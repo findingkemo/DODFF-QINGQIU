@@ -1,0 +1,9 @@
+add_core = INC
+add_core = QOL
+owner = BRG
+controller = BRG
+trade_goods = sulphur
+life_rating = 35
+terrain = desert_mountains
+naval_base = 2
+colonial = 1

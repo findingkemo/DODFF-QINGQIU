@@ -1,0 +1,8 @@
+owner = CHV
+controller = CHV
+add_core = NBG
+add_core = CHV
+trade_goods = coal
+life_rating = 35
+fort = 1
+terrain = deciduous_forest_mountains

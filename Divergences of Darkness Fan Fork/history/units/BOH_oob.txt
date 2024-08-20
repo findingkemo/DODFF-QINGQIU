@@ -1,0 +1,325 @@
+
+GRB = {
+	value = 50	#relation
+	level = 2		#3=cordial, 4 = friendly, 5 sphere
+	influence_value = 50
+}
+
+BAV = {
+	value = 50		#relation
+	level = 4		#3=cordial, 4 = friendly, 5 sphere
+	influence_value = 25
+}
+
+AUS = {
+	value = 50		#relation
+	level = 5		#3=cordial, 4 = friendly, 5 sphere
+	influence_value = 50
+}
+
+SAL = {
+	value = 100		#relation
+	level = 5		#3=cordial, 4 = friendly, 5 sphere
+	influence_value = 50
+}
+
+AGR = {
+	value = 100		#relation
+	level = 5		#3=cordial, 4 = friendly, 5 sphere
+	influence_value = 50
+}
+
+ASB = {
+	value = 100		#relation
+	level = 5		#3=cordial, 4 = friendly, 5 sphere
+	influence_value = 50
+}
+
+MSZ = {
+	value = 100		#relation
+	level = 5		#3=cordial, 4 = friendly, 5 sphere
+	influence_value = 50
+}
+
+DSX = {
+	value = 100		#relation
+	level = 5		#3=cordial, 4 = friendly, 5 sphere
+	influence_value = 50
+}
+
+OLD = {
+	value = 100		#relation
+	level = 5		#3=cordial, 4 = friendly, 5 sphere
+	influence_value = 10
+}
+
+OSN = {
+	value = 100		#relation
+	level = 5		#3=cordial, 4 = friendly, 5 sphere
+	influence_value = 15
+}
+
+FRW = {
+	value = 100		#relation
+	level = 5		#3=cordial, 4 = friendly, 5 sphere
+	influence_value = 50
+}
+
+FRE = {
+	value = 100		#relation
+	level = 5		#3=cordial, 4 = friendly, 5 sphere
+	influence_value = 50
+}
+
+SME = {
+	value = 100		#relation
+	level = 5		#3=cordial, 4 = friendly, 5 sphere
+	influence_value = 50
+}
+
+HEK = {
+	value = 100		#relation
+	level = 4		#3=cordial, 4 = friendly, 5 sphere
+	influence_value = 0
+}
+
+ULM = {
+	value = 50	#relation
+	level = 3		#3=cordial, 4 = friendly, 5 sphere
+	influence_value = 50
+}
+
+FRA = {
+	value = -100	#relation
+}
+
+DUA = {
+	value = -100	#relation
+	truce_until = "1840.1.1"
+}
+
+BRG = {
+	value = -200	#relation
+	truce_until = "1840.1.1"
+}
+
+SCA = {
+	value = -50	   #relation
+	truce_until = "1840.1.1"
+}
+
+leader = {
+	name = "Petr Voskovec"
+	type = land
+	date = 1836.1.1
+	personality = pisspoor
+	background = son_of_hero
+}
+
+leader = {
+	name = "Oto Malík"
+	type = land
+	date = 1836.1.1
+	personality = deeply_religious
+	background = nationalist
+}
+
+leader = {
+	name = "Jan Niklas"
+	type = land
+	date = 1836.1.1
+	personality = efficient
+	background = generals_aide
+}
+
+leader = {
+	name = "Ivan Gellner"
+	type = land
+	date = 1836.1.1
+	personality = resolute
+	background = drillmaster
+}
+
+leader = {
+	name = "Jakub Ivanov"
+	type = land
+	date = 1836.1.1
+	personality = keen
+	background = school_of_offense
+}
+
+leader = {
+	name = "Hans Corinth"
+	type = land
+	date = 1836.1.1
+	personality = skilled
+	background = mercenary
+}
+
+army = {
+	name = "Erste Reichsarmee"
+	location = 625
+	regiment = {
+		name= "1.1st Division"
+		type = regular
+		home = 625
+	}
+
+	regiment = {
+		name= "2.1st Division"
+		type = regular
+		home = 625
+	}
+
+	regiment = {
+		name= "3.1st Division"
+		type = regular
+		home = 625
+	}
+
+	regiment = {
+		name= "4.1st Division"
+		type = regular
+		home = 625
+	}
+
+	regiment = {
+		name= "6.1st Division"
+		type = regular
+		home = 3265
+	}
+	
+	regiment = {
+		name= "7.1st Division"
+		type = regular
+		home = 625
+	}
+	
+	regiment = {
+		name= "8.1st Division"
+		type = regular
+		home = 631
+	}
+	
+	regiment = {
+		name= "1.1st Artillery Division"
+		type = artillery
+		home = 629
+	}
+
+	regiment = {
+		name= "2.1st Artillery Division"
+		type = artillery
+		home = 626
+	}
+	
+	regiment = {
+		name= "1.1st Cavalry Division"
+		type = hussar
+		home = 628
+	}
+}
+
+army = {
+	name = "Zweite Reichsarmee"
+	location = 549
+	regiment = {
+		name= "1.1st Division"
+		type = regular
+		home = 631
+	}
+
+	regiment = {
+		name= "2.1st Division"
+		type = regular
+		home = 631
+	}
+
+	regiment = {
+		name= "3.1st Division"
+		type = regular
+		home = 631
+	}
+
+	regiment = {
+		name= "4.1st Division"
+		type = regular
+		home = 631
+	}
+
+	regiment = {
+		name= "5.1st Division"
+		type = regular
+		home = 682
+	}
+	
+	regiment = {
+		name= "6.1st Division"
+		type = regular
+		home = 685
+	}
+	
+	regiment = {
+		name= "7.1st Division"
+		type = regular
+		home = 682
+	}
+	
+	regiment = {
+		name= "4.1st Division"
+		type = artillery
+		home = 631
+	}
+	
+	regiment = {
+		name= "5.1st Division"
+		type = hussar
+		home = 684
+	}
+	
+	regiment = {
+		name= "6.1st Division"
+		type = hussar
+		home = 625
+	}
+}
+
+army = {
+	name = "Dritte Reichsarmee"
+	location = 682
+	regiment = {
+		name= "1.1st Division"
+		type = regular
+		home = 630
+	}
+
+	regiment = {
+		name= "2.1st Division"
+		type = regular
+		home = 630
+	}
+
+	regiment = {
+		name= "3.1st Division"
+		type = regular
+		home = 627
+	}
+
+	regiment = {
+		name= "4.1st Division"
+		type = regular
+		home = 627
+	}
+	
+	regiment = {
+		name= "5.1st Division"
+		type = artillery
+		home = 632
+	}
+	
+	regiment = {
+		name= "6.1st Division"
+		type = hussar
+		home = 632
+	}
+}

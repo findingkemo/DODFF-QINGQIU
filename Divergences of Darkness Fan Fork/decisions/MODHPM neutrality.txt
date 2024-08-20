@@ -1,0 +1,84 @@
+political_decisions = {
+	declare_neutrality = {
+		potential = {
+		 OR = {
+			AND = {
+			tag = SWI
+			has_country_flag = SWI_neutral
+			}
+			AND = { 
+			tag = GNV
+			has_country_flag = GNV_neutral
+			}
+		}
+		NOT = {
+			has_country_modifier = neutrality
+			has_country_flag = abandoned_neutrality
+			has_country_flag = neutrality_violated
+		}	
+		}
+		allow = {
+			NOT = { any_owned_province = { is_core = THIS } }
+			NOT = { badboy = 1 }
+		}
+		
+		effect = {
+			add_country_modifier = {
+				name = neutrality
+				duration = -1
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = { factor = 0 government = fascist_dictatorship }
+			modifier = { factor = 0 government = fascist_monarchy }
+			modifier = { factor = 0 government = proletarian_dictatorship }
+		}
+	}
+
+
+	abandon_neutrality = {
+		picture = declare_neutrality
+		potential = {
+		    OR = {
+			AND = {
+			tag = SWI
+			has_country_flag = SWI_neutral
+			}
+			AND = { 
+			tag = GNV
+			has_country_flag = GNV_neutral
+			}
+			}
+			has_country_modifier = neutrality
+			NOT = { has_country_flag = abandoned_neutrality }
+		}
+		
+		allow = {
+			prestige = 20
+		}
+		
+		effect = {
+			set_country_flag = abandoned_neutrality
+			prestige = -20
+			badboy = 5
+			remove_country_modifier = neutrality
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						badboy = 0.75
+						government = fascist_dictatorship
+						government = fascist_monarchy
+						government = proletarian_dictatorship
+					}
+				}
+			}
+		}
+	}
+}

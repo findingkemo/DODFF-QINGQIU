@@ -1,0 +1,7 @@
+add_core = ATS
+trade_goods = sugar
+life_rating = 5
+terrain = swamp_jungle
+colonial = 2
+is_slave = yes
+

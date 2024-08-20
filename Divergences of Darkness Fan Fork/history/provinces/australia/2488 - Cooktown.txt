@@ -1,0 +1,8 @@
+owner = ZSA
+controller = ZSA
+add_core = ZSA
+
+
+trade_goods = tropical_wood
+life_rating = 30
+terrain = seasonal_jungle

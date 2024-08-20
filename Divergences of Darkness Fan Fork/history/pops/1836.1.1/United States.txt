@@ -1,0 +1,12085 @@
+#Alaska Region (25000)
+#ruled by Russia 1836
+#Sitka (8000/2000 POPS)
+1 = {
+	bureaucrats = {
+		culture = kaiganese
+		religion = shinto
+		size = 50
+	}
+
+	clergymen = {
+		culture = kaiganese
+		religion = shinto
+		size = 50
+	}
+
+	artisans = {
+		culture = kaiganese
+		religion = shinto
+		size = 150
+	}
+
+	soldiers = {
+		culture = kaiganese
+		religion = shinto
+		size= 100
+
+	}
+
+	aristocrats = {
+		culture = native_american_minor
+		religion = animist
+		size = 25
+	}
+
+	clergymen = {
+		culture = native_american_minor
+		religion = animist
+		size = 75
+	}
+
+	artisans = {
+		culture = native_american_minor
+		religion = animist
+		size = 100
+	}
+
+	soldiers = {
+		culture = native_american_minor
+		religion = animist
+		size= 25
+
+	}
+
+	farmers = {
+		culture = native_american_minor
+		religion = animist
+		size = 2600
+	}
+	
+	farmers = {
+		culture = kaiganese
+		religion = mahayana
+		size = 4080
+	}
+	
+	farmers = {
+		culture = kaiganese
+		religion = taiping
+		size = 480
+	}
+	
+	farmers = {
+		culture = kaiganese
+		religion = shinto
+		size = 240
+	}
+}
+#Yakutat (4000/1000 POPS)
+2 = {
+	aristocrats = {
+		culture = kaiganese
+		religion = shinto
+		size = 10
+	}
+
+	clergymen = {
+		culture = kaiganese
+		religion = shinto
+		size = 45
+	}
+	
+	artisans = {
+		culture = kaiganese
+		religion = shinto
+		size = 75
+	}
+
+	artisans = {
+		culture = native_american_minor
+		religion = animist
+		size = 50
+	}
+
+	soldiers = {
+		culture = native_american_minor
+		religion = animist
+		size= 15
+
+	}
+
+	farmers = {
+		culture = native_american_minor
+		religion = animist
+		size = 1300
+	}
+	
+	farmers = {
+		culture = kaiganese
+		religion = mahayana
+		size = 1400
+	}
+	
+	farmers = {
+		culture = kaiganese
+		religion = shinto
+		size = 300
+	}
+}
+#Kenai (2400/600 POPS)
+3 = {
+	aristocrats = {
+		culture = kaiganese
+		religion = shinto
+		size = 5
+	}
+
+	clergymen = {
+		culture = native_american_minor
+		religion = animist
+		size = 20
+	}
+
+	artisans = {
+		culture = native_american_minor
+		religion = animist
+		size = 50
+	}
+	
+	artisans = {
+		culture = native_american_minor
+		religion = animist
+		size = 25
+	}
+
+	soldiers = {
+		culture = native_american_minor
+		religion = animist
+		size= 10
+
+	}
+
+	farmers = {
+		culture = native_american_minor
+		religion = animist
+		size = 550
+	}
+	
+	farmers = {
+		culture = kaiganese
+		religion = shinto
+		size = 1250
+	}
+}
+#brabantian Harbor (2000/500 POPS)
+4 = {
+	aristocrats = {
+		culture = kaiganese
+		religion = mahayana
+		size = 5
+	}
+
+	clergymen = {
+		culture = kaiganese
+		religion = mahayana
+		size = 20
+	}
+
+	artisans = {
+		culture = kaiganese
+		religion = mahayana
+		size = 25
+	}
+
+	soldiers = {
+		culture = kaiganese
+		religion = mahayana
+		size= 5
+
+	}
+
+	farmers = {
+		culture = inuit
+		religion = animist
+		size = 900
+	}
+	
+	farmers = {
+		culture = kaiganese
+		religion = mahayana
+		size = 1200
+	}
+}
+#Bethel (2000/500 POPS)
+5 = {
+	aristocrats = {
+		culture = kaiganese
+		religion = mahayana
+		size = 5
+	}
+
+	clergymen = {
+		culture = kaiganese
+		religion = mahayana
+		size = 20
+	}
+
+	artisans = {
+		culture = kaiganese
+		religion = mahayana
+		size = 25
+	}
+
+	soldiers = {
+		culture = kaiganese
+		religion = mahayana
+		size= 5
+
+	}
+
+	farmers = {
+		culture = inuit
+		religion = animist
+		size = 900
+	}
+	
+	farmers = {
+		culture = kaiganese
+		religion = mahayana
+		size = 1200
+	}
+}
+#Fairbanks (2000/500 POPS)
+2599 = {
+	aristocrats = {
+		culture = native_american_minor
+		religion = animist
+		size = 5
+	}
+
+	clergymen = {
+		culture = native_american_minor
+		religion = animist
+		size = 15
+	}
+
+	artisans = {
+		culture = native_american_minor
+		religion = animist
+		size = 25
+	}
+
+	soldiers = {
+		culture = native_american_minor
+		religion = animist
+		size= 5
+
+	}
+
+	farmers = {
+		culture = native_american_minor
+		religion = animist
+		size = 1400
+	}
+}
+#Cordova (1600/360 POPS)
+2630 = {
+	aristocrats = {
+		culture = native_american_minor
+		religion = animist
+		size = 5
+	}
+
+	clergymen = {
+		culture = native_american_minor
+		religion = animist
+		size = 15
+	}
+
+	artisans = {
+		culture = native_american_minor
+		religion = animist
+		size = 20
+	}
+
+	soldiers = {
+		culture = native_american_minor
+		religion = animist
+		size= 5
+
+	}
+
+	farmers = {
+		culture = native_american_minor
+		religion = animist
+		size = 360
+	}
+	
+	farmers = {
+		culture = kaiganese
+		religion = shinto
+		size = 600
+	}
+}
+#Unalakeet (3000/750 POPS)
+2631 = {
+	aristocrats = {
+		culture = inuit
+		religion = animist
+		size = 5
+	}
+
+	clergymen = {
+		culture = inuit
+		religion = animist
+		size = 15
+	}
+
+	artisans = {
+		culture = inuit
+		religion = animist
+		size = 25
+	}
+
+	soldiers = {
+		culture = inuit
+		religion = animist
+		size= 5
+
+	}
+
+	farmers = {
+		culture = inuit
+		religion = animist
+		size = 450
+	}
+
+	aristocrats = {
+		culture = inuit
+		religion = animist
+		size = 2
+	}
+
+	clergymen = {
+		culture = inuit
+		religion = animist
+		size = 4
+	}
+
+	artisans = {
+		culture = inuit
+		religion = animist
+		size = 15
+	}
+
+	soldiers = {
+		culture = inuit
+		religion = animist
+		size= 5
+
+	}
+
+	farmers = {
+		culture = inuit
+		religion = animist
+		size = 225
+	}
+}
+
+79 = {
+	aristocrats = {
+		culture = kaiganese
+		religion = mahayana
+		size = 100
+	}
+
+	bureaucrats = {
+		culture = kaiganese
+		religion = mahayana
+		size = 50
+	}
+
+	clergymen = {
+		culture = kaiganese
+		religion = mahayana
+		size = 50
+	}
+
+	farmers = {
+		culture = kaiganese
+		religion = mahayana
+		size = 9600
+	}
+	
+	artisans = {
+		culture = kaiganese
+		religion = mahayana
+		size = 3600
+	}
+
+	soldiers = {
+		culture = kaiganese
+		religion = mahayana
+		size = 600
+	}
+
+	farmers = {
+		culture = buyean
+		religion = mahayana
+		size = 5000
+	}
+	
+	farmers = {
+		culture = qingqiuan
+		religion = mahayana
+		size = 1000
+	}
+}
+#Sakai
+
+3388 = {
+
+	aristocrats = {
+		culture = kaiganese
+		religion = mahayana
+		size = 300
+	}
+	
+	clergymen = {
+		culture = kaiganese
+		religion = mahayana
+		size = 150
+	}
+	
+	bureaucrats = {
+		culture = kaiganese
+		religion = mahayana
+		size = 75
+	}
+	
+	farmers = {
+		culture = kaiganese
+		religion = mahayana
+		size = 17000
+	}
+	
+	soldiers = {
+		culture = kaiganese
+		religion = mahayana
+		size = 625
+	}
+	
+	artisans = {
+		culture = kaiganese
+		religion = mahayana
+		size = 7350
+	}
+	
+	farmers = {
+		culture = buyean
+		religion = mahayana
+		size = 3000
+	}
+	
+	farmers = {
+		culture = qingqiuan
+		religion = mahayana
+		size = 1500
+	}
+}
+#Washington Region (20000)
+#claims by Britain and USA in 1836, de facto Native American rule
+#Seattle / Xiaosu (12000/3000 POPS)
+78 = {
+
+	bureaucrats = {
+		culture = buyean
+		religion = mahayana
+		size = 85
+	}
+	
+	soldiers = {
+		culture = buyean
+		religion = mahayana
+		size = 500
+	}
+	
+	clergymen = {
+		culture = buyean
+		religion = mahayana
+		size = 165
+	}
+	
+	farmers = {
+		culture = buyean
+		religion = mahayana
+		size = 12000
+	}
+	
+	artisans = {
+		culture = buyean
+		religion = mahayana
+		size = 4250
+	}
+	
+	farmers = {
+		culture = kaiganese
+		religion = mahayana
+		size = 1600
+	}
+	
+	soldiers = {
+		culture = kaiganese
+		religion = mahayana
+		size = 400
+	}
+	
+	farmers = {
+		culture = qingqiuan
+		religion = mahayana
+		size = 1000
+	}
+	
+}
+
+#Walla Walla / Walla Walla(4000/1000 POPS)
+80 = {
+
+aristocrats = {
+	culture = buyean
+	religion = mahayana
+	size = 150
+}
+
+clergymen = {
+	culture = buyean
+	religion = mahayana
+	size = 150
+}
+
+bureaucrats = {
+	culture = buyean
+	religion = mahayana
+	size = 75
+}
+
+farmers = {
+	culture = buyean
+	religion = mahayana
+	size = 12919
+}
+
+artisans = {
+	culture = buyean
+	religion = mahayana
+	size = 6956
+}
+
+soldiers = {
+	culture = buyean
+	religion = mahayana
+	size = 750 
+	}
+
+farmers = {
+	culture = kaiganese
+	religion = mahayana
+	size = 6525
+}
+
+bureaucrats = {
+	culture = kaiganese
+	religion = mahayana
+	size = 75
+}
+
+clergymen = {
+	culture = kaiganese
+	religion = mahayana
+	size = 150
+}
+
+aristocrats = {
+	culture = kaiganese
+	religion = mahayana
+	size = 150
+}
+
+soldiers = {
+	culture = kaiganese 
+	religion = mahayana
+	size = 600
+}
+
+farmers = {
+	culture = qingqiuan
+	religion = mahayana
+	size = 1500
+}
+
+}
+#Oregon Region (20000)
+#claims by Britain and USA in 1836, de facto Native American rule
+#Portland / Qizhou(12000/3000 POPS)
+81 = {
+
+	aristocrats = {
+		culture = buyean
+		religion = mahayana
+		size = 50
+	}
+	
+	aristocrats = {
+		culture = qingqiuan
+		religion = mahayana
+		size = 50
+	}
+	
+	clergymen = {
+		culture = buyean
+		religion = mahayana
+		size = 50
+	}
+	
+	bureaucrats = {
+		culture = qingqiuan
+		religion = mahayana
+		size = 50
+	}
+	
+	farmers = {
+		culture = buyean
+		religion = mahayana
+		size = 2200
+	}
+	
+	artisans = {
+		culture = buyean
+		religion = mahayana
+		size = 1600
+	}
+	
+	farmers = {
+		culture = buyean
+		religion = taiping
+		size = 975
+	}
+	
+	farmers = {
+		culture = buyean
+		religion = catholic
+		size = 650
+	}
+	
+	farmers = {
+		culture = qingqiuan
+		religion = mahayana
+		size = 3000
+	}
+}
+#Baker City / Ruilin (4000/1000 POPS)
+82 = {
+
+	clergymen = {
+		culture = buyean
+		religion = mahayana
+		size = 100
+	}
+	
+	aristocrats = {
+		culture = buyean
+		religion = mahayana
+		size = 100
+	}
+	
+	bureaucrats = {
+		culture = buyean
+		religion = mahayana
+		size = 50
+	}
+	
+	bureaucrats = {
+		culture = qingqiuan
+		religion = mahayana
+		size = 50
+	}	
+
+	aristocrats = {
+		culture = qingqiuan
+		religion = mahayana
+		size = 100
+	}
+
+	farmers = {
+		culture = buyean
+		religion = mahayana
+		size = 10400
+	}
+	
+	soldiers = {
+		culture = buyean
+		religion = mahayana
+		size = 600
+	}
+	
+	farmers = {
+		culture = buyean
+		religion = taiping
+		size = 2250
+	}
+	
+	farmers = {
+		culture = buyean
+		religion = catholic
+		size = 1500
+	}
+	
+	farmers = {
+		culture = kaiganese
+		religion = mahayana
+		size = 1250
+	}
+	
+	farmers = {
+		culture = kaiganese
+		religion = shinto
+		size = 100
+	}
+	
+	farmers = {
+		culture = kaiganese
+		religion = shinto
+		size = 150
+	}
+	
+	farmers = {
+		culture = qingqiuan
+		religion = mahayana
+		size = 2100
+	}
+
+}
+
+#California Region (64000)
+#ruled by Mexico 1836
+#San Francisco / Sanbao (9600/2400 POPS)
+84 = {
+	
+	capitalists = {
+		culture = kaiganese
+		religion = shinto
+		size = 60
+	}
+	
+	aristocrats = {
+		culture = qingqiuan
+		religion = mahayana 
+		size = 200
+	}
+	
+	clergymen = {
+		culture = qingqiuan
+		religion = mahayana 
+		size = 105
+	}
+
+	bureaucrats = {
+		culture = qingqiuan
+		religion = mahayana 
+		size = 105
+	}
+	
+	farmers = {
+		culture = qingqiuan
+		religion = mahayana
+		size = 5900
+	}
+	
+	artisans = {
+		culture = qingqiuan
+		religion = mahayana
+		size = 5900
+	}
+	
+	craftsmen = {
+		culture = qingqiuan
+		religion = mahayana
+		size = 2440
+	}
+	
+	soldiers = {
+		culture = qingqiuan
+		religion = mahayana
+		size = 1000
+	}
+	
+	farmers = {
+		culture = qingqiuan
+		religion = catholic
+		size = 4200
+	}
+	
+	farmers = {
+		culture = qingqiuan
+		religion = taiping
+		size = 1050
+	}
+	
+	farmers = {
+		culture = buyean
+		religion = mahayana
+		size = 3900
+	}
+	
+	farmers = {
+		culture = buyean
+		religion = taiping
+		size = 800
+	}
+	
+	farmers = {
+		culture = buyean
+		religion = catholic
+		size = 520
+	}
+	
+	farmers = {
+		culture = kaiganese
+		religion = mahayana
+		size = 4425
+	}
+	
+	farmers = {
+		culture = kaiganese
+		religion = catholic
+		size = 525
+	}
+	
+	farmers = {
+		culture = kaiganese
+		religion = shinto
+		size = 280
+	}
+	
+	farmers = {
+		culture = lusitanian
+		religion = catholic
+		size = 2000
+	}
+	
+	farmers = {
+		culture = lusitanian
+		religion = jewish
+		size = 800
+	}
+	
+	farmers = {
+		culture = valleyan
+		religion = catholic
+		size = 800
+	}
+}
+
+#Monterey / Donghai (6400/1600 POPS)
+39 = {
+
+	aristocrats = {
+		culture = qingqiuan
+		religion = catholic
+		size = 150
+	}
+	
+	bureaucrats = {
+		culture = lusitanian
+		religion = catholic
+		size = 30
+	}
+	
+	bureaucrats = {
+		culture = qingqiuan
+		religion = catholic
+		size = 30
+	}
+	
+	clergymen = {
+		culture = qingqiuan
+		religion = catholic
+		size = 120
+	}
+	
+	aristocrats = {
+		culture = lusitanian
+		religion = catholic
+		size = 150
+	}
+
+	farmers = {
+		culture = qingqiuan
+		religion = catholic
+		size = 3345
+	}
+	
+	artisans = {
+		culture = qingqiuan
+		religion = catholic
+		size = 2400
+	}
+	
+	farmers = {
+		culture = qingqiuan
+		religion = mahayana
+		size = 3105
+	}
+	
+	soldiers = {
+		culture = qingqiuan
+		religion = mahayana
+		size = 600
+	}
+	
+	farmers = {
+		culture = qingqiuan
+		religion = taiping
+		size = 2550
+	}
+	
+	farmers = {
+		culture = lusitanian
+		religion = catholic
+		size = 1800
+	}
+	
+	farmers = {
+		culture = lusitanian
+		religion = catholic
+		size = 540
+	}
+
+}
+#Mariposa / Jilinyutian Shan (8000/2000 POPS)
+88 = {
+	
+	aristocrats = {
+		culture = qingqiuan
+		religion = catholic
+		size = 500
+	}
+	
+	clergymen = {
+		culture = qingqiuan
+		religion = catholic
+		size = 100
+	}
+	
+	bureaucrats = {
+		culture = qingqiuan
+		religion = catholic
+		size = 100
+	}
+	
+	farmers = {
+		culture = qingqiuan
+		religion = catholic
+		size = 4000
+	}
+	
+	artisans = {
+		culture = qingqiuan
+		religion = catholic
+		size = 4000
+	}
+	
+	farmers = {
+		culture = qingqiuan
+		religion = mahayana
+		size = 5125
+	}
+	
+	soldiers = {
+		culture = qingqiuan
+		religion = mahayana
+		size = 500
+	}
+	
+	farmers = {
+		culture = qingqiuan
+		religion = taiping
+		size = 3750
+	}
+
+	clergymen = {
+		culture = valleyan
+		religion = catholic
+		size = 100
+	}
+	
+	bureaucrats = {
+		culture = valleyan
+		religion = catholic
+		size = 100
+	}
+
+	farmers = {
+		culture = valleyan
+		religion = catholic
+		size = 7400
+	}
+
+	soldiers = {
+		culture = qingqiuan
+		religion = mahayana
+		size = 500
+	}
+	
+	farmers = {
+		culture = valleyan
+		religion = taiping
+		size = 900
+	}
+}
+
+3378 = {
+	
+	aristocrats = {
+		culture = qingqiuan
+		religion = catholic
+		size = 500
+	}
+	
+	clergymen = {
+		culture = qingqiuan
+		religion = catholic
+		size = 100
+	}
+	
+	bureaucrats = {
+		culture = qingqiuan
+		religion = catholic
+		size = 100
+	}
+	
+	farmers = {
+		culture = qingqiuan
+		religion = catholic
+		size = 4000
+	}
+	
+	artisans = {
+		culture = qingqiuan
+		religion = catholic
+		size = 4000
+	}
+	
+	farmers = {
+		culture = qingqiuan
+		religion = mahayana
+		size = 5125
+	}
+	
+	soldiers = {
+		culture = qingqiuan
+		religion = mahayana
+		size = 500
+	}
+	
+	farmers = {
+		culture = qingqiuan
+		religion = taiping
+		size = 3750
+	}
+
+	clergymen = {
+		culture = valleyan
+		religion = catholic
+		size = 100
+	}
+	
+	bureaucrats = {
+		culture = valleyan
+		religion = catholic
+		size = 100
+	}
+
+	farmers = {
+		culture = valleyan
+		religion = catholic
+		size = 7400
+	}
+
+	soldiers = {
+		culture = qingqiuan
+		religion = mahayana
+		size = 500
+	}
+	
+	farmers = {
+		culture = valleyan
+		religion = taiping
+		size = 900
+	}
+}
+#Los Angeles / Yongle (12000/3000 POPS)
+89 = {
+
+	bureaucrats = {
+		culture = lusitanian
+		religion = catholic
+		size = 70
+	}
+	
+	aristocrats = {
+		culture = lusitanian
+		religion = catholic
+		size = 165
+	}
+	
+	clergymen = {
+		culture = lusitanian
+		religion = catholic
+		size = 132
+	}
+	
+	clergymen = {
+		culture = qingqiuan
+		religion = catholic
+		size = 132
+	}
+	
+	aristocrats = {
+		culture = qingqiuan
+		religion = catholic
+		size = 165
+	}
+	
+	bureaucrats = {
+		culture = qingqiuan
+		religion = catholic
+		size = 70
+	}
+
+	farmers = {
+		culture = qingqiuan
+		religion = catholic
+		size = 13200
+	}
+	
+	artisans = {
+		culture = qingqiuan
+		religion = catholic
+		size = 6000
+	}
+	
+	soldiers = {
+		culture = qingqiuan
+		religion = catholic
+		size = 1200
+	}
+	
+	farmers = {
+		culture = qingqiuan
+		religion = mahayana
+		size = 1155
+	}
+	
+	farmers = {
+		culture = qingqiuan
+		religion = taiping
+		size = 1155
+	}
+
+	farmers = {
+		culture = lusitanian
+		religion = catholic
+		size = 6000
+	}
+	
+	farmers = {
+		culture = lusitanian
+		religion = jewish
+		size = 1800
+	}
+	
+}
+#San Diego / Porto Novo(12000/3000 POPS)
+90 = {
+	aristocrats = {
+		culture = lusitanian
+		religion = catholic
+		size = 320
+	}
+
+	bureaucrats = {
+		culture = mexican
+		religion = catholic
+		size = 50
+	}
+
+	officers = {
+		culture = lusitanian
+		religion = catholic
+		size = 50
+	}
+
+	clergymen = {
+		culture = lusitanian
+		religion = catholic
+		size = 200
+	}
+
+	clergymen = {
+		culture = mexican
+		religion = catholic
+		size = 100
+	}
+
+	artisans = {
+		culture = lusitanian
+		religion = catholic
+		size = 6200
+	}
+	
+	
+	farmers = {
+		culture = mexican
+		religion = catholic
+		size = 6800
+	}
+
+	soldiers = {
+		culture = lusitanian
+		religion = catholic
+		size = 2000
+	}
+
+	soldiers = {
+		culture = mexican
+		religion = catholic
+		size = 600
+	}
+
+	farmers = {
+		culture = lusitanian
+		religion = catholic
+		size = 13200
+	}
+
+	farmers = {
+		culture = mexican
+		religion = catholic
+		size = 4500
+	}
+	
+	aristocrats = {
+		culture = pueblo
+		religion = catholic
+		size = 60
+	}
+
+	clergymen = {
+		culture = pueblo
+		religion = animist
+		size = 100
+	}
+
+	soldiers = {
+		culture = pueblo
+		religion = animist
+		size = 500
+	}
+
+	farmers = {
+		culture = pueblo
+		religion = animist
+		size = 2600
+	}
+
+}
+
+#Coeur d'Alene / Yingjiang (4000/1000 POPS)
+92 = {
+	
+	aristocrats = {
+		culture = buyean
+		religion = mahayana
+		size = 50
+	}
+	
+	clergymen = {
+		culture = buyean
+		religion = mahayana
+		size = 25
+	}
+	
+	bureaucrats = {
+		culture = buyean
+		religion = mahayana
+		size = 20
+	}
+	
+	farmers = {
+		culture = salish
+		religion = animist
+		size = 2100
+	}
+	
+	farmers = {
+		culture = salish
+		religion = taiping
+		size = 450
+	}
+	
+	farmers = {
+		culture = salish
+		religion = catholic
+		size = 225
+	}
+	
+	farmers = {
+		culture = salish
+		religion = mahayana
+		size = 225
+	}
+	
+	farmers = {
+		culture = buyean
+		religion = mahayana
+		size = 1600
+	}
+	
+	farmers = {
+		culture = buyean
+		religion = taiping
+		size = 240
+	}
+	
+	farmers = {
+		culture = buyean
+		religion = catholic
+		size = 160
+	}
+	
+	farmers = {
+		culture = qingqiuan
+		religion = mahayana
+		size = 400
+	}
+
+}
+
+#Las Vegas / Qingma (4000/1000 POPS)
+96 = {
+	aristocrats = {
+		culture = qingqiuan
+		religion = catholic
+		size = 40
+	}
+	
+	clergymen = {
+		culture = qingqiuan
+		religion = catholic
+		size = 40
+	}
+	
+	bureaucrats = {
+		culture = qingqiuan
+		religion = catholic
+		size = 20
+	}
+
+	farmers = {
+		culture = qingqiuan
+		religion = catholic
+		size = 2400
+	}
+	
+	artisans = {
+		culture = qingqiuan
+		religion = catholic
+		size = 1300
+	}	
+
+	farmers = {
+		culture = qingqiuan
+		religion = mahayana
+		size = 130
+	}
+	
+	farmers = {
+		culture = qingqiuan
+		religion = taiping
+		size = 130
+	}
+	
+	farmers = {
+		culture = lusitanian
+		religion = catholic
+		size = 1200
+	}
+	
+	farmers = {
+		culture = lusitanian
+		religion = jewish
+		size = 600
+	}
+}
+
+
+#Arizona Region (37000)
+#"ruled" by Mexico 1836/de facto under Native Control
+#Phoenix / San Jose Ixtapa (12000/3000 POPS)
+100 = {
+
+	farmers = {
+		culture = pueblo
+		religion = taiping
+		size = 1800
+	}
+	
+	farmers = {
+		culture = pueblo
+		religion = catholic
+		size = 560
+	}
+	
+	farmers = {
+		culture = pueblo
+		religion = animist
+		size = 560
+	}
+
+	aristocrats = {
+		culture = lusitanian
+		religion = catholic
+		size = 100
+	}
+
+	clergymen = {
+		culture = lusitanian
+		religion = catholic
+		size = 40
+	}
+
+	bureaucrats = {
+		culture = lusitanian
+		religion = catholic
+		size = 120
+	}
+
+	artisans = {
+		culture = lusitanian
+		religion = catholic
+		size = 800
+	}
+
+	soldiers = {
+		culture = lusitanian
+		religion = catholic
+		size = 250
+	}
+
+	farmers = {
+		culture = lusitanian
+		religion = catholic
+		size = 2800
+	}
+}
+#Flagstaff / Aguililla (12000/3000 POPS)
+101 = {
+
+	aristocrats = {
+		culture = pueblo
+		religion = catholic
+		size = 20
+	}
+
+	clergymen = {
+		culture = pueblo
+		religion = catholic
+		size = 45
+	}
+
+	artisans = {
+		culture = pueblo
+		religion = catholic
+		size = 150
+	}
+
+	soldiers = {
+		culture = pueblo
+		religion = catholic
+		size = 150
+	}
+	
+	farmers = {
+		culture = pueblo
+		religion = catholic
+		size = 4600
+	}
+	
+	farmers = {
+		culture = pueblo
+		religion = animist
+		size = 800
+	}
+
+	clergymen = {
+		culture = lusitanian
+		religion = catholic
+		size = 100
+	}
+
+	soldiers = {
+		culture = lusitanian
+		religion = catholic
+		size = 300
+	}
+
+	farmers = {
+		culture = lusitanian
+		religion = catholic
+		size = 800
+	}
+}
+#ruled by Mexico 1836
+#Tucson / San Nicolas (13000/3250 POPS)
+102 = {
+
+	aristocrats = {
+		culture = pueblo
+		religion = catholic
+		size = 50
+	}
+
+	clergymen = {
+		culture = pueblo
+		religion = catholic
+		size = 75
+	}
+
+	soldiers = {
+		culture = pueblo
+		religion = catholic
+		size = 100
+	}
+
+	farmers = {
+		culture = pueblo
+		religion = catholic
+		size = 3400
+	}
+
+	farmers = {
+		culture = pueblo
+		religion = animist
+		size = 1800
+	}
+
+	aristocrats = {
+		culture = lusitanian
+		religion = catholic
+		size = 30
+	}
+
+	bureaucrats = {
+		culture = lusitanian
+		religion = catholic
+		size = 120
+	}
+
+	clergymen = {
+		culture = lusitanian
+		religion = catholic
+		size = 50
+	}
+
+	soldiers = {
+		culture = lusitanian
+		religion = catholic
+		size = 100
+	}
+
+	farmers = {
+		culture = lusitanian
+		religion = catholic
+		size = 3800
+	}
+
+}
+#New Mexico Region (56000)
+#ruled by Mexico 1836
+#Santa Fe / Daguan (32000/8000 POPS)
+103 = {
+	aristocrats = {
+		culture = cherokee
+		religion = catholic
+		size = 600
+	}
+
+	clergymen = {
+		culture = cherokee
+		religion = catholic
+		size = 200
+	}
+
+	artisans = {
+		culture = cherokee
+		religion = catholic
+		size = 1350
+	}
+
+	soldiers = {
+		culture = cherokee
+		religion = catholic
+		size= 1500
+
+	}
+
+	farmers = {
+		culture = cherokee
+		religion = catholic
+		size = 20475
+	}
+
+	clergymen = {
+		culture = afro_frankish
+		religion = catholic
+		size = 50
+	}
+	
+	farmers = {
+		culture = afro_frankish
+		religion = catholic
+		size = 150
+	}
+
+	slaves = {
+		culture = afro_frankish
+		religion = catholic
+		size = 800
+	}
+
+	clergymen = {
+		culture = plantagenian
+		religion = catholic
+		size = 100
+	}
+}
+#Albuquerque / La Rinconada(20000/5000 POPS)
+104 = {
+	aristocrats = {
+		culture = pueblo
+		religion = catholic
+		size = 40
+	}
+
+	clergymen = {
+		culture = pueblo
+		religion = catholic
+		size = 60
+	}
+
+	artisans = {
+		culture = pueblo
+		religion = catholic
+		size = 1850
+	}
+
+	soldiers = {
+		culture = pueblo
+		religion = catholic
+		size= 225
+
+	}
+
+	farmers = {
+		culture = pueblo
+		religion = catholic
+		size = 2800
+	}
+	
+	farmers = {
+		culture = pueblo
+		religion = animist
+		size = 1400
+	}
+
+	aristocrats = {
+		culture = lusitanian
+		religion = catholic
+		size = 40
+	}
+
+	clergymen = {
+		culture = lusitanian
+		religion = catholic
+		size = 60
+	}
+
+	artisans = {
+		culture = lusitanian
+		religion = catholic
+		size = 400
+	}
+
+	soldiers = {
+		culture = lusitanian
+		religion = catholic
+		size= 250
+
+	}
+
+	farmers = {
+		culture = lusitanian
+		religion = catholic
+		size = 1400
+	}
+	
+}
+#Las Cruces / Las Cruces (4000/1000 POPS)
+105 = {
+	aristocrats = {
+		culture = apache
+		religion = animist
+		size = 35
+	}
+
+	clergymen = {
+		culture = apache
+		religion = animist
+		size = 70
+	}
+
+	artisans = {
+		culture = apache
+		religion = animist
+		size = 300
+	}
+
+	soldiers = {
+		culture = apache
+		religion = animist
+		size= 125
+
+	}
+
+	farmers = {
+		culture = apache
+		religion = animist
+		size = 2300
+	}
+	
+	farmers = {
+		culture = apache
+		religion = catholic
+		size = 1900
+	}
+
+	farmers = {
+		culture = pueblo
+		religion = catholic
+		size = 800
+	}
+	
+	farmers = {
+		culture = pueblo
+		religion = animist
+		size = 400
+	}
+	
+	aristocrats = {
+		culture = lusitanian
+		religion = catholic
+		size = 40
+	}
+	
+	clergymen = {
+		culture = lusitanian
+		religion = catholic
+		size = 100
+	}
+
+	artisans = {
+		culture = lusitanian
+		religion = catholic
+		size = 500
+	}
+
+	soldiers = {
+		culture = lusitanian
+		religion = catholic
+		size = 200
+	}
+
+	farmers = {
+		culture = lusitanian
+		religion = catholic
+		size = 3800
+	}
+}
+#Colorado Region (20000)
+#claimed by both Mexico and the USA/de facto under Native Control
+#Denver / Yulin (8000/2000 POPS)
+106 = {
+	aristocrats = {
+		culture = west_algonquin
+		religion = animist
+		size = 25
+	}
+
+	clergymen = {
+		culture = west_algonquin
+		religion = animist
+		size = 50
+	}
+
+	artisans = {
+		culture = west_algonquin
+		religion = animist
+		size = 100
+	}
+
+	soldiers = {
+		culture = west_algonquin
+		religion = animist
+		size= 25
+
+	}
+
+	farmers = {
+		culture = west_algonquin
+		religion = animist
+		size = 1800
+	}
+}
+#Grand Junction / Dekuan (4000/1000 POPS)
+107 = {
+
+	aristocrats = {
+		culture = shoshone
+		religion = taiping
+		size = 20
+	}
+	
+	clergymen = {
+		culture = shoshone
+		religion = taiping
+		size = 20
+	}
+	
+	bureaucrats = {
+		culture = shoshone
+		religion = taiping
+		size = 20
+	}
+
+	farmers = {
+		culture = shoshone
+		religion = taiping
+		size = 1090
+	}
+	
+	artisans = {
+		culture = shoshone
+		religion = taiping
+		size = 820
+	}
+	
+	farmers = {
+		culture = shoshone
+		religion = animist
+		size = 1710
+	}
+	
+	farmers = {
+		culture = qingqiuan
+		religion = taiping
+		size = 320
+	}
+	
+}
+
+97 = {
+
+	bureaucrats = {
+		culture = pueblo
+		religion = taiping
+		size = 25
+	}
+	
+	clergymen = {
+		culture = pueblo
+		religion = taiping
+		size = 25
+	}
+	
+	aristocrats = {
+		culture = pueblo
+		religion = taiping
+		size = 25
+	}
+
+	farmers = {
+		culture = pueblo
+		religion = taiping
+		size = 1200
+	}
+	
+	farmers = {
+		culture = pueblo
+		religion = catholic
+		size = 800
+	}
+	
+	farmers = {
+		culture = pueblo
+		religion = animist
+		size = 800
+	}
+	
+	farmers = {
+		culture = qingqiuan
+		religion = taiping
+		size = 1800
+	}
+	
+	farmers = {
+		culture = qingqiuan
+		religion = mahayana
+		size = 230
+	}
+}
+
+98 = {
+
+	bureaucrats = {
+		culture = pueblo
+		religion = taiping
+		size = 25
+	}
+	
+	clergymen = {
+		culture = pueblo
+		religion = taiping
+		size = 25
+	}
+	
+	aristocrats = {
+		culture = pueblo
+		religion = taiping
+		size = 25
+	}
+
+	farmers = {
+		culture = pueblo
+		religion = taiping
+		size = 1400
+	}
+	
+	farmers = {
+		culture = pueblo
+		religion = catholic
+		size = 800
+	}
+	
+	farmers = {
+		culture = pueblo
+		religion = animist
+		size = 800
+	}
+	
+	farmers = {
+		culture = qingqiuan
+		religion = taiping
+		size = 1400
+	}
+	
+	farmers = {
+		culture = qingqiuan
+		religion = mahayana
+		size = 100
+	}
+	
+	farmers = {
+		culture = lusitanian
+		religion = catholic
+		size = 400
+	}
+}
+
+#Pueblo / Laofeng (4000/1000 POPS)
+109 = {
+	aristocrats = {
+		culture = west_algonquin
+		religion = animist
+		size = 10
+	}
+
+	clergymen = {
+		culture = west_algonquin
+		religion = animist
+		size = 25
+	}
+
+	artisans = {
+		culture = west_algonquin
+		religion = animist
+		size = 50
+	}
+
+	soldiers = {
+		culture = west_algonquin
+		religion = animist
+		size= 15
+
+	}
+
+	farmers = {
+		culture = west_algonquin
+		religion = animist
+		size = 900
+	}
+}
+#Wyoming Region (28000)
+#"ruled" by the USA/de facto under Native Control
+#Cheyenne / Longshan (8000/2000 POPS)
+110 = {
+	aristocrats = {
+		culture = west_algonquin
+		religion = animist
+		size = 25
+	}
+
+	clergymen = {
+		culture = west_algonquin
+		religion = animist
+		size = 50
+	}
+
+	artisans = {
+		culture = west_algonquin
+		religion = animist
+		size = 100
+	}
+
+	soldiers = {
+		culture = west_algonquin
+		religion = animist
+		size= 25
+
+	}
+
+	farmers = {
+		culture = west_algonquin
+		religion = animist
+		size = 1800
+	}
+}
+#Cody / Changfeng (12000/3000 POPS)
+111 = {
+
+	aristocrats = {
+		culture = shoshone
+		religion = taiping
+		size = 20
+	}
+	
+	clergymen = {
+		culture = shoshone
+		religion = taiping
+		size = 20
+	}
+	
+	bureaucrats = {
+		culture = shoshone
+		religion = taiping
+		size = 20
+	}
+
+	farmers = {
+		culture = shoshone
+		religion = taiping
+		size = 1090
+	}
+	
+	artisans = {
+		culture = shoshone
+		religion = taiping
+		size = 940
+	}
+	
+	farmers = {
+		culture = shoshone
+		religion = animist
+		size = 1710
+	}
+	
+	farmers = {
+		culture = qingqiuan
+		religion = taiping
+		size = 200
+	}
+	
+}
+#Casper / Jixuan (8000/2000 POPS)
+112 = {
+	aristocrats = {
+		culture = west_algonquin
+		religion = animist
+		size = 25
+	}
+
+	clergymen = {
+		culture = west_algonquin
+		religion = animist
+		size = 50
+	}
+
+	artisans = {
+		culture = west_algonquin
+		religion = animist
+		size = 100
+	}
+
+	soldiers = {
+		culture = west_algonquin
+		religion = animist
+		size= 25
+
+	}
+
+	farmers = {
+		culture = west_algonquin
+		religion = animist
+		size = 1800
+	}
+}
+#Montana Region (32000)
+#"ruled" by the USA/de facto under Native Control
+#Bozeman / Huaxiang (8000/2000 POPS)
+113 = {
+	aristocrats = {
+		culture = west_algonquin
+		religion = animist
+		size = 25
+	}
+
+	clergymen = {
+		culture = west_algonquin
+		religion = animist
+		size = 50
+	}
+
+	artisans = {
+		culture = west_algonquin
+		religion = animist
+		size = 100
+	}
+
+	soldiers = {
+		culture = west_algonquin
+		religion = animist
+		size= 25
+
+	}
+
+	farmers = {
+		culture = west_algonquin
+		religion = animist
+		size = 1800
+	}
+}
+
+#Great Falls / Linghu (8000/2000 POPS)
+115 = {
+	artisans = {
+		culture = sioux
+		religion = animist
+		size = 50
+	}
+
+	aristocrats = {
+		culture = sioux
+		religion = animist
+		size = 20
+	}
+
+	clergymen = {
+		culture = sioux
+		religion = animist
+		size = 50
+	}
+
+	soldiers = {
+		culture = sioux
+		religion = animist
+		size= 30
+	}
+
+	farmers = {
+		culture = sioux
+		religion = animist
+		size = 1800
+	}
+}
+#Billings / Shihua (12000/3000 POPS)
+116 = {
+	aristocrats = {
+		culture = sioux
+		religion = animist
+		size = 35
+	}
+
+	clergymen = {
+		culture = sioux
+		religion = animist
+		size = 75
+	}
+
+	soldiers = {
+		culture = sioux
+		religion = animist
+		size= 40
+
+	}
+
+	farmers = {
+		culture = sioux
+		religion = animist
+		size = 2700
+	}
+
+	artisans = {
+		culture = sioux
+		religion = animist
+		size = 100
+	}
+}
+#North Dakota Region (24000)
+#"ruled" by the USA/de facto under Native Control
+#Bismarck / Slottsholme(8000/2000 POPS)
+117 = {
+	aristocrats = {
+		culture = sioux
+		religion = animist
+		size = 25
+	}
+
+	clergymen = {
+		culture = sioux
+		religion = animist
+		size = 50
+	}
+
+	artisans = {
+		culture = sioux
+		religion = animist
+		size = 100
+	}
+
+	soldiers = {
+		culture = sioux
+		religion = animist
+		size= 25
+
+	}
+
+	farmers = {
+		culture = sioux
+		religion = animist
+		size = 1800
+	}
+}
+#Minot / Kvarneby (8000/2000 POPS)
+118 = {
+	aristocrats = {
+		culture = sioux
+		religion = animist
+		size = 20
+	}
+
+	clergymen = {
+		culture = sioux
+		religion = animist
+		size = 50
+	}
+
+	artisans = {
+		culture = sioux
+		religion = animist
+		size = 100
+	}
+
+	soldiers = {
+		culture = sioux
+		religion = animist
+		size= 30
+	}
+
+	farmers = {
+		culture = sioux
+		religion = animist
+		size = 1800
+	}
+}
+#Dickinson / Drosund (8000/2000 POPS)
+119 = {
+	aristocrats = {
+		culture = sioux
+		religion = animist
+		size = 20
+	}
+
+	clergymen = {
+		culture = sioux
+		religion = animist
+		size = 50
+	}
+
+	artisans = {
+		culture = sioux
+		religion = animist
+		size = 100
+	}
+
+	soldiers = {
+		culture = sioux
+		religion = animist
+		size= 30
+
+	}
+
+	farmers = {
+		culture = sioux
+		religion = animist
+		size = 1800
+	}
+}
+#South Dakota Region (24000)
+#"ruled" by the USA/de facto under Native Control
+#Sioux Falls / Chutes-Sioux (8000/2000 POPS)
+120 = {
+	aristocrats = {
+		culture = sioux
+		religion = animist
+		size = 20
+	}
+
+	clergymen = {
+		culture = sioux
+		religion = animist
+		size = 50
+	}
+
+	artisans = {
+		culture = sioux
+		religion = animist
+		size = 100
+	}
+
+	soldiers = {
+		culture = sioux
+		religion = animist
+		size= 30
+
+	}
+
+	farmers = {
+		culture = sioux
+		religion = animist
+		size = 1800
+	}
+}
+#Dupree / Collines Noires (8000/2000 POPS)
+121 = {
+	aristocrats = {
+		culture = sioux
+		religion = animist
+		size = 25
+	}
+
+	clergymen = {
+		culture = sioux
+		religion = animist
+		size = 50
+	}
+
+	artisans = {
+		culture = sioux
+		religion = animist
+		size = 100
+	}
+
+	soldiers = {
+		culture = sioux
+		religion = animist
+		size= 25
+
+	}
+
+	farmers = {
+		culture = sioux
+		religion = animist
+		size = 1800
+	}
+}
+#Rapid City / Grandes Plaines (8000/2000 POPS)
+122 = {
+	aristocrats = {
+		culture = sioux
+		religion = animist
+		size = 20
+	}
+
+	clergymen = {
+		culture = sioux
+		religion = animist
+		size = 50
+	}
+
+	artisans = {
+		culture = sioux
+		religion = animist
+		size = 100
+	}
+
+	soldiers = {
+		culture = sioux
+		religion = animist
+		size= 30
+
+	}
+
+	farmers = {
+		culture = sioux
+		religion = animist
+		size = 4584
+	}
+}
+#Nebraska Region (20000)
+#"ruled" by the USA/de facto under Native Control
+#Omaha / Omaha (8000/2000 POPS)
+123 = {
+	aristocrats = {
+		culture = sioux
+		religion = animist
+		size = 20
+	}
+
+	clergymen = {
+		culture = sioux
+		religion = animist
+		size = 50
+	}
+
+	artisans = {
+		culture = sioux
+		religion = animist
+		size = 100
+	}
+
+	soldiers = {
+		culture = sioux
+		religion = animist
+		size= 30
+
+	}
+
+	farmers = {
+		culture = sioux
+		religion = animist
+		size = 3579
+	}
+}
+#Alliance / Panimaha (4000/1000 POPS)
+124 = {
+	aristocrats = {
+		culture = sioux
+		religion = animist
+		size = 20
+	}
+
+	clergymen = {
+		culture = sioux
+		religion = animist
+		size = 50
+	}
+
+	artisans = {
+		culture = sioux
+		religion = animist
+		size = 100
+	}
+
+	soldiers = {
+		culture = sioux
+		religion = animist
+		size= 30
+
+	}
+
+	farmers = {
+		culture = sioux
+		religion = animist
+		size = 3579
+	}
+}
+#North Platte / Sauque (8000/2000 POPS)
+125 = {
+	aristocrats = { 
+		culture = plantagenian
+		religion = catholic
+		size = 67
+	}
+
+	artisans = { 
+		culture = plantagenian
+		religion = catholic
+		size = 700
+	}
+	
+	bureaucrats = { 
+		culture = plantagenian
+		religion = catholic
+		size = 65
+	}
+
+	clergymen = { 
+		culture = plantagenian
+		religion = catholic
+		size = 132
+	}
+
+	farmers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 8343
+	}
+
+	farmers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 3575
+	}
+
+	soldiers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 1000
+	}
+
+	farmers = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 98
+	}
+
+	slaves = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 42
+	}
+
+	slaves = { 
+		culture = sioux
+		religion = catholic
+		size = 490
+	}
+
+	slaves = { 
+		culture = sioux
+		religion = animist
+		size = 210
+	}
+}
+
+#Kansas Region (24000)
+#"ruled" by the USA/de facto under Native Control
+#Topeka / Topequa (8000/2000 POPS)
+126 = {
+	aristocrats = { 
+		culture = plantagenian
+		religion = catholic
+		size = 166
+	}
+
+	artisans = { 
+		culture = plantagenian
+		religion = catholic
+		size = 2000
+	}
+
+	bureaucrats = { 
+		culture = plantagenian
+		religion = catholic
+		size = 25
+	}
+
+	clergymen = { 
+		culture = plantagenian
+		religion = catholic
+		size = 666
+	}
+
+	officers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 65
+	}
+
+	farmers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 9476
+	}
+
+	farmers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 4061
+	}
+
+	soldiers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 500
+	}
+
+	farmers = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 2100
+	}
+
+	slaves = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 900
+	}
+
+}
+#Goodland / Mission St. Francois (8000/2000 POPS)
+127 = {
+	aristocrats = {
+		culture = west_algonquin
+		religion = animist
+		size = 25
+	}
+
+	clergymen = {
+		culture = west_algonquin
+		religion = animist
+		size = 50
+	}
+
+	artisans = {
+		culture = west_algonquin
+		religion = animist
+		size = 100
+	}
+
+	soldiers = {
+		culture = west_algonquin
+		religion = animist
+		size= 25
+
+	}
+
+	farmers = {
+		culture = west_algonquin
+		religion = animist
+		size = 1800
+	}
+}
+#Wichita / Wichita (8000/2000 POPS)
+128 = {
+	aristocrats = { 
+		culture = plantagenian
+		religion = catholic
+		size = 67
+	}
+
+	artisans = { 
+		culture = plantagenian
+		religion = catholic
+		size = 750
+	}
+
+	clergymen = { 
+		culture = plantagenian
+		religion = catholic
+		size = 132
+	}
+
+	farmers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 8966
+	}
+
+	farmers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 3842
+	}
+
+	soldiers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 342
+	}
+
+	farmers = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 630
+	}
+
+	slaves = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 270
+	}
+	
+	slaves = {
+		culture = native_american_minor
+		religion = animist
+		size = 200
+	}
+}
+#Oklahoma Region (32000)
+#"ruled" by the USA/de facto under Native Control
+#Oklahoma City / Ouaco (12000/3000 POPS)
+129 = {
+	aristocrats = {
+		culture = apache
+		religion = animist
+		size = 10
+	}
+
+	clergymen = {
+		culture = apache
+		religion = animist
+		size = 25
+	}
+
+	artisans = {
+		culture = apache
+		religion = animist
+		size = 50
+	}
+
+	soldiers = {
+		culture = apache
+		religion = animist
+		size = 400
+	}
+
+	farmers = {
+		culture = apache
+		religion = animist
+		size = 12300
+	}
+}
+#Tahlequah / Tahlecua (12000/3000 POPS)
+130 = {
+	aristocrats = {
+		culture = apache
+		religion = animist
+		size = 10
+	}
+
+	clergymen = {
+		culture = apache
+		religion = animist
+		size = 25
+	}
+
+	artisans = {
+		culture = apache
+		religion = animist
+		size = 50
+	}
+
+	soldiers = {
+		culture = apache
+		religion = animist
+		size = 400
+	}
+
+	farmers = {
+		culture = apache
+		religion = animist
+		size = 12300
+	}
+}
+#Texas Region (67400)
+#ruled by Texas in 1836
+#Houston / Santa Pola (16000/4000 POPS)
+132 = {
+	aristocrats = { 
+		culture = plantagenian
+		religion = catholic
+		size = 715
+	}
+
+	artisans = { 
+		culture = plantagenian
+		religion = catholic
+		size = 500
+	}
+
+	clergymen = { 
+		culture = plantagenian
+		religion = catholic
+		size = 392
+	}
+
+	farmers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 283
+	}
+
+	farmers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 5395
+	}
+
+	soldiers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 714
+	}
+
+	farmers = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 100
+	}
+
+	slaves = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 1900
+	}
+	
+	slaves = { 
+		culture = apache
+		religion = animist
+		size = 1500
+	}
+
+}
+#Austin / Benalmadena (14000/3500 POPS)
+133 = {
+	aristocrats = {
+		culture = apache
+		religion = animist
+		size = 10
+	}
+
+	clergymen = {
+		culture = apache
+		religion = animist
+		size = 25
+	}
+
+	artisans = {
+		culture = apache
+		religion = animist
+		size = 50
+	}
+
+	soldiers = {
+		culture = apache
+		religion = animist
+		size = 400
+	}
+
+	farmers = {
+		culture = apache
+		religion = animist
+		size = 12300
+	}
+}
+
+#San Antonio / Nova Lisboa (10000/2500 POPS)
+137 = {
+	aristocrats = {
+		culture = lusitanian
+		religion = catholic
+		size = 225
+	}
+	bureaucrats = {
+		culture = lusitanian
+		religion = catholic
+		size = 150
+	}
+
+	clergymen = {
+		culture = lusitanian
+		religion = catholic
+		size = 125
+	}
+	
+	artisans = {
+		culture = lusitanian
+		religion = catholic
+		size = 8000
+	}
+
+	soldiers = {
+		culture = lusitanian
+		religion = catholic
+		size = 3000
+	}
+
+	farmers = {
+		culture = lusitanian
+		religion = catholic
+		size = 38000
+	}
+	
+	farmers = {
+		culture = apache
+		religion = catholic
+		size = 2200
+	}
+	
+	aristocrats = {
+		culture = mexican
+		religion = catholic
+		size = 20
+	}
+
+	clergymen = {
+		culture = mexican
+		religion = catholic
+		size = 100
+	}
+
+	artisans = {
+		culture = mexican
+		religion = catholic
+		size = 1800
+	}
+
+	soldiers = {
+		culture = mexican
+		religion = catholic
+		size = 500
+	}
+
+	farmers = {
+		culture = mexican
+		religion = catholic
+		size = 4200
+	}
+}
+#Laredo / Laredo (6000/1500 POPS)
+138 = {
+	aristocrats = {
+		culture = lusitanian
+		religion = catholic
+		size = 100
+	}
+	clergymen = {
+		culture = lusitanian
+		religion = catholic
+		size = 200
+	}
+
+	artisans = {
+		culture = lusitanian
+		religion = catholic
+		size = 1500
+	}
+
+	soldiers = {
+		culture = lusitanian
+		religion = catholic
+		size = 1000
+	}
+
+	farmers = {
+		culture = lusitanian
+		religion = catholic
+		size = 12800
+	}
+	
+	farmers = {
+		culture = apache
+		religion = catholic
+		size = 1800
+	}
+	
+	farmers = {
+		culture = apache 
+		religion = animist
+		size = 1400
+	}
+}
+#"ruled" by Texas/de facto under Native Control
+#Dallas / Joquicingo (4400/1100 POPS)
+134 = {
+	aristocrats = {
+		culture = apache
+		religion = animist
+		size = 10
+	}
+
+	clergymen = {
+		culture = apache
+		religion = animist
+		size = 25
+	}
+
+	artisans = {
+		culture = apache
+		religion = animist
+		size = 50
+	}
+
+	soldiers = {
+		culture = apache
+		religion = animist
+		size = 400
+	}
+
+	farmers = {
+		culture = apache
+		religion = animist
+		size = 12300
+	}
+}
+#Lubbock / Apaseo el Grande (8000/2000 POPS)
+135 = {
+	aristocrats = {
+		culture = apache
+		religion = animist
+		size = 10
+	}
+
+	clergymen = {
+		culture = apache
+		religion = animist
+		size = 25
+	}
+
+	artisans = {
+		culture = apache
+		religion = animist
+		size = 50
+	}
+
+	soldiers = {
+		culture = apache
+		religion = animist
+		size = 400
+	}
+
+	farmers = {
+		culture = apache
+		religion = animist
+		size = 12300
+	}
+}
+
+#El Paso / El Paso (9000/2250 POPS)
+136 = {
+	aristocrats = {
+		culture = apache
+		religion = animist
+		size = 35
+	}
+
+	clergymen = {
+		culture = apache
+		religion = animist
+		size = 70
+	}
+
+	artisans = {
+		culture = apache
+		religion = animist
+		size = 300
+	}
+
+	soldiers = {
+		culture = apache
+		religion = animist
+		size= 125
+
+	}
+
+	farmers = {
+		culture = apache
+		religion = animist
+		size = 2300
+	}
+	
+	farmers = {
+		culture = apache
+		religion = catholic
+		size = 1900
+	}
+
+	aristocrats = {
+		culture = lusitanian
+		religion = catholic
+		size = 40
+	}
+	
+	clergymen = {
+		culture = lusitanian
+		religion = catholic
+		size = 100
+	}
+
+	artisans = {
+		culture = lusitanian
+		religion = catholic
+		size = 500
+	}
+
+	soldiers = {
+		culture = lusitanian
+		religion = catholic
+		size = 200
+	}
+
+	farmers = {
+		culture = lusitanian
+		religion = catholic
+		size = 3800
+	}
+}
+#Louisiana Region (280000)
+#ruled by USA in 1836
+#New Orleans / Nouvelle Orleans(128000/32000 POPS)
+139 = {
+	aristocrats = { 
+		culture = plantagenian
+		religion = catholic
+		size = 5000
+	}
+
+	capitalists = { 
+		culture = plantagenian
+		religion = catholic
+		size = 1600
+	}
+
+	artisans = { 
+		culture = plantagenian
+		religion = catholic
+		size = 7250
+	}
+	
+	artisans = { 
+		culture = plantagenian
+		religion = jewish
+		size = 4000
+	}
+
+	bureaucrats = { 
+		culture = plantagenian
+		religion = catholic
+		size = 1000
+	}
+	
+	craftsmen = { 
+		culture = plantagenian
+		religion = catholic
+		size = 40000
+	}
+
+	clergymen = { 
+		culture = plantagenian
+		religion = catholic
+		size = 2000
+	}
+
+	clerks = { 
+		culture = plantagenian
+		religion = catholic
+		size = 500
+	}
+
+	officers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 1400
+	}
+
+	craftsmen = { 
+		culture = plantagenian
+		religion = catholic
+		size = 2000
+	}
+
+	soldiers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 3625
+	}
+
+	farmers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 5625
+	}
+
+	soldiers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 4000
+	}
+
+	farmers = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 4000
+	}
+
+	slaves = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 43000
+	}
+
+}
+#Baton Rouge / Baton Rouge (72000/18000 POPS)
+140 = {
+	aristocrats = { 
+		culture = plantagenian
+		religion = catholic
+		size = 715
+	}
+
+	artisans = { 
+		culture = plantagenian
+		religion = catholic
+		size = 1500
+	}
+
+	clergymen = { 
+		culture = plantagenian
+		religion = catholic
+		size = 392
+	}
+
+	farmers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 733
+	}
+
+	farmers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 13945
+	}
+
+	soldiers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 1100
+	}
+
+	farmers = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 600
+	}
+
+	slaves = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 11400
+	}
+
+}
+#Lake Charles / Lac Richard (36000/9000 POPS)
+141 = {
+	aristocrats = { 
+		culture = plantagenian
+		religion = catholic
+		size = 715
+	}
+
+	artisans = { 
+		culture = plantagenian
+		religion = catholic
+		size = 2000
+	}
+
+	clergymen = { 
+		culture = plantagenian
+		religion = catholic
+		size = 392
+	}
+
+	farmers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 17930
+	}
+
+	soldiers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 714
+	}
+
+	farmers = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 760
+	}
+
+	slaves = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 17440
+	}
+
+}
+
+#Shreveport / Brucourt (44000/11000 POPS)
+142 = {
+	aristocrats = { 
+		culture = plantagenian
+		religion = catholic
+		size = 715
+	}
+
+	artisans = { 
+		culture = plantagenian
+		religion = catholic
+		size = 1000
+	}
+
+	clergymen = { 
+		culture = plantagenian
+		religion = catholic
+		size = 392
+	}
+
+	farmers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 478
+	}
+
+	farmers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 9100
+	}
+
+	soldiers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 714
+	}
+
+	farmers = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 380
+	}
+
+	slaves = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 7220
+	}
+
+}
+#Arkansas Region (88000)
+#ruled by USA in 1836
+#Little Rock / Aux Arcs (56000/14000 POPS)
+143 = {
+	aristocrats = { 
+		culture = plantagenian
+		religion = catholic
+		size = 1000
+	}
+
+	bureaucrats = { 
+		culture = plantagenian
+		religion = catholic
+		size = 350
+	}
+
+	clergymen = { 
+		culture = plantagenian
+		religion = catholic
+		size = 1000
+	}
+
+	officers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 250
+	}
+
+	soldiers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 2200
+	}
+	
+	farmers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 260
+	}
+
+	farmers = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 1260
+	}
+
+	slaves = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 23940
+	}
+
+}
+#Hot Springs / Sources Chaudes (16000/4000 POPS)
+144 = {
+	aristocrats = { 
+		culture = plantagenian
+		religion = catholic
+		size = 715
+	}
+
+	artisans = { 
+		culture = plantagenian
+		religion = catholic
+		size = 1000
+	}
+
+	clergymen = { 
+		culture = plantagenian
+		religion = catholic
+		size = 392
+	}
+
+	farmers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 108
+	}
+
+	farmers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 2070
+	}
+
+	soldiers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 714
+	}
+
+	farmers = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 750
+	}
+
+	slaves = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 14250
+	}
+
+}
+#Fayetteville / Lipan (16000/4000 POPS)
+145 = {
+	aristocrats = { 
+		culture = plantagenian
+		religion = catholic
+		size = 67
+	}
+
+	artisans = { 
+		culture = plantagenian
+		religion = catholic
+		size = 1500
+	}
+
+	clergymen = { 
+		culture = plantagenian
+		religion = catholic
+		size = 132
+	}
+
+	farmers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 5711
+	}
+
+	farmers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 2447
+	}
+
+	soldiers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 342
+	}
+
+	farmers = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 5940
+	}
+
+	slaves = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 13860
+	}
+
+}
+#Missouri Region (365000)
+#ruled by USA in 1836
+#Saint Louis / Fort Saints Georges (188000/47000 POPS)
+146 = {
+	aristocrats = { 
+		culture = plantagenian
+		religion = catholic
+		size = 67
+	}
+
+	artisans = { 
+		culture = plantagenian
+		religion = catholic
+		size = 1500
+	}
+
+	clergymen = { 
+		culture = plantagenian
+		religion = catholic
+		size = 132
+	}
+
+	farmers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 13860
+	}
+
+	farmers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 5940
+	}
+
+	soldiers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 1540
+	}
+	
+	farmers = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 5711
+	}
+
+	slaves = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 2447
+	}
+
+	
+
+}
+#Joplin / Laneau (25000/5000 POPS)
+147 = {
+	aristocrats = { 
+		culture = plantagenian
+		religion = catholic
+		size = 715
+	}
+
+	artisans = { 
+		culture = plantagenian
+		religion = catholic
+		size = 1000
+	}
+
+	clergymen = { 
+		culture = plantagenian
+		religion = catholic
+		size = 392
+	}
+
+	farmers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 608
+	}
+
+	farmers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 11570
+	}
+
+	soldiers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 714
+	}
+
+	farmers = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 250
+	}
+
+	slaves = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 4750
+	}
+
+}
+#Malden / Ussy (40000/10000 POPS)
+148 = {
+	aristocrats = { 
+		culture = plantagenian
+		religion = catholic
+		size = 145
+	}
+
+	artisans = { 
+		culture = plantagenian
+		religion = catholic
+		size = 4374
+	}
+
+	bureaucrats = { 
+		culture = plantagenian
+		religion = catholic
+		size = 56
+	}
+
+	clergymen = { 
+		culture = plantagenian
+		religion = catholic
+		size = 582
+	}
+
+	officers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 56
+	}
+
+	farmers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 20545
+	}
+
+	farmers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 8805
+	}
+
+	soldiers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 3020
+	}
+
+	farmers = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 7000
+	}
+
+	slaves = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 3000
+	}
+
+}
+#Jefferson City / Trois Rivieres (56000/14000 POPS)
+149 = {
+	aristocrats = { 
+		culture = plantagenian
+		religion = catholic
+		size = 67
+	}
+
+	artisans = { 
+		culture = plantagenian
+		religion = catholic
+		size = 1000
+	}
+
+	clergymen = { 
+		culture = plantagenian
+		religion = catholic
+		size = 132
+	}
+
+	farmers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 11521
+	}
+
+	farmers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 4937
+	}
+
+	soldiers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 342
+	}
+
+	farmers = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 1400
+	}
+
+	slaves = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 600
+	}
+
+}
+#Kansas City / Ouachita (56000/14000 POPS)
+150 = {
+	aristocrats = { 
+		culture = plantagenian
+		religion = catholic
+		size = 67
+	}
+
+	artisans = { 
+		culture = plantagenian
+		religion = catholic
+		size = 1250
+	}
+
+	clergymen = { 
+		culture = plantagenian
+		religion = catholic
+		size = 132
+	}
+
+	farmers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 15546
+	}
+
+	farmers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 6662
+	}
+
+	soldiers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 342
+	}
+
+	farmers = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 700
+	}
+
+	slaves = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 300
+	}
+
+}
+#Iowa Region (44000)
+#ruled by the USA/parts de facto under Native Control
+#Des Moines / Sabine (12000/3000 POPS)
+151 = {
+	aristocrats = { 
+		culture = plantagenian
+		religion = catholic
+		size = 67
+	}
+
+	artisans = { 
+		culture = plantagenian
+		religion = catholic
+		size = 1250
+	}
+
+	clergymen = { 
+		culture = plantagenian
+		religion = catholic
+		size = 132
+	}
+
+	farmers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 15546
+	}
+
+	farmers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 6662
+	}
+
+	soldiers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 342
+	}
+
+	farmers = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 700
+	}
+
+	slaves = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 300
+	}
+
+}
+#Oskaloosa / Oscaluca (8000/2000 POPS)
+152 = {
+	aristocrats = { 
+		culture = plantagenian
+		religion = catholic
+		size = 67
+	}
+
+	artisans = { 
+		culture = plantagenian
+		religion = catholic
+		size = 1250
+	}
+
+	clergymen = { 
+		culture = plantagenian
+		religion = catholic
+		size = 132
+	}
+
+	farmers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 15546
+	}
+
+	farmers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 6662
+	}
+
+	soldiers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 342
+	}
+
+	farmers = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 700
+	}
+
+	slaves = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 300
+	}
+
+}
+#Cedar Rapids / Cicapou (16000/4000 POPS)
+153 = {
+	aristocrats = {
+		culture = sioux
+		religion = animist
+		size = 10
+	}
+
+	clergymen = {
+		culture = sioux
+		religion = animist
+		size = 25
+	}
+
+	artisans = {
+		culture = sioux
+		religion = animist
+		size = 50
+	}
+
+	soldiers = {
+		culture = sioux
+		religion = animist
+		size= 15
+
+	}
+
+	farmers = {
+		culture = sioux
+		religion = animist
+		size = 900
+	}
+}
+#Sioux City / Fauxe (8000/2000 POPS)
+154 = {
+	aristocrats = {
+		culture = sioux
+		religion = animist
+		size = 25
+	}
+
+	clergymen = {
+		culture = sioux
+		religion = animist
+		size = 50
+	}
+
+	artisans = {
+		culture = sioux
+		religion = animist
+		size = 100
+	}
+
+	soldiers = {
+		culture = sioux
+		religion = animist
+		size= 25
+
+	}
+
+	farmers = {
+		culture = sioux
+		religion = animist
+		size = 1800
+	}
+}
+#Minnesota Region (32000)
+#"ruled" by the USA/de facto under Native Control
+#Minneapolis / Holarborgh (8000/2000 POPS)
+155 = {
+	aristocrats = {
+		culture = sioux
+		religion = animist
+		size = 20
+	}
+
+	clergymen = {
+		culture = sioux
+		religion = animist
+		size = 50
+	}
+
+	artisans = {
+		culture = sioux
+		religion = animist
+		size = 100
+	}
+
+	soldiers = {
+		culture = sioux
+		religion = animist
+		size= 30
+
+	}
+
+	farmers = {
+		culture = sioux
+		religion = animist
+		size = 1800
+	}
+}
+#Granite Falls / Sauque (8000/2000 POPS)
+156 = {
+	aristocrats = {
+		culture = sioux
+		religion = animist
+		size = 25
+	}
+
+	clergymen = {
+		culture = sioux
+		religion = animist
+		size = 50
+	}
+
+	artisans = {
+		culture = sioux
+		religion = animist
+		size = 100
+	}
+
+	soldiers = {
+		culture = sioux
+		religion = animist
+		size= 25
+
+	}
+
+	farmers = {
+		culture = sioux
+		religion = animist
+		size = 1800
+	}
+}
+#Moorhead / Askjavidroijfjord (8000/2000 POPS)
+157 = {
+	aristocrats = {
+		culture = sioux
+		religion = animist
+		size = 20
+	}
+
+	clergymen = {
+		culture = sioux
+		religion = animist
+		size = 50
+	}
+
+	artisans = {
+		culture = sioux
+		religion = animist
+		size = 100
+	}
+
+	soldiers = {
+		culture = sioux
+		religion = animist
+		size= 30
+	}
+
+	farmers = {
+		culture = sioux
+		religion = animist
+		size = 1800
+	}
+}
+#Duluth / Jernberg (8000/2000 POPS)
+158 = {
+
+	aristocrats = {
+		culture = buyean
+		religion = mahayana
+		size = 200
+	}
+	
+	aristocrats = {
+		culture = qingqiuan
+		religion = mahayana
+		size = 200
+	}
+
+	clergymen = {
+		culture = buyean
+		religion = mahayana
+		size = 100
+	}
+
+	bureaucrats = {
+		culture = buyean
+		religion = mahayana
+		size = 100
+	}
+
+	farmers = {
+		culture = buyean
+		religion = mahayana
+		size = 5550
+	}
+	
+	artisans = {
+		culture = buyean
+		religion = mahayana
+		size = 3000
+	}
+	
+	farmers = {
+		culture = buyean
+		religion = catholic
+		size = 1300
+	}
+	
+	farmers = {
+		culture = buyean
+		religion = taiping
+		size = 1950
+	}
+	
+	farmers = {
+		culture = qingqiuan
+		religion = mahayana
+		size = 6200
+	}
+	
+	soldiers = {
+		culture = qingqiuan
+		religion = mahayana
+		size = 800
+	}
+}
+#Wisconsin Region (36000)
+#ruled by the USA/parts under de facto under Native Control
+#Milwaukee / Milwaukee (16000/4000 POPS)
+159 = {
+	aristocrats = { 
+		culture = southern_algonquin
+		religion = catholic
+		size = 140
+	}
+
+	artisans = { 
+		culture = southern_algonquin
+		religion = catholic
+		size = 350
+	}
+
+	clergymen = { 
+		culture = southern_algonquin
+		religion = catholic
+		size = 34
+	}
+
+	farmers = { 
+		culture = southern_algonquin
+		religion = catholic
+		size = 6336
+	}
+
+	soldiers = { 
+		culture = southern_algonquin
+		religion = catholic
+		size = 140
+	}
+
+}
+#Eau Claire / Asgardsala (4000/1000 POPS)
+160 = {
+	aristocrats = { 
+		culture = algonquin
+		religion = catholic
+		size = 70
+	}
+
+	artisans = { 
+		culture = algonquin
+		religion = catholic
+		size = 100
+	}
+
+	clergymen = { 
+		culture = algonquin
+		religion = catholic
+		size = 17
+	}
+
+	farmers = { 
+		culture = algonquin
+		religion = catholic
+		size = 1743
+	}
+
+	soldiers = { 
+		culture = algonquin
+		religion = catholic
+		size = 70
+	}
+
+	aristocrats = { 
+		culture = algonquin
+		religion = protestant
+		size = 70
+	}
+
+	artisans = { 
+		culture = algonquin
+		religion = protestant
+		size = 100
+	}
+
+	clergymen = { 
+		culture = algonquin
+		religion = protestant
+		size = 17
+	}
+
+	farmers = { 
+		culture = algonquin
+		religion = protestant
+		size = 1743
+	}
+
+	soldiers = { 
+		culture = algonquin
+		religion = protestant
+		size = 70
+	}
+
+}
+#Green Bay / Varaldskogen(8000/2000 POPS)
+161 = {
+	aristocrats = { 
+		culture = iroquois
+		religion = protestant
+		size = 70
+	}
+
+	artisans = { 
+		culture = iroquois
+		religion = protestant
+		size = 175
+	}
+
+	clergymen = { 
+		culture = iroquois
+		religion = protestant
+		size = 17
+	}
+
+	farmers = { 
+		culture = iroquois
+		religion = protestant
+		size = 3169
+	}
+
+	soldiers = { 
+		culture = iroquois
+		religion = protestant
+		size = 69
+	}
+
+	aristocrats = { 
+		culture = algonquin
+		religion = protestant
+		size = 14
+	}
+
+	artisans = { 
+		culture = algonquin
+		religion = protestant
+		size = 35
+	}
+
+	clergymen = { 
+		culture = algonquin
+		religion = protestant
+		size = 3
+	}
+
+	farmers = { 
+		culture = algonquin
+		religion = protestant
+		size = 634
+	}
+
+	soldiers = { 
+		culture = algonquin
+		religion = protestant
+		size = 14
+	}
+
+	aristocrats = { 
+		culture = southern_algonquin
+		religion = catholic
+		size = 56
+	}
+
+	artisans = { 
+		culture = southern_algonquin
+		religion = catholic
+		size = 139
+	}
+
+	clergymen = { 
+		culture = southern_algonquin
+		religion = catholic
+		size = 13
+	}
+
+	farmers = { 
+		culture = southern_algonquin
+		religion = catholic
+		size = 2536
+	}
+
+	soldiers = { 
+		culture = southern_algonquin
+		religion = catholic
+		size = 56
+	}
+
+}
+#Madison / Ramsoya (8000/2000 POPS)
+162 = {
+	aristocrats = { 
+		culture = algonquin
+		religion = protestant
+		size = 70
+	}
+
+	artisans = { 
+		culture = algonquin
+		religion = protestant
+		size = 75
+	}
+
+	clergymen = { 
+		culture = algonquin
+		religion = protestant
+		size = 17
+	}
+
+	farmers = { 
+		culture = algonquin
+		religion = protestant
+		size = 1268
+	}
+
+	soldiers = { 
+		culture = algonquin
+		religion = protestant
+		size = 70
+	}
+
+	aristocrats = { 
+		culture = southern_algonquin
+		religion = catholic
+		size = 70
+	}
+
+	artisans = { 
+		culture = southern_algonquin
+		religion = catholic
+		size = 75
+	}
+
+	clergymen = { 
+		culture = southern_algonquin
+		religion = catholic
+		size = 17
+	}
+
+	farmers = { 
+		culture = southern_algonquin
+		religion = catholic
+		size = 1268
+	}
+
+	soldiers = { 
+		culture = southern_algonquin
+		religion = catholic
+		size = 70
+	}
+
+}
+#Illinois Region (452000)
+#ruled by the USA
+#Chicago / Tobol (172000/43000 POPS)
+163 = {
+	aristocrats = { 
+		culture = southern_algonquin
+		religion = catholic
+		size = 576
+	}
+
+	artisans = { 
+		culture = southern_algonquin
+		religion = catholic
+		size = 2300
+	}
+
+	clergymen = { 
+		culture = southern_algonquin
+		religion = catholic
+		size = 100
+	}
+
+	farmers = { 
+		culture = southern_algonquin
+		religion = catholic
+		size = 19448
+	}
+
+	soldiers = { 
+		culture = southern_algonquin
+		religion = catholic
+		size = 576
+	}
+
+}
+#Rockford / Rabbkjolgrenda (44000/11000 POPS)
+164 = {
+	aristocrats = { 
+		culture = southern_algonquin
+		religion = catholic
+		size = 140
+	}
+
+	artisans = { 
+		culture = southern_algonquin
+		religion = catholic
+		size = 600
+	}
+
+	clergymen = { 
+		culture = southern_algonquin
+		religion = catholic
+		size = 34
+	}
+
+	farmers = { 
+		culture = southern_algonquin
+		religion = catholic
+		size = 11086
+	}
+
+	soldiers = { 
+		culture = southern_algonquin
+		religion = catholic
+		size = 140
+	}
+
+}
+#Champaign / Telneset (36000/9000 POPS)
+165 = {
+	aristocrats = { 
+		culture = southern_algonquin
+		religion = catholic
+		size = 140
+	}
+
+	artisans = { 
+		culture = southern_algonquin
+		religion = catholic
+		size = 300
+	}
+
+	clergymen = { 
+		culture = southern_algonquin
+		religion = catholic
+		size = 34
+	}
+
+	farmers = { 
+		culture = southern_algonquin
+		religion = catholic
+		size = 5386
+	}
+
+	soldiers = { 
+		culture = southern_algonquin
+		religion = catholic
+		size = 140
+	}
+
+}
+#Peoria / Peoria (100000/25000 POPS)
+166 = {
+	aristocrats = { 
+		culture = southern_algonquin
+		religion = catholic
+		size = 140
+	}
+
+	artisans = { 
+		culture = southern_algonquin
+		religion = catholic
+		size = 650
+	}
+
+	clergymen = { 
+		culture = southern_algonquin
+		religion = catholic
+		size = 34
+	}
+
+	farmers = { 
+		culture = southern_algonquin
+		religion = catholic
+		size = 12036
+	}
+
+	soldiers = { 
+		culture = southern_algonquin
+		religion = catholic
+		size = 140
+	}
+
+}
+#Springfield / Bretteville (36000/9000 POPS)
+167 = {
+	aristocrats = { 
+		culture = southern_algonquin
+		religion = catholic
+		size = 576
+	}
+
+	artisans = { 
+		culture = southern_algonquin
+		religion = catholic
+		size = 1500
+	}
+
+	clergymen = { 
+		culture = southern_algonquin
+		religion = catholic
+		size = 100
+	}
+
+	farmers = { 
+		culture = southern_algonquin
+		religion = catholic
+		size = 12248
+	}
+
+	soldiers = { 
+		culture = southern_algonquin
+		religion = catholic
+		size = 576
+	}
+
+}
+#Carbondale / Vaux-sur-Mississippi (68000/17000 POPS)
+168 = {
+	aristocrats = { 
+		culture = southern_algonquin
+		religion = catholic
+		size = 140
+	}
+
+	artisans = { 
+		culture = southern_algonquin
+		religion = catholic
+		size = 500
+	}
+
+	clergymen = { 
+		culture = southern_algonquin
+		religion = catholic
+		size = 34
+	}
+
+	farmers = { 
+		culture = southern_algonquin
+		religion = catholic
+		size = 2186
+	}
+
+	soldiers = { 
+		culture = southern_algonquin
+		religion = catholic
+		size = 140
+	}
+
+	farmers = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 7000
+	}
+
+}
+#Indiana Region (644000)
+#ruled by the USA
+#Indianapolis / Vermundsjoen (276000/69000 POPS)
+169 = {
+	aristocrats = { 
+		culture = southern_algonquin
+		religion = catholic
+		size = 140
+	}
+
+	artisans = { 
+		culture = southern_algonquin
+		religion = catholic
+		size = 250
+	}
+
+	clergymen = { 
+		culture = southern_algonquin
+		religion = catholic
+		size = 34
+	}
+
+	farmers = { 
+		culture = southern_algonquin
+		religion = catholic
+		size = 4436
+	}
+
+	soldiers = { 
+		culture = southern_algonquin
+		religion = catholic
+		size = 140
+	}
+
+}
+#Evansville / Cantebrigge (196000/49000 POPS)
+170 = {
+	aristocrats = { 
+		culture = southern_algonquin
+		religion = catholic
+		size = 140
+	}
+
+	artisans = { 
+		culture = southern_algonquin
+		religion = catholic
+		size = 350
+	}
+
+	clergymen = { 
+		culture = southern_algonquin
+		religion = catholic
+		size = 34
+	}
+
+	farmers = { 
+		culture = southern_algonquin
+		religion = catholic
+		size = 6336
+	}
+
+	soldiers = { 
+		culture = southern_algonquin
+		religion = catholic
+		size = 140
+	}
+
+}
+#South Bend / Asmarka (44000/11000 POPS)
+171 = {
+	aristocrats = { 
+		culture = southern_algonquin
+		religion = catholic
+		size = 140
+	}
+
+	artisans = { 
+		culture = southern_algonquin
+		religion = catholic
+		size = 400
+	}
+
+	clergymen = { 
+		culture = southern_algonquin
+		religion = catholic
+		size = 34
+	}
+
+	farmers = { 
+		culture = southern_algonquin
+		religion = catholic
+		size = 7286
+	}
+
+	soldiers = { 
+		culture = southern_algonquin
+		religion = catholic
+		size = 140
+	}
+
+}
+#Fort Wayne / Trautskogen (128000/32000 POPS)
+172 = {
+	aristocrats = { 
+		culture = southern_algonquin
+		religion = catholic
+		size = 140
+	}
+
+	artisans = { 
+		culture = southern_algonquin
+		religion = catholic
+		size = 400
+	}
+
+	clergymen = { 
+		culture = southern_algonquin
+		religion = catholic
+		size = 34
+	}
+
+	farmers = { 
+		culture = southern_algonquin
+		religion = catholic
+		size = 7286
+	}
+
+	soldiers = { 
+		culture = southern_algonquin
+		religion = catholic
+		size = 140
+	}
+
+}
+#Michigan Region (148000)
+#ruled by the USA/parts under defacto native Control
+#Detroit /Lonasmoen (POPS)
+173 = {
+	aristocrats = { 
+		culture = iroquois
+		religion = protestant
+		size = 600
+	}
+
+	artisans = { 
+		culture = iroquois
+		religion = protestant
+		size = 3450
+	}
+
+	bureaucrats = { 
+		culture = iroquois
+		religion = protestant
+		size = 236
+	}
+
+	clergymen = { 
+		culture = iroquois
+		religion = protestant
+		size = 299
+	}
+
+	officers = { 
+		culture = iroquois
+		religion = protestant
+		size = 236
+	}
+
+	farmers = { 
+		culture = iroquois
+		religion = protestant
+		size = 8379
+	}
+
+	soldiers = { 
+		culture = iroquois
+		religion = protestant
+		size = 600
+	}
+
+	aristocrats = { 
+		culture = southern_algonquin
+		religion = catholic
+		size = 400
+	}
+
+	artisans = { 
+		culture = southern_algonquin
+		religion = catholic
+		size = 2300
+	}
+
+	bureaucrats = { 
+		culture = southern_algonquin
+		religion = catholic
+		size = 157
+	}
+
+	clergymen = { 
+		culture = southern_algonquin
+		religion = catholic
+		size = 200
+	}
+
+	officers = { 
+		culture = southern_algonquin
+		religion = catholic
+		size = 157
+	}
+
+	farmers = { 
+		culture = southern_algonquin
+		religion = catholic
+		size = 5586
+	}
+
+	soldiers = { 
+		culture = southern_algonquin
+		religion = catholic
+		size = 400
+	}
+
+}
+#Grand Rapids / Osmoen (POPS)
+174 = {
+	aristocrats = { 
+		culture = southern_algonquin
+		religion = catholic
+		size = 140
+	}
+
+	artisans = { 
+		culture = southern_algonquin
+		religion = catholic
+		size = 750
+	}
+
+	clergymen = { 
+		culture = southern_algonquin
+		religion = catholic
+		size = 34
+	}
+
+	farmers = { 
+		culture = southern_algonquin
+		religion = catholic
+		size = 13936
+	}
+
+	soldiers = { 
+		culture = southern_algonquin
+		religion = catholic
+		size = 140
+	}
+
+}
+#Saginaw / Saginaw (POPS)
+175 = {
+	aristocrats = { 
+		culture = algonquin
+		religion = protestant
+		size = 49
+	}
+
+	artisans = { 
+		culture = algonquin
+		religion = protestant
+		size = 174
+	}
+
+	clergymen = { 
+		culture = algonquin
+		religion = protestant
+		size = 11
+	}
+
+	farmers = { 
+		culture = algonquin
+		religion = protestant
+		size = 3217
+	}
+
+	soldiers = { 
+		culture = algonquin
+		religion = protestant
+		size = 49
+	}
+
+	aristocrats = { 
+		culture = algonquin
+		religion = catholic
+		size = 56
+	}
+
+	artisans = { 
+		culture = algonquin
+		religion = catholic
+		size = 200
+	}
+
+	clergymen = { 
+		culture = algonquin
+		religion = catholic
+		size = 13
+	}
+
+	farmers = { 
+		culture = algonquin
+		religion = catholic
+		size = 3676
+	}
+
+	soldiers = { 
+		culture = algonquin
+		religion = catholic
+		size = 55
+	}
+
+	aristocrats = { 
+		culture = iroquois
+		religion = protestant
+		size = 35
+	}
+
+	artisans = { 
+		culture = iroquois
+		religion = protestant
+		size = 124
+	}
+
+	clergymen = { 
+		culture = iroquois
+		religion = protestant
+		size = 8
+	}
+
+	farmers = { 
+		culture = iroquois
+		religion = protestant
+		size = 2298
+	}
+
+	soldiers = { 
+		culture = iroquois
+		religion = protestant
+		size = 35
+	}
+
+}
+#Traverse City / Odals Verk (POPS)
+176 = {
+	aristocrats = { 
+		culture = algonquin
+		religion = catholic
+		size = 70
+	}
+
+	artisans = { 
+		culture = algonquin
+		religion = catholic
+		size = 250
+	}
+
+	clergymen = { 
+		culture = algonquin
+		religion = catholic
+		size = 17
+	}
+
+	farmers = { 
+		culture = algonquin
+		religion = catholic
+		size = 4593
+	}
+
+	soldiers = { 
+		culture = algonquin
+		religion = catholic
+		size = 70
+	}
+
+	aristocrats = { 
+		culture = algonquin
+		religion = protestant
+		size = 70
+	}
+
+	artisans = { 
+		culture = algonquin
+		religion = protestant
+		size = 250
+	}
+
+	clergymen = { 
+		culture = algonquin
+		religion = protestant
+		size = 17
+	}
+
+	farmers = { 
+		culture = algonquin
+		religion = protestant
+		size = 4593
+	}
+
+	soldiers = { 
+		culture = algonquin
+		religion = protestant
+		size = 70
+	}
+
+}
+#Marquette / Ottestad(POPS)
+177 = {
+	aristocrats = { 
+		culture = algonquin
+		religion = protestant
+		size = 70
+	}
+
+	artisans = { 
+		culture = algonquin
+		religion = protestant
+		size = 150
+	}
+
+	clergymen = { 
+		culture = algonquin
+		religion = protestant
+		size = 17
+	}
+
+	farmers = { 
+		culture = algonquin
+		religion = protestant
+		size = 2693
+	}
+
+	soldiers = { 
+		culture = algonquin
+		religion = protestant
+		size = 70
+	}
+
+	aristocrats = { 
+		culture = algonquin
+		religion = catholic
+		size = 70
+	}
+
+	artisans = { 
+		culture = algonquin
+		religion = catholic
+		size = 150
+	}
+
+	clergymen = { 
+		culture = algonquin
+		religion = catholic
+		size = 17
+	}
+
+	farmers = { 
+		culture = algonquin
+		religion = catholic
+		size = 2693
+	}
+
+	soldiers = { 
+		culture = algonquin
+		religion = catholic
+		size = 70
+	}
+
+}
+#Ohio Region (1344000)
+#ruled by the USA
+#Cleveland / Nye Nidaros (208000/52000 POPS)
+178 = {
+	aristocrats = { 
+		culture = iroquois
+		religion = protestant
+		size = 140
+	}
+
+	artisans = { 
+		culture = iroquois
+		religion = protestant
+		size = 700
+	}
+
+	clergymen = { 
+		culture = iroquois
+		religion = protestant
+		size = 34
+	}
+
+	farmers = { 
+		culture = iroquois
+		religion = protestant
+		size = 12986
+	}
+
+	soldiers = { 
+		culture = iroquois
+		religion = protestant
+		size = 140
+	}
+
+}
+#Columbus / Skivik (268000/67000 POPS)
+179 = {
+	aristocrats = { 
+		culture = iroquois
+		religion = protestant
+		size = 140
+	}
+
+	artisans = { 
+		culture = iroquois
+		religion = protestant
+		size = 500
+	}
+
+	clergymen = { 
+		culture = iroquois
+		religion = protestant
+		size = 34
+	}
+
+	farmers = { 
+		culture = iroquois
+		religion = protestant
+		size = 9186
+	}
+
+	soldiers = { 
+		culture = iroquois
+		religion = protestant
+		size = 140
+	}
+
+}
+#Sandusky / Skjoldby (188000/47000 POPS)
+180 = {
+	aristocrats = { 
+		culture = iroquois
+		religion = protestant
+		size = 576
+	}
+
+	artisans = { 
+		culture = iroquois
+		religion = protestant
+		size = 1500
+	}
+
+	clergymen = { 
+		culture = iroquois
+		religion = protestant
+		size = 100
+	}
+
+	farmers = { 
+		culture = iroquois
+		religion = protestant
+		size = 12248
+	}
+
+	soldiers = { 
+		culture = iroquois
+		religion = protestant
+		size = 576
+	}
+
+}
+#Dayton / Stromberg (224000/56000 POPS)
+181 = {
+	aristocrats = { 
+		culture = iroquois
+		religion = protestant
+		size = 140
+	}
+
+	artisans = { 
+		culture = iroquois
+		religion = protestant
+		size = 400
+	}
+
+	clergymen = { 
+		culture = iroquois
+		religion = protestant
+		size = 34
+	}
+
+	farmers = { 
+		culture = iroquois
+		religion = protestant
+		size = 7286
+	}
+
+	soldiers = { 
+		culture = iroquois
+		religion = protestant
+		size = 140
+	}
+
+}
+#Cincinnati / Lakkness (296000/74000 POPS)
+182 = {
+	aristocrats = { 
+		culture = iroquois
+		religion = protestant
+		size = 140
+	}
+
+	artisans = { 
+		culture = iroquois
+		religion = protestant
+		size = 450
+	}
+
+	clergymen = { 
+		culture = iroquois
+		religion = protestant
+		size = 34
+	}
+
+	farmers = { 
+		culture = iroquois
+		religion = protestant
+		size = 8236
+	}
+
+	soldiers = { 
+		culture = iroquois
+		religion = protestant
+		size = 140
+	}
+
+}
+#Marietta / La Biche (160000/40000 POPS)
+183 = {
+	aristocrats = { 
+		culture = iroquois
+		religion = protestant
+		size = 140
+	}
+
+	artisans = { 
+		culture = iroquois
+		religion = protestant
+		size = 350
+	}
+
+	clergymen = { 
+		culture = iroquois
+		religion = protestant
+		size = 34
+	}
+
+	farmers = { 
+		culture = iroquois
+		religion = protestant
+		size = 6336
+	}
+
+	soldiers = { 
+		culture = iroquois
+		religion = protestant
+		size = 140
+	}
+
+}
+#Kentucky Region (740000)
+#ruled by the USA
+#Louisville / Cantorbery (156000/39000 POPS)
+184 = {
+	aristocrats = { 
+		culture = plantagenian
+		religion = catholic
+		size = 500
+	}
+
+	bureaucrats = { 
+		culture = plantagenian
+		religion = catholic
+		size = 50
+	}
+
+	clergymen = { 
+		culture = plantagenian
+		religion = catholic
+		size = 400
+	}
+
+	officers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 100
+	}
+
+	soldiers = { 
+		culture = southern_algonquin
+		religion = catholic
+		size = 1050
+	}
+
+	farmers = { 
+		culture = southern_algonquin
+		religion = catholic
+		size = 17150
+	}
+
+	soldiers = { 
+		culture = cherokee
+		religion = catholic
+		size = 50
+	}
+
+	farmers = { 
+		culture = cherokee
+		religion = catholic
+		size = 950
+	}
+
+}
+#Lexington / Colbert (332000/83000 POPS)
+185 = {
+	aristocrats = { 
+		culture = plantagenian
+		religion = catholic
+		size = 333
+	}
+
+	clergymen = { 
+		culture = plantagenian
+		religion = catholic
+		size = 166
+	}
+
+	farmers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 1109
+	}
+
+	soldiers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 333
+	}
+
+	farmers = { 
+		culture = southern_algonquin
+		religion = catholic
+		size = 16150
+	}
+
+	soldiers = { 
+		culture = southern_algonquin
+		religion = catholic
+		size = 850
+	}
+
+	farmers = { 
+		culture = cherokee
+		religion = catholic
+		size = 950
+	}
+
+	soldiers = { 
+		culture = cherokee
+		religion = catholic
+		size = 50
+	}
+
+}
+#Bowling Green / Fort Dagobert (144000/36000 POPS)
+186 = {
+	aristocrats = { 
+		culture = plantagenian
+		religion = catholic
+		size = 333
+	}
+
+	clergymen = { 
+		culture = plantagenian
+		religion = catholic
+		size = 166
+	}
+
+	farmers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 1109
+	}
+
+	soldiers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 133
+	}
+
+	farmers = { 
+		culture = southern_algonquin
+		religion = catholic
+		size = 16150
+	}
+
+	soldiers = { 
+		culture = southern_algonquin
+		religion = catholic
+		size = 400
+	}
+
+	farmers = { 
+		culture = cherokee
+		religion = catholic
+		size = 950
+	}
+
+	soldiers = { 
+		culture = cherokee
+		religion = catholic
+		size = 50
+	}
+
+}
+#Paducah / Paducha (108000/27000 POPS)
+
+187 = {
+	aristocrats = { 
+		culture = plantagenian
+		religion = catholic
+		size = 1200
+	}
+
+	artisans = { 
+		culture = plantagenian
+		religion = catholic
+		size = 4000
+	}
+
+	bureaucrats = { 
+		culture = plantagenian
+		religion = catholic
+		size = 350
+	}
+
+	clergymen = { 
+		culture = plantagenian
+		religion = catholic
+		size = 1000
+	}
+
+	officers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 250
+	}
+
+	farmers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 277
+	}
+
+	farmers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 5272
+	}
+
+	soldiers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 2250
+	}
+
+	farmers = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 1280
+	}
+
+	slaves = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 24320
+	}
+
+}
+#Tennessee Region (772000)
+#ruled by the USA
+#Nashville / Arlette (396000/99000 POPS)
+188 = {
+	aristocrats = { 
+		culture = plantagenian
+		religion = catholic
+		size = 715
+	}
+
+	artisans = { 
+		culture = plantagenian
+		religion = catholic
+		size = 1250
+	}
+
+	clergymen = { 
+		culture = plantagenian
+		religion = catholic
+		size = 392
+	}
+
+	farmers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 96
+	}
+
+	farmers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 1832
+	}
+
+	soldiers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 714
+	}
+
+	farmers = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 1000
+	}
+
+	slaves = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 19000
+	}
+
+}
+#Memphis / Richelieu (128000/32000 POPS)
+189 = {
+	aristocrats = { 
+		culture = plantagenian
+		religion = catholic
+		size = 715
+	}
+
+	artisans = { 
+		culture = plantagenian
+		religion = catholic
+		size = 1500
+	}
+
+	clergymen = { 
+		culture = plantagenian
+		religion = catholic
+		size = 392
+	}
+
+	farmers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 208
+	}
+
+	farmers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 3970
+	}
+
+	soldiers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 1114
+	}
+
+	farmers = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 125
+	}
+
+	slaves = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 21375
+	}
+
+}
+#Knoxville / Bois Rouvray (116000/29000 POPS)
+190 = {
+	aristocrats = {
+		culture = cherokee
+		religion = catholic
+		size = 600
+	}
+
+	clergymen = {
+		culture = cherokee
+		religion = catholic
+		size = 200
+	}
+
+	artisans = {
+		culture = cherokee
+		religion = catholic
+		size = 1350
+	}
+
+	soldiers = {
+		culture = cherokee
+		religion = catholic
+		size= 1500
+
+	}
+
+	farmers = {
+		culture = cherokee
+		religion = catholic
+		size = 21475
+	}
+
+	clergymen = {
+		culture = afro_frankish
+		religion = catholic
+		size = 50
+	}
+
+	artisans = {
+		culture = afro_frankish
+		religion = catholic
+		size = 500
+	}
+
+	farmers = {
+		culture = afro_frankish
+		religion = catholic
+		size = 150
+	}
+
+	slaves = {
+		culture = afro_frankish
+		religion = catholic
+		size = 5300
+	}
+
+	clergymen = {
+		culture = plantagenian
+		religion = catholic
+		size = 100
+	}
+}
+#Chattanooga / Chatanouga (132000/33000 POPS)
+191 = {
+	clergymen = {
+		culture = plantagenian
+		religion = catholic
+		size = 150
+	}
+
+	aristocrats = {
+		culture = cherokee
+		religion = catholic
+		size = 575
+	}
+
+	clergymen = {
+		culture = cherokee
+		religion = catholic
+		size = 100
+	}
+
+	artisans = {
+		culture = cherokee
+		religion = catholic
+		size = 4825
+	}
+
+	soldiers = {
+		culture = cherokee
+		religion = catholic
+		size= 3100
+
+	}
+
+	farmers = {
+		culture = cherokee
+		religion = catholic
+		size = 29000
+	}
+
+	clergymen = {
+		culture = afro_frankish
+		religion = catholic
+		size = 50
+	}
+
+	artisans = {
+		culture = afro_frankish
+		religion = catholic
+		size = 350
+	}
+
+	farmers = {
+		culture = afro_frankish
+		religion = catholic
+		size = 400
+	}
+
+	slaves = {
+		culture = afro_frankish
+		religion = catholic
+		size = 15200
+	}
+
+	aristocrats = {
+		culture = plantagenian
+		religion = catholic
+		size = 125
+	}
+}
+#Mississippi Region (340000)
+#ruled by the USA
+#Jackson / Fort Bilocci (164000/41000 POPS)
+192 = {
+	aristocrats = { 
+		culture = plantagenian
+		religion = catholic
+		size = 715
+	}
+
+	artisans = { 
+		culture = plantagenian
+		religion = catholic
+		size = 1500
+	}
+
+	clergymen = { 
+		culture = plantagenian
+		religion = catholic
+		size = 392
+	}
+
+	farmers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 238
+	}
+
+	farmers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 4540
+	}
+
+	soldiers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 1123
+	}
+
+	farmers = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 320
+	}
+
+	slaves = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 20805
+	}
+
+}
+#Vicksburg / Branville (100000/25000 POPS)
+193 = {
+	aristocrats = { 
+		culture = plantagenian
+		religion = catholic
+		size = 715
+	}
+
+	artisans = { 
+		culture = plantagenian
+		religion = catholic
+		size = 1500
+	}
+
+	clergymen = { 
+		culture = plantagenian
+		religion = catholic
+		size = 392
+	}
+
+	farmers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 208
+	}
+
+	farmers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 3970
+	}
+
+	soldiers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 714
+	}
+
+	farmers = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 1125
+	}
+
+	slaves = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 21375
+	}
+
+}
+#Biloxi / Saint Francois (76000/19000 POPS)
+194 = {
+	aristocrats = { 
+		culture = plantagenian
+		religion = catholic
+		size = 715
+	}
+
+	artisans = { 
+		culture = plantagenian
+		religion = catholic
+		size = 2500
+	}
+
+	clergymen = { 
+		culture = plantagenian
+		religion = catholic
+		size = 392
+	}
+
+	farmers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 1133
+	}
+
+	farmers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 21545
+	}
+
+	soldiers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 714
+	}
+
+	farmers = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 1100
+	}
+	
+	soldiers = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 50
+	}
+
+	slaves = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 21850
+	}
+
+}
+#Alabama Region (576000)
+#ruled by the USA
+#Montgomery / Blois (268000/67000 POPS)
+195 = {
+	aristocrats = { 
+		culture = plantagenian
+		religion = catholic
+		size = 715
+	}
+
+	artisans = { 
+		culture = plantagenian
+		religion = catholic
+		size = 2500
+	}
+
+	clergymen = { 
+		culture = plantagenian
+		religion = catholic
+		size = 392
+	}
+
+	farmers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 1412
+	}
+
+	farmers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 29145
+	}
+
+	soldiers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 1145
+	}
+
+	farmers = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 750
+	}
+	
+	soldiers = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 200
+	}
+
+	slaves = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 14250
+	}
+
+}
+#Tuscaloosa / Tuscalousa (168000/42000 POPS)
+196 = {
+	aristocrats = { 
+		culture = plantagenian
+		religion = catholic
+		size = 715
+	}
+
+	artisans = { 
+		culture = plantagenian
+		religion = catholic
+		size = 2000
+	}
+
+	clergymen = { 
+		culture = plantagenian
+		religion = catholic
+		size = 392
+	}
+
+	farmers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 308
+	}
+
+	farmers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 5870
+	}
+
+	soldiers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 1250
+	}
+
+	farmers = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 1500
+	}
+	
+	soldiers = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 400
+	}
+
+	slaves = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 28500
+	}
+
+}
+#Mobile / Mobile (140000/35000 POPS)
+197 = {
+	aristocrats = { 
+		culture = plantagenian
+		religion = catholic
+		size = 715
+	}
+
+	artisans = { 
+		culture = plantagenian
+		religion = catholic
+		size = 2500
+	}
+
+	clergymen = { 
+		culture = plantagenian
+		religion = catholic
+		size = 392
+	}
+
+	craftsmen = { 
+		culture = plantagenian
+		religion = catholic
+		size = 1333
+	}
+
+	farmers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 22345
+	}
+
+	soldiers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 714
+	}
+
+	farmers = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 950
+	}
+	
+	craftsmen = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 50
+	}
+	
+	soldiers = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 50
+	}
+
+	slaves = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 21050
+	}
+
+}
+#Florida Region (88000)
+#ruled by the USA
+#Tallahassee / Talahasi (32000/8000 POPS)
+198 = {
+	aristocrats = { 
+		culture = plantagenian
+		religion = catholic
+		size = 715
+	}
+
+	artisans = { 
+		culture = plantagenian
+		religion = catholic
+		size = 1250
+	}
+
+	clergymen = { 
+		culture = plantagenian
+		religion = catholic
+		size = 392
+	}
+
+	farmers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 596
+	}
+
+	farmers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 11332
+	}
+
+	soldiers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 714
+	}
+
+	farmers = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 500
+	}
+	
+	soldiers = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 50
+	}
+
+	slaves = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 9500
+	}
+
+}
+#St Augustine / San Marco (48000/12000 POPS)
+199 = {
+	aristocrats = {
+		culture = athesian
+		religion = catholic
+		size = 150
+	}
+
+	capitalists = {
+		culture = athesian
+		religion = catholic
+		size = 3
+	}
+
+	officers = {
+		culture = athesian
+		religion = catholic
+		size = 200
+	}
+
+	bureaucrats = {
+		culture = athesian
+		religion = catholic
+		size = 10
+	}
+
+	clergymen = {
+		culture = athesian
+		religion = catholic
+		size = 850
+	}
+
+	artisans = {
+		culture = athesian
+		religion = catholic
+		size = 10000
+	}
+
+	soldiers = {
+		culture = athesian
+		religion = catholic
+		size = 1100
+	}
+
+	farmers = {
+		culture = athesian
+		religion = catholic
+		size = 23000
+	}
+
+	clergymen = {
+		culture = afro_latino
+		religion = catholic
+		size = 410
+	}
+
+	artisans = {
+		culture = afro_latino
+		religion = catholic
+		size = 3780
+	}
+
+	soldiers = {
+		culture = afro_latino
+		religion = catholic
+		size = 50
+	}
+	
+	farmers = {
+		culture = afro_latino
+		religion = catholic
+		size = 459
+	}
+
+	slaves = {
+		culture = afro_latino
+		religion = catholic
+		size = 7000
+	}
+
+	slaves = {
+		culture = native_american_minor
+		religion = animist
+		size = 489
+	}
+}
+#Tampa (8000/2000 POPS)
+200 = {
+
+	clergymen = {
+		culture = afro_latino
+		religion = catholic
+		size = 145
+	}
+	
+	soldiers = {
+		culture = afro_latino
+		religion = catholic
+		size = 400
+	}
+	
+	artisans = { 
+		culture = afro_latino
+		religion = catholic
+		size = 1000
+	}
+
+	farmers = {
+		culture = afro_latino
+		religion = catholic
+		size = 8450
+	}
+
+
+	artisans = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 1000
+	}
+	
+	soldiers  = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 1000
+	}
+
+	farmers = {
+		culture = afro_frankish
+		religion = catholic
+		size = 8450
+	}
+	
+	aristocrats = { 
+		culture = native_american_minor
+		religion = animist
+		size = 150
+	} 
+	
+	farmers = {
+		culture = native_american_minor
+		religion = animist
+		size = 9500
+	}
+	
+}
+#Georgia Region (628000)
+#ruled by the USA
+#Atlanta / Fort de Toulouse (244000/61000 POPS)
+201 = {
+	aristocrats = { 
+		culture = plantagenian
+		religion = catholic
+		size = 1000
+	}
+
+	artisans = { 
+		culture = plantagenian
+		religion = catholic
+		size = 6000
+	}
+
+	bureaucrats = { 
+		culture = plantagenian
+		religion = catholic
+		size = 350
+	}
+
+	clergymen = { 
+		culture = plantagenian
+		religion = catholic
+		size = 1000
+	}
+
+	officers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 250
+	}
+
+	farmers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 147
+	}
+
+	farmers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 2802
+	}
+
+	soldiers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 2250
+	}
+
+	farmers = { 
+		culture = cherokee
+		religion = catholic
+		size = 210
+	}
+
+	farmers = { 
+		culture = cherokee
+		religion = catholic
+		size = 3990
+	}
+
+	farmers = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 2100
+	}
+	
+	soldiers = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 500
+	}
+
+	slaves = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 39900
+	}
+
+}
+#Saint Augustin
+3267 = {
+	aristocrats = { 
+		culture = plantagenian
+		religion = catholic
+		size = 400
+	}
+
+	artisans = { 
+		culture = plantagenian
+		religion = catholic
+		size = 1250
+	}
+
+	clergymen = { 
+		culture = plantagenian
+		religion = catholic
+		size = 400
+	}
+
+	officers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 233
+	}
+
+	farmers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 1711
+	}
+
+	farmers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 15405
+	}
+
+	soldiers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 600
+	}
+
+	farmers = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 500
+	}
+	soldiers = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 40
+	}
+
+	slaves = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 4500
+	}
+
+}
+
+#Valdosta / Crevecoeur (44000/11000 POPS)
+202 = {
+	aristocrats = { 
+		culture = plantagenian
+		religion = catholic
+		size = 400
+	}
+
+	artisans = { 
+		culture = plantagenian
+		religion = catholic
+		size = 2250
+	}
+
+	clergymen = { 
+		culture = plantagenian
+		religion = catholic
+		size = 400
+	}
+
+	farmers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 130
+	}
+
+	farmers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 1170
+	}
+
+	soldiers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 600
+	}
+
+	farmers = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 4005
+	}
+	soldiers = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 4005
+	}
+
+	slaves = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 36045
+	}
+
+}
+#Savannah / Port Louis (200000/50000 POPS)
+204 = {
+	aristocrats = { 
+		culture = plantagenian
+		religion = catholic
+		size = 1000
+	}
+
+	artisans = { 
+		culture = plantagenian
+		religion = catholic
+		size = 5500
+	}
+
+	bureaucrats = { 
+		culture = plantagenian
+		religion = catholic
+		size = 466
+	}
+
+	clergymen = { 
+		culture = plantagenian
+		religion = catholic
+		size = 2155
+	}
+
+	officers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 233
+	}
+
+	farmers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 2758
+	}
+
+	farmers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 21822
+	}
+
+	soldiers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 2666
+	}
+
+	farmers = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 1540
+	}
+	
+	soldiers = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 300
+	}
+
+	slaves = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 16860
+	}
+
+}
+#Augusta / Gueron (140000/35000 POPS)
+2555 = {
+	aristocrats = { 
+		culture = plantagenian
+		religion = catholic
+		size = 400
+	}
+
+	artisans = { 
+		culture = plantagenian
+		religion = catholic
+		size = 2500
+	}
+
+	clergymen = { 
+		culture = plantagenian
+		religion = catholic
+		size = 400
+	}
+
+	farmers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 360
+	}
+
+	farmers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 3240
+	}
+
+	soldiers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 600
+	}
+
+	farmers = { 
+		culture = cherokee
+		religion = catholic
+		size = 250
+	}
+
+	farmers = { 
+		culture = cherokee
+		religion = catholic
+		size = 2250
+	}
+
+	farmers = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 4000
+	}
+	
+	soldiers = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 400
+	}
+
+	slaves = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 36000
+	}
+
+}
+#South Carolina Region (588000)
+#ruled by the USA
+#Charleston / Amiral St Clair (248000/61000 POPS)
+205 = {
+	aristocrats = { 
+		culture = plantagenian
+		religion = catholic
+		size = 1000
+	}
+
+	artisans = { 
+		culture = plantagenian
+		religion = catholic
+		size = 9000
+	}
+
+	bureaucrats = { 
+		culture = plantagenian
+		religion = catholic
+		size = 466
+	}
+
+	clergymen = { 
+		culture = plantagenian
+		religion = catholic
+		size = 2155
+	}
+
+	officers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 233
+	}
+
+	farmers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 968
+	}
+
+	farmers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 8712
+	}
+
+	soldiers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 2666
+	}
+
+	farmers = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 6480
+	}
+	
+	soldiers = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 451
+	}
+
+	slaves = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 58320
+	}
+
+}
+#Columbia / Resurrection (340000/85000 POPS)
+206 = {
+	aristocrats = { 
+		culture = plantagenian
+		religion = catholic
+		size = 400
+	}
+
+	artisans = { 
+		culture = plantagenian
+		religion = catholic
+		size = 3000
+	}
+
+	clergymen = { 
+		culture = plantagenian
+		religion = catholic
+		size = 400
+	}
+
+	officers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 233
+	}
+
+	farmers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 1396
+	}
+
+	farmers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 12570
+	}
+
+	soldiers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 800
+	}
+
+	farmers = { 
+		culture = cherokee
+		religion = catholic
+		size = 180
+	}
+
+	farmers = { 
+		culture = cherokee
+		religion = catholic
+		size = 1620
+	}
+
+	farmers = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 3960
+	}
+	
+	soldiers = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 90
+	}
+
+	slaves = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 35640
+	}
+
+}
+#North Carolina Region (736000)
+#ruled by the USA
+#Greenville / Saint Raphael (96000/27000 POPS)
+207 = {
+	aristocrats = { 
+		culture = plantagenian
+		religion = catholic
+		size = 400
+	}
+
+	artisans = { 
+		culture = plantagenian
+		religion = catholic
+		size = 4156
+	}
+
+	clergymen = { 
+		culture = plantagenian
+		religion = catholic
+		size = 400
+	}
+
+	officers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 233
+	}
+
+	farmers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 19410
+	}
+
+	soldiers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 600
+	}
+
+	farmers = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 1480
+	}
+
+	slaves = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 13320
+	}
+
+}
+#Raleigh / Julie (156000/39000 POPS)
+208 = {
+	aristocrats = { 
+		culture = plantagenian
+		religion = catholic
+		size = 400
+	}
+
+	artisans = { 
+		culture = plantagenian
+		religion = catholic
+		size = 1750
+	}
+
+	clergymen = { 
+		culture = plantagenian
+		religion = catholic
+		size = 400
+	}
+
+	officers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 233
+	}
+
+	farmers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 2146
+	}
+
+	farmers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 17320
+	}
+
+	soldiers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 600
+	}
+
+	farmers = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 1015
+	}
+	
+	soldiers = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 50
+	}
+
+	slaves = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 11135
+	}
+
+}
+#Charlotte / Richardville (136000/34000 POPS)
+209 = {
+	aristocrats = { 
+		culture = plantagenian
+		religion = catholic
+		size = 400
+	}
+
+	artisans = { 
+		culture = plantagenian
+		religion = catholic
+		size = 4956
+	}
+
+	clergymen = { 
+		culture = plantagenian
+		religion = catholic
+		size = 400
+	}
+
+	officers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 233
+	}
+
+	farmers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 8610
+	}
+
+	soldiers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 600
+	}
+
+	farmers = { 
+		culture = cherokee
+		religion = catholic
+		size = 400
+	}
+
+	farmers = { 
+		culture = cherokee
+		religion = catholic
+		size = 3600
+	}
+
+	farmers = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 6080
+	}
+	
+	soldiers = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 300
+	}
+
+	slaves = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 54720
+	}
+
+}
+#Wilmington / Bourg-du-Roi(188000/47000 POPS)
+210 = {
+	aristocrats = { 
+		culture = plantagenian
+		religion = catholic
+		size = 400
+	}
+
+	artisans = { 
+		culture = plantagenian
+		religion = catholic
+		size = 15250
+	}
+
+	clergymen = { 
+		culture = plantagenian
+		religion = catholic
+		size = 400
+	}
+
+	officers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 233
+	}
+
+	farmers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 6661
+	}
+
+	farmers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 40955
+	}
+
+	soldiers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 600
+	}
+
+	farmers = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 3150
+	}
+
+	slaves = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 37350
+	}
+
+}
+#Asheville / Madeleine (148000/37000 POPS)
+2556 = {
+	aristocrats = {
+		culture = cherokee
+		religion = catholic
+		size = 600
+	}
+
+	clergymen = {
+		culture = cherokee
+		religion = catholic
+		size = 200
+	}
+
+	artisans = {
+		culture = cherokee
+		religion = catholic
+		size = 1350
+	}
+
+	soldiers = {
+		culture = cherokee
+		religion = catholic
+		size= 1500
+
+	}
+
+	farmers = {
+		culture = cherokee
+		religion = catholic
+		size = 25475
+	}
+
+	clergymen = {
+		culture = afro_frankish
+		religion = catholic
+		size = 50
+	}
+
+	artisans = {
+		culture = afro_frankish
+		religion = catholic
+		size = 500
+	}
+
+	farmers = {
+		culture = afro_frankish
+		religion = catholic
+		size = 150
+	}
+
+	slaves = {
+		culture = afro_frankish
+		religion = catholic
+		size = 1300
+	}
+
+	clergymen = {
+		culture = plantagenian
+		religion = catholic
+		size = 100
+	}
+}
+#Virginia Region (1016000)
+#ruled by the USA
+#Richmond / Villefranche (340000/85000 POPS)
+211 = {
+	aristocrats = { 
+		culture = plantagenian
+		religion = catholic
+		size = 400
+	}
+
+	artisans = { 
+		culture = plantagenian
+		religion = catholic
+		size = 2500
+	}
+
+	clergymen = { 
+		culture = plantagenian
+		religion = catholic
+		size = 400
+	}
+
+	officers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 233
+	}
+
+	farmers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 1086
+	}
+
+	farmers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 9780
+	}
+
+	soldiers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 600
+	}
+
+	farmers = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 3500
+	}
+	
+	soldiers = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 300
+	}
+
+	slaves = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 31500
+	}
+
+}
+#Manassas / Pont Vedrin (68000/17000 POPS)
+212 = {
+	aristocrats = { 
+		culture = septiman
+		religion = protestant
+		size = 235
+	}
+
+	artisans = { 
+		culture = septiman
+		religion = protestant
+		size = 3500
+	}
+
+	clergymen = { 
+		culture = septiman
+		religion = protestant
+		size = 516
+	}
+
+	farmers = { 
+		culture = septiman
+		religion = protestant
+		size = 12000
+	}
+
+	soldiers = { 
+		culture = septiman
+		religion = protestant
+		size = 1750
+	}
+
+	farmers = { 
+		culture = septiman
+		religion = catholic
+		size = 14500
+	}
+
+	slaves = { 
+		culture = afro_frankish
+		religion = protestant
+		size = 20000
+	}
+
+	slaves = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 17500
+	}
+
+}
+#Fredericksburg / Cap Morlanwelz (116000/29000 POPS)
+213 = {
+	aristocrats = { 
+		culture = septiman
+		religion = protestant
+		size = 235
+	}
+
+	artisans = { 
+		culture = septiman
+		religion = protestant
+		size = 3000
+	}
+
+	clergymen = { 
+		culture = septiman
+		religion = protestant
+		size = 516
+	}
+
+	farmers = { 
+		culture = septiman
+		religion = protestant
+		size = 12499
+	}
+
+	soldiers = { 
+		culture = septiman
+		religion = protestant
+		size = 1750
+	}
+
+	farmers = { 
+		culture = septiman
+		religion = catholic
+		size = 6000
+	}
+
+	slaves = { 
+		culture = afro_frankish
+		religion = protestant
+		size = 24000
+	}
+
+	slaves = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 18000
+	}
+
+}
+#Norfolk / Vierset (108000/27000 POPS)
+214 = {
+	aristocrats = { 
+		culture = plantagenian
+		religion = catholic
+		size = 400
+	}
+
+	artisans = { 
+		culture = plantagenian
+		religion = catholic
+		size = 1000
+	}
+
+	clergymen = { 
+		culture = plantagenian
+		religion = catholic
+		size = 400
+	}
+
+	officers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 233
+	}
+
+	farmers = { 
+		culture = plantagenian
+		religion = protestant
+		size = 1236
+	}
+
+	farmers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 11130
+	}
+
+	soldiers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 600
+	}
+
+	farmers = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 500
+	}
+	
+	soldiers = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 15
+	}
+
+	slaves = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 4500
+	}
+
+}
+#Staunton / Mont Mouscron (60000/15000 POPS)
+215 = {
+	aristocrats = { 
+		culture = septiman
+		religion = catholic
+		size = 117
+	}
+
+	artisans = { 
+		culture = septiman
+		religion = catholic
+		size = 1125
+	}
+
+	clergymen = { 
+		culture = septiman
+		religion = catholic
+		size = 258
+	}
+
+	farmers = { 
+		culture = septiman
+		religion = catholic
+		size = 8875
+	}
+
+	soldiers = { 
+		culture = septiman
+		religion = catholic
+		size = 875
+	}
+
+	aristocrats = { 
+		culture = septiman
+		religion = protestant
+		size = 117
+	}
+
+	artisans = { 
+		culture = septiman
+		religion = protestant
+		size = 1125
+	}
+
+	clergymen = { 
+		culture = septiman
+		religion = protestant
+		size = 258
+	}
+
+	farmers = { 
+		culture = septiman
+		religion = protestant
+		size = 8875
+	}
+
+	soldiers = { 
+		culture = septiman
+		religion = protestant
+		size = 875
+	}
+
+	slaves = { 
+		culture = afro_frankish
+		religion = protestant
+		size = 11250
+	}
+
+	slaves = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 11250
+	}
+
+}
+#Roanoke / Roanoque (120000/30000 POPS)
+216 = {
+	aristocrats = { 
+		culture = plantagenian
+		religion = catholic
+		size = 1000
+	}
+
+	artisans = { 
+		culture = plantagenian
+		religion = catholic
+		size = 5500
+	}
+
+	bureaucrats = { 
+		culture = plantagenian
+		religion = catholic
+		size = 466
+	}
+
+	clergymen = { 
+		culture = plantagenian
+		religion = catholic
+		size = 2155
+	}
+
+	officers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 233
+	}
+
+	farmers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 2648
+	}
+
+	farmers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 8832
+	}
+
+	soldiers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 850
+	}
+
+	farmers = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 3500
+	}
+	
+	soldiers = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 50
+	}
+	
+	slaves = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 34850
+	}
+
+}
+#became West Virginia in 1863
+#Wheeling / Metz (104000/26000 POPS)
+217 = {
+	aristocrats = { 
+		culture = septiman
+		religion = protestant
+		size = 66
+	}
+
+	artisans = { 
+		culture = septiman
+		religion = protestant
+		size = 1500
+	}
+
+	clergymen = { 
+		culture = septiman
+		religion = protestant
+		size = 416
+	}
+
+	farmers = { 
+		culture = septiman
+		religion = protestant
+		size = 24318
+	}
+
+	soldiers = { 
+		culture = septiman
+		religion = protestant
+		size = 700
+	}
+
+	slaves = { 
+		culture = afro_frankish
+		religion = protestant
+		size = 3000
+	}
+
+}
+#Huntington / Les Minieres (100000/25000 POPS)
+218 = {
+	aristocrats = { 
+		culture = plantagenian
+		religion = catholic
+		size = 333
+	}
+
+	clergymen = { 
+		culture = plantagenian
+		religion = catholic
+		size = 166
+	}
+
+	farmers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 207
+	}
+
+	farmers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 10
+	}
+
+	soldiers = { 
+		culture = plantagenian
+		religion = catholic
+		size = 333
+	}
+
+	farmers = { 
+		culture = cherokee
+		religion = catholic
+		size = 997
+	}
+
+	soldiers = { 
+		culture = cherokee
+		religion = catholic
+		size = 52
+	}
+
+	farmers = { 
+		culture = southern_algonquin
+		religion = catholic
+		size = 12255
+	}
+
+	soldiers = { 
+		culture = southern_algonquin
+		religion = catholic
+		size = 645
+	}
+
+}
+#Maryland Region (452000)
+#ruled by the USA
+#Baltimore / Cap Valois (212000/53000 POPS)
+219 = {
+	aristocrats = { 
+		culture = septiman
+		religion = protestant
+		size = 162
+	}
+
+	artisans = { 
+		culture = septiman
+		religion = protestant
+		size = 2321
+	}
+
+	clergymen = { 
+		culture = septiman
+		religion = protestant
+		size = 389
+	}
+
+	farmers = { 
+		culture = septiman
+		religion = protestant
+		size = 29083
+	}
+
+	soldiers = { 
+		culture = septiman
+		religion = protestant
+		size = 545
+	}
+
+	aristocrats = { 
+		culture = septiman
+		religion = catholic
+		size = 12
+	}
+
+	artisans = { 
+		culture = septiman
+		religion = catholic
+		size = 178
+	}
+
+	clergymen = { 
+		culture = septiman
+		religion = catholic
+		size = 29
+	}
+
+	farmers = { 
+		culture = septiman
+		religion = catholic
+		size = 2239
+	}
+
+	soldiers = { 
+		culture = septiman
+		religion = catholic
+		size = 42
+	}
+
+	slaves = { 
+		culture = afro_frankish
+		religion = protestant
+		size = 12500
+	}
+
+	slaves = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 2500
+	}
+
+}
+#Washington / Bruxelles-Atlantique (184000/46000 POPS)
+220 = {
+	aristocrats = { 
+		culture = septiman
+		religion = protestant
+		size = 533
+	}
+
+	capitalists = { 
+		culture = septiman
+		religion = protestant
+		size = 66
+	}
+
+	artisans = { 
+		culture = septiman
+		religion = protestant
+		size = 13333
+	}
+
+	bureaucrats = { 
+		culture = septiman
+		religion = protestant
+		size = 850
+	}
+
+	clergymen = { 
+		culture = septiman
+		religion = protestant
+		size = 666
+	}
+
+	clerks = { 
+		culture = septiman
+		religion = protestant
+		size = 333
+	}
+
+	officers = { 
+		culture = septiman
+		religion = protestant
+		size = 1019
+	}
+
+	craftsmen = { 
+		culture = septiman
+		religion = protestant
+		size = 3333
+	}
+
+	farmers = { 
+		culture = septiman
+		religion = protestant
+		size = 6868
+	}
+
+	soldiers = { 
+		culture = septiman
+		religion = protestant
+		size = 4999
+	}
+
+	aristocrats = { 
+		culture = septiman
+		religion = catholic
+		size = 266
+	}
+
+	capitalists = { 
+		culture = septiman
+		religion = catholic
+		size = 33
+	}
+
+	artisans = { 
+		culture = septiman
+		religion = catholic
+		size = 6666
+	}
+
+	bureaucrats = { 
+		culture = septiman
+		religion = catholic
+		size = 425
+	}
+
+	clergymen = { 
+		culture = septiman
+		religion = catholic
+		size = 333
+	}
+
+	clerks = { 
+		culture = septiman
+		religion = catholic
+		size = 166
+	}
+
+	officers = { 
+		culture = septiman
+		religion = catholic
+		size = 510
+	}
+
+	craftsmen = { 
+		culture = septiman
+		religion = catholic
+		size = 1666
+	}
+
+	farmers = { 
+		culture = septiman
+		religion = catholic
+		size = 3435
+	}
+
+	soldiers = { 
+		culture = septiman
+		religion = catholic
+		size = 2500
+	}
+
+	slaves = { 
+		culture = afro_frankish
+		religion = protestant
+		size = 22000
+	}
+
+	slaves = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 10000
+	}
+
+}
+#Hagerstown / Alzing (56000/14000 POPS)
+221 = {
+	aristocrats = { 
+		culture = septiman
+		religion = protestant
+		size = 250
+	}
+
+	artisans = { 
+		culture = septiman
+		religion = protestant
+		size = 4500
+	}
+
+	bureaucrats = { 
+		culture = septiman
+		religion = protestant
+		size = 150
+	}
+
+	clergymen = { 
+		culture = septiman
+		religion = protestant
+		size = 1000
+	}
+
+	officers = { 
+		culture = septiman
+		religion = protestant
+		size = 450
+	}
+
+	farmers = { 
+		culture = septiman
+		religion = protestant
+		size = 31750
+	}
+
+	soldiers = { 
+		culture = septiman
+		religion = protestant
+		size = 2400
+	}
+
+	farmers = { 
+		culture = afro_frankish
+		religion = protestant
+		size = 4500
+	}
+
+}
+#Delaware Region (76000)  
+#ruled by the USA
+#Dover / Bourg-Leblois (76000/19000 POPS)
+222 = {
+
+	capitalists = {
+		culture = kaiganese
+		religion = shinto
+		size = 120
+	}
+
+	aristocrats = {
+		culture = qingqiuan
+		religion = catholic
+		size = 1600
+	}
+	
+	capitalists = {
+		culture = qingqiuan
+		religion = catholic
+		size = 400
+	}
+	
+	bureaucrats = {
+		culture = qingqiuan
+		religion = catholic
+		size = 600
+	}
+	
+	clergymen = {
+		culture = qingqiuan
+		religion = catholic
+		size = 600
+	}
+	
+	farmers = {
+		culture = qingqiuan
+		religion = catholic
+		size = 14000
+	}
+	
+	soldiers = {
+		culture = qingqiuan
+		religion = catholic
+		size = 2400
+	}
+	
+	craftsmen = {
+		culture = qingqiuan
+		religion = catholic
+		size = 5200
+	}
+	
+	artisans = {
+		culture = qingqiuan
+		religion = catholic
+		size = 16000
+	}	
+
+	farmers = {
+		culture = qingqiuan
+		religion = mahayana
+		size = 20400
+	}
+
+	farmers = {
+		culture = qingqiuan
+		religion = taiping
+		size = 6800
+	}
+	
+	farmers = {
+		culture = lusitanian
+		religion = taiping
+		size = 4165
+	}
+	
+	farmers = {
+		culture = lusitanian
+		religion = jewish
+		size = 1785
+	}
+	
+	farmers = {
+		culture = valleyan
+		religion = catholic
+		size = 3400
+	}
+	
+	farmers = {
+		culture = valleyan
+		religion = taiping
+		size = 850
+	}
+	
+	farmers = {
+		culture = buyean
+		religion = mahayana
+		size = 3188
+	}
+	
+	farmers = {
+		culture = buyean
+		religion = taiping
+		size = 637
+	}
+	
+	farmers = {
+		culture = buyean
+		religion = catholic
+		size = 425
+	}
+
+	farmers = {
+		culture = kaiganese
+		religion = mahayana
+		size = 3613
+	}
+	
+	farmers = {
+		culture = kaiganese
+		religion = mahayana
+		size = 425
+	}
+	
+	farmers = {
+		culture = kaiganese
+		religion = mahayana
+		size = 212
+	}
+
+}
+#Pennsylvania Region (1536000)  
+#ruled by the USA
+#Philadelphia / Bourg-George (468000/117000 POPS)
+223 = {
+	aristocrats = { 
+		culture = septiman
+		religion = protestant
+		size = 162
+	}
+
+	capitalists = { 
+		culture = septiman
+		religion = protestant
+		size = 278
+	}
+
+	artisans = { 
+		culture = septiman
+		religion = protestant
+		size = 17409
+	}
+
+	bureaucrats = { 
+		culture = septiman
+		religion = protestant
+		size = 92
+	}
+
+	clergymen = { 
+		culture = septiman
+		religion = protestant
+		size = 389
+	}
+
+	clerks = { 
+		culture = septiman
+		religion = protestant
+		size = 464
+	}
+
+	craftsmen = { 
+		culture = septiman
+		religion = protestant
+		size = 4642
+	}
+
+	farmers = { 
+		culture = septiman
+		religion = protestant
+		size = 24769
+	}
+
+	soldiers = { 
+		culture = septiman
+		religion = protestant
+		size = 545
+	}
+
+	aristocrats = { 
+		culture = septiman
+		religion = catholic
+		size = 12
+	}
+
+	capitalists = { 
+		culture = septiman
+		religion = catholic
+		size = 21
+	}
+
+	artisans = { 
+		culture = septiman
+		religion = catholic
+		size = 1340
+	}
+
+	bureaucrats = { 
+		culture = septiman
+		religion = catholic
+		size = 7
+	}
+
+	clergymen = { 
+		culture = septiman
+		religion = catholic
+		size = 29
+	}
+
+	clerks = { 
+		culture = septiman
+		religion = catholic
+		size = 35
+	}
+
+	craftsmen = { 
+		culture = septiman
+		religion = catholic
+		size = 357
+	}
+
+	farmers = { 
+		culture = septiman
+		religion = catholic
+		size = 1907
+	}
+
+	soldiers = { 
+		culture = septiman
+		religion = catholic
+		size = 42
+	}
+
+	slaves = { 
+		culture = afro_frankish
+		religion = protestant
+		size = 18750
+	}
+
+	slaves = {  
+		culture = afro_frankish
+		religion = catholic
+		size = 3750
+	}
+
+}
+#Scranton / Nouvelle Anvers (164000/41000 POPS)
+224 = {
+	aristocrats = { 
+		culture = septiman
+		religion = protestant
+		size = 100
+	}
+
+	artisans = { 
+		culture = septiman
+		religion = protestant
+		size = 4500
+	}
+
+	bureaucrats = { 
+		culture = septiman
+		religion = protestant
+		size = 350
+	}
+
+	clergymen = { 
+		culture = septiman
+		religion = protestant
+		size = 1000
+	}
+
+	officers = { 
+		culture = septiman
+		religion = protestant
+		size = 350
+	}
+
+	craftsmen = { 
+		culture = septiman
+		religion = protestant
+		size = 20000
+	}
+	
+	farmers = { 
+		culture = septiman
+		religion = protestant
+		size = 12550
+	}
+
+	soldiers = { 
+		culture = septiman
+		religion = protestant
+		size = 3000
+	}
+
+	farmers = { 
+		culture = iroquois
+		religion = protestant
+		size = 1800
+	}
+
+	farmers = { 
+		culture = afro_frankish
+		religion = protestant
+		size = 1350
+	}
+
+}
+#Williamsport / Sinai (172000/43000 POPS)
+225 = {
+	aristocrats = { 
+		culture = septiman
+		religion = protestant
+		size = 62
+	}
+
+	artisans = { 
+		culture = septiman
+		religion = protestant
+		size = 1750
+	}
+
+	clergymen = { 
+		culture = septiman
+		religion = protestant
+		size = 406
+	}
+
+	farmers = { 
+		culture = septiman
+		religion = protestant
+		size = 29770
+	}
+
+	soldiers = { 
+		culture = septiman
+		religion = protestant
+		size = 562
+	}
+
+	farmers = { 
+		culture = iroquois
+		religion = protestant
+		size = 1400
+	}
+
+	farmers = { 
+		culture = afro_frankish
+		religion = protestant
+		size = 1050
+	}
+
+}
+#Harrisburg / Waldwisse (292000/73000 POPS)
+226 = {
+	aristocrats = { 
+		culture = septiman
+		religion = protestant
+		size = 175
+	}
+
+	artisans = { 
+		culture = septiman
+		religion = protestant
+		size = 2000
+	}
+
+	clergymen = { 
+		culture = septiman
+		religion = protestant
+		size = 419
+	}
+
+	farmers = { 
+		culture = septiman
+		religion = protestant
+		size = 24818
+	}
+
+	soldiers = { 
+		culture = septiman
+		religion = protestant
+		size = 588
+	}
+
+	slaves = { 
+		culture = afro_frankish
+		religion = protestant
+		size = 12000
+	}
+
+}
+#Pittsburgh / Haselbourg (332000/83000 POPS)
+227 = {
+	aristocrats = { 
+		culture = septiman
+		religion = protestant
+		size = 66
+	}
+
+	artisans = { 
+		culture = septiman
+		religion = protestant
+		size = 1500
+	}
+
+	clergymen = { 
+		culture = septiman
+		religion = protestant
+		size = 416
+	}
+
+	farmers = { 
+		culture = septiman
+		religion = protestant
+		size = 24318
+	}
+
+	soldiers = { 
+		culture = septiman
+		religion = protestant
+		size = 700
+	}
+
+	slaves = { 
+		culture = afro_frankish
+		religion = protestant
+		size = 3000
+	}
+
+}
+#Erie / Port Laurent (108000/27000 POPS)
+228 = {
+	aristocrats = { 
+		culture = iroquois
+		religion = protestant
+		size = 140
+	}
+
+	artisans = { 
+		culture = iroquois
+		religion = protestant
+		size = 750
+	}
+
+	clergymen = { 
+		culture = iroquois
+		religion = protestant
+		size = 34
+	}
+
+	farmers = { 
+		culture = iroquois
+		religion = protestant
+		size = 13936
+	}
+
+	soldiers = { 
+		culture = iroquois
+		religion = protestant
+		size = 140
+	}
+
+}
+#New Jersey Region (340000)  
+#ruled by the USA
+#Newark / Maline (156000/39000 POPS)
+229 = {
+	aristocrats = { 
+		culture = septiman
+		religion = protestant
+		size = 238
+	}
+
+	artisans = { 
+		culture = septiman
+		religion = protestant
+		size = 10000
+	}
+
+	bureaucrats = { 
+		culture = septiman
+		religion = protestant
+		size = 250
+	}
+
+	clergymen = { 
+		culture = septiman
+		religion = protestant
+		size = 1781
+	}
+
+	farmers = { 
+		culture = septiman
+		religion = protestant
+		size = 63356
+	}
+
+	soldiers = { 
+		culture = septiman
+		religion = protestant
+		size = 4375
+	}
+
+}
+#Trenton / Luther (96000/24000 POPS)
+230 = {
+	aristocrats = { 
+		culture = septiman
+		religion = protestant
+		size = 191
+	}
+
+	artisans = { 
+		culture = septiman
+		religion = protestant
+		size = 3078
+	}
+
+	bureaucrats = { 
+		culture = septiman
+		religion = protestant
+		size = 335
+	}
+
+	clergymen = { 
+		culture = septiman
+		religion = protestant
+		size = 1368
+	}
+
+	officers = { 
+		culture = septiman
+		religion = protestant
+		size = 670
+	}
+
+	farmers = { 
+		culture = septiman
+		religion = protestant
+		size = 20188
+	}
+
+	soldiers = { 
+		culture = septiman
+		religion = protestant
+		size = 3420
+	}
+
+	aristocrats = { 
+		culture = septiman
+		religion = catholic
+		size = 14
+	}
+
+	artisans = { 
+		culture = septiman
+		religion = catholic
+		size = 237
+	}
+
+	bureaucrats = { 
+		culture = septiman
+		religion = catholic
+		size = 25
+	}
+
+	clergymen = { 
+		culture = septiman
+		religion = catholic
+		size = 105
+	}
+
+	officers = { 
+		culture = septiman
+		religion = catholic
+		size = 51
+	}
+
+	farmers = { 
+		culture = septiman
+		religion = catholic
+		size = 1555
+	}
+
+	soldiers = { 
+		culture = septiman
+		religion = catholic
+		size = 263
+	}
+
+	aristocrats = { 
+		culture = septiman
+		religion = protestant
+		size = 73
+	}
+
+	artisans = { 
+		culture = septiman
+		religion = protestant
+		size = 1184
+	}
+
+	bureaucrats = { 
+		culture = septiman
+		religion = protestant
+		size = 128
+	}
+
+	clergymen = { 
+		culture = septiman
+		religion = protestant
+		size = 526
+	}
+
+	officers = { 
+		culture = septiman
+		religion = protestant
+		size = 257
+	}
+
+	slaves = { 
+		culture = afro_frankish
+		religion = protestant
+		size = 7767
+	}
+
+	slaves = { 
+		culture = afro_frankish
+		religion = protestant
+		size = 1315
+	}
+
+	slaves = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 2250
+	}
+
+}
+#Atlantic City / Port Clair (88000/22000 POPS)
+231 = {
+	aristocrats = { 
+		culture = septiman
+		religion = protestant
+		size = 162
+	}
+
+	artisans = { 
+		culture = septiman
+		religion = protestant
+		size = 2089
+	}
+
+	clergymen = { 
+		culture = septiman
+		religion = protestant
+		size = 389
+	}
+
+	farmers = { 
+		culture = septiman
+		religion = protestant
+		size = 26065
+	}
+
+	soldiers = { 
+		culture = septiman
+		religion = protestant
+		size = 545
+	}
+
+	aristocrats = { 
+		culture = septiman
+		religion = catholic
+		size = 12
+	}
+
+	artisans = { 
+		culture = septiman
+		religion = catholic
+		size = 160
+	}
+
+	clergymen = { 
+		culture = septiman
+		religion = catholic
+		size = 29
+	}
+
+	farmers = { 
+		culture = septiman
+		religion = catholic
+		size = 2007
+	}
+
+	soldiers = { 
+		culture = septiman
+		religion = catholic
+		size = 42
+	}
+
+	slaves = { 
+		culture = afro_frankish
+		religion = protestant
+		size = 11250
+	}
+
+	slaves = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 2250
+	}
+
+}
+#New York Region (2140000)  
+#ruled by the USA
+#New York / Port Valois (440000/110000 POPS)
+232 = {
+	aristocrats = { 
+		culture = septiman
+		religion = protestant
+		size = 238
+	}
+
+	artisans = { 
+		culture = septiman
+		religion = protestant
+		size = 10000
+	}
+
+	bureaucrats = { 
+		culture = septiman
+		religion = protestant
+		size = 250
+	}
+
+	clergymen = { 
+		culture = septiman
+		religion = protestant
+		size = 1781
+	}
+
+	farmers = { 
+		culture = septiman
+		religion = protestant
+		size = 84556
+	}
+
+	soldiers = { 
+		culture = septiman
+		religion = protestant
+		size = 4375
+	}
+
+	farmers = { 
+		culture = ashkenazi
+		religion = jewish
+		size = 8800
+	}
+
+}
+#Islip / Nouvelle Bruges (100000/25000 POPS)
+233 = {
+	aristocrats = { 
+		culture = septiman
+		religion = protestant
+		size = 1000
+	}
+
+	capitalists = { 
+		culture = septiman
+		religion = protestant
+		size = 1875
+	}
+
+	artisans = { 
+		culture = septiman
+		religion = protestant
+		size = 12414
+	}
+
+	bureaucrats = { 
+		culture = septiman
+		religion = protestant
+		size = 1000
+	}
+
+	clergymen = { 
+		culture = septiman
+		religion = protestant
+		size = 3562
+	}
+
+	clerks = { 
+		culture = septiman
+		religion = protestant
+		size = 1000
+	}
+
+	officers = { 
+		culture = septiman
+		religion = protestant
+		size = 1875
+	}
+
+	craftsmen = { 
+		culture = septiman
+		religion = protestant
+		size = 10000
+	}
+
+	farmers = { 
+		culture = septiman
+		religion = protestant
+		size = 114524
+	}
+
+	soldiers = { 
+		culture = septiman
+		religion = protestant
+		size = 10000
+	}
+
+	farmers = { 
+		culture = ashkenazi
+		religion = jewish
+		size = 9250
+	}
+
+	farmers = { 
+		culture = afro_frankish
+		religion = protestant
+		size = 18500
+	}
+
+}
+#Albany / Deux-Sources (332000/83000 POPS)
+234 = {
+	aristocrats = { 
+		culture = septiman
+		religion = protestant
+		size = 62
+	}
+
+	artisans = { 
+		culture = septiman
+		religion = protestant
+		size = 1500
+	}
+
+	clergymen = { 
+		culture = septiman
+		religion = protestant
+		size = 406
+	}
+
+	farmers = { 
+		culture = septiman
+		religion = protestant
+		size = 25370
+	}
+
+	soldiers = { 
+		culture = septiman
+		religion = protestant
+		size = 562
+	}
+
+	farmers = { 
+		culture = iroquois
+		religion = protestant
+		size = 1200
+	}
+
+	farmers = { 
+		culture = afro_frankish
+		religion = protestant
+		size = 900
+	}
+
+}
+#Binghamton / Blegny (352000/88000 POPS)
+235 = {
+	aristocrats = { 
+		culture = septiman
+		religion = protestant
+		size = 62
+	}
+
+	artisans = { 
+		culture = septiman
+		religion = protestant
+		size = 2000
+	}
+
+	clergymen = { 
+		culture = septiman
+		religion = protestant
+		size = 406
+	}
+
+	farmers = { 
+		culture = septiman
+		religion = protestant
+		size = 34170
+	}
+
+	soldiers = { 
+		culture = septiman
+		religion = protestant
+		size = 562
+	}
+
+	farmers = { 
+		culture = iroquois
+		religion = protestant
+		size = 1600
+	}
+
+	farmers = { 
+		culture = afro_frankish
+		religion = protestant
+		size = 1200
+	}
+
+}
+#Buffalo / Roi-Charles (244000/61000 POPS)
+236 = {
+	aristocrats = { 
+		culture = iroquois
+		religion = protestant
+		size = 576
+	}
+
+	artisans = { 
+		culture = iroquois
+		religion = protestant
+		size = 2500
+	}
+
+	clergymen = { 
+		culture = iroquois
+		religion = protestant
+		size = 100
+	}
+
+	farmers = { 
+		culture = iroquois
+		religion = protestant
+		size = 21248
+	}
+
+	soldiers = { 
+		culture = iroquois
+		religion = protestant
+		size = 576
+	}
+
+}
+#Rochester / Rosseau (176000/44000 POPS)
+237 = {
+	aristocrats = { 
+		culture = iroquois
+		religion = protestant
+		size = 140
+	}
+
+	artisans = { 
+		culture = iroquois
+		religion = protestant
+		size = 900
+	}
+
+	clergymen = { 
+		culture = iroquois
+		religion = protestant
+		size = 34
+	}
+
+	farmers = { 
+		culture = iroquois
+		religion = protestant
+		size = 16786
+	}
+
+	soldiers = { 
+		culture = iroquois
+		religion = protestant
+		size = 140
+	}
+
+}
+#Syracuse / Njiverdal (304000/76000 POPS)
+238 = {
+	clergymen = {
+		culture = iroquois
+		religion = animist
+		size = 525
+	}
+
+	artisans = {
+		culture = iroquois
+		religion = animist
+		size = 3800
+	}
+
+	soldiers = {
+		culture = iroquois
+		religion = animist
+		size= 2000
+
+	}
+
+	farmers = {
+		culture = iroquois
+		religion = animist
+		size = 49675
+	}
+}
+#Watertown / Rochefort-en-Terre (116000/29000 POPS)
+239 = {
+	aristocrats = { 
+		culture = vinlander
+		religion = protestant
+		size = 356
+	}
+
+	artisans = { 
+		culture = vinlander
+		religion = protestant
+		size = 2750
+	}
+
+	bureaucrats = { 
+		culture = vinlander
+		religion = protestant
+		size = 106
+	}
+
+	clergymen = { 
+		culture = vinlander
+		religion = protestant
+		size = 300
+	}
+
+	farmers = { 
+		culture = vinlander
+		religion = protestant
+		size = 41355
+	}
+
+	soldiers = { 
+		culture = vinlander
+		religion = protestant
+		size = 1883
+	}
+
+	farmers = { 
+		culture = afro_frankish
+		religion = catholic
+		size = 8250
+	}
+
+}
+#Plattsburgh / Geneve (76000/19000 POPS)
+240 = {
+	aristocrats = { 
+		culture = septiman
+		religion = protestant
+		size = 25
+	}
+
+	artisans = { 
+		culture = septiman
+		religion = protestant
+		size = 2000
+	}
+
+	clergymen = { 
+		culture = septiman
+		religion = protestant
+		size = 250
+	}
+
+	farmers = { 
+		culture = septiman
+		religion = protestant
+		size = 36612
+	}
+
+	soldiers = { 
+		culture = septiman
+		religion = protestant
+		size = 313
+	}
+
+	farmers = { 
+		culture = afro_frankish
+		religion = protestant
+		size = 800
+	}
+
+}
+#Connecticut Region (304000)  
+#ruled by the USA
+#Hartford / Esperance (304000/76000 POPS)
+241 = {
+	aristocrats = { 
+		culture = septiman
+		religion = protestant
+		size = 200
+	}
+
+	artisans = { 
+		culture = septiman
+		religion = protestant
+		size = 3750
+	}
+
+	clergymen = { 
+		culture = septiman
+		religion = protestant
+		size = 1438
+	}
+
+	farmers = { 
+		culture = septiman
+		religion = protestant
+		size = 63299
+	}
+
+	soldiers = { 
+		culture = septiman
+		religion = protestant
+		size = 313
+	}
+
+	farmers = { 
+		culture = afro_frankish
+		religion = protestant
+		size = 6000
+	}
+
+}
+#Rhode Island Region (104000)  
+#ruled by the USA
+#Providence / Vise (104000/26000 POPS)
+242 = {
+	aristocrats = { 
+		culture = septiman
+		religion = protestant
+		size = 200
+	}
+
+	artisans = { 
+		culture = septiman
+		religion = protestant
+		size = 3500
+	}
+
+	clergymen = { 
+		culture = septiman
+		religion = protestant
+		size = 1438
+	}
+
+	farmers = { 
+		culture = septiman
+		religion = protestant
+		size = 58949
+	}
+
+	soldiers = { 
+		culture = septiman
+		religion = protestant
+		size = 313
+	}
+
+	farmers = { 
+		culture = afro_frankish
+		religion = protestant
+		size = 5600
+	}
+
+}
+#Massachusetts Region (660000)  
+#ruled by the USA
+#Boston / Philippa (444000/111000 POPS)
+243 = {
+	aristocrats = { 
+		culture = septiman
+		religion = protestant
+		size = 500
+	}
+
+	capitalists = { 
+		culture = septiman
+		religion = protestant
+		size = 1000
+	}
+
+	artisans = { 
+		culture = septiman
+		religion = protestant
+		size = 25000
+	}
+
+	bureaucrats = { 
+		culture = septiman
+		religion = protestant
+		size = 1625
+	}
+
+	clergymen = { 
+		culture = septiman
+		religion = protestant
+		size = 4000
+	}
+
+	clerks = { 
+		culture = septiman
+		religion = protestant
+		size = 1000
+	}
+
+	craftsmen = { 
+		culture = septiman
+		religion = protestant
+		size = 10000
+	}
+
+	farmers = { 
+		culture = septiman
+		religion = protestant
+		size = 46875
+	}
+
+	soldiers = { 
+		culture = septiman
+		religion = protestant
+		size = 2000
+	}
+
+	farmers = { 
+		culture = afro_frankish
+		religion = protestant
+		size = 8000
+	}
+
+}
+#New Bedford / Cap Bon (132000/33000 POPS)
+244 = {
+	aristocrats = { 
+		culture = septiman
+		religion = protestant
+		size = 200
+	}
+
+	artisans = { 
+		culture = septiman
+		religion = protestant
+		size = 1500
+	}
+
+	clergymen = { 
+		culture = septiman
+		religion = protestant
+		size = 1438
+	}
+
+	farmers = { 
+		culture = septiman
+		religion = protestant
+		size = 24149
+	}
+
+	soldiers = { 
+		culture = septiman
+		religion = protestant
+		size = 313
+	}
+
+	farmers = { 
+		culture = afro_frankish
+		religion = protestant
+		size = 2400
+	}
+
+}
+#Pittsfield / Ville Louis (84000/21000 POPS)
+245 = {
+	aristocrats = { 
+		culture = septiman
+		religion = protestant
+		size = 200
+	}
+
+	artisans = { 
+		culture = septiman
+		religion = protestant
+		size = 2500
+	}
+
+	clergymen = { 
+		culture = septiman
+		religion = protestant
+		size = 1438
+	}
+
+	farmers = { 
+		culture = septiman
+		religion = protestant
+		size = 41549
+	}
+
+	soldiers = { 
+		culture = septiman
+		religion = protestant
+		size = 313
+	}
+
+	farmers = { 
+		culture = afro_frankish
+		religion = protestant
+		size = 4000
+	}
+
+}
+#Vermont Region (284000)  
+#ruled by the USA
+#Montpelier / Mont Rouge (284000/71000 POPS)
+246 = {
+	aristocrats = { 
+		culture = septiman
+		religion = protestant
+		size = 200
+	}
+
+	artisans = { 
+		culture = septiman
+		religion = protestant
+		size = 4000
+	}
+
+	bureaucrats = { 
+		culture = septiman
+		religion = protestant
+		size = 125
+	}
+
+	clergymen = { 
+		culture = septiman
+		religion = protestant
+		size = 2000
+	}
+
+	farmers = { 
+		culture = septiman
+		religion = protestant
+		size = 32250
+	}
+
+	soldiers = { 
+		culture = septiman
+		religion = protestant
+		size = 625
+	}
+
+	farmers = { 
+		culture = afro_frankish
+		religion = protestant
+		size = 800
+	}
+
+}
+#New Hampshire Region (276000)  
+#ruled by the USA
+#Concord / Binche (POPS)
+247 = {
+	aristocrats = { 
+		culture = septiman
+		religion = protestant
+		size = 25
+	}
+
+	artisans = { 
+		culture = septiman
+		religion = protestant
+		size = 2250
+	}
+
+	clergymen = { 
+		culture = septiman
+		religion = protestant
+		size = 250
+	}
+
+	farmers = { 
+		culture = septiman
+		religion = protestant
+		size = 41262
+	}
+
+	soldiers = { 
+		culture = septiman
+		religion = protestant
+		size = 313
+	}
+
+	farmers = { 
+		culture = afro_frankish
+		religion = protestant
+		size = 900
+	}
+
+}
+#Maine Region (432000)  
+#ruled by the USA
+#Lewiston / Hamina (240000/60000 POPS)
+248 = {
+	aristocrats = { 
+		culture = marklander
+		religion = protestant
+		size = 130
+	}
+
+	artisans = { 
+		culture = marklander
+		religion = protestant
+		size = 2000
+	}
+
+	clergymen = { 
+		culture = marklander
+		religion = protestant
+		size = 130
+	}
+
+	farmers = { 
+		culture = marklander
+		religion = protestant
+		size = 26757
+	}
+
+	soldiers = { 
+		culture = marklander
+		religion = protestant
+		size = 983
+	}
+
+	farmers = { 
+		culture = vinlander
+		religion = protestant
+		size = 10000
+	}
+
+}
+#Bangor / Vaestersund (156000/44000 POPS)
+249 = {
+	aristocrats = { 
+		culture = marklander
+		religion = protestant
+		size = 130
+	}
+
+	artisans = { 
+		culture = marklander
+		religion = protestant
+		size = 1700
+	}
+
+	clergymen = { 
+		culture = marklander
+		religion = protestant
+		size = 130
+	}
+
+	farmers = { 
+		culture = marklander
+		religion = protestant
+		size = 22557
+	}
+
+	soldiers = { 
+		culture = marklander
+		religion = protestant
+		size = 983
+	}
+
+	farmers = { 
+		culture = vinlander
+		religion = protestant
+		size = 8500
+	}
+
+}
+#ruled by the UK
+#Caribou / Markby (36000/9000 POPS)
+250 = {
+	aristocrats = { 
+		culture = vinlander
+		religion = protestant
+		size = 356
+	}
+
+	artisans = { 
+		culture = vinlander
+		religion = protestant
+		size = 1000
+	}
+
+	bureaucrats = { 
+		culture = vinlander
+		religion = protestant
+		size = 106
+	}
+
+	clergymen = { 
+		culture = vinlander
+		religion = protestant
+		size = 300
+	}
+
+	farmers = { 
+		culture = vinlander
+		religion = protestant
+		size = 16355
+	}
+
+	soldiers = { 
+		culture = vinlander
+		religion = protestant
+		size = 1883
+	}
+
+}
+
+#3383
+
+3383 = {
+	
+	farmers = {
+		culture = valleyan
+		religion = catholic
+		size = 8330
+	}
+	
+	farmers = {
+		culture = valleyan
+		religion = catholic
+		size = 3570
+	}
+	
+	artisans = {
+		culture = valleyan
+		religion = catholic
+		size = 5200
+	}
+	
+	clergymen = {
+		culture = valleyan
+		religion = catholic
+		size = 300
+	}
+	
+	bureaucrats = {
+		culture = valleyan
+		religion = catholic
+		size = 100
+	}
+	
+	soldiers = {
+		culture = valleyan
+		religion = catholic
+		size = 600
+	}
+	
+	clergymen = {
+		culture = qingqiuan
+		religion = mahayana
+		size = 200
+	}
+	
+	farmers = {
+		culture = qingqiuan
+		religion = mahayana
+		size = 15575
+	}
+	
+	farmers = {
+		culture = qingqiuan
+		religion = catholic
+		size = 4800
+	}
+
+	farmers = {
+		culture = qingqiuan
+		religion = taiping
+		size = 1225
+	}
+
+	bureaucrats = {
+		culture = qingqiuan
+		religion = mahayana
+		size = 100
+	}
+
+	soldiers = {
+		culture = qingqiuan
+		religion = mahayana
+		size = 600
+	}
+
+	farmers = {
+		culture = buyean
+		religion = mahayana
+		size = 4500
+	}
+}
+
+#Jinhe
+
+3382 = {
+
+	aristocrats = {
+		culture = valleyan
+		religion = catholic
+		size = 50
+	}
+
+	clergymen = {
+		culture = valleyan
+		religion = catholic
+		size = 50
+	}
+	
+	bureaucrats = {
+		culture = valleyan
+		religion = catholic
+		size = 25
+	}
+
+	farmers = {
+		culture = valleyan
+		religion = catholic
+		size = 5765
+	}
+	
+	farmers = {
+		culture = valleyan
+		religion = taiping
+		size = 1920
+	}
+	
+	farmers = {
+		culture = qingqiuan
+		religion = mahayana
+		size = 600
+	}
+	
+	farmers = {
+		culture = qingqiuan
+		religion = catholic
+		size = 400
+	}
+	
+	farmers = {
+		culture = qingqiuan
+		religion = taiping
+		size = 200
+	}
+	
+	soldiers = {
+		culture = qingqiuan
+		religion = mahayana
+		size = 300
+	}
+	
+	farmers = {
+		culture = buyean
+		religion = mahayana
+		size = 1100
+	}
+}
+
+#Anlin
+
+85 = {
+
+	aristocrats = {
+		culture = qingqiuan
+		religion = mahayana
+		size = 200
+	}
+	
+	clergymen = {
+		culture = qingqiuan
+		religion = mahayana
+		size = 250
+	}
+
+	bureaucrats = {
+		culture = qingqiuan
+		religion = mahayana
+		size = 50
+	}
+
+	farmers = {
+		culture = qingqiuan
+		religion = mahayana
+		size = 5560
+	}
+	
+	farmers = {
+		culture = qingqiuan
+		religion = catholic
+		size = 3150
+	}
+	
+	farmers = {
+		culture = qingqiuan
+		religion = taiping
+		size = 1450
+	}
+
+	farmers = {
+		culture = valleyan
+		religion = catholic
+		size = 1560
+	}
+	
+	farmers = {
+		culture = valleyan
+		religion = taiping
+		size = 390
+	}
+	
+	farmers = {
+		culture = buyean
+		religion = mahayana
+		size = 650
+	}
+}
+
+#Xianggu
+
+3381 = {
+
+	bureaucrats = {
+		culture = qingqiuan
+		religion = mahayana
+		size = 250
+	}
+	
+	aristocrats = {
+		culture = qingqiuan
+		religion = mahayana
+		size = 250
+	}
+	
+	clergymen = {
+		culture = qingqiuan
+		religion = mahayana
+		size = 250
+	}
+	
+	farmers = {
+		culture = qingqiuan
+		religion = mahayana
+		size = 11150
+	}
+	
+	soldiers = {
+		culture = qingqiuan
+		religion = mahayana
+		size = 1000
+	}
+
+	farmers = {
+		culture = qingqiuan
+		religion = catholic
+		size = 3500
+	}
+	
+		farmers = {
+		culture = qingqiuan
+		religion = taiping
+		size = 1750
+	}
+	
+	farmers = {
+		culture = valleyan
+		religion = catholic
+		size = 4000
+	}
+	
+	farmers = {
+		culture = valleyan
+		religion = taiping
+		size = 1000
+	}
+	
+	farmers = {
+		culture = kaiganese
+		religion = mahayana
+		size = 2000
+	}
+	
+	farmers = {
+		culture = kaiganese
+		religion = catholic
+		size = 250
+	}
+	
+	farmers = {
+		culture = kaiganese
+		religion = shinto
+		size = 250
+	}
+}
+
+3380 = {
+
+	clergymen = {
+		culture = qingqiuan
+		religion = mahayana
+		size = 350
+	}
+
+	aristocrats = {
+		culture = qingqiuan
+		religion = mahayana
+		size = 350
+	}
+	
+	bureaucrats = {
+		culture = qingqiuan
+		religion = mahayana
+		size = 175
+	}
+	
+	farmers = {
+		culture = qingqiuan
+		religion = mahayana
+		size = 19125
+	}
+	
+	soldiers = {
+		culture = qingqiuan
+		religion = mahayana
+		size = 1000
+	}
+	
+	farmers = {
+		culture = qingqiuan
+		religion = catholic
+		size = 5600
+	}
+	
+	farmers = {
+		culture = qingqiuan
+		religion = taiping
+		size = 1400
+	}
+	
+	farmers = {
+		culture = valleyan
+		religion = catholic
+		size = 4200
+	}
+	
+	farmers = {
+		culture = valleyan
+		religion = taiping
+		size = 1050
+	}
+	
+	farmers = {
+		culture = kaiganese
+		religion = mahayana
+		size = 1350
+	}
+	
+	farmers = {
+		culture = kaiganese
+		religion = shinto
+		size = 200
+	}
+	
+	farmers = {
+		culture = kaiganese
+		religion = catholic
+		size = 200
+	}	
+}
+
+2593 = {
+	aristocrats = {
+		culture = qingqiuan
+		religion = mahayana
+		size = 200
+	}
+	
+	clergymen = {
+		culture = qingqiuan
+		religion = mahayana
+		size = 100
+	}
+	
+	bureaucrats = {
+		culture = qingqiuan
+		religion = mahayana 
+		size = 50
+	}
+
+	farmers = {
+		culture = qingqiuan
+		religion = mahayana
+		size = 6700
+	}
+	
+	farmers = {
+		culture = qingqiuan
+		religion = catholic
+		size = 3200
+	}
+	
+	farmers = {
+		culture = qingqiuan
+		religion = taiping
+		size = 7200
+	}
+	
+	soldiers = {
+		culture = qingqiuan
+		religion = mahayana
+		size = 750
+	}
+	
+	farmers = {
+		culture = kaiganese
+		religion = mahayana
+		size = 1050
+	}
+	
+	farmers = {
+		culture = buyean
+		religion = mahayana
+		size = 4200
+	}
+}
+
+86 = {
+	farmers = {
+		culture = qingqiuan
+		religion = mahayana
+		size = 13900
+	}
+	
+	soldiers = {
+		culture = qingqiuan
+		religion = mahayana
+		size = 500
+	}
+	
+		clergymen = {
+		culture = qingqiuan
+		religion = mahayana
+		size = 100
+	}
+	
+		aristocrats = {
+		culture = qingqiuan
+		religion = mahayana
+		size = 250
+	}
+	
+		bureaucrats = {
+		culture = qingqiuan
+		religion = mahayana
+		size = 250
+	}
+	
+	
+	farmers = {
+		culture = qingqiuan
+		religion = mahayana
+		size = 4000
+	}
+	
+	farmers = {
+		culture = qingqiuan
+		religion = mahayana
+		size = 1000
+	}
+	
+	farmers = {
+		culture = valleyan
+		religion = catholic
+		size = 3000
+	}
+	
+	farmers = {
+		culture = valleyan
+		religion = taiping
+		size = 750
+	}
+	
+	farmers = {
+		culture = kaiganese
+		religion = mahayana
+		size = 850
+	}
+	
+	farmers = {
+		culture = kaiganese
+		religion = taiping
+		size = 250
+	}
+	
+	farmers = {
+		culture = kaiganese
+		religion = shinto
+		size = 150
+	}
+}
+
+3389 = {
+
+	aristocrats = {
+		culture = qingqiuan
+		religion = mahayana
+		size = 2000
+	}
+	
+	bureaucrats = {
+		culture = qingqiuan
+		religion = mahayana
+		size = 500
+	}
+	
+	clergymen = {
+		culture = qingqiuan
+		religion = mahayana
+		size = 500
+	}
+
+	farmers = {
+		culture = qingqiuan
+		religion = taiping
+		size = 18100
+	}
+	
+	artisans = {
+		culture = qingqiuan
+		religion = taiping
+		size = 18100
+	}
+	
+	soldiers = {
+		culture = qingqiuan
+		religion = mahayana
+		size = 2000
+	}
+	
+	farmers = {
+		culture = qingqiuan
+		religion = mahayana
+		size = 4500
+	}
+	
+	farmers = {
+		culture = shoshone
+		religion = taiping
+		size = 2750
+	}
+	
+	farmers = {
+		culture = shoshone
+		religion = animist
+		size = 2250
+	}
+	
+}
+
+3390 = {
+	aristocrats = {
+		culture = qingqiuan
+		religion = taiping
+		size = 200
+	}
+
+	clergymen = {
+		culture = qingqiuan
+		religion = taiping
+		size = 100
+	}
+	
+	bureaucrats = {
+		culture = qingqiuan
+		religion = taiping
+		size = 100
+	}
+
+	farmers = {
+		culture = qingqiuan
+		religion = taiping
+		size = 13400
+	}
+	
+	soldiers = {
+		culture = qingqiuan
+		religion = taiping
+		size = 600
+	}
+	
+	farmers = {
+		culture = qingqiuan
+		religion = mahayana
+		size = 1600
+	}
+	
+	farmers = {
+		culture = shoshone
+		religion = taiping
+		size = 2200
+	}
+	
+	farmers = {
+		culture = shoshone
+		religion = animist
+		size = 1800
+	}
+}
+
+#Okmulgee / Ocmoulji (8000/2000 POPS)
+131 = {
+	aristocrats = {
+		culture = buyean
+		religion = mahayana
+		size = 100
+	}
+
+	clergymen = {
+		culture = buyean
+		religion = mahayana
+		size = 100
+	}
+
+	farmers = {
+		culture = buyean
+		religion = catholic
+		size = 1870
+	}
+
+	soldiers = {
+		culture = buyean
+		religion = mahayana
+		size = 1000
+	}
+
+	farmers = {
+		culture = buyean
+		religion = taiping
+		size = 2810
+	}
+
+	farmers = {
+		culture = buyean
+		religion = mahayana
+		size = 12870
+	}
+	
+	farmers = {
+		culture = kaiganese
+		religion = mahayana
+		size = 2000
+	}
+	
+	farmers = {
+		culture = kaiganese
+		religion = shinto
+		size = 250
+	}
+	
+	farmers = {
+		culture = kaiganese
+		religion = shinto
+		size = 250
+	}
+	
+	farmers = {
+		culture = qingqiuan
+		religion = mahayana
+		size = 3750
+	}
+}
+
+3393 = {
+
+	clergymen = {
+		culture = shoshone
+		religion = taiping
+		size = 60
+	}
+	
+	aristocrats = {
+		culture = shoshone
+		religion = taiping
+		size = 60
+	}
+
+	bureaucrats = {
+		culture = shoshone
+		religion = taiping
+		size = 25
+	}
+
+	farmers = {
+		culture = shoshone
+		religion = taiping
+		size = 1450
+	}
+	
+	artisans = {
+		culture = shoshone
+		religion = taiping
+		size = 1200
+	}
+	
+	soldiers = {
+		culture = shoshone
+		religion = taiping
+		size = 240
+	}
+	
+	farmers = {
+		culture = shoshone
+		religion = animist
+		size = 2364
+	}
+	
+	farmers = {
+		culture = buyean
+		religion = taiping
+		size = 300
+	}
+
+	farmers = {
+		culture = qingqiuan
+		religion = taiping
+		size = 300
+	}
+}
+
+3392 = {
+	clergymen = {
+		culture = shoshone
+		religion = taiping
+		size = 40
+	}
+	
+	aristocrats = {
+		culture = shoshone
+		religion = taiping
+		size = 40
+	}
+
+	bureaucrats = {
+		culture = shoshone
+		religion = taiping
+		size = 20
+	}
+
+	farmers = {
+		culture = shoshone
+		religion = taiping
+		size = 1100
+	}
+	
+	artisans = {
+		culture = shoshone
+		religion = taiping
+		size = 800
+	}
+	
+	farmers = {
+		culture = shoshone
+		religion = animist
+		size = 1420
+	}
+	
+	soldiers = {
+		culture = shoshone
+		religion = animist
+		size = 180
+	}
+	
+	farmers = {
+		culture = qingqiuan
+		religion = taiping
+		size = 400
+	}
+	
+		farmers = {
+		culture = qingqiuan
+		religion = catholic
+		size = 200
+	}
+	
+}
+
+83 = {
+
+	clergymen = {
+		culture = shoshone
+		religion = taiping
+		size = 40
+	}
+	
+	aristocrats = {
+		culture = shoshone
+		religion = taiping
+		size = 40
+	}
+
+	bureaucrats = {
+		culture = shoshone
+		religion = taiping
+		size = 20
+	}
+
+	farmers = {
+		culture = shoshone
+		religion = taiping
+		size = 1100
+	}
+	
+	artisans = {
+		culture = shoshone
+		religion = taiping
+		size = 800
+	}
+	
+	farmers = {
+		culture = shoshone
+		religion = animist
+		size = 1520
+	}
+	
+	soldiers = {
+		culture = shoshone
+		religion = animist
+		size = 180
+	}
+	
+	farmers = {
+		culture = buyean
+		religion = taiping
+		size = 400
+	}
+	
+	farmers = {
+		culture = buyean
+		religion = catholic
+		size = 200
+	}
+	
+}
+
+91 = {
+
+	clergymen = {
+		culture = shoshone
+		religion = taiping
+		size = 40
+	}
+	
+	aristocrats = {
+		culture = shoshone
+		religion = taiping
+		size = 40
+	}
+
+	bureaucrats = {
+		culture = shoshone
+		religion = taiping
+		size = 20
+	}
+
+	farmers = {
+		culture = shoshone
+		religion = taiping
+		size = 1900
+	}
+	
+	farmers = {
+		culture = shoshone
+		religion = animist
+		size = 1520
+	}
+	
+	soldiers = {
+		culture = shoshone
+		religion = animist
+		size = 180
+	}
+	
+	farmers = {
+		culture = buyean
+		religion = taiping
+		size = 400
+	}
+	
+	farmers = {
+		culture = buyean
+		religion = catholic
+		size = 200
+	}
+	
+}
+
+93 = {
+	clergymen = {
+		culture = shoshone
+		religion = taiping
+		size = 40
+	}
+	
+	aristocrats = {
+		culture = shoshone
+		religion = taiping
+		size = 40
+	}
+
+	bureaucrats = {
+		culture = shoshone
+		religion = taiping
+		size = 20
+	}
+
+	farmers = {
+		culture = shoshone
+		religion = taiping
+		size = 1000
+	}
+	
+	artisans = {
+		culture = shoshone
+		religion = taiping
+		size = 600
+	}
+	
+	farmers = {
+		culture = shoshone
+		religion = animist
+		size = 1220
+	}
+	
+	soldiers = {
+		culture = shoshone
+		religion = animist
+		size = 180
+	}
+	
+	farmers = {
+		culture = west_algonquin
+		religion = animist
+		size = 800
+	}
+	
+	farmers = {
+		culture = west_algonquin
+		religion = taiping
+		size = 250
+	}
+	
+	farmers = {
+		culture = west_algonquin
+		religion = catholic
+		size = 150
+	}
+	
+}
+
+114 = {
+	clergymen = {
+		culture = shoshone
+		religion = taiping
+		size = 40
+	}
+	
+	aristocrats = {
+		culture = shoshone
+		religion = taiping
+		size = 40
+	}
+
+	bureaucrats = {
+		culture = shoshone
+		religion = taiping
+		size = 20
+	}
+
+	farmers = {
+		culture = shoshone
+		religion = taiping
+		size = 1000
+	}
+	
+	artisans = {
+		culture = shoshone
+		religion = taiping
+		size = 600
+	}
+	
+	farmers = {
+		culture = shoshone
+		religion = animist
+		size = 1220
+	}
+	
+	soldiers = {
+		culture = shoshone
+		religion = animist
+		size = 180
+	}
+	
+	farmers = {
+		culture = west_algonquin
+		religion = animist
+		size = 800
+	}
+	
+	farmers = {
+		culture = west_algonquin
+		religion = taiping
+		size = 250
+	}
+	
+	farmers = {
+		culture = west_algonquin
+		religion = catholic
+		size = 150
+	}
+}
+
+#Atlin / Stikine (4000/1000 POPS)
+3391 = {
+	bureaucrats = {
+		culture = qingqiuan
+		religion = taiping
+		size = 65
+	}
+
+	aristocrats = {
+		culture = qingqiuan
+		religion = taiping
+		size = 130
+	}
+
+	clergymen = {
+		culture = qingqiuan
+		religion = taiping
+		size = 130
+	}
+
+	artisans = {
+		culture = qingqiuan
+		religion = taiping
+		size = 2000
+	}
+
+	soldiers = {
+		culture = qingqiuan
+		religion = taiping
+		size= 200
+
+	}
+
+	farmers = {
+		culture = qingqiuan
+		religion = taiping
+		size = 5200
+	}
+	
+	farmers = {
+		culture = qingqiuan
+		religion = mahayana
+		size = 800
+	}
+	
+	farmers = {
+		culture = shoshone
+		religion = taiping
+		size = 3200
+	}
+	
+	farmers = {
+		culture = shoshone
+		religion = animist
+		size = 2800
+	}
+}
+
+#Elko / Dahuang(4000/1000 POPS)
+95 = {
+	aristocrats = {
+		culture = shoshone
+		religion = animist
+		size = 70
+	}
+
+	clergymen = {
+		culture = shoshone
+		religion = animist
+		size = 70
+	}
+
+	bureaucrats = {
+		culture = shoshone
+		religion = animist
+		size = 3
+	}
+
+	farmers = {
+		culture = shoshone
+		religion = taiping
+		size = 1375
+	}
+	
+	artisans = {
+		culture = shoshone
+		religion = taiping
+		size = 1200
+	}
+	
+	farmers = {
+		culture = shoshone
+		religion = animist
+		size = 2100
+	}	
+	
+	farmers = {
+		culture = qingqiuan
+		religion = taiping
+		size = 1050
+	}
+	
+	farmers = {
+		culture = qingqiuan
+		religion = mahayana
+		size = 50
+	}
+
+}
+
+94 = {
+	aristocrats = {
+		culture = shoshone
+		religion = taiping
+		size = 40
+	}
+
+	clergymen = {
+		culture = shoshone
+		religion = taiping
+		size = 40
+	}
+
+	bureaucrats = {
+		culture = shoshone
+		religion = taiping
+		size = 20
+	}
+
+	soldiers = {
+		culture = shoshone
+		religion = taiping
+		size= 180
+
+	}
+
+	farmers = {
+		culture = shoshone
+		religion = taiping
+		size = 1300
+	}
+	
+	artisans = {
+		culture = shoshone
+		religion = taiping
+		size = 1300
+	}	
+	
+	farmers = {
+		culture = shoshone
+		religion = animist
+		size = 1000
+	}	
+
+	farmers = {
+		culture = qingqiuan
+		religion = taiping
+		size = 200
+	}
+	
+	farmers = {
+		culture = qingqiuan
+		religion = mahayana
+		size = 20
+	}
+}
+
+26 = {
+	clergymen = {
+		culture = rohnnst
+		religion = protestant
+		size = 12
+	}
+
+	clergymen = {
+		culture = rohnnst
+		religion = mahayana
+		size = 13
+	}
+
+	artisans = {
+		culture = rohnnst
+		religion = protestant
+		size = 25
+	}
+
+	artisans = {
+		culture = rohnnst
+		religion = mahayana
+		size = 25
+	}
+
+	soldiers = {
+		culture = rohnnst
+		religion = protestant
+		size= 7
+	}
+
+	soldiers = {
+		culture = rohnnst
+		religion = mahayana
+		size = 8
+	}
+
+	farmers = {
+		culture = rohnnst
+		religion = protestant
+		size = 450
+	}
+
+	farmers = {
+		culture = rohnnst
+		religion = mahayana
+		size = 460
+	}
+
+	aristocrats = {
+		culture = west_algonquin
+		religion = animist
+		size = 10
+	}
+
+	clergymen = {
+		culture = west_algonquin
+		religion = animist
+		size = 25
+	}
+
+	artisans = {
+		culture = west_algonquin
+		religion = animist
+		size = 50
+	}
+
+	soldiers = {
+		culture = west_algonquin
+		religion = animist
+		size= 15
+
+	}
+
+	farmers = {
+		culture = west_algonquin
+		religion = animist
+		size = 900
+	}
+}
+
+25 = {
+	aristocrats = {
+		culture = rohnnst
+		religion = protestant
+		size = 25
+	}
+
+	clergymen = {
+		culture = rohnnst
+		religion = protestant
+		size = 25
+	}
+
+	artisans = {
+		culture = rohnnst
+		religion = protestant
+		size = 50
+	}
+
+	soldiers = {
+		culture = rohnnst
+		religion = protestant
+		size= 15
+
+	}
+
+	farmers = {
+		culture = rohnnst
+		religion = protestant
+		size = 910
+	}
+
+	aristocrats = {
+		culture = west_algonquin
+		religion = animist
+		size = 10
+	}
+
+	clergymen = {
+		culture = west_algonquin
+		religion = animist
+		size = 25
+	}
+
+	artisans = {
+		culture = west_algonquin
+		religion = animist
+		size = 50
+	}
+
+	soldiers = {
+		culture = west_algonquin
+		religion = animist
+		size= 15
+
+	}
+
+	farmers = {
+		culture = west_algonquin
+		religion = animist
+		size = 900
+	}
+}
+
+24 = {
+	aristocrats = {
+		culture = native_american_minor
+		religion = animist
+		size = 10
+	}
+
+	clergymen = {
+		culture = native_american_minor
+		religion = animist
+		size = 25
+	}
+
+	artisans = {
+		culture = native_american_minor
+		religion = animist
+		size = 50
+	}
+
+	soldiers = {
+		culture = native_american_minor
+		religion = animist
+		size= 15
+
+	}
+
+	farmers = {
+		culture = native_american_minor
+		religion = animist
+		size = 2200
+	}
+}
+
+3385 = {
+	aristocrats = {
+		culture = buyean
+		religion = mahayana
+		size = 50
+	}
+	
+	aristocrats = {
+		culture = qingqiuan
+		religion = mahayana
+		size = 50
+	}
+	
+	clergymen = {
+		culture = buyean
+		religion = mahayana
+		size = 50
+	}
+	
+	bureaucrats = {
+		culture = qingqiuan
+		religion = mahayana
+		size = 50
+	}
+	
+	farmers = {
+		culture = buyean
+		religion = mahayana
+		size = 2275
+	}
+	
+	artisans = {
+		culture = buyean
+		religion = mahayana
+		size = 2000
+	}
+	
+	farmers = {
+		culture = buyean
+		religion = taiping
+		size = 980
+	}
+	
+	farmers = {
+		culture = buyean
+		religion = catholic
+		size = 650
+	}
+	
+	farmers = {
+		culture = qingqiuan
+		religion = mahayana
+		size = 3500
+	}
+}
+
+2597 = {
+
+	aristocrats = {
+		culture = buyean
+		religion = mahayana
+		size = 200
+	}
+	
+	aristocrats = {
+		culture = qingqiuan
+		religion = mahayana
+		size = 200
+	}
+
+	clergymen = {
+		culture = buyean
+		religion = mahayana
+		size = 100
+	}
+
+	bureaucrats = {
+		culture = buyean
+		religion = mahayana
+		size = 100
+	}
+
+	farmers = {
+		culture = buyean
+		religion = mahayana
+		size = 5000
+	}
+	
+	artisans = {
+		culture = buyean
+		religion = mahayana
+		size = 4000
+	}
+	
+	farmers = {
+		culture = buyean
+		religion = catholic
+		size = 1300
+	}
+	
+	farmers = {
+		culture = buyean
+		religion = taiping
+		size = 2150
+	}
+	
+	farmers = {
+		culture = qingqiuan
+		religion = mahayana
+		size = 6550
+	}
+	
+	soldiers = {
+		culture = qingqiuan
+		religion = mahayana
+		size = 800
+	}
+}
+
+17 = {
+
+	bureaucrats = {
+		culture = shoshone
+		religion = taiping
+		size = 60
+	}
+	
+	clergymen = {
+		culture = qingqiuan
+		religion = taiping
+		size = 60
+	}
+	
+	aristocrats = {
+		culture = shoshone
+		religion = taiping
+		size = 60
+	}
+	
+	clergymen = {
+		culture = shoshone
+		religion = taiping
+		size = 60
+	}
+
+	bureaucrats = {
+		culture = qingqiuan
+		religion = taiping
+		size = 60
+	}
+	
+	farmers = {
+		culture = qingqiuan
+		religion = taiping
+		size = 5900
+	}
+	
+	soldiers = {
+		culture = qingqiuan
+		religion = taiping
+		size = 480
+	}
+	
+	farmers = {
+		culture = qingqiuan
+		religion = mahayana
+		size = 365
+	}
+	
+	artisans = {
+		culture = shoshone
+		religion = taiping
+		size = 2600
+	}
+	
+	farmers = {
+		culture = shoshone
+		religion = animist
+		size = 2260
+	}
+	
+}
+
+108 = {
+
+	bureaucrats = {
+		culture = shoshone
+		religion = taiping
+		size = 30
+	}
+	
+	aristocrats = {
+		culture = shoshone
+		religion = taiping
+		size = 30
+	}
+	
+	clergymen = {
+		culture = shoshone
+		religion = taiping
+		size = 30
+	}
+
+	bureaucrats = {
+		culture = pueblo
+		religion = taiping
+		size = 30
+	}
+	
+	farmers = {
+		culture = pueblo
+		religion = taiping
+		size = 1600
+	}
+	
+	farmers = {
+		culture = pueblo
+		religion = catholic
+		size = 690
+	}
+	
+	farmers = {
+		culture = pueblo
+		religion = animist
+		size = 690
+	}
+	
+	soldiers = {
+		culture = pueblo
+		religion = taiping
+		size = 240
+	}
+	
+	artisans = {
+		culture = shoshone
+		religion = taiping
+		size = 1300
+	}
+	
+	farmers = {
+		culture = shoshone
+		religion = animist
+		size = 1130
+	}
+	
+}
+
+99 = {
+
+	bureaucrats = {
+		culture = pueblo
+		religion = taiping
+		size = 30
+	}
+	
+	aristocrats = {
+		culture = pueblo
+		religion = taiping
+		size = 30
+	}
+	
+	clergymen = {
+		culture = pueblo
+		religion = taiping
+		size = 30
+	}
+
+	farmers = {
+		culture = pueblo
+		religion = taiping
+		size = 3800
+	}
+	
+	farmers = {
+		culture = pueblo
+		religion = catholic
+		size = 1300
+	}
+	
+	farmers = {
+		culture = pueblo
+		religion = animist
+		size = 1300
+	}
+	
+	soldiers = {
+		culture = pueblo
+		religion = taiping
+		size = 240
+	}
+	
+	artisans = {
+		culture = shoshone
+		religion = taiping
+		size = 800
+	}
+	
+	farmers = {
+		culture = shoshone
+		religion = animist
+		size = 600
+	}
+	
+	farmers = {
+		culture = lusitanian
+		religion = catholic
+		size = 800
+	}
+	
+}
+
+3384 = {
+
+	aristocrats = {
+		culture = qingqiuan
+		religion = catholic
+		size = 40
+	}
+	
+	clergymen = {
+		culture = qingqiuan
+		religion = catholic
+		size = 40
+	}
+	
+	bureaucrats = {
+		culture = qingqiuan
+		religion = catholic
+		size = 20
+	}
+
+	farmers = {
+		culture = qingqiuan
+		religion = catholic
+		size = 800
+	}
+	
+	artisans = {
+		culture = qingqiuan
+		religion = catholic
+		size = 800
+	}	
+
+	farmers = {
+		culture = qingqiuan
+		religion = mahayana
+		size = 130
+	}
+	
+	farmers = {
+		culture = qingqiuan
+		religion = taiping
+		size = 130
+	}
+	
+	farmers = {
+		culture = lusitanian
+		religion = catholic
+		size = 3100
+	}
+	
+		farmers = {
+		culture = lusitanian
+		religion = jewish
+		size = 100
+	}
+}
+
+3375 = {
+	aristocrats = {
+		culture = qingqiuan
+		religion = catholic
+		size = 40
+	}
+	
+	clergymen = {
+		culture = qingqiuan
+		religion = catholic
+		size = 40
+	}
+	
+	bureaucrats = {
+		culture = qingqiuan
+		religion = catholic
+		size = 20
+	}
+
+	farmers = {
+		culture = qingqiuan
+		religion = catholic
+		size = 900
+	}
+	
+	artisans = {
+		culture = qingqiuan
+		religion = catholic
+		size = 500
+	}	
+
+	farmers = {
+		culture = qingqiuan
+		religion = mahayana
+		size = 20
+	}
+	
+	farmers = {
+		culture = qingqiuan
+		religion = taiping
+		size = 20
+	}
+	
+	farmers = {
+		culture = lusitanian
+		religion = catholic
+		size = 800
+	}
+	
+	farmers = {
+		culture = lusitanian
+		religion = jewish
+		size = 20
+	}
+}
+
+3374 = {
+
+	bureaucrats = {
+		culture = qingqiuan
+		religion = catholic
+		size = 130
+	}
+	
+	bureaucrats = {
+		culture = lusitanian
+		religion = catholic
+		size = 130
+	}
+
+	aristocrats = {
+		culture = qingqiuan
+		religion = catholic
+		size = 440
+	}
+	
+	clergymen = {
+		culture = lusitanian
+		religion = catholic
+		size = 264
+	}
+	
+	bureaucrats = {
+		culture = qingqiuan
+		religion = catholic
+		size = 264
+	}
+	
+	aristocrats = {
+		culture = lusitanian
+		religion = catholic
+		size = 440
+	}
+
+	farmers = {
+		culture = qingqiuan
+		religion = catholic
+		size = 11736
+	}
+	
+	soldiers = {
+		culture = qingqiuan
+		religion = catholic
+		size = 1200
+	}
+	
+	artisans = {
+		culture = qingqiuan
+		religion = catholic
+		size = 8600
+	}
+	
+	farmers = {
+		culture = qingqiuan
+		religion = mahayana
+		size = 1200
+	}
+	
+	farmers = {
+		culture = qingqiuan
+		religion = taiping
+		size = 1200
+	}
+
+	farmers = {
+		culture = lusitanian
+		religion = catholic
+		size = 12896
+	}
+	
+	farmers = {
+		culture = lusitanian
+		religion = jewish
+		size = 5940
+	}
+}
+
+3377 = {
+
+	clergymen = {
+		culture = valleyan
+		religion = catholic
+		size = 550
+	}
+
+	aristocrats = {
+		culture = valleyan
+		religion = catholic
+		size = 400
+	}
+	
+	aristocrats = {
+		culture = valleyan
+		religion = catholic
+		size = 280
+	}
+
+	farmers = {
+		culture = valleyan
+		religion = catholic
+		size = 14970
+	}
+	
+	farmers = {
+		culture = valleyan
+		religion = taiping
+		size = 4400
+	}	
+
+	farmers = {
+		culture = qingqiuan
+		religion = catholic
+		size = 10000
+	}
+	
+	farmers = {
+		culture = qingqiuan
+		religion = catholic
+		size = 8000
+	}
+	
+	soldiers = {
+		culture = valleyan
+		religion = catholic
+		size = 1400
+	}
+	
+	farmers = {
+		culture = qingqiuan
+		religion = mahayana
+		size = 5400
+	}
+	
+	farmers = {
+		culture = qingqiuan
+		religion = taiping
+		size = 3600
+	}
+	
+}
+
+3376 = {
+
+	aristocrats = {
+		culture = valleyan
+		religion = catholic
+		size = 300
+	}
+
+	clergymen = {
+		culture = valleyan
+		religion = catholic
+		size = 200
+	}
+
+	bureaucrats = {
+		culture = valleyan
+		religion = catholic
+		size = 160
+	}
+
+	farmers = {
+		culture = valleyan
+		religion = catholic
+		size = 11940
+	}
+	
+	farmers = {
+		culture = valleyan
+		religion = taiping
+		size = 4200
+	}
+	
+	soldiers = {
+		culture = valleyan
+		religion = catholic
+		size = 1200
+	}
+	
+	farmers = {
+		culture = qingqiuan
+		religion = catholic
+		size = 8000
+	}
+	
+	farmers = {
+		culture = valleyan
+		religion = mahayana
+		size = 2400
+	}
+	
+	farmers = {
+		culture = valleyan
+		religion = taiping
+		size = 1600
+	}
+	
+}
+
+3386 = {
+
+	clergymen = {
+		culture = buyean
+		religion = mahayana
+		size = 100
+	}
+	
+	aristocrats = {
+		culture = buyean
+		religion = mahayana
+		size = 100
+	}
+	
+	bureaucrats = {
+		culture = buyean
+		religion = mahayana
+		size = 50
+	}
+	
+	bureaucrats = {
+		culture = qingqiuan
+		religion = mahayana
+		size = 50
+	}	
+
+	aristocrats = {
+		culture = qingqiuan
+		religion = mahayana
+		size = 100
+	}
+
+	farmers = {
+		culture = buyean
+		religion = mahayana
+		size = 10400
+	}
+	
+	soldiers = {
+		culture = buyean
+		religion = mahayana
+		size = 600
+	}
+	
+	farmers = {
+		culture = buyean
+		religion = taiping
+		size = 2250
+	}
+	
+	farmers = {
+		culture = buyean
+		religion = catholic
+		size = 1500
+	}
+	
+	farmers = {
+		culture = kaiganese
+		religion = mahayana
+		size = 1250
+	}
+	
+	farmers = {
+		culture = kaiganese
+		religion = shinto
+		size = 100
+	}
+	
+	farmers = {
+		culture = kaiganese
+		religion = shinto
+		size = 150
+	}
+	
+	farmers = {
+		culture = qingqiuan
+		religion = mahayana
+		size = 2100
+	}
+
+}
+
+3387 = {
+	
+	aristocrats = {
+		culture = buyean
+		religion = mahayana
+		size = 50
+	}
+	
+	clergymen = {
+		culture = buyean
+		religion = mahayana
+		size = 25
+	}
+	
+	bureaucrats = {
+		culture = buyean
+		religion = mahayana
+		size = 20
+	}
+	
+	farmers = {
+		culture = salish
+		religion = animist
+		size = 2100
+	}
+	
+	farmers = {
+		culture = salish
+		religion = taiping
+		size = 450
+	}
+	
+	farmers = {
+		culture = salish
+		religion = catholic
+		size = 225
+	}
+	
+	farmers = {
+		culture = salish
+		religion = mahayana
+		size = 225
+	}
+	
+	farmers = {
+		culture = buyean
+		religion = mahayana
+		size = 1600
+	}
+	
+	farmers = {
+		culture = buyean
+		religion = taiping
+		size = 240
+	}
+	
+	farmers = {
+		culture = buyean
+		religion = catholic
+		size = 160
+	}
+	
+	farmers = {
+		culture = qingqiuan
+		religion = mahayana
+		size = 400
+	}
+
+}
+
+3394 = {
+	
+	aristocrats = {
+		culture = japanese
+		religion = mahayana
+		size = 100
+	}
+	
+	bureaucrats = {
+		culture = japanese
+		religion = mahayana
+		size = 20
+	}
+	
+	bureaucrats = {
+		culture = kaiganese
+		religion = mahayana
+		size = 20
+	}
+	
+	clergymen = {
+		culture = japanese
+		religion = mahayana
+		size = 80
+	}
+	
+	farmers = {
+		culture = kaiganese
+		religion = mahayana
+		size = 3412
+	}
+	
+	artisans = {
+		culture = kaiganese
+		religion = mahayana
+		size = 2400
+	}
+	
+	soldiers = {
+		culture = kaiganese
+		religion = mahayana
+		size = 400
+	}
+	
+	farmers = {
+		culture = kaiganese
+		religion = catholic
+		size = 850
+	}
+	
+	farmers = {
+		culture = kaiganese
+		religion = shinto
+		size = 425
+	}
+	
+	
+	farmers = {
+		culture = salish
+		religion = animist
+		size = 700
+	}
+	
+	farmers = {
+		culture = salish
+		religion = taiping
+		size = 150
+	}
+	
+	farmers = {
+		culture = salish
+		religion = mahayana
+		size = 75
+	}
+	
+	farmers = {
+		culture = salish
+		religion = catholic
+		size = 75
+	}
+	
+	farmers = {
+		culture = japanese
+		religion = mahayana
+		size = 150
+	}	
+	
+	farmers = {
+		culture = japanese
+		religion = shinto
+		size = 210
+	}	
+
+}
+
+3396 = {
+	
+	aristocrats = {
+		culture = japanese
+		religion = mahayana
+		size = 80
+	}
+	
+	bureaucrats = {
+		culture = japanese
+		religion = mahayana
+		size = 10
+	}
+	
+	bureaucrats = {
+		culture = japanese
+		religion = mahayana
+		size = 40
+	}
+	
+	farmers = {
+		culture = salish
+		religion = animist
+		size = 2400
+	}	
+	
+	farmers = {
+		culture = salish
+		religion = taiping
+		size = 600
+	}	
+	
+	farmers = {
+		culture = salish
+		religion = mahayana
+		size = 300
+
+	}	
+	
+	farmers = {
+		culture = salish
+		religion = catholic
+		size = 300
+	}	
+	
+	farmers = {
+		culture = japanese
+		religion = mahayana
+		size = 270
+	}
+	
+	farmers = {
+		culture = japanese
+		religion = shinto
+		size = 400
+	}
+
+}
+
+3395 = {
+	
+	capitalists = {
+		culture = kaiganese
+		religion = shinto
+		size = 200
+	}
+		
+	bureaucrats = {
+		culture = kaiganese
+		religion = mahayana
+		size = 448
+	}
+	
+	bureaucrats = {
+		culture = buyean
+		religion = mahayana
+		size = 250
+	}
+
+	aristocrats = {
+		culture = kaiganese
+		religion = mahayana
+		size = 2240
+	}	
+	
+	clergymen = {
+		culture = kaiganese
+		religion = mahayana
+		size = 700
+	}
+
+	clergymen = {
+		culture = buyean
+		religion = mahayana
+		size = 450
+	}
+
+	farmers = {
+		culture = kaiganese
+		religion = mahayana
+		size = 32800
+	}
+	
+	craftsmen = {
+		culture = kaiganese
+		religion = mahayana
+		size = 9600
+	}
+	
+	
+	artisans = {
+		culture = kaiganese
+		religion = mahayana
+		size = 30744
+	}
+	
+	farmers = {
+		culture = kaiganese
+		religion = shinto
+		size = 4480
+	}
+
+	soldiers = {
+		culture = buyean
+		religion = mahayana
+		size = 1800
+	}
+
+	farmers = {
+		culture = kaiganese
+		religion = catholic
+		size = 8960
+	}
+	
+	farmers = {
+		culture = buyean
+		religion = mahayana
+		size = 10900
+	}
+	
+	soldiers = {
+		culture = buyean
+		religion = mahayana
+		size = 1000
+	}
+	
+	farmers = {
+		culture = buyean
+		religion = taiping
+		size = 2520
+	}
+	
+	farmers = {
+		culture = buyean
+		religion = catholic
+		size = 1680
+	}
+	
+	farmers = {
+		culture = qingqiuan
+		religion = mahayana
+		size = 7840
+	}
+	
+	farmers = {
+		culture = salish
+		religion = mahayana
+		size = 2352
+	}
+	
+	farmers = {
+		culture = salish
+		religion = mahayana
+		size = 504
+	}
+	
+	farmers = {
+		culture = salish
+		religion = mahayana
+		size = 252
+	}
+	
+	farmers = {
+		culture = salish
+		religion = mahayana
+		size = 252
+	}
+
+}
+
+3417 = {
+	
+	clergymen = {
+		culture = kaiganese
+		religion = mahayana
+		size = 60
+	}	
+	
+	bureaucrats = {
+		culture = kaiganese
+		religion = mahayana
+		size = 50
+	}	
+	
+	aristocrats = {
+		culture = kaiganese
+		religion = mahayana
+		size = 120
+	}	
+	
+	farmers = {
+		culture = kaiganese
+		religion = mahayana
+		size = 6040
+	}	
+	
+	artisans = {
+		culture = native_american_minor
+		religion = animist
+		size = 2000
+	}	
+
+	soldiers = {
+		culture = kaiganese
+		religion = mahayana
+		size = 360
+	}	
+	
+	farmers = {
+		culture = kaiganese
+		religion = catholic
+		size = 780
+	}
+	
+	farmers = {
+		culture = kaiganese
+		religion = shinto
+		size = 390
+	}
+	
+	farmers = {
+		culture = native_american_minor
+		religion = animist
+		size = 2200
+	}
+	
+	artisans = {
+		culture = native_american_minor
+		religion = animist
+		size = 1000
+	}	
+	
+	farmers = {
+		culture = native_american_minor
+		religion = taiping
+		size = 630
+	}	
+
+	farmers = {
+		culture = native_american_minor
+		religion = catholic
+		size = 315
+	}
+	
+	farmers = {
+		culture = native_american_minor
+		religion = mahayana
+		size = 315
+	}
+
+}
+
+21 = {
+	
+	aristocrats = {
+		culture = kaiganese
+		religion = mahayana
+		size = 100
+	}
+	
+	farmers = {
+		culture = kaiganese
+		religion = mahayana
+		size = 40
+	}
+	
+	clergymen = {
+		culture = kaiganese
+		religion = mahayana
+		size = 60
+	}
+	
+	farmers = {
+		culture = kaiganese
+		religion = mahayana
+		size = 3000
+	}
+	
+	artisans = {
+		culture = kaiganese
+		religion = mahayana
+		size = 1300
+	}
+	
+	soldiers = {
+		culture = kaiganese
+		religion = mahayana
+		size = 1300
+	}
+	
+	farmers = {
+		culture = kaiganese
+		religion = taiping
+		size = 450
+	}
+	
+	farmers = {
+		culture = kaiganese
+		religion = shinto
+		size = 225
+	}
+
+	farmers = {
+		culture = native_american_minor
+		religion = animist
+		size = 3851
+	}
+	
+	farmers = {
+		culture = native_american_minor
+		religion = animist
+		size = 825
+	}
+	
+	farmers = {
+		culture = native_american_minor
+		religion = animist
+		size = 412
+	}
+	
+	farmers = {
+		culture = native_american_minor
+		religion = animist
+		size = 412
+	}
+
+}
+
+19 = {
+	
+	aristocrats = {
+		culture = kaiganese
+		religion = mahayana
+		size = 100
+	}
+	
+	farmers = {
+		culture = kaiganese
+		religion = mahayana
+		size = 40
+	}
+	
+	clergymen = {
+		culture = kaiganese
+		religion = mahayana
+		size = 60
+	}
+	
+	farmers = {
+		culture = kaiganese
+		religion = mahayana
+		size = 2600
+	}
+	
+	artisans = {
+		culture = kaiganese
+		religion = mahayana
+		size = 1300
+	}
+	
+	soldiers = {
+		culture = kaiganese
+		religion = mahayana
+		size = 1300
+	}
+	
+	farmers = {
+		culture = kaiganese
+		religion = taiping
+		size = 450
+	}
+	
+	farmers = {
+		culture = kaiganese
+		religion = shinto
+		size = 225
+	}
+
+	farmers = {
+		culture = native_american_minor
+		religion = animist
+		size = 4200
+	}
+	
+	farmers = {
+		culture = native_american_minor
+		religion = animist
+		size = 825
+	}
+	
+	farmers = {
+		culture = native_american_minor
+		religion = animist
+		size = 412
+	}
+	
+	farmers = {
+		culture = native_american_minor
+		religion = animist
+		size = 412
+	}
+
+}
+
+3379 = {
+	
+	clergymen = {
+		culture = qingqiuan
+		religion = catholic
+		size = 300
+	}
+	
+	bureaucrats = {
+		culture = qingqiuan
+		religion = catholic
+		size = 150
+	}
+	
+	aristocrats = {
+		culture = qingqiuan
+		religion = catholic
+		size = 600
+	}
+	
+	farmers = {
+		culture = qingqiuan
+		religion = catholic
+		size = 17050
+	}
+	
+	farmers = {
+		culture = qingqiuan
+		religion = mahayana
+		size = 8550
+	}
+	
+	soldiers = {
+		culture = qingqiuan
+		religion = mahayana
+		size = 450
+	}
+	
+	farmers = {
+		culture = qingqiuan
+		religion = taiping
+		size = 3000
+	}
+	
+	farmers = {
+		culture = valleyan
+		religion = catholic
+		size = 7550
+	}
+	
+	soldiers = {
+		culture = valleyan
+		religion = catholic
+		size = 450
+	}
+
+	farmers = {
+		culture = valleyan
+		religion = taiping
+		size = 2000
+	}
+
+}

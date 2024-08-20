@@ -1,0 +1,6 @@
+
+
+trade_goods = lead
+life_rating = 30
+terrain = semi_desert
+colonial = 1

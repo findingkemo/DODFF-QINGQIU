@@ -1,0 +1,4 @@
+# Ported from TGC. This is a better method then the old one that I used here.
+
+# Moved to V2ME Cleanup to prevent two daily events at once.
+

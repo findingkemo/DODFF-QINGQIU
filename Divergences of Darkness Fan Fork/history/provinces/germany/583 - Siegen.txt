@@ -1,0 +1,7 @@
+owner = HSK
+controller = HSK
+add_core = HSK
+add_core = GER
+trade_goods = cattle
+life_rating = 36
+terrain = deciduous_forest_hills

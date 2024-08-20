@@ -1,0 +1,402 @@
+#Guatemala Region (476000)
+#Ruled by Central America 1836
+#Guatemala City (276000/69000 POPS)
+3400 = {
+	aristocrats = {
+		culture = mexican
+		religion = catholic
+		size = 200
+	}
+
+	bureaucrats = {
+		culture = mexican
+		religion = catholic
+		size = 175
+	}
+
+	officers = {
+		culture = central_american
+		religion = catholic
+		size = 150
+	}
+
+	clergymen = {
+		culture = central_american
+		religion = catholic
+		size = 275
+	}
+
+	artisans = {
+		culture = central_american
+		religion = catholic
+		size = 1350
+	}
+
+	soldiers = {
+		culture = central_american
+		religion = catholic
+		size= 200
+
+	}
+
+	farmers = {
+		culture = central_american
+		religion = catholic
+		size = 10000
+	}
+
+	aristocrats = {
+		culture = mayan
+		religion = catholic
+		size = 100
+	}
+
+	clergymen = {
+		culture = mayan
+		religion = catholic
+		size = 225
+	}
+
+	artisans = {
+		culture = mayan
+		religion = catholic
+		size = 2100
+	}
+
+	soldiers = {
+		culture = mayan
+		religion = catholic
+		size = 600
+	}
+
+	farmers = {
+		culture = mayan
+		religion = catholic
+		size = 11000
+	}
+}
+
+2186 = {
+	aristocrats = {
+		culture = mexican
+		religion = catholic
+		size = 200
+	}
+
+	bureaucrats = {
+		culture = mexican
+		religion = catholic
+		size = 175
+	}
+
+	officers = {
+		culture = central_american
+		religion = catholic
+		size = 150
+	}
+
+	clergymen = {
+		culture = central_american
+		religion = catholic
+		size = 275
+	}
+
+	artisans = {
+		culture = central_american
+		religion = catholic
+		size = 1350
+	}
+
+	soldiers = {
+		culture = central_american
+		religion = catholic
+		size= 200
+
+	}
+
+	farmers = {
+		culture = central_american
+		religion = catholic
+		size = 16200
+	}
+
+	aristocrats = {
+		culture = mayan
+		religion = catholic
+		size = 100
+	}
+
+	clergymen = {
+		culture = mayan
+		religion = catholic
+		size = 225
+	}
+
+	artisans = {
+		culture = mayan
+		religion = catholic
+		size = 2100
+	}
+
+	soldiers = {
+		culture = mayan
+		religion = catholic
+		size = 600
+	}
+
+	farmers = {
+		culture = mayan
+		religion = catholic
+		size = 14000
+	}
+}
+
+3411 = {
+	aristocrats = {
+		culture = mexican
+		religion = catholic
+		size = 200
+	}
+
+	bureaucrats = {
+		culture = mexican
+		religion = catholic
+		size = 175
+	}
+
+	officers = {
+		culture = central_american
+		religion = catholic
+		size = 150
+	}
+
+	clergymen = {
+		culture = central_american
+		religion = catholic
+		size = 275
+	}
+
+	artisans = {
+		culture = central_american
+		religion = catholic
+		size = 1350
+	}
+
+	soldiers = {
+		culture = central_american
+		religion = catholic
+		size= 200
+
+	}
+
+	farmers = {
+		culture = central_american
+		religion = catholic
+		size = 8000
+	}
+
+	aristocrats = {
+		culture = mayan
+		religion = catholic
+		size = 100
+	}
+
+	clergymen = {
+		culture = mayan
+		religion = catholic
+		size = 225
+	}
+
+	artisans = {
+		culture = mayan
+		religion = catholic
+		size = 2100
+	}
+
+	soldiers = {
+		culture = mayan
+		religion = catholic
+		size = 600
+	}
+
+	farmers = {
+		culture = mayan
+		religion = catholic
+		size = 4000
+	}
+}
+
+#Quetzaltenango (112000/28000 POPS)
+2187 = {
+	aristocrats = {
+		culture = mexican
+		religion = catholic
+		size = 175
+	}
+
+	clergymen = {
+		culture = central_american
+		religion = catholic
+		size = 75
+	}
+
+	artisans = {
+		culture = central_american
+		religion = catholic
+		size = 350
+	}
+
+	soldiers = {
+		culture = central_american
+		religion = catholic
+		size= 200
+
+	}
+
+	farmers = {
+		culture = central_american
+		religion = catholic
+		size = 8800
+	}
+
+	clergymen = {
+		culture = mayan
+		religion = catholic
+		size = 100
+	}
+
+	artisans = {
+		culture = mayan
+		religion = catholic
+		size = 1050
+	}
+
+	soldiers = {
+		culture = mayan
+		religion = catholic
+		size= 225
+
+	}
+
+	farmers = {
+		culture = mayan
+		religion = catholic
+		size = 12400
+	}
+
+}
+#Puerto Barrios (72000/18000 POPS)
+2188 = {
+	aristocrats = {
+		culture = central_american
+		religion = catholic
+		size = 150
+	}
+
+	clergymen = {
+		culture = mexican
+		religion = catholic
+		size = 50
+	}
+
+	artisans = {
+		culture = central_american
+		religion = catholic
+		size = 300
+	}
+
+	soldiers = {
+		culture = central_american
+		religion = catholic
+		size= 475
+
+	}
+
+	farmers = {
+		culture = central_american
+		religion = catholic
+		size = 3600
+	}
+
+	clergymen = {
+		culture = mayan
+		religion = catholic
+		size = 50
+	}
+
+	artisans = {
+		culture = mayan
+		religion = catholic
+		size = 600
+	}
+
+	soldiers = {
+		culture = mayan
+		religion = catholic
+		size= 125
+
+	}
+
+	farmers = {
+		culture = mayan
+		religion = catholic
+		size = 8225
+	}
+
+}
+#Sayaxche (16000/4000 POPS)
+2189 = {
+	aristocrats = {
+		culture = mexican
+		religion = catholic
+		size = 100
+	}
+
+	clergymen = {
+		culture = central_american
+		religion = catholic
+		size = 125
+	}
+
+	artisans = {
+		culture = central_american
+		religion = catholic
+		size = 800
+	}
+
+	farmers = {
+		culture = central_american
+		religion = catholic
+		size = 2000
+	}
+
+	aristocrats = {
+		culture = mayan
+		religion = catholic
+		size = 100
+	}
+
+	clergymen = {
+		culture = mayan
+		religion = catholic
+		size = 150
+	}
+
+	artisans = {
+		culture = mayan
+		religion = catholic
+		size = 1250
+	}
+
+	soldiers = {
+		culture = mayan
+		religion = catholic
+		size = 250
+	}
+
+	farmers = {
+		culture = mayan
+		religion = catholic
+		size = 5600
+	}
+}

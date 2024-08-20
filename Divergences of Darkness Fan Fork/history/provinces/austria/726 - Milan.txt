@@ -1,0 +1,18 @@
+owner = LOM
+controller = LOM
+add_core = LOM
+add_core = ITA
+trade_goods = iron
+life_rating = 40
+fort = 1
+terrain = hilly_farmland
+state_building = {
+	level = 1
+	building = fabric_factory
+	upgrade = yes
+}
+state_building = {
+	level = 2 
+	building = steel_factory
+	upgrade = yes
+}

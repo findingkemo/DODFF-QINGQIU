@@ -1,0 +1,26 @@
+leader = {
+	name = "Hans Keller"
+	type = land
+	date = 1836.1.1
+	personality = unflinching
+	background = old_school
+}
+army = {
+	name = "Landwehr"
+	location = 605
+	regiment = {
+		name= "1. Brigade"
+		type = regular
+		home = 605
+	}
+	regiment = {
+		name= "2. Brigade"
+		type = regular
+		home = 605
+	}
+	regiment = {
+		name= "3. Brigade"
+		type = regular
+		home = 605
+	}
+}

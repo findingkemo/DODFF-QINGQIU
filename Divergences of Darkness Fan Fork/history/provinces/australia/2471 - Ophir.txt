@@ -1,0 +1,7 @@
+owner = YLO
+controller = YLO
+add_core = YLO
+trade_goods = grain
+life_rating = 30
+terrain = deciduous_forest_hills
+

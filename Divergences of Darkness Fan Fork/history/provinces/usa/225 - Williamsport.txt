@@ -1,0 +1,7 @@
+owner = CFS
+controller = CFS
+add_core = NBG
+add_core = CFS
+trade_goods = coal
+life_rating = 35
+terrain = deciduous_forest_hills

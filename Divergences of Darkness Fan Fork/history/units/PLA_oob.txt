@@ -1,0 +1,191 @@
+
+CNF = {
+	value = -200		#relation
+	level = 0	#3=cordial, 4 = friendly, 5 sphere
+	influence_value = 0
+	truce_until = "1842.1.1"
+}
+
+SCA = {
+	value = -200	#relation
+	level = 0	#3=cordial, 4 = friendly, 5 sphere
+	influence_value = 0
+	truce_until = "1842.1.1"
+}
+
+VIN = {
+	value = -50	#relation
+	level = 0	#3=cordial, 4 = friendly, 5 sphere
+	influence_value = 0
+	truce_until = "1842.1.1"
+}
+
+SKR = {
+	value = -50	#relation
+	level = 0	#3=cordial, 4 = friendly, 5 sphere
+	influence_value = 0
+	truce_until = "1842.1.1"
+}
+
+MSG = { 
+	value = -50	#relation
+	level = 0	#3=cordial, 4 = friendly, 5 sphere
+	influence_value = 0
+	truce_until = "1842.1.1"
+}
+
+CLM = {
+	value = -50	#relation
+	level = 0	#3=cordial, 4 = friendly, 5 sphere
+	influence_value = 0
+	truce_until = "1842.1.1"
+}
+
+CHE = {
+	value = 200	#relation
+}
+
+leader = {
+	name = "Pierre Duchesne"
+	type = land
+	date = 1836.1.1
+	personality = arrogant
+	background = ethnic
+}
+
+leader = {
+	name = "Samuel de Champlain"
+	type = sea
+	date = 1836.1.1
+	personality = charismatic
+	background = engineer
+}
+
+army = {
+	name = "1ère Division d'Infanterie"
+	location = 207
+	regiment = {
+		name= "1ère Brigade d'Infanterie"
+		type = regular
+		home = 198
+	}
+
+	regiment = {
+		name= "2ème Brigade d'Infanterie"
+		type = regular
+		home = 198
+	}
+	
+	regiment = {
+		name= "3ème Brigade d'Infanterie"
+		type = regular
+		home = 201
+	}
+	
+	regiment = {
+		name= "4ème Brigade d'Infanterie"
+		type = regular
+		home = 195
+	}
+	
+	regiment = {
+		name= "1ère Brigade de Cavalerie"
+		type = hussar
+		home = 202
+	}
+	
+	regiment = {
+		name= "1ère Brigade de Artillerie" 
+		type = artillery
+		home = 205
+	}
+	
+	regiment = {
+		name= "1ème Brigade de Artillerie"
+		type = artillery
+		home = 204
+	}
+}
+
+army = {
+	name = "2ère Division d'Infanterie"
+	location = 141
+	regiment = {
+		name= "1ère Brigade d'Infanterie"
+		type = regular
+		home = 139
+	}
+
+	regiment = {
+		name= "2ème Brigade d'Infanterie"
+		type = regular
+		home = 139
+	}
+	
+	regiment = {
+		name= "3ème Brigade d'Infanterie"
+		type = regular
+		home = 196
+	}
+	
+	regiment = {
+		name= "4ème Brigade d'Infanterie"
+		type = regular
+		home = 192
+	}
+	
+	regiment = {
+		name= "5ème Brigade d'Infanterie"
+		type = regular
+		home = 189
+	}
+	
+	regiment = {
+		name= "6ème Brigade d'Infanterie"
+		type = regular
+		home = 197
+	}
+
+	regiment = {
+		name= "1ère Brigade de Cavalerie"
+		type = hussar
+		home = 142
+	}
+	
+	regiment = {
+		name= "1ère Brigade de Artillerie" 
+		type = artillery
+		home = 148
+	}
+	
+	regiment = {
+		name= "1ème Brigade de Artillerie"
+		type = artillery
+		home = 148
+	}
+}
+
+navy = {
+	name = "Marine Royale de Plantagénie"
+	location = 139
+	ship = {
+		name= "Gloire"
+		type = frigate
+	}
+
+	ship = {
+		name= "Liberite"
+		type = frigate
+	}
+
+	ship = {
+		name= "Egalite"
+		type = frigate
+	}
+
+	ship = {
+		name= "1e Flottille de Transport"
+		type = clipper_transport
+	}
+
+}

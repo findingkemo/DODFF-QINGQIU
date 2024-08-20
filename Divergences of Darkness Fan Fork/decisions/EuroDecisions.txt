@@ -1,0 +1,77 @@
+political_decisions = {
+
+    the_third_revolution = { 
+	picture = switch_to_freedom
+	potential = { 
+	    is_ideology_enabled = socialist
+	    OR = {
+		   government = democracy
+		   government = socialist_republic
+		   government = parliamentary_republic
+		}
+	    OR = {
+	       ruling_party_ideology = anarcho_liberal
+	       ruling_party_ideology = social_liberal
+		   ruling_party_ideology = liberal
+		}
+		capital_scope = { continent = europe }
+		NOT = { has_country_flag = inevitable_BRG_coup }
+		NOT = { has_global_flag = the_revolution_avenged }
+		NOT = { has_global_flag = post_colonial_era_fired }
+	}
+	
+	allow = { 
+        rank = 3
+		war = no 		
+	    NOT = { has_country_modifier = national_confusion }
+		NOT = { has_country_modifier = the_eye_of_the_storm }
+	}
+	
+	effect = {
+       set_global_flag = the_revolution_avenged
+	   country_event = { id = 443053 days = 1 }
+	}
+	}
+
+	hydroelectric_giant = {
+	picture = electricity_fairy
+	potential = {
+			tag = SCA
+			NOT = { has_country_flag = hydropowerSCA }	
+		}
+	allow = {
+			war = no
+			electricity = 1
+			electrical_power_generation = 1
+		}
+
+		effect = { 
+			set_country_flag = hydropowerSCA
+			SWE_308 = { add_province_modifier = { name = hydropower_sca  duration = -1 } }
+			SWE_309 = { add_province_modifier = { name = hydropower_sca  duration = -1 } }
+		}
+	}
+	
+	Standardize_Russian = { 
+	picture = Libkez
+	potential = { 
+		tag = RUS 
+		NOT = { has_country_flag = Russianunitedlanguage } 
+	}
+	
+	allow = { 
+		nationalism_n_imperialism = 1 
+		war = no 
+	}
+	
+	effect = { 
+	set_country_flag = Russianunitedlanguage
+	prestige = 5 
+		add_country_modifier = { 
+		name = united_language_RUS
+		duration = -1 
+			}
+		}
+	
+	}
+}

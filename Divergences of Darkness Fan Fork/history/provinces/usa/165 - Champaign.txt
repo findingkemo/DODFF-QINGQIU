@@ -1,0 +1,8 @@
+owner = SKR
+controller = SKR
+add_core = SKR
+add_core = NUN 
+add_core = VIN
+trade_goods = copper
+life_rating = 35
+terrain = temperate_grassland

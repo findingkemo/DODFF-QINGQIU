@@ -1,0 +1,1457 @@
+political_decisions = {
+
+	#tutorial_1_ = {
+	#	alert = yes
+	#	potential = {
+	#		has_country_flag = hidden_decisions
+	#		not = { has_country_flag = hidden_tutorials }
+	#		not = { has_country_flag = tutorial_1 }
+	#		ai = no
+	#	}
+	#	allow = {
+	#		ai = no
+	#
+    #	}
+	#	effect = {
+	#		set_global_flag = tutorial_1
+	#	}
+	#	ai_will_do = {
+	#		factor = 0
+	#	}
+	#}
+	
+	#alert_avg_mil = {
+	#	alert = yes
+	#	potential = {
+	#		not = { has_country_flag = hidden_alerts }
+	#		not = { has_country_flag = hidden_alert_avg_mil }
+	#		ai = no
+	#	}
+	#	allow = {
+	#		ai = no
+	#	}
+	#	effect = {
+	#		set_global_flag = hidden_alert_avg_mil
+	#	}
+	#	ai_will_do = {
+	#		factor = 0
+	#	}
+	#}
+	
+	railroading = {
+		alert = no
+		picture = bytown_1853
+		potential = {
+			ai = no
+			has_country_flag = hidden_decisions
+			NOT = { year = 1837 }
+		}
+		
+		allow = {
+		}
+		
+		effect = {
+		   country_event = 88000
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	exhibition = {
+		alert = yes
+		picture = exhibition
+		potential = {
+			civilized = yes
+			is_greater_power = no
+			is_secondary_power = no
+			year = 1840
+			classicism_n_early_romanticism = 1
+			NOT = {
+				romanticism = 1
+			}				
+			NOT = {
+				has_country_modifier = exhibition
+			}
+		}
+		allow = {
+			money = 10000
+		}
+		effect = {
+			prestige = 4
+			treasury = -10000
+			add_country_modifier = {
+				name = exhibition
+				duration = 5400
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			}
+	}	
+	
+	exhibition2 = {
+		alert = yes
+		picture = exhibition
+		potential = {
+			civilized = yes
+			is_greater_power = no
+			is_secondary_power = no
+			romanticism = 1
+			year = 1840
+			NOT = {
+				realism = 1
+			}	
+			NOT = {
+				has_country_modifier = exhibition
+			}
+		}
+		allow = {
+			money = 20000
+		}
+		effect = {
+			prestige = 6
+			treasury = -20000
+			add_country_modifier = {
+				name = exhibition
+				duration = 5400	
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			}
+	}	
+	exhibition3 = {
+		alert = yes
+		picture = exhibition
+		potential = {
+			civilized = yes
+			is_greater_power = no
+			is_secondary_power = no
+			realism = 1
+			year = 1840
+			NOT = {
+				impressionism = 1
+			}	
+			NOT = {
+				has_country_modifier = exhibition
+			}
+		}
+		allow = {
+			money = 30000
+		}
+		effect = {
+			prestige = 8
+			treasury = -30000
+			add_country_modifier = {
+				name = exhibition
+				duration = 5400
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			}
+	}	
+	
+	exhibition4 = {
+		alert = yes
+		picture = exhibition
+		potential = {
+			civilized = yes
+			is_greater_power = no
+			is_secondary_power = no
+			year = 1840
+			impressionism = 1
+			NOT = {
+					expressionism = 1
+			}
+			NOT = {
+				has_country_modifier = exhibition
+			}
+		}
+		allow = {
+			money = 75000
+		}
+		effect = {
+			prestige = 10
+			treasury = -75000
+			add_country_modifier = {
+				name = exhibition
+				duration = 5400
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			}
+	}	
+	
+	exhibition5 = {
+		alert = yes
+		picture = exhibition
+		potential = {
+			civilized = yes
+			is_greater_power = no
+			is_secondary_power = no
+			expressionism = 1
+			year = 1840
+			NOT = {
+				mass_culture_n_the_avant_garde= 1
+			}
+			NOT = {
+				has_country_modifier = exhibition
+			}
+		}
+		allow = {
+			money = 100000
+		}
+		effect = {
+			prestige = 12
+			treasury = -100000
+			add_country_modifier = {
+				name = exhibition
+				duration = 5400
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}	
+	
+	exhibition6 = {
+		alert = yes
+		picture = exhibition
+		potential = {
+			civilized = yes
+			is_greater_power = no
+			is_secondary_power = no
+			mass_culture_n_the_avant_garde = 1
+			NOT = {
+				has_country_modifier = exhibition
+			}
+		}
+		allow = {
+			money = 250000
+		}
+		effect = {
+			prestige = 15
+			treasury = -250000
+			add_country_modifier = {
+				name = exhibition
+				duration = 5400
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			}
+	}	
+	
+	grand_exhibition = {
+		alert = yes
+		picture = grand_exhibition
+		potential = {
+			civilized = yes
+			is_greater_power = no
+			is_secondary_power = yes
+			year = 1840
+			classicism_n_early_romanticism = 1
+			NOT = {
+				romanticism = 1
+			}	
+			NOT = {
+				has_country_modifier = exhibition
+			}
+		}
+		allow = {
+			money = 20000
+		}
+		effect = {
+			prestige = 4
+			treasury = -20000
+			add_country_modifier = {
+				name = exhibition
+				duration = 5400
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}	
+	
+	grand_exhibition2 = {
+		alert = yes
+		picture = grand_exhibition
+		potential = {
+			civilized = yes
+			is_greater_power = no
+			is_secondary_power = yes
+			year = 1840
+			romanticism = 1
+			NOT = {
+				realism = 1
+			}	
+			NOT = {
+				has_country_modifier = exhibition
+			}
+		}
+		allow = {
+			money = 40000
+		}
+		effect = {
+			prestige = 6
+			treasury = -40000
+			add_country_modifier = {
+				name = exhibition
+				duration = 5400
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}	
+	grand_exhibition3 = {
+		alert = yes
+		picture = grand_exhibition
+		potential = {
+			civilized = yes
+			is_greater_power = no
+			is_secondary_power = yes
+			realism = 1
+			year = 1840
+			NOT = {
+				impressionism = 1
+			}	
+			NOT = {
+				has_country_modifier = exhibition
+			}
+		}
+		allow = {
+			money = 60000
+		}
+		effect = {
+			prestige = 8
+			treasury = -60000
+			add_country_modifier = {
+				name =exhibition
+				duration = 5400
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}	
+	
+	grand_exhibition4 = {
+		alert = yes
+		picture = grand_exhibition
+		potential = {
+			civilized = yes
+			is_greater_power = no
+			is_secondary_power = yes
+			impressionism = 1
+			year = 1840
+			NOT = {
+					expressionism = 1
+			}
+			NOT = {
+				has_country_modifier = exhibition
+			}
+		}
+		allow = {
+			money = 100000
+		}
+		effect = {
+			prestige = 10
+			treasury = -100000
+			add_country_modifier = {
+				name =exhibition
+				duration = 5400
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}	
+	
+	grand_exhibition5 = {
+		alert = yes
+		picture = grand_exhibition
+		potential = {
+			civilized = yes
+			is_greater_power = no
+			is_secondary_power = yes
+			expressionism = 1
+			NOT = {
+				mass_culture_n_the_avant_garde = 1
+				}
+			NOT = {
+				has_country_modifier = exhibition
+			}
+		}
+		allow = {
+			money = 250000
+		}
+		effect = {
+			prestige = 12
+			treasury = -250000
+			add_country_modifier = {
+				name =exhibition
+				duration = 5400
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}	
+	
+	grand_exhibition6 = {
+		alert = yes
+		picture = grand_exhibition
+		potential = {
+			civilized = yes
+			is_greater_power = no
+			is_secondary_power = yes
+			mass_culture_n_the_avant_garde = 1
+			NOT = {
+				has_country_modifier = exhibition
+			}
+		}
+		allow = {
+			money = 500000
+		}
+		effect = {
+			prestige = 15
+			treasury = -500000
+			add_country_modifier = {
+				name = exhibition
+				duration = 5400
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}	
+	
+	lavish_exhibition = {
+		alert = yes
+		potential = {
+			civilized = yes
+			is_greater_power = yes
+			year = 1840
+			classicism_n_early_romanticism = 1
+			NOT = {
+				romanticism = 1
+			}	
+			NOT = {
+				has_country_modifier = exhibition
+			}
+		}
+		allow = {
+			money = 50000
+		}
+		effect = {
+			prestige = 4
+			treasury = -50000
+			add_country_modifier = {
+				name = exhibition
+				duration = 5400
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}	
+	
+	lavish_exhibition2 = {
+		alert = yes
+		picture = lavish_exhibition
+		potential = {
+			civilized = yes
+			is_greater_power = yes
+			romanticism = 1
+			year = 1840
+			NOT = {
+				realism = 1
+			}	
+			NOT = {
+				has_country_modifier = exhibition
+			}
+		}
+		allow = {
+			money = 75000
+		}
+		effect = {
+			prestige = 6
+			treasury = -75000
+			add_country_modifier = {
+				name = exhibition
+				duration = 5400
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}	
+	lavish_exhibition3 = {
+		alert = yes
+		picture = lavish_exhibition
+		potential = {
+			civilized = yes
+			is_greater_power = yes
+			realism = 1
+			year = 1840
+			NOT = {
+				impressionism = 1
+			}	
+			NOT = {
+				has_country_modifier = exhibition
+			}
+		}
+		allow = {
+			money = 100000
+		}
+		effect = {
+			prestige = 8
+			treasury = -100000
+			add_country_modifier = {
+				name = exhibition
+				duration = 5400
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}	
+	
+	lavish_exhibition4 = {
+		alert = yes
+		picture = lavish_exhibition
+		potential = {
+			civilized = yes
+			is_greater_power = yes
+			impressionism = 1
+			year = 1840
+			NOT = {
+					expressionism = 1
+			}
+			NOT = {
+				has_country_modifier = exhibition
+			}
+		}
+		allow = {
+			money = 250000
+		}
+		effect = {
+			prestige = 10
+			treasury = -250000
+			add_country_modifier = {
+				name = exhibition
+				duration = 5400
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}	
+	
+	lavish_exhibition5 = {
+		alert = yes
+		picture = lavish_exhibition
+		potential = {
+			civilized = yes
+			is_greater_power = yes
+			expressionism = 1
+			NOT = {
+				mass_culture_n_the_avant_garde = 1
+				}
+			NOT = {
+				has_country_modifier = exhibition
+			}
+		}
+		allow = {
+			money = 500000
+		}
+		effect = {
+			prestige = 12
+			treasury = -500000
+			add_country_modifier = {
+				name = exhibition
+				duration = 5400
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}	
+	
+	lavish_exhibition6 = {
+		alert = yes
+		picture = lavish_exhibition
+		potential = {
+			civilized = yes
+			is_greater_power = yes
+			mass_culture_n_the_avant_garde = 1
+			NOT = {
+				has_country_modifier = exhibition
+			}
+		}
+		allow = {
+			money = 1000000
+
+		}
+		effect = {
+			prestige = 15
+			treasury = -1000000
+			add_country_modifier = {
+				name = exhibition
+				duration = 5400
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	five_year_plan = {
+		alert = yes
+		potential = {
+			government = proletarian_dictatorship
+			NOT = {
+				has_country_modifier = five_year_plan
+			}
+		}
+		allow = {
+			revolution_n_counterrevolution = 1
+		}
+		effect = {
+			add_country_modifier = {
+				name = five_year_plan
+				duration = 1825
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0 
+				average_militancy = 2
+			}
+		}
+	}	
+	
+	establish_panslavism = {
+		potential = {
+			tag = CRO
+			TUR = {
+				any_owned_province = { is_core = SER }
+			}
+			NOT = { has_global_flag = panslavism }
+		}
+		
+		allow = {
+			year = 1845
+			NOT = {
+				relation = { who = TUR value = 0 }
+				truce_with = TUR
+				alliance_with = TUR
+			}
+		}
+		
+		effect = {
+			set_global_flag = panslavism
+			relation = { who = TUR value = -100 }
+			TUR = {
+				any_pop = { 
+					limit = { has_pop_religion = orthodox }
+					militancy = 8
+					ideology = {
+						value = separatist
+						factor = 0.25
+					}
+				}
+				any_owned = {
+					limit = { pop_majority_religion = orthodox }
+					add_province_modifier = {
+						name = nationalist_agitation
+						duration = 1095
+					}
+				}
+				casus_belli = {	
+					target = THIS
+					type = humiliate
+					months = 12
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				part_of_sphere = no
+				NOT = { any_greater_power = { alliance_with = CRO } }
+				is_greater_power = no
+			}
+		}
+	}
+	
+	change_national_value_on = {
+		alert = no
+		picture = national_value
+		potential = {			
+			NOT = {	has_country_flag = nv_change }
+			ai = no
+			civilized = yes
+		}
+		
+		allow = {
+		    NOT = {	has_country_modifier = national_confusion }
+			ideological_thought = 1
+		}
+		
+		effect = {
+			set_country_flag = nv_change
+		}
+	}
+
+	change_national_value_off = {
+		alert = no
+		picture = national_value
+		potential = {
+			ai = no
+			has_country_flag = nv_change
+		}
+		
+		allow = {
+			ideological_thought = 1
+		}
+		
+		effect = {
+			clr_country_flag = nv_change
+		}
+	}
+	
+	#disable_state_election_events = {
+	#	alert = no
+	#	potential = {
+	#		not = { has_country_flag = no_state_election_events }
+	#		has_country_flag = hidden_decisions
+	#	}
+	#	allow = {
+	#		ai = no
+	#	}
+	#	effect = {
+	#		set_country_flag = no_state_election_events
+	#	}
+	#	ai_will_do = {
+	#		factor = 0
+	#	}
+	#}
+	
+	#enable_state_election_events = {
+	#	alert = no
+	#	potential = {
+	#		has_country_flag = no_state_election_events
+	#		has_country_flag = hidden_decisions
+	#	}
+	#	allow = {
+	#		ai = no
+	#	}
+	#	effect = {
+	#		clr_country_flag = no_state_election_events
+	#	}
+	#	ai_will_do = {
+	#		factor = 0
+	#	}
+	#}
+	
+	disable_rgo_change_events = {
+		alert = no
+		potential = {
+			not = { has_country_flag = no_rgo_change_events }
+			has_country_flag = hidden_decisions
+		}
+		allow = {
+			ai = no
+		}
+		effect = {
+			set_country_flag = no_rgo_change_events
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	enable_rgo_change_events = {
+		alert = no
+		potential = {
+			has_country_flag = no_rgo_change_events
+			has_country_flag = hidden_decisions
+		}
+		allow = {
+			ai = no
+		}
+		effect = {
+			clr_country_flag = no_rgo_change_events
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+    leave_soi = {
+        alert = no
+        picture = sign_the_geneva_convention
+        potential = {
+            part_of_sphere = yes
+            OR = {
+                is_vassal = no
+                AND = {
+                    ai = yes
+                    has_country_flag = failed_unification_remove_from_sphere
+                }
+            }
+        }
+
+        allow = {
+            OR = {
+                total_pops = 50000000
+                AND = {
+                    is_secondary_power = yes
+                    sphere_owner = {
+                        NOT = {
+                            relation = { who = THIS value = -100 }
+                            truce_with = THIS
+                        }
+                    }
+                }
+                AND = {
+                    ai = yes
+                    has_country_flag = failed_unification_remove_from_sphere
+                }
+            }
+        }
+
+        effect = {
+            random_owned = {
+                limit = { owner = { NOT = { has_country_flag = failed_unification_remove_from_sphere } } }
+                owner = { sphere_owner = { country_event = 13202 } }
+            }
+            random_owned = {
+                limit = { owner = { has_country_flag = failed_unification_remove_from_sphere } }
+                owner = {
+                    clr_country_flag = failed_unification_remove_from_sphere
+                    sphere_owner = { diplomatic_influence = { who = THIS value = -200 } }
+                }
+            }
+        }
+
+        ai_will_do = {
+            factor = 1
+
+            # Ai will do, if sphere owner has LESS than thrice our brigades.
+            modifier = {
+                factor = 0
+                NOT = {
+                    total_pops = 50000000
+                    has_country_flag = failed_unification_remove_from_sphere
+                }
+                sphere_owner = {
+                    # Factor = (sphere_owner regiments) / (our regiments).
+                    # Returns true if( factor >= x ).
+                    # Use NOT statement to check if( factor < x )
+                    brigades_compare = 3
+                }
+            }
+        }
+    }
+	
+	nationalize = {
+		picture = nationalize
+			
+		potential = {
+			can_nationalize = yes
+			civilized = yes
+			NOT = { has_country_modifier = nationalization_in_progress }
+		}
+		
+		allow = {
+			NOT = { part_of_sphere = yes }
+			NOT = { is_vassal = yes }
+			OR = {
+			    economic_policy = statism
+				economic_policy = state_capitalism
+				economic_policy = planned_economy
+				is_greater_power = yes
+			}
+			OR = {
+				ai = no
+				is_greater_power = yes
+				military_score = 300
+				AND = {
+					NOT = { has_recently_lost_war = yes }
+					NOT = { is_disarmed = yes }
+					NOT = { war_policy = pacifism }
+					NOT = { num_of_revolts = 1 }
+					NOT = { any_owned_province = { country_units_in_province = REB } }
+					NOT = { average_militancy = 7 }
+					total_amount_of_divisions = 10
+					military_score = 50
+					OR = {
+						ruling_party_ideology = communist
+						ruling_party_ideology = fascist
+						AND = {
+							military_score = 200
+							is_secondary_power = yes
+							OR = {
+								war_policy = jingoism
+								war_policy = pro_military
+							}
+						}
+						AND = {
+							any_greater_power = { alliance_with = THIS military_score = 50 }
+							OR = {
+								war_policy = jingoism
+								war_policy = pro_military
+							}
+						}
+					}
+				}
+			}
+		}
+		
+		effect = {
+			add_country_modifier = { name = nationalization_in_progress duration = 365 }
+			nationalize = yes
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+	
+	land_of_opportunity = {
+		picture = liberty_enlightening_the_world
+		potential = {
+		NOT = { 
+		OR = {
+		   tag = INC 
+		   tag = QUI
+		   tag = HHR
+		   tag = CHE 
+		   tag = IRO
+		   tag = SKR
+		   tag = AZT
+		   tag = PUR
+		   tag = ZAP
+		   tag = YUC 
+		   tag = ARU
+		}
+		}
+		OR = {
+			continent = north_america
+			continent = south_america
+		}
+		NOT = { has_country_flag = land_of_opportunity }
+		}
+		
+		allow = {
+			war = no
+			year = 1840			
+			OR = {
+			   government = democracy
+			   government = parliamentary_republic
+			   government = socialist_republic
+			}
+		}
+		
+		effect = {
+			set_country_flag = land_of_opportunity
+			add_country_modifier = {
+				name = land_of_opportunity
+				duration = 7300
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	go_insane = {
+	    picture = letatcestmoi
+		alert = no
+		potential = {	
+			ai = no
+			has_country_flag = hidden_decisions
+		}
+		allow = {
+		    badboy = 0.9
+		}
+		effect = {
+			prestige = -1
+			money = -100000
+			badboy = -1000
+			badboy = 22.5
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}	
+	max_fort_level = {
+		alert = no
+		potential = {	
+			has_country_flag = hidden_decisions
+			modern_army_doctrine = 1
+		}
+		allow = {
+			war = no
+			not = { has_country_modifier = fort_constructions }
+		}
+		effect = {
+			add_country_modifier = {
+				name = fort_constructions 
+				duration = 1825
+			}
+			any_owned = {
+				fort = 10
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	build_fort_level_1 = {
+		alert = no
+		potential = {	
+			has_country_flag = hidden_decisions
+			post_napoleonic_thought = 1
+			any_owned_province = {
+				not = {
+					has_building = fort
+				}
+			}
+		}
+		allow = {
+			war = no
+			not = { has_country_modifier = fort_constructions }
+		}
+		effect = {
+			add_country_modifier = {
+				name = fort_constructions 
+				duration = 1825
+			}
+			any_owned = {
+				limit = {
+					not = {
+						has_building = fort
+					}
+				}
+				fort = 1
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	max_port_level = {
+		alert = no
+		potential = {
+			has_country_flag = hidden_decisions
+			modern_naval_doctrine = 1
+			any_owned_province = {
+				is_coastal = yes
+			}
+		}
+		allow = {
+			war = no
+			not = { has_country_modifier = fort_constructions }
+		}
+		effect = {
+			add_country_modifier = {
+				name = fort_constructions 
+				duration = 1825
+			}
+			any_owned = {
+				limit = {
+					has_building = naval_base
+				}
+				naval_base = 10
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	build_port_level_1 = {
+		alert = no
+		potential = {	
+			has_country_flag = hidden_decisions
+			post_nelsonian_thought = 1
+			any_state = {
+				and = {
+					any_owned_province = {
+						is_coastal = yes
+					}
+					not = {
+						any_owned_province = {
+							has_building = naval_base
+						}
+					}
+				}
+			}
+		}
+		allow = {
+			war = no
+			not = { has_country_modifier = fort_constructions }
+		}
+		effect = {
+			add_country_modifier = {
+				name = fort_constructions 
+				duration = 1825
+			}
+			any_state = {
+				limit = {
+					not = {
+						any_owned_province = {
+							is_coastal = yes
+							has_building = naval_base
+						}
+					}
+				}
+				random_owned = {
+					limit = {
+						is_coastal = yes
+					}
+					naval_base = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	AI_build_weapons_industry = {
+		alert = no
+		potential = {	
+			ai = yes
+			OR = {
+			   is_greater_power = yes
+			AND = {
+			   is_secondary_power = yes
+			   tech_school = army_tech_school
+			   }
+			}
+			OR = {
+			AND = {
+			   bolt_action_rifles = 1
+			   iron_breech_loaded_artillery = 1
+			   } 
+			   tech_school = army_tech_school
+			}
+			not = { has_country_flag = built_small_arms }
+		}
+		
+		allow = {
+			war = no
+		}
+		
+		effect = {
+			set_country_flag = built_small_arms
+			build_factory_in_capital_state = small_arms_factory
+			build_factory_in_capital_state = artillery_factory
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}	
+	
+	AI_build_electric_gear_factory = {
+		alert = no
+		potential = {	
+			ai = yes
+			invention = edison_light_bulb
+			not = { has_country_flag = built_electric_gear_factory }
+		}
+		allow = {
+			war = no
+		}
+		effect = {
+			set_country_flag = built_electric_gear_factory
+			build_factory_in_capital_state = electric_gear_factory
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	AI_build_radio_factory = {
+		alert = no
+		potential = {	
+			ai = yes
+			invention = national_radio_networks
+			not = { has_country_flag = built_radio_factory }
+		}
+		allow = {
+			war = no
+		}
+		effect = {
+			set_country_flag = built_radio_factory
+			build_factory_in_capital_state = radio_factory
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	AI_build_telephone_factory = {
+		alert = no
+		potential = {	
+			ai = yes
+			invention = bell_n_greys_telephones
+			not = { has_country_flag = built_telephone_factory }
+		}
+		allow = {
+			war = no
+		}
+		effect = {
+			set_country_flag = built_telephone_factory
+			build_factory_in_capital_state = telephone_factory
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	AI_build_barrel_factory = {
+		alert = no
+		potential = {	
+			ai = yes
+			invention = tank_experiments
+			not = { has_country_flag = built_barrel_factory }
+		}
+		allow = {
+			war = no
+		}
+		effect = {
+			set_country_flag = built_barrel_factory
+			build_factory_in_capital_state = barrel_factory
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	AI_build_steamer_factory = {
+		alert = no
+		potential = {	
+			ai = yes
+			OR = {
+			    tech_school = naval_tech_school
+				is_greater_power = yes
+		    }
+			steamers = 1
+			year = 1860
+			not = { has_country_flag = built_steamer_factory }
+		}
+		allow = {
+			war = no
+		}
+		effect = {
+			set_country_flag = built_steamer_factory
+			build_factory_in_capital_state = steamer_shipyard  
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}		
+	
+	AI_build_aeroplane_factory = {
+		alert = no
+		potential = {	
+			ai = yes
+			invention = wright_n_langleys_aeroplanes
+			not = { has_country_flag = built_aeroplane_factory }
+		}
+		allow = {
+			war = no
+		}
+		effect = {
+			set_country_flag = built_aeroplane_factory
+			build_factory_in_capital_state = aeroplane_factory
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	AI_build_automobile_factory = {
+		alert = no
+		potential = {	
+			ai = yes
+			invention = daimlers_automobile
+			not = { has_country_flag = built_automobile_factory }
+		}
+		allow = {
+			war = no
+		}
+		effect = {
+			set_country_flag = built_automobile_factory
+			build_factory_in_capital_state = automobile_factory
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	AI_build_synthetic_oil_factory = {
+		alert = no
+		potential = {	
+			ai = yes
+			invention = synthetic_oil
+			not = { has_country_flag = built_synthetic_oil_factory }
+		}
+		allow = {
+			war = no
+		}
+		effect = {
+			set_country_flag = built_synthetic_oil_factory
+			build_factory_in_capital_state = synthetic_oil_factory
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	AI_build_synthetic_rubber_factory = {
+		alert = no
+		potential = {	
+			ai = yes
+			invention = synthetic_rubber
+			not = { has_country_flag = built_synthetic_rubber_factory }
+		}
+		allow = {
+			war = no
+		}
+		effect = {
+			set_country_flag = built_synthetic_rubber_factory
+			build_factory_in_capital_state = synthetic_rubber_factory
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	AI_build_fuel_refinery = {
+		alert = no
+		potential = {	
+			ai = yes
+			invention = cracking
+			not = { has_country_flag = built_fuel_refinery }
+		}
+		allow = {
+			war = no
+		}
+		effect = {
+			set_country_flag = built_fuel_refinery
+			build_factory_in_capital_state = fuel_refinery
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	AI_build_synthetic_tropical_factory = {
+		alert = no
+		potential = {	
+			ai = yes
+			invention = import_substitution_industrialization_2
+			not = { has_country_flag = built_synthetic_tropical_factory }
+		}
+		allow = {
+			war = no
+		}
+		effect = {
+			set_country_flag = built_synthetic_tropical_factory
+			build_factory_in_capital_state = synthetic_tropical_factory
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	disable_improved_rebels = {
+		alert = no
+		potential = {	
+		    ai = no
+		    has_country_flag = hidden_decisions
+			NOT = { has_global_flag = disable_rebel_improvement }
+		}
+		allow = {
+			war = no
+		}
+		effect = {
+			set_global_flag = disable_rebel_improvement
+			prestige = -1
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	disable_army_munities = {
+		alert = no
+		potential = {	
+		    ai = no
+		    has_country_flag = hidden_decisions
+			NOT = { has_country_flag = no_munity }
+		}
+		allow = {
+			war = no
+		}
+		effect = {
+			set_country_flag = no_munity
+			prestige = -1
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	hide_extra_decisions = {
+		alert = no
+		picture = bytown_1853
+		potential = {
+			has_country_flag = hidden_decisions
+			ai = no
+		}
+		
+		allow = {
+		}
+		
+		effect = {
+		    clr_country_flag = hidden_decisions
+			
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	show_extra_decisions = {
+		alert = no
+		picture = bytown_1853
+		potential = {
+			NOT = { has_country_flag = hidden_decisions }
+			ai = no
+		}
+		
+		allow = {
+		}
+		
+		effect = {
+		   set_country_flag = hidden_decisions
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

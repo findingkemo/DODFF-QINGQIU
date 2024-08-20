@@ -1,0 +1,13 @@
+owner = OSN
+controller = OSN
+add_core = OSN
+add_core = GER
+trade_goods = grain
+life_rating = 32
+terrain = marginal_farmland
+state_building = {
+	level = 2 
+	building = clipper_shipyard
+	upgrade = yes
+}
+

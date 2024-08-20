@@ -1,0 +1,190 @@
+political_decisions = {
+	form_grossdeutschland = {
+	picture = Germania
+		potential = {
+			is_culture_group = germanic
+			# To avoid people getting misguided - There are alternaive decisions for earlier formations of GER
+			mass_politics = 1		
+			NOT = {
+			    tag = GCF
+				tag = HLR
+				exists = GER
+			}
+		}
+		
+		allow = {
+			war = no
+			prestige = 80
+			NOT = { exists = CAE }
+			NOT = { SCA = { owns = 528 } }
+			GER = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						owner = {
+							in_sphere = THIS
+						}
+					}
+				}
+			}
+		}
+		
+		effect = {
+			prestige = 20
+		    random_owned = { limit = { owner = { OR = { government = hms_government government = prussian_constitutionalism government = democracy government = parliamentary_republic } } }
+		    owner = { political_reform = federalism }
+		    }
+		    any_owned = {
+		       limit = {
+		         is_core = SGF
+			     is_core = SLO
+		       }
+		       add_core = GER
+		    }
+			change_tag = GER
+			add_accepted_culture = north_german
+			add_accepted_culture = south_german
+			add_accepted_culture = rheinish 
+			add_accepted_culture = swabian
+			any_country = {
+				limit = {
+					is_culture_group = germanic
+					NOT = { primary_culture = prussian }
+					NOT = { vassal_of = BRG }
+					NOT = { vassal_of = FRK }
+					NOT = { vassal_of = PBG }
+					in_sphere = THIS
+				}
+				country_event = 11101
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	integrate_elsass = { 
+		
+	potential = { 
+	tag = HLR 
+	409 = { owned_by = THIS }
+	410 = { owned_by = THIS }
+	NOT = { has_country_flag = integrate_elsass	}
+	}
+	
+	allow = { 
+	nationalism_n_imperialism = 1 
+		}
+	
+	effect = { 
+	badboy = 6 
+	409 = { add_core = THIS }
+	410 = { add_core = THIS }
+	set_country_flag = integrate_elsass
+		}
+	ai_will_do = { 
+	factor = 1 
+		}
+	}
+	
+	
+	integrate_prussian = {
+    picture = MarzBerlin	
+		
+	potential = { 
+	OR = { tag = GER tag = HLR tag = CAE tag = NGF tag = GCF tag = POM } 
+	NOT = { accepted_culture = prussian }
+	any_owned_province = { OR = { is_core = PRU is_core = KRL is_core = PZN is_core = PML } }
+	NOT = { has_country_flag = prussian_acc }
+	}
+	
+	allow = { 
+	NOT = { citizenship_policy = residency }
+	}
+	
+	effect = { 
+	set_country_flag = prussian_acc
+	add_accepted_culture = prussian 
+	}
+	
+	}
+	
+	integrate_rhineland = { 
+	picture = MarzBerlin
+	potential = { 
+	   OR = { tag = SGF tag = CAE tag = NGF }
+	   NOT = { accepted_culture = rheinish }
+	   any_owned_province = { is_core = CFR }
+	   NOT = { has_country_flag = rheinish_acc }
+	}
+	
+	allow = { 
+	   NOT = { citizenship_policy = residency }
+	}
+	
+	effect = { 
+	   set_country_flag = rheinish_acc
+	   add_accepted_culture = rheinish 
+	}	
+	}
+	
+	integrate_elbe = { 
+	picture = MarzBerlin
+	potential = { 
+	OR = { tag = SGF tag = CFR tag = PRU }
+	NOT = { accepted_culture = north_german }
+	OR = { any_owned_province = { is_core = BRN } any_owned_province = { is_core = POM } any_owned_province = { is_core = HAN } }
+	NOT = { has_country_flag = elbe_acc }
+	}
+	
+	allow = { 
+	   NOT = { citizenship_policy = residency }
+	}
+	
+	effect = { 
+	set_country_flag = elbe_acc
+	add_accepted_culture = north_german 
+	}
+	
+	}
+	
+	integrate_swabia = { 
+	picture = MarzBerlin
+	potential = { 
+	   OR = { tag = SGF tag = GCF }
+	   NOT = { accepted_culture = swabian }
+	   any_owned_province = { is_core = SWA }
+	   NOT = { has_country_flag = swabian_acc }
+	}
+	
+	allow = { 
+	   NOT = { citizenship_policy = residency }
+	}
+	
+	effect = { 
+	   set_country_flag = swabia_acc
+	   add_accepted_culture = swabian
+	}	
+	}
+	
+	integrate_south = { 
+	picture = MarzBerlin
+	potential = { 
+	OR = { tag = NGF tag = RHI }
+	NOT = { accepted_culture = south_german }
+	OR = { any_owned_province = { is_core = BAV } any_owned_province = { is_core = AUS } }
+	NOT = { has_country_flag = south_acc }
+	}
+	
+	allow = { 
+	NOT = { citizenship_policy = residency }
+	}
+	
+	effect = { 
+	set_country_flag = south_acc
+	add_accepted_culture = south_german 
+	    }
+    }
+}
+
+	

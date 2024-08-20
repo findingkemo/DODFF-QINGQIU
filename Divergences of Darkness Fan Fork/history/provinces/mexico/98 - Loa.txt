@@ -1,0 +1,6 @@
+owner = DIN
+controller = DIN
+add_core = DIN
+trade_goods = copper
+life_rating = 35
+terrain = semi_desert_mountains

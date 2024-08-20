@@ -1,0 +1,8 @@
+owner = KKN
+controller = KKN
+add_core = KKN
+
+
+trade_goods = iron
+life_rating = 35
+terrain = boreal_forest_mountains

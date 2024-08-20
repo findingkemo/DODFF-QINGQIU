@@ -1,0 +1,102 @@
+country_event = {
+	id = 200000
+	title = "200000.T"
+	desc = "EVTDESC200000"
+
+	major = yes
+	
+	trigger = {
+		OR = {
+			tag = DNG
+			tag = PLA
+			tag = NBG
+			tag = LST
+			AND = {
+			   tag = CLM
+			   has_country_flag = native_policy_possible
+			}			
+    	}
+		NOT = { has_country_flag = native_integration }
+		NOT = { has_country_flag = native_assimilation }
+		NOT = { has_country_flag = native_reservation }
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = "200000.A"
+		set_country_flag = native_assimilation
+		add_country_modifier = {
+			name = native_assimilation
+			duration = 3650
+		}
+	}
+	option = {
+		name = "200000.B"
+		set_country_flag = native_reservation
+		any_owned = {
+			limit = {
+				is_core = IRO
+			}
+			add_province_modifier = {
+				name = native_reservation
+				duration = 36000
+			}
+		}
+		any_owned = {
+			limit = {
+				is_core = ANI
+			}
+			add_province_modifier = {
+				name = native_reservation
+				duration = 36000
+			}
+		}
+		any_owned = {
+			limit = {
+				is_core = NUN
+			}
+			add_province_modifier = {
+				name = native_reservation
+				duration = 36000
+			}
+		}
+		any_owned = {
+			limit = {
+				is_core = CHE
+			}
+			add_province_modifier = {
+				name = native_reservation
+				duration = 36000
+			}
+		}
+		any_owned = {
+			limit = {
+				is_core = DIN
+			}
+			add_province_modifier = {
+				name = native_reservation
+				duration = 36000
+			}
+		}
+		any_owned = {
+			limit = {
+				culture = native_american_minor
+			}
+			add_province_modifier = {
+				name = native_reservation
+				duration = 1825
+			}
+		}
+	}
+	option = {
+		name = "200000.C"
+		set_country_flag = native_integration
+		add_country_modifier = {
+			name = native_integration
+			duration = 3650
+		}
+	}
+}

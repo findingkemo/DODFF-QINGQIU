@@ -1,0 +1,11 @@
+owner = SPA
+controller = SPA
+add_core = DRA
+add_core = VIJ
+add_core = BHO
+trade_goods = precious_goods
+life_rating = 32
+terrain = jungle_farmland
+colonial = 1
+naval_base = 2
+

@@ -1,0 +1,7 @@
+owner = MCC
+controller = MCC
+add_core = MCC
+add_core = MCH
+trade_goods = grain
+life_rating = 35
+terrain = hilly_grassland

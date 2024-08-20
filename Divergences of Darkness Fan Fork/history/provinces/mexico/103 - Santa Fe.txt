@@ -1,0 +1,9 @@
+owner = CHE 
+controller = CHE
+add_core = CHE
+add_core = PLA 
+add_core = LOU
+trade_goods = fruit
+life_rating = 35
+terrain = deciduous_forest_mountains
+

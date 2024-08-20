@@ -1,0 +1,18 @@
+leader = {
+	name = "Feng Yuting"
+	type = land
+	date = 1836.1.1
+	personality = pompous 
+	background = megalomaniac 
+}
+
+army = {
+	name = "Army of the Rightful Marshal of Qingqiu"
+	location = 658
+	regiment = {
+		name= "1.Hawaii regular"
+		type = infantry
+		home = 658
+	}
+}
+

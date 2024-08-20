@@ -1,0 +1,8 @@
+owner = CHV
+controller = CHV
+add_core = NBG
+add_core = CHV
+trade_goods = copper
+life_rating = 35
+terrain = forested_farmland
+

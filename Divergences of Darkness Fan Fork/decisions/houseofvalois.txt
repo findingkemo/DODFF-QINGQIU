@@ -1,0 +1,705 @@
+political_decisions = {
+	begin_the_crusade_TUS = {
+	picture = valois_italy
+		potential = {
+			tag = PRV
+			NOT = { exists = ITA }
+			NOT = { exists = ARI }
+		    TUS = { exists = yes }
+		    TUS = { OR = { government = democracy government = parliamentary_republic government = socialist_republic } }
+		    NOT = { has_country_flag = valois_rulez }
+			NOT = { has_country_flag = the_only_chance_TUS }
+			NOT = { has_country_flag = tus_crusade_begins  }
+			NOT = { has_country_flag = new_provence }
+			ai = no
+		}	
+
+		allow = {
+		year = 1838
+        NOT = { year = 1850 }
+		ai = no
+		}
+		
+		effect = {
+			prestige = 10
+			set_country_flag = tus_crusade_begins 
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+
+	restore_valois_italy = {
+	picture = valois_italy
+		potential = {
+			NOT = { has_country_flag = valois_rulez }
+			NOT = { has_country_flag = new_provence }
+			NOT = { exists = ITA }
+			NOT = { exists = ARI }
+			tag = PRV
+		}	
+		allow = {
+			NOT = { part_of_sphere = yes }
+			NOT = { war = yes }
+			744 = {
+				owned_by = THIS	
+				}
+			FRR = {
+				OR = {
+				NOT = { exists = yes }
+				in_sphere = THIS
+				vassal_of = THIS
+				}
+			}
+			749 = {
+				owned_by = THIS	
+				}
+		}
+		
+		effect = {
+			prestige = 15
+			clr_country_flag = PRV_TUS_CONQUEST_ENABLED
+			any_owned = {
+					limit = {
+							is_core = THIS
+					}
+					add_core = ITA
+			}
+			any_country = {
+				any_owned = {
+						limit = {
+							is_core = THIS
+					}
+					remove_core = PRV
+				}
+			}
+			any_country = {
+				limit = {
+					primary_culture = north_italian
+					OR = {
+						in_sphere = THIS
+						vassal_of = THIS
+					}
+				}
+				annex_to = THIS
+			}
+			ITC = { remove_country_modifier = the_compromesso all_core = { remove_core = ITC } }
+			change_tag = ITA
+			add_accepted_culture = south_italian
+			add_accepted_culture = central_italian
+			add_accepted_culture = north_italian
+			capital = 749
+			set_country_flag = valois_italy
+			country_event = 1243510
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	reclaim_occitania = { 
+
+		potential = { 
+			tag = ITA 
+			has_country_flag = valois_italy
+			OR = { 
+			government = prussian_constitutionalism 
+			government = hms_government 
+			government = absolute_monarchy 
+			government = fascist_monarchy
+			}			
+			NOT = { has_country_flag = occitania_claimed }
+		}
+
+		allow = {
+			ITA = { 
+				all_core = {
+					owned_by = THIS
+					}
+				}
+			nationalism_n_imperialism = 1
+		}
+
+		effect = { 
+		FRA_451 = { 
+			add_core = THIS 
+		}
+		OCC = {
+				all_core = {
+						add_core = THIS	
+				}
+			}
+		set_country_flag = occitania_claimed
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	renew_war_DUA = { 
+	picture = hundred_years_war
+		potential = { 
+			tag = ITA 
+			OR = { 
+			government = prussian_constitutionalism 
+			government = hms_government 
+			government = absolute_monarchy 
+			government = fascist_monarchy
+			}
+			has_country_flag = occitania_claimed
+			NOT = { has_country_flag = renew_war }
+		}
+
+		allow = {
+			ITA = { 
+				all_core = {
+					owned_by = THIS
+					}
+				}
+			nationalism_n_imperialism = 1
+		}
+
+		effect = { 
+		any_owned = {
+				limit = {
+					is_core = OCC
+					is_core = FRA
+				}
+				add_core = THIS
+			}
+		FRA_445 = { add_core = THIS }
+		FRA_442 = { add_core = THIS }
+		FRA_420 = { add_core = THIS }
+		FRA_435 = { add_core = THIS }
+		FRA_418 = { add_core = THIS }
+		FRA_438 = { add_core = THIS }
+		FRA_425 = { add_core = THIS }
+		FRA_404 = { add_core = THIS }
+		402 = { add_core = THIS }
+		set_country_flag = renew_war 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	france_italy = { 
+	potential = { 
+			tag = ITA 
+			OR = { 
+			    government = prussian_constitutionalism 
+			    government = hms_government 
+			    government = absolute_monarchy 
+			    government = fascist_monarchy
+			}
+			has_country_flag = renew_war 
+	}
+	
+	allow = {        
+			NOT = { has_country_modifier = ARI_papal_interference }
+			NOT = { has_country_modifier = ARI_prisoner_vatican }	        
+			ITA = { 
+				all_core = {
+					owned_by = THIS
+				}
+			}
+	}
+
+	effect = { 
+	change_tag = FRT 
+	FRA_428 = { add_core = THIS }
+	GNV = { all_core = { add_core = THIS } }
+	any_owned = { 
+	limit = { OR = { is_core = FRA is_core = OCC } } 
+	remove_core = ITA
+	}
+	country_event = 110604
+	prestige = 50 
+		}
+	
+	}
+	
+	treaty_of_paris = {
+		picture = treaty_signing
+		potential = {
+			OR = {
+				AND = {
+					tag = PRV
+					has_country_flag = valois_rulez
+				}
+				AND = {
+					tag = ITA 
+					has_country_flag = renew_war
+				}
+			}
+			425 = {
+				owned_by = DUA 
+			}
+			war_with = DUA 
+			NOT = { has_country_flag = new_provence }
+		}
+		
+		allow = {
+			war = yes
+			425 = { controlled_by = THIS 
+			province_control_days = 720 }
+			
+		OR = {	
+			ITA = {
+				all_core = {
+					OR = {
+						province_id = 419
+						controlled_by = THIS
+						controller = { alliance_with = THIS }
+						owner = {
+							NOT = { war_with = THIS }
+							}
+						}
+					}
+				}
+			AND = { 
+				has_country_flag = valois_rulez
+				PRV = {
+				all_core = {
+					OR = {
+						province_id = 419
+						controlled_by = THIS
+						controller = { alliance_with = THIS }
+						owner = {
+							NOT = { war_with = THIS }
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		
+		effect = {
+			DUA = { country_event = 6502960 }	
+			}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	treaty_of_paris_alternative = {
+		picture = treaty_signing
+		potential = {		    
+			tag = PRV
+			NOT = { OR = { government = democracy government = socialist_republic government = parliamentary_republic } }
+			has_country_flag = valois_rulez
+			425 = {
+				owned_by = FRA 
+			}
+			war_with = FRA
+			NOT = { has_country_flag = new_provence }
+		}
+		
+		allow = {
+			war = yes
+			OR = {
+			425 = { controlled_by = THIS 
+			province_control_days = 720 }
+			AND = {
+			425 = { controlled_by = THIS 
+			province_control_days = 365 }
+			ai = yes
+			    }
+		    }			
+			AND = { 
+				has_country_flag = valois_rulez
+				PRV = {
+				all_core = {
+					OR = {
+						province_id = 419
+						controlled_by = THIS
+						controller = { alliance_with = THIS }
+						owner = {
+							NOT = { war_with = THIS }
+								}
+							}
+						}
+					}
+				}
+		}
+		
+		effect = {
+		FRA = { country_event = 65111 }	
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	challenge_usurpers = {
+	picture = hundred_years_war
+		potential = {
+			NOT = { has_country_flag = valois_rulez }
+			OR = { 
+			government = prussian_constitutionalism 
+			government = hms_government 
+			government = absolute_monarchy 
+			government = fascist_monarchy
+			}
+			tag = PRV
+			NOT = { has_country_flag = new_provence }
+		}	
+		allow = {
+			NOT = { war = yes }
+			OR = { 
+			NOT = { part_of_sphere = yes }  
+			NOT = { owns = 744 }
+				}
+			PRV = {
+				all_core = {
+						owned_by = THIS	
+				}
+			}
+			OCC = {
+				all_core = {
+						owned_by = THIS	
+				}
+			}
+		}
+		
+		effect = {
+			prestige = 50
+			OCC = {
+				all_core = {
+						add_core = THIS	
+				}
+			}
+			any_owned = {
+				limit = {
+					is_core = OCC
+					is_core = FRA
+				}
+				add_core = THIS
+			}
+			FRA_445 = { add_core = THIS }
+			FRA_442 = { add_core = THIS }
+			FRA_420 = { add_core = THIS }
+			FRA_435 = { add_core = THIS }
+			FRA_418 = { add_core = THIS }
+			FRA_438 = { add_core = THIS }
+			FRA_425 = { add_core = THIS }
+			FRA_404 = { add_core = THIS }
+			set_country_flag = valois_rulez
+		}
+		ai_will_do = {
+			factor = 1
+	        modifier = { 
+		    factor = 0 
+		    owns = 744
+			}
+		}
+	}
+	
+	reclaim_paris_PRV = {
+	picture = Paris_taken
+		potential = {
+			tag = PRV
+			has_country_flag = valois_rulez
+			NOT = { has_country_flag = PRV_paris }
+			NOT = { has_country_flag = new_provence }
+		}
+		allow = {
+			owns = 425
+		}
+		effect = {
+			capital = 425
+			prestige = 10
+			change_tag = FRA
+			set_country_flag = PRV_paris
+			OCC = { all_core = { remove_core = DUA } }
+			DUA = {
+				capital = 300
+				prestige = -250
+			}
+		}
+	}
+	
+	reclaim_paris_DUA = {
+		potential = {
+			tag = DUA
+			FRA = { has_country_flag = PRV_paris }
+			NOT = { has_country_flag = new_provence }
+		}
+		allow = {
+			owns = 425
+		}
+		effect = {
+			capital = 425
+			prestige = 10
+			FRA = {
+				capital = 470
+				prestige = -25
+				clr_country_flag = PRV_paris
+			}
+		}
+	}
+	
+	integrate_bretons = { 
+	potential = { 
+	OR = { tag = FRT 
+	AND = { tag = PRV has_country_flag = valois_rulez }
+	AND = { tag = FRA has_country_flag = valois_rulez } }
+	NOT = { has_country_flag = britany_acc }
+	}
+	
+	allow = { 
+	BRT = { all_core = { owned_by = THIS } }
+	revolution_n_counterrevolution = 1 
+	}
+	
+	effect = { 
+	set_country_flag = britany_acc
+	add_accepted_culture = breton 
+	}
+	}
+	
+	### Add Decisions for Late Game Conquest for Provence by Occitania or Dual Monarchy when Provence_Blocked is set.
+	
+	liberate_greater_provence = {
+    picture = hundred_years_war
+	potential = { 
+	   OR = {
+	      AND = { 
+		     tag = DUA
+			 NOT = { exists = OCC }
+		  }
+		  tag = OCC
+	   }
+	   has_country_flag = provence_blocked
+	}
+	
+	allow = { 
+	   is_greater_power = yes
+	   mass_politics = 1	  
+       NOT = { OR = { government = democracy government = parliamentary_republic government = socialist_republic } }   
+	}
+	
+	effect = { 
+	   clr_country_flag = provence_blocked
+	   set_country_flag = PRV_failsafe
+	   prestige = 10
+	   PRV = { all_core = { add_core = THIS } }
+	}
+	}
+	
+	### Add Decisions for Valois to conquer the rest of Italy.
+	
+	clean_up_italy_minors = {
+    picture = valois_italy
+	potential = { 
+	   tag = PRV
+	   has_country_flag = PRV_TUS_CONQUEST_ENABLED
+	   NOT = { has_country_flag = PRV_MINORS }
+	}
+	
+	allow = { 
+	   owns = 744
+	}
+	
+	effect = {
+	   set_country_flag = PRV_MINORS
+       prestige = 5	   
+	   LUC = { all_core = { add_core = PRV } }
+	   PAR = { all_core = { add_core = PRV } }
+	   MOD = { all_core = { add_core = PRV } }
+	}
+	}
+	
+	clean_up_italy_milan = {
+    picture = valois_italy
+	potential = { 
+	   tag = PRV
+	   has_country_flag = PRV_TUS_CONQUEST_ENABLED
+	   NOT = { has_country_flag = PRV_MILAN }
+	}
+	
+	allow = { 
+	   owns = 739
+	   owns = 746
+	   owns = 738
+	}
+	
+	effect = { 
+	   set_country_flag = PRV_MILAN
+	   prestige = 5	
+	   add_accepted_culture = north_italian  
+	   LOM = { all_core = { add_core = PRV } }
+	}
+	}
+
+	clean_up_italy_pope = {
+    picture = valois_italy
+	potential = { 
+	   tag = PRV
+	   has_country_flag = PRV_TUS_CONQUEST_ENABLED
+	   NOT = { has_country_flag = PRV_POPE }
+	}
+	
+	allow = { 
+	   owns = 726
+	}
+	
+	effect = { 
+	   set_country_flag = PRV_POPE
+	   prestige = 5	
+	   FRR = { all_core = { add_core = PRV } }
+	   PAP = { all_core = { add_core = PRV } }		   
+	}
+	}
+	
+	clean_up_italy_genoa_savoy = {
+    picture = valois_italy
+	potential = { 
+	   tag = PRV
+	   has_country_flag = PRV_TUS_CONQUEST_ENABLED
+	   NOT = { exists = PIE }
+	   NOT = { has_country_flag = PRV_GENSAR }
+	   NOT = { has_country_flag = PRV_PIE }
+	}
+	
+	allow = { 
+	   owns = 749
+       owns = 742	   
+	}
+	
+	effect = { 
+	   set_country_flag = PRV_GENSAR
+	   set_country_flag = PRV_PIE
+	   prestige = 5	
+	   FRR = { all_core = { add_core = PRV } }
+	   PAP = { all_core = { add_core = PRV } }
+       CRS = { all_core = { add_core = PRV } }   
+	}
+	}	
+
+	clean_up_italy_savoyard = {
+    picture = valois_italy
+	potential = { 
+	   tag = PRV
+	   has_country_flag = PRV_TUS_CONQUEST_ENABLED
+	   exists = PIE
+	   NOT = { has_country_flag = PRV_GENSAR }
+	   NOT = { has_country_flag = PRV_PIE }
+	}
+	
+	allow = { 
+	   owns = 749
+       owns = 742	   
+	}
+	
+	effect = { 
+	   set_country_flag = PRV_GENSAR
+	   set_country_flag = PRV_PIE
+	   prestige = 5	
+	   PIE = { all_core = { add_core = PRV } }
+	}
+	}			
+	
+	
+	### Add Decision for the Dual Monarchy to kill off Tuscany if the flag is set
+
+	end_the_hundred_years_war = {
+    picture = hundred_years_war
+	potential = { 
+	   tag = DUA
+	   war = no 
+	   exists = PRV
+	   has_country_flag = fuck_provence_DUA
+	   # This is to prevent the Dual Monarchy owning Italy
+	   NOT = { PRV = { owns = 744 } }
+	   NOT = { has_country_flag = provence_blocked }
+	}
+	
+	allow = { 
+	   is_greater_power = yes  
+	   NOT = { exists = OCC }
+	}
+	
+	effect = { 
+		clr_country_flag = fuck_provence_DUA
+		war = {
+			target = PRV
+			attacker_goal = {
+				casus_belli = conquest_any
+			}
+			defender_goal = {
+				casus_belli = acquire_all_cores
+				country = OCC
+				}
+			}
+		}
+	}
+	
+	restore_the_grand_duchy = { 
+		picture = restore_the_grand_duchy
+	potential = {
+	   tag = LUC
+	   war = no 
+	   OR = { 
+		government = absolute_monarchy
+		government = hms_government
+		government = prussian_constitutionalism 
+	   }
+	   NOT = { has_country_flag = restored_TUS }
+	}
+	
+	allow = { 
+	   owns = 744
+	   NOT = { TUS = { exists = yes } }
+	}
+	
+	effect = { 
+		set_country_flag = restored_TUS
+		change_tag = TUS 
+		capital = 744 
+		any_owned = { remove_core = LUC }
+		}
+	}
+	
+	### Add Decision to sell Avignon for ITA
+
+	sell_avignon = {
+    picture = hundred_years_war
+	potential = { 
+	   tag = ITA
+	   OR = {
+	      owns = 468
+		  AVN = { vassal_of = ITA }
+	   }
+	   NOT = { has_country_flag = sold_AVN }
+	   NOT = { has_country_flag = valois_italy }
+	}
+	 
+	allow = { 
+	   capital = 749
+	   war = no	   
+	   OR = {
+	      owns = 468
+		  AVN = { vassal_of = ITA }
+	   }	
+       NOT = { religious_policy = moralism }	   
+	}
+	
+	effect = { 
+		set_country_flag = sold_AVN
+		set_global_flag = AVIGNON_CRISIS
+		inherit = AVN
+        any_country = {
+		   limit = {
+		     owns = 470
+		   }
+           country_event = { id = 110661 days = 1 }
+        }
+	}	
+	}
+}

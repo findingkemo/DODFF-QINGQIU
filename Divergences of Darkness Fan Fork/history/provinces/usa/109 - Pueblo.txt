@@ -1,0 +1,6 @@
+
+add_core = OUM
+add_core = PLA
+trade_goods = cattle
+life_rating = 20
+terrain = hilly_grassland

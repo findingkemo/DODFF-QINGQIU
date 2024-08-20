@@ -1,0 +1,8 @@
+owner = MSG
+controller = MSG
+add_core = MSG
+add_core = VIN
+
+trade_goods = fish
+life_rating = 35
+terrain = conifer_forest

@@ -1,0 +1,2536 @@
+political_decisions = {
+
+	LOT_NAN_friendship_decision = {
+		potential = { 
+			tag = LOT
+			NOT = {
+				has_country_flag = kings_statue
+				has_country_flag = lot_nan_friendship
+				has_country_flag = lot_nan_friendship_end
+			}
+			
+		}
+		
+		allow = {
+			money = 50000
+			prestige = 20
+			war = no
+			OR = { 
+			romanticism = 1
+			AND = {
+			ai = yes
+			year = 1837
+			    }
+			}
+			NOT = {
+				has_country_flag = kings_statue
+				has_country_flag = lot_nan_friendship
+				has_country_flag = lot_nan_friendship_end
+			}
+			OR = {
+				government = presidential_dictatorship
+				government = hms_government
+				upper_house = {
+					ideology = reactionary
+					value = 0.4
+					}
+			}
+			
+		}
+		
+		effect = {
+			money = -50000
+			set_country_flag = kings_statue
+			NAN = { relation = { who = LOT value = 200 }
+				}	
+			}
+	}
+	
+	conquest_of_the_desertNAN = {
+	
+		picture = conquest_of_the_desert
+	
+		potential = {
+			tag = NAN
+			OR = {
+				2391 = { empty = yes }
+				2392 = { empty = yes }
+				2394 = { empty = yes }
+			}
+			owns = 2395
+			NOT = { has_country_flag = conquest_of_the_desert }
+		}
+		allow = {
+			war = no
+			OR = {
+				is_greater_power = yes
+				state_n_government = 1
+				year = 1870
+				3361 = { empty = no }
+			}
+		}
+		effect = {
+			set_country_flag = conquest_of_the_desert
+			prestige = 5
+			random_owned = {
+				limit = {
+					2394 = { empty = yes }
+					2392 = { empty = no }
+					2391 = { empty = no }
+				}
+				2394 = { secede_province = THIS }
+			}
+			random_owned = {
+				limit = {
+					2392 = { empty = yes }
+					2391 = { empty = no }
+				}
+				2392 = { secede_province = THIS }
+			}
+			random_owned = {
+				limit = {
+					2391 = { empty = yes }
+				}
+				2391 = { secede_province = THIS }
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+    conquest_of_the_desertLOT = {
+    
+        picture = conquest_of_the_desert
+    
+        potential = {
+            tag = LOT 
+            NAN = { exists = no } 
+            owns = 2348
+            OR = {
+                2391 = { empty = yes }
+                2392 = { empty = yes }
+                2394 = { empty = yes }
+            }
+            owns = 2395
+            NOT = { has_country_flag = conquest_of_the_desert }
+        }
+        allow = {
+            war = no
+            OR = {
+                is_greater_power = yes
+                nationalism_n_imperialism = 1
+                year = 1880
+                2332 = { empty = no }
+            }
+        }
+        effect = {
+            set_country_flag = conquest_of_the_desert
+            prestige = 5
+            random_owned = {
+                limit = {
+                    2394 = { empty = yes }
+                    2392 = { empty = no }
+                    2391 = { empty = no }
+                }
+                2394 = { secede_province = THIS }
+            }
+            random_owned = {
+                limit = {
+                    2392 = { empty = yes }
+                    2391 = { empty = no }
+                }
+                2392 = { secede_province = THIS }
+            }
+            random_owned = {
+                limit = {
+                    2391 = { empty = yes }
+                }
+                2391 = { secede_province = THIS }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+	
+	occupation_of_araucaniaINC = {
+		picture = conquest_of_the_desert
+		potential = {
+			tag = INC
+			OR = {
+				2332 = { empty = yes }
+				2333 = { empty = yes }
+				2334 = { empty = yes }
+				2335 = { empty = yes }
+			}
+			owns = 2329
+			NOT = { has_country_flag = occupation_of_araucania }
+		}
+		allow = {
+			OR = {
+				nationalism_n_imperialism = 1
+				2398 = { empty = no }
+			}
+		}
+		effect = {
+			set_country_flag = occupation_of_araucania
+			prestige = 5
+			random_owned = {
+				limit = {
+					3361 = { empty = yes }
+				}
+				3361 = { secede_province = THIS }
+			}
+			random_owned = {
+				limit = {
+					2333 = { empty = yes }
+					2334 = { empty = no }
+				}
+				2333 = { secede_province = THIS }
+			}
+			random_owned = {
+				limit = {
+					2334 = { empty = yes }
+					2332 = { empty = no }
+				}
+				2334 = { secede_province = THIS }
+			}
+
+			random_owned = {
+				limit = {
+					2329 = { empty = yes }
+					2330 = { empty = no }
+					2331 = { empty = no }
+				}
+				2329 = { secede_province = THIS }
+			}		
+			random_owned = {
+				limit = {
+					2328 = { empty = yes }
+					2332 = { empty = yes }
+					2329 = { empty = no }
+				}
+				2328 = { secede_province = THIS }
+			}	
+			random_owned = {
+				limit = {
+					2332 = { empty = yes }
+					2333 = { empty = yes }
+					2334 = { empty = no }
+				}
+				2332 = { secede_province = THIS }
+			}	
+			random_owned = {
+				limit = {
+					2331 = { empty = yes }
+					2327 = { empty = no }
+					2330 = { empty = no }
+				}
+				2331 = { secede_province = THIS }
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	annex_Mapuche = { 
+	
+	potential = { 
+	tag = INC 
+	ARU = { 
+          vassal_of = THIS
+          ai = yes    
+			}
+	}
+	
+	allow = { 
+		OR = { 
+		ARU = { in_sphere = THIS } 
+		2398 = { empty = no }
+		state_n_government = 1
+			}
+		NOT = { war = yes }
+
+		}
+		
+	effect = { 
+		inherit = ARU 
+		ARU = { all_core = { add_core = THIS } }
+		}
+	
+	}
+	
+	exploration_of_Amazonia_GRA = {
+	picture = naturalist_decision
+	potential = {
+		tag = GRA
+		owns = 2412
+		NOT = { has_country_flag = exploration_of_Amazonia }
+		2402 = { empty = yes }
+		2403 = { empty = yes }
+		2404 = { empty = yes }
+		2407 = { empty = yes }
+		2549 = { empty = yes }
+	}
+		
+	allow = {
+		OR = {
+			year = 1890 
+			is_greater_power = yes 
+			AND = {
+				vassal_of = SPA 
+				nationalism_n_imperialism = 1
+				steamers = 1
+			}
+		}
+	}
+	
+	effect = {
+		set_country_flag = exploration_of_Amazonia
+		random_owned = {
+				2402 = { secede_province = THIS }
+			}
+		}
+	}
+	
+	exploration_of_Amazonia_GUY = { 
+	picture = naturalist_decision
+	potential = { 
+		tag = GUY
+		owns = 2412
+		NOT = { has_country_flag = exploration_of_Amazonia }
+		2402 = { empty = yes }
+		2403 = { empty = yes }
+		2404 = { empty = yes }
+		2407 = { empty = yes }
+		2549 = { empty = yes }
+	}
+	
+	allow = {
+		OR = {
+			year = 1870
+			is_greater_power = yes
+			AND = {
+				vassal_of = SPA
+				ideological_thought = 1
+				steamers = 1
+			}
+		}
+	}
+	
+	effect = {
+		set_country_flag = exploration_of_Amazonia
+		add_country_modifier = {
+			name = gateway_to_harbor 
+			duration = 1095
+		}
+		random_owned = {
+				2402 = { secede_province = THIS }
+			}
+		}
+	}
+	
+	Ameriga_AMA = { 
+	
+	    picture = switch_to_freedom
+	
+		potential = { 
+		tag = AMA
+		NOT = { has_country_flag = BIG_AMAZONIA } 
+		}
+		
+		allow = { 
+		is_greater_power = yes 
+		AMA = { all_core = { OR = { empty = yes owned_by = THIS } } }
+		ATL = { all_core = { OR = { empty = yes owned_by = THIS } } }
+		LOT = {
+				all_core = {
+						OR = {
+						owned_by = THIS
+						empty = yes
+						owner = {
+							in_sphere = THIS
+						}
+						province_id = 2131
+					}
+				}
+			}
+		}
+		
+		effect = { 
+		prestige = 20
+		change_tag = AZL
+		capital = 2447
+		# Add cores to LOT and LOT break offs
+		LOT = { all_core = { add_core = AZL } }
+		ODO = { all_core = { add_core = AZL } } 
+		AVA = { all_core = { add_core = AZL } } 
+		NAL = { all_core = { add_core = AZL } }
+		# Add cores to AMA and AMA break offs		
+		AMA = { all_core = { add_core = AZL } }
+		ANT = { all_core = { add_core = AZL } }	
+		GOU = { all_core = { add_core = AZL } }	
+		EQN = { all_core = { add_core = AZL } } 		
+		add_accepted_culture = atlantian
+		add_accepted_culture = lotharian 
+		any_country = {
+		   limit = {
+		      in_sphere = THIS
+		      OR = {
+			     primary_culture = amazonian
+				 primary_culture = atlantian
+				 primary_culture = lotharian
+			  }
+			}
+			country_event = { id = 11101 days = 0 }
+		}
+		}
+		ai_will_do = { 
+			factor = 1
+		}
+	}
+	
+	Big_AMA = { 
+	
+	    picture = switch_to_supremacy
+	
+		potential = { 
+		tag = AMA
+		has_country_flag = BIG_AMAZONIA
+		NOT = { has_country_flag = bigger_ama }
+		}
+		
+		allow = { 
+		rank = 16 
+		AMA = { all_core = { owned_by = THIS } }
+		}
+
+		
+		effect = { 
+		prestige = 20
+		ATL = { all_core = { add_core = THIS } }
+		NAL = { all_core = { add_core = THIS } }
+		GUY = { all_core = { add_core = THIS } }
+		set_country_flag = bigger_ama
+		}
+	
+		ai_will_do = { 
+			factor = 1
+		}
+	}
+	
+	Big_LOT = { 
+	
+	   	picture = switch_to_supremacy
+	
+		potential = { 
+		tag = LOT
+		has_country_flag = BIG_LOTHARINGIA
+		NOT = { has_country_flag = bigger_lot }
+		}
+		
+		allow = { 
+		rank = 16 
+		LOT = { all_core = { owned_by = THIS } }
+		}
+
+		
+		effect = { 
+		prestige = 20
+		ATL = { all_core = { add_core = THIS } }
+		NAN = { all_core = { limit = { NOT = { is_core = ENL is_core = AEN } } add_core = THIS } }
+		GOU = { all_core = { add_core = THIS } }
+		set_country_flag = bigger_lot 
+		}
+	
+		ai_will_do = { 
+			factor = 1
+		}
+	}
+	
+	
+	Ameriga_LOT = { 
+	
+	    picture = switch_to_freedom
+	
+		potential = { 
+		tag = LOT 
+		NOT = { has_country_flag = BIG_LOTHARINGIA } 
+		}
+		
+		allow = { 
+		is_greater_power = yes 
+		OR = { 
+		   NOT = { AMA = { exists = yes } }
+		   AMA = { 
+			   in_sphere = THIS
+		   }
+		}
+		LOT = { all_core = { OR = { empty = yes owned_by = THIS } } }
+		}
+
+		
+		effect = { 
+		prestige = 20
+		change_tag = AZL
+		capital = 2447
+		# Add cores to LOT and LOT break offs
+		LOT = { all_core = { add_core = AZL } }
+		ODO = { all_core = { add_core = AZL } } 
+		AVA = { all_core = { add_core = AZL } } 
+		NAL = { all_core = { add_core = AZL } }
+		# Add cores to AMA and AMA break offs		
+		AMA = { all_core = { add_core = AZL } }
+		ANT = { all_core = { add_core = AZL } }	
+		GOU = { all_core = { add_core = AZL } }	
+		EQN = { all_core = { add_core = AZL } }
+		add_accepted_culture = amazonian 
+		add_accepted_culture = atlantian
+		any_country = {
+		   limit = {
+		      in_sphere = THIS
+		      OR = {
+			     primary_culture = amazonian
+				 primary_culture = atlantian
+				 primary_culture = lotharian
+			  }
+			}
+			country_event = { id = 11101 days = 0 }
+		}
+		}
+	
+		ai_will_do = { 
+			factor = 1
+		}
+	}
+	
+	Ameriga_LOT_danton = { 
+	
+	    picture = switch_to_freedom
+	
+		potential = { 
+			tag = LOT 
+			NOT = { has_country_flag = BIG_LOTHARINGIA } 
+			has_country_flag = d_anton
+		}
+		
+		allow = { 
+			OR = { 
+				is_our_vassal = AMA 
+				AND = { 
+					is_our_vassal = ANT
+					is_our_vassal = EQN  
+					} 
+				} 
+			revolution_n_counterrevolution = 1 
+			war = no 
+		}
+
+		effect = { 
+		prestige = 20
+		inherit = ATL 
+		inherit = ANT 
+		inherit = EQN
+		inherit = AMA
+		inherit = GOU
+		change_tag = AZL
+		capital = 2447
+		# Add cores to LOT and LOT break offs
+		AVA = { all_core = { add_core = AZL } } 
+		LOT = { all_core = { add_core = AZL } }
+		ODO = { all_core = { add_core = AZL } } 
+		AVA = { all_core = { add_core = AZL } } 
+		NAL = { all_core = { add_core = AZL } }
+		# Add cores to AMA and AMA break offs		
+		AMA = { all_core = { add_core = AZL } }
+		ANT = { all_core = { add_core = AZL } }	
+		GOU = { all_core = { add_core = AZL } }	
+		EQN = { all_core = { add_core = AZL } }
+		LOT_6 = { add_core = AZL } 
+		SA_2403 = { add_core = AZL }
+		SA_2 = { add_core = AZL }
+		SA_3 = { add_core = AZL } 
+		SA_5 = { add_core = AZL } 
+		add_accepted_culture = amazonian 
+		add_accepted_culture = atlantian
+		add_country_modifier = { 
+			name = new_born_AZL
+			duration = 7300
+			}
+		any_country = {
+		   limit = {
+		      in_sphere = THIS
+		      OR = {
+			     primary_culture = amazonian
+				 primary_culture = atlantian
+				 primary_culture = lotharian
+			  }
+			}
+			country_event = { id = 11101 days = 0 }
+			}
+		}
+	
+		ai_will_do = { 
+			factor = 1
+		}
+	}
+	
+	Ameriga_ATL = { 
+		
+	    picture = switch_to_freedom		
+		
+		potential = { 
+		tag = ATL 
+		}
+		
+		allow = { 
+		owns = 2416 
+		owns = 2450 
+		is_greater_power = yes 
+		ATL = { all_core = { OR = { empty = yes owned_by = THIS } } }
+		ANT = {
+				all_core = {
+						OR = {
+						owned_by = THIS
+						empty = yes
+						owner = {
+							in_sphere = THIS
+						}
+					}
+				}
+			}
+		LOT = {
+				all_core = {
+						OR = {
+						is_core = AVA
+						owned_by = THIS
+						empty = yes
+						owner = {
+							in_sphere = THIS
+						}
+						province_id = 2131
+					}
+				}
+			}
+		}
+		
+		effect = { 
+		prestige = 20
+		change_tag = AZL
+		# Add cores to LOT and LOT break offs
+		LOT = { all_core = { add_core = AZL } }
+		ODO = { all_core = { add_core = AZL } } 
+		AVA = { all_core = { add_core = AZL } } 
+		NAL = { all_core = { add_core = AZL } }
+		# Add cores to AMA and AMA break offs		
+		AMA = { all_core = { add_core = AZL } }
+		ANT = { all_core = { add_core = AZL } }	
+		GOU = { all_core = { add_core = AZL } }	
+		EQN = { all_core = { add_core = AZL } }
+		add_accepted_culture = amazonian 
+		add_accepted_culture = lotharian 
+		any_country = {
+		   limit = {
+		      in_sphere = THIS
+		      OR = {
+			     primary_culture = amazonian
+				 primary_culture = atlantian
+				 primary_culture = lotharian
+			  }
+			}
+			country_event = { id = 11101 days = 0 }
+		}
+		}
+	
+	}
+	
+	GOU_puppet = { 
+		
+		picture = gouas	
+		
+		potential = { 
+		tag = ATL 
+		GOU = { exists = yes war = no } 
+		has_global_flag = ATL_BRIBE
+		NOT = { has_country_flag = ATL_GOU }
+		}
+		
+		allow = { 
+		war = no 
+		}
+		
+		effect = { 
+		create_vassal = GOU
+		set_country_flag = ATL_GOU
+		}
+	} 
+	
+	integrate_GOU = { 
+	
+		picture = gouas	
+		
+		potential = { 
+		tag = ATL 
+		GOU = { exists = yes is_vassal = yes } 
+		has_country_flag = ATL_GOU
+		}
+		
+		allow = { 
+		early_railroad = 1 
+		}
+		
+		effect = { 
+		inherit = GOU
+		GOU = { all_core = { add_core = ATL } }
+		}
+	} 
+	
+	Northern_border = { 
+	picture = Guyana
+	potential = { 
+	tag = AZL 
+	is_greater_power = yes 
+	NOT = { has_global_flag = guyana_claim }
+	NOT = { truce_with = GRA }
+	}
+	
+	allow = { 
+	nationalism_n_imperialism = 1 
+	}
+	
+	effect = { 
+	prestige = 2
+	badboy = 5 
+	set_global_flag = guyana_claim
+	ENG_1979 = { 
+		add_core = THIS }
+	VNZ_2275 = { 
+		add_core = THIS }
+	VNZ_2278 = { 
+		add_core = THIS }
+	BRZ_2408 = { 
+		add_core = THIS }
+	}
+	
+	}
+	
+	Federation_NAN = { 
+	
+	potential = { 
+	tag = AZL 
+	is_greater_power = yes 
+	has_global_flag = guyana_claim 
+	NAN = { exists = yes }
+	NOT = { has_country_flag = Odon_treaty }
+	}
+	
+	allow = { 
+	NAN = { in_sphere = THIS }
+	AZL = { all_core = { owned_by = THIS } 
+		}
+	}
+	
+	effect = { 
+	NAN = { country_event = 775411 }
+	set_country_flag = Odon_treaty 
+	}
+	
+	
+	}
+
+	NAN_congress = { 
+	picture = Congress_AMA
+	potential = { 
+	tag = AZL 
+	is_greater_power = yes 
+	owns = 2348 
+	NOT = { accepted_culture = beornian }
+	}
+	
+	allow = { 
+	NOT = { NAN = { exists = yes } }
+	}
+	
+	effect = { 
+	AZL = { country_event = 775414 }
+	set_country_flag = congress_NAN
+	}
+	
+	
+	}
+	
+	Granada_border = { 
+	
+	potential = { 
+	tag = AZL 
+	is_greater_power = yes 
+	NOT = { NAN = { exists = yes } }
+	NOT = { has_country_flag = granada_claim }
+	}
+	
+	allow = { 
+	owns = 2348 
+	}
+	
+	effect = { 
+	badboy = 15 
+	set_country_flag = granada_claim
+	GRA = { all_core = { add_core = AZL } }
+	PNM = { all_core = { add_core = AZL } }
+	}
+	
+	}
+	
+	GRA_congress = { 
+		picture = Congress_AMA
+	
+		potential = { 
+			tag = AZL 
+			is_greater_power = yes 
+			owns = 2254 
+			NOT = { accepted_culture = granadan }
+		}
+	
+		allow = { 
+			NOT = { GRA = { exists = yes } }
+		}
+	
+		effect = { 
+			AZL = { country_event = 775415 }
+			set_country_flag = congress_GRA
+		}
+	
+	}
+	
+	integrate_beornians = { 
+	
+	potential = {
+	owns = 2348 
+	NOT = { has_country_flag = beornia_accepted }
+	has_country_flag = congress_NAN
+	}
+	
+	allow = { 
+	NAN = {
+				all_core = {
+					owned_by = THIS
+				}
+			}
+			nationalism_n_imperialism = 1
+			OR = {
+				rank = 4
+				revolution_n_counterrevolution = 1
+			}
+	}
+	
+	effect = { 
+	add_accepted_culture = beornian
+	prestige = 15 
+	set_country_flag = beornia_accepted
+	}
+	
+	}
+	
+	integrate_granadan = { 
+	
+	potential = {
+	owns = 2348 
+	has_country_flag = congress_GRA
+	NOT = { has_country_flag = ameriga_united }
+	}
+	
+	allow = { 
+	AZL = {
+		all_core = {
+					owned_by = THIS
+				}
+			}
+			nationalism_n_imperialism = 1
+			OR = {
+				rank = 4
+				revolution_n_counterrevolution = 1
+			}
+	}
+	
+	effect = { 
+	add_accepted_culture = granadan
+	prestige = 15 
+	set_country_flag = ameriga_united
+	}
+	
+	}
+
+	embrace_ameriganism = {       
+    picture = "Panarcadianism"
+		potential = {
+		tag = AZL
+      has_country_flag = ameriga_united
+      NOT = { has_country_flag = amerigan_ideal }
+		}
+		allow = {
+			is_greater_power = yes
+			ideological_thought = 1  
+		war = no  
+		}
+		effect = {
+		prestige = 30			
+		set_country_flag = amerigan_ideal 
+        nationalvalue = nv_prosperity
+		any_pop = {
+			limit = {
+				is_accepted_culture = yes
+			}
+			militancy = -2
+      consciousness = 2
+			scaled_consciousness = {
+					ideology = liberal
+					factor = 1
+				}     
+			scaled_consciousness = {
+					ideology = anarcho_liberal
+					factor = 1
+				}    				
+		}         
+		any_pop = {
+			limit = {
+				is_primary_culture = yes
+			}
+			scaled_militancy = {
+					ideology = reactionary
+					factor = 3
+			} 
+			scaled_consciousness = {
+					ideology = reactionary
+					factor = 3
+			} 
+			scaled_militancy = {
+					ideology = paternal
+					factor = 3
+			}   
+			scaled_consciousness = {
+					ideology = paternal
+					factor = 3
+			}    
+			scaled_militancy = {
+					ideology = fascist
+					factor = 3
+			}   
+			scaled_consciousness = {
+					ideology = fascist
+					factor = 3
+			}    
+			scaled_militancy = {
+					ideology = conservative
+					factor = 1
+			} 
+			scaled_consciousness = {
+					ideology = conservative
+					factor = 1
+			}
+			scaled_militancy = {
+					ideology = market_liberal
+					factor = 1
+			} 
+			scaled_consciousness = {
+					ideology = market_liberal
+					factor = 1
+			}
+			scaled_consciousness = {
+					ideology = liberal
+					factor = 1
+			}   
+			scaled_militancy = {
+					ideology = liberal
+					factor = 1
+			}  
+			scaled_consciousness = {
+					ideology = anarcho_liberal
+					factor = 1
+			}   
+			scaled_militancy = {
+					ideology = anarcho_liberal
+					factor = 1
+			}  			
+		}         
+        add_country_modifier = {
+				  name = the_homestead_act
+				  duration = -1
+			  }
+		}
+    ai_will_do = {
+			factor = 1
+		}
+  }
+  
+  # Due to the inherit somewhat racist nature of the Arcadian States they do not get this till Mass Politics
+	
+	afro_french_slave_citizens = {
+	picture = acceptation_afro 
+		potential = {
+			OR = {
+				tag = PLA
+				tag = NBG
+				tag = ARC	
+			}
+			NOT = { accepted_culture = afro_frankish }
+			NOT = { has_country_flag = slave_citizens }
+		}
+		allow = {
+			NOT = { war = yes }
+			mass_politics = 1
+			slavery = no_slavery 
+			NOT = { average_militancy = 3 }
+			OR = {
+				upper_house = {
+					ideology = socialist
+					value = 0.4
+				}
+				upper_house = {
+					ideology = liberal
+					value = 0.4
+				}
+				upper_house = {
+					ideology = anarcho_liberal
+					value = 0.4
+				}
+				upper_house = {
+					ideology = social_liberal
+					value = 0.4
+				}
+				AND = {
+					upper_house = {
+						ideology = socialist
+						value = 0.20
+					}
+					upper_house = {
+						ideology = anarcho_liberal
+						value = 0.20
+					}
+				}
+				AND = {
+					upper_house = {
+						ideology = anarcho_liberal
+						value = 0.20
+					}
+					upper_house = {
+						ideology = liberal
+						value = 0.20
+					}
+				}
+				AND = {
+					upper_house = {
+						ideology = socialist
+						value = 0.20
+					}
+					upper_house = {
+						ideology = liberal
+						value = 0.20
+					}
+				}
+				AND = {
+					upper_house = {
+						ideology = socialist
+						value = 0.20
+					}
+					upper_house = {
+						ideology = social_liberal
+						value = 0.20
+					}
+				}
+			}	
+		}
+		effect = {
+			add_accepted_culture = afro_frankish
+			set_country_flag = slave_citizens
+			prestige = -15
+			any_pop = {
+			    limit = {
+			      NOT = { culture = afro_frankish }
+			    }
+				  militancy = 2
+			}
+			any_pop = {
+			    limit = {
+			       culture = afro_frankish
+				  }
+          consciousness = 2
+			}
+		}
+	}
+	afro_amerigan_slave_citizens = {
+	picture = acceptation_afro 
+		potential = {
+			OR = {
+				tag = AMA
+				tag = LOT	
+				tag = AZL 	
+			}
+			NOT = { has_country_flag = slave_citizens }
+		}
+		allow = {
+			NOT = { war = yes }
+			slavery = no_slavery 
+			NOT = { average_militancy = 3 }
+			OR = {
+				upper_house = {
+					ideology = socialist
+					value = 0.4
+				}
+				upper_house = {
+					ideology = liberal
+					value = 0.4
+				}
+				upper_house = {
+					ideology = anarcho_liberal
+					value = 0.4
+				}
+				AND = {
+					upper_house = {
+						ideology = socialist
+						value = 0.20
+					}
+					upper_house = {
+						ideology = anarcho_liberal
+						value = 0.20
+					}
+				}
+				AND = {
+					upper_house = {
+						ideology = anarcho_liberal
+						value = 0.20
+					}
+					upper_house = {
+						ideology = liberal
+						value = 0.20
+					}
+				}
+				AND = {
+					upper_house = {
+						ideology = socialist
+						value = 0.20
+					}
+					upper_house = {
+						ideology = liberal
+						value = 0.20
+					}
+				}
+			}	
+		}
+		effect = {
+			add_accepted_culture = afro_amerigan
+			set_country_flag = slave_citizens
+			prestige = -15
+			any_pop = {
+			    limit = {
+			      NOT = { culture = afro_amerigan }
+			    }
+				  militancy = 2
+			}
+			any_pop = {
+			    limit = {
+			       culture = afro_amerigan
+				  }
+          consciousness = 2
+			}
+		}
+	}
+
+	afro_colombian_slave_citizens = {
+	picture = acceptation_afro 
+		potential = {
+			OR = {
+				tag = CLM
+				tag = CUB
+				tag = LST
+				tag = MEX
+				tag = JLS
+				tag = AZT
+				tag = YUC
+				tag = UCA
+				tag = ELS
+				tag = NIC
+				tag = PNM
+				tag = GRA
+				tag = PUR
+				tag = ZAP
+				tag = SAN
+				tag = GUY
+				tag = CAS
+				tag = QUI
+				tag = ARE
+				tag = ATS
+			}
+			NOT = { has_country_flag = slave_citizens }
+		}
+		allow = {
+			NOT = { war = yes }
+			slavery = no_slavery
+			NOT = { average_militancy = 3 }
+			OR = {
+				upper_house = {
+					ideology = socialist
+					value = 0.4
+				}
+				upper_house = {
+					ideology = liberal
+					value = 0.4
+				}
+				upper_house = {
+					ideology = anarcho_liberal
+					value = 0.4
+				}
+				AND = {
+					upper_house = {
+						ideology = socialist
+						value = 0.20
+					}
+					upper_house = {
+						ideology = anarcho_liberal
+						value = 0.20
+					}
+				}
+				AND = {
+					upper_house = {
+						ideology = anarcho_liberal
+						value = 0.20
+					}
+					upper_house = {
+						ideology = liberal
+						value = 0.20
+					}
+				}
+				AND = {
+					upper_house = {
+						ideology = socialist
+						value = 0.20
+					}
+					upper_house = {
+						ideology = liberal
+						value = 0.20
+					}
+				}
+			}
+		}
+		effect = {
+			add_accepted_culture = afro_latino
+			set_country_flag = slave_citizens
+			prestige = -15
+			any_pop = {
+			    limit = {
+			      NOT = { culture = afro_latino }
+			    }
+				  militancy = 2
+			}
+			any_pop = {
+			    limit = {
+			       culture = afro_latino
+				  }
+          consciousness = 2
+			}
+		}
+	}
+	
+	liberty_enlightening_the_world_AZL = {
+		picture = statue_liberte
+	
+		potential = {
+			NOT = {
+				has_global_flag = statue_of_liberty_has_been_built
+			}
+			tag = AZL
+			OR = {
+			   government = democracy
+			   government = parliamentary_republic
+			   government = socialist_republic
+			}
+			owns = 2447
+			year = 1850
+		}
+	
+		allow = {
+			drilling_and_blasting = 1
+		}
+	
+		effect = {
+			set_global_flag = statue_of_liberty_has_been_built	
+			prestige = 5
+			2447 = { add_province_modifier = {
+			name = the_statue_of_liberty
+			duration = -1
+				}
+			}
+			any_pop = {
+				militancy = -0.5
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	AZL_annexation_INC = { 
+	
+	potential = { 
+	has_country_flag = ameriga_united
+	is_greater_power = yes 
+	INC = { exists = yes }
+	NOT = { 
+	     OR	= {
+				government = democracy 
+				government = parliamentary_republic
+				government = socialist_republic
+				government = hms_government 
+			}
+		}
+	}
+	
+	allow = { 
+	war = no 
+	NOT = { truce_with = INC }
+	NOT = { alliance_with = INC }
+	OR = { 
+	war_policy = jingoism
+	AND = { 
+	war_policy = pro_military 
+	OR = { 
+	government = proletarian_dictatorship
+	government = presidential_dictatorship
+	government = fascist_dictatorship
+	government = fascist_monarchy
+				}
+			}
+		}
+	NOT = { INC = { is_greater_power = yes } }
+	}
+	
+	effect = { 
+	    badboy = 26
+	    war = {
+			target = INC
+			attacker_goal = {
+			    casus_belli = conquest_any
+			}
+			attacker_goal = {
+			    casus_belli = cut_down_to_size
+			}
+	    }
+	}
+	
+	}
+	
+	camelot_renovation = { 
+	
+		picture = new_camelot
+	
+		potential = { 
+		NOT = { has_global_flag = camelot_NAN }
+		OR = { 
+		tag = NAN tag = AZL
+			}
+		owns = 2348 
+		}
+		
+		allow = { 
+		medicine = 1 
+		regenerative_furnaces = 1 
+		romanticism = 1 
+		}
+		
+		effect = { 
+		prestige = 15 
+		set_global_flag = camelot_NAN
+		2348 = {
+				life_rating = 5
+			}
+		}
+	}
+	
+	beornia_inca_border_treaty = {
+		picture = treaty_signing
+		potential = {
+			OR = {
+				tag = NAN
+				tag = HBE
+			}
+			has_country_flag = conquest_of_the_desert
+			NOT = { has_country_flag = NAN_cone }
+			NOT = { is_greater_power = yes }
+			2324 = {
+				owner = {
+					has_country_flag = occupation_of_araucania
+					NOT = { is_greater_power = yes }
+				}
+			}
+			any_owned_province = {
+				OR = {
+					region = NAN_5
+					region = SA_9
+				}
+			}
+			NOT = { has_global_flag = NAN_INC_border_treaty }
+			2329 = { empty = no }
+			2332 = { empty = no }
+			2333 = { empty = no }
+			2334 = { empty = no }
+			2335 = { empty = no }
+			2391 = { empty = no }
+			2392 = { empty = no }
+			2394 = { empty = no }
+			2396 = { empty = no }
+			2397 = { empty = no }
+			2398 = { empty = no }
+			2399 = { empty = no }
+			2400 = { empty = no }
+		}
+		
+		allow = {
+			war = no
+			2324 = {
+				owner = {
+					war = no
+					NOT = { truce_with = THIS }
+				}
+			}
+		}
+		
+		effect = {
+			set_global_flag = NAN_INC_border_treaty
+			2324 = {
+				owner = {
+					country_event = 775420
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	beornia_inca_border_treaty_unequal = {
+		picture = treaty_signing
+		potential = {
+			OR = {
+				tag = NAN
+				tag = HBE
+			}
+			NOT = { has_country_flag = NAN_cone }
+			has_country_flag = conquest_of_the_desert
+			is_greater_power = yes
+			2324 = {
+				owner = {
+					has_country_flag = occupation_of_araucania
+					NOT = { is_greater_power = yes }
+				}
+			}
+			any_owned_province = {
+				OR = {
+					region = NAN_5
+					region = SA_9
+				}
+			}
+			NOT = { has_global_flag = NAN_INC_border_treaty }
+			2329 = { empty = no }
+			2332 = { empty = no }
+			2333 = { empty = no }
+			2334 = { empty = no }
+			2335 = { empty = no }
+			2391 = { empty = no }
+			2392 = { empty = no }
+			2394 = { empty = no }
+			2396 = { empty = no }
+			2397 = { empty = no }
+			2398 = { empty = no }
+			2399 = { empty = no }
+			2400 = { empty = no }
+		}
+		
+		allow = {
+			war = no
+			2324 = {
+				owner = {
+					war = no
+					NOT = { truce_with = THIS }
+				}
+			}
+		}
+		
+		effect = {
+			set_global_flag = NAN_INC_border_treaty
+			SA_6 = { add_core = THIS add_core = NAN }
+			SA_9 = { add_core = THIS add_core = NAN }
+			NAN_5 = { add_core = THIS }
+			2324 = {
+				owner = {
+					country_event = 775421
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	inca_beornia_border_treaty = {
+		picture = treaty_signing
+		potential = {
+			tag = INC
+			has_country_flag = occupation_of_araucania
+			is_greater_power = yes
+			2348 = {
+				owner = {
+					has_country_flag = occupation_of_araucania
+					NOT = { has_country_flag = NAN_cone }
+					NOT = { is_greater_power = yes }
+				}
+			}
+			any_owned_province = {
+				OR = {
+					region = SA_6
+					region = SA_9
+				}
+			}
+			NOT = { has_global_flag = NAN_INC_border_treaty }
+			2329 = { empty = no }
+			2332 = { empty = no }
+			2333 = { empty = no }
+			2334 = { empty = no }
+			2335 = { empty = no }
+			2391 = { empty = no }
+			2392 = { empty = no }
+			2394 = { empty = no }
+			2396 = { empty = no }
+			2397 = { empty = no }
+			2398 = { empty = no }
+			2399 = { empty = no }
+			2400 = { empty = no }
+		}
+		
+		allow = {
+			war = no
+			2324 = {
+				owner = {
+					war = no
+					NOT = { truce_with = THIS }
+				}
+			}
+		}
+		
+		effect = {
+			set_global_flag = NAN_INC_border_treaty
+			SA_6 = { add_core = THIS }
+			SA_9 = { add_core = THIS }
+			NAN_5 = { add_core = THIS }
+			2348 = {
+				owner = {
+					country_event = 775422
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	Beornian_Cone = { 
+	
+		picture = "NAN_Andes"
+	
+		potential = { 
+		OR = { 
+		tag = NAN 
+		tag = HBE 
+			}	
+		NOT = { has_country_flag = NAN_cone }
+		}
+		
+		allow = { 
+		OR = { 
+		has_country_flag = CLM_NAN_expansion 
+		AND = {
+		INC = { is_greater_power = no }
+		rank = 12
+		war_policy = jingoism
+		        }
+		    }
+	    }
+		
+		effect = { 
+		set_country_flag = NAN_cone 
+		badboy = 12
+		SA_6 = { add_core = THIS add_core = NAN }
+		SA_9 = { add_core = THIS add_core = NAN }
+		NAN_5 = { add_core = THIS }
+		CHL_2322 = { add_core = THIS }
+		INC_2389 = { add_core = THIS }
+		ARG_2387 = { add_core = THIS }
+		relation = { who = INC value = -150 }
+		}
+	}	
+	
+	saint_godwin_tunnel = { 
+		potential = { 
+			tag = NAN 
+			has_country_flag = New_Mercia_established
+			NOT = { has_country_flag = saint_godwin } 
+		}
+		
+		allow = { 
+			money = 500000
+			invention = dynamite 
+			steel_railroad = 1 
+			drilling_and_blasting = 1 
+			all_core = { owned_by = THIS } 
+			owns = 2348 
+			owns = 2355
+		}
+		
+		effect = { 
+			2390 = {
+				infrastructure = 4
+			}
+			2324 = {
+				infrastructure = 4
+			}
+			money = -500000
+			prestige = 15
+			set_country_flag = saint_godwin 
+			
+		}
+	
+	}
+	
+	AMA_become_ANT = { 
+	
+		potential = { 
+		tag = EQN
+		NOT = {
+           OR = {
+		      has_global_flag = CW_waiting 
+		      has_global_flag = AMA_CW
+			  has_country_flag = EQN_AMA_FORMED
+		   }
+		}
+		AMA = { exists = yes }
+		}
+		
+		allow = { 
+		war = no 
+		NOT = { is_vassal = yes }
+		}
+		
+		effect = { 
+		set_country_flag = EQN_AMA_FORMED
+		EQN = { all_core = { remove_core = AMA } }
+		AMA = { country_event = 98426 }
+		}
+	}
+	
+	ODO_become_LOT = { 
+		potential = { 
+		tag = ODO 
+		}
+		
+		allow = { 
+		LOT = { exists = no } 
+		owns = 2463
+		} 
+		
+		effect = { 
+		change_tag = LOT 
+		NAL = { all_core = { add_core = THIS } }
+		ODO = { all_core = { add_core = THIS } }
+		AVA = { all_core = { add_core = THIS } }
+		prestige = 15
+		set_country_flag = ODO_newLOT
+		}
+	} 
+	
+	NAL_puppet = { 
+	
+		picture = rooster_atlantia
+		
+		potential = { 
+		tag = ATL 
+		NAL = { exists = yes war = no } 
+		has_global_flag = NAL_backed_ATL
+		NOT = { has_country_flag = ATL_NAL }
+		}
+		
+		allow = { 
+		war = no 
+		NAL = { relation = { who = THIS value = 100 } }
+		early_railroad = 1
+		}
+		
+		effect = { 
+		create_vassal = NAL
+		set_country_flag = ATL_NAL
+		}
+	} 
+	
+	integrate_NAL = { 
+	
+		picture = rooster_atlantia
+		
+		potential = { 
+		tag = ATL 
+		NAL = { exists = yes is_vassal = yes } 
+		has_country_flag = ATL_NAL
+		}
+		
+		allow = { 
+		business_banks = 1 
+		}
+		
+		effect = { 
+		inherit = NAL
+		NAL = { all_core = { add_core = ATL } }
+		}
+	} 
+	
+	ODO_grand_duchy_NAN = { 
+	
+		picture = Odonie
+	
+		potential = { 
+        OR = {		
+		  tag = NAN 
+		  tag = HBE
+	    }
+		has_global_flag = ODO_GRAND_DUCHY
+		ODO = { exists = yes }
+		NOT = { has_country_flag = NO_GRAND_DUCHY } 
+		NOT = { has_country_flag = ODO_duke } 
+		}
+		
+		allow = { 
+		war = no 
+		ODO = { war = no } 
+		}
+		
+		effect = { 
+		create_vassal = ODO 
+		ODO = { government = absolute_monarchy }
+		set_country_flag = ODO_duke
+		}
+	}
+	
+	integrate_ODO = { 
+	
+		picture = Odonie
+		
+		potential = {
+        OR = {		
+		  tag = NAN 
+		  tag = HBE
+	    }
+		ODO = { is_vassal = yes } 
+		has_country_flag = ODO_duke 
+		}
+		
+		allow = { 
+		OR = { is_greater_power = yes 
+		revolution_n_counterrevolution = 1 }
+		}
+		
+		effect = { 
+		inherit = ODO 
+		ODO = { all_core = { add_core = NAN } }
+		}
+	}
+	
+	prospect_Atlantia = { 
+		
+		picture = mining_Ameriga
+	
+		potential = {
+		OR = { 
+			tag = AZL 
+			tag = ATL 
+			AND = { tag = LOT NOT = { has_country_flag = BIG_LOTHARINGIA } } 
+			AND = { tag = AMA NOT = { has_country_flag = BIG_AMAZONIA } }
+			}
+		OR = { owns = 2443 owns = 3249 }
+		NOT = { has_country_flag = mining_ATL }
+		}
+		
+		allow = { 
+		regenerative_furnaces = 1 
+		iron_railroad = 1 
+		owns = 2442 
+		owns = 2467
+		}
+		
+		effect = { 
+		set_country_flag = mining_ATL 
+		prestige = 2 
+		2442 = { trade_goods = precious_metal } 
+		3249 = { trade_goods = iron add_province_modifier = { name = Amerigan_mines duration = -1 } } 
+		2441 = { trade_goods = iron add_province_modifier = { name = Amerigan_mines duration = -1 } }
+		2467 = { trade_goods = iron add_province_modifier = { name = Amerigan_mines duration = -1 } }
+		}
+		
+	}
+	
+	LOT_coal = { 
+	
+		picture = mining_Ameriga
+		
+		potential = {
+		OR = { 
+			tag = AZL 
+			tag = ATL 
+			AND = { tag = LOT NOT = { has_country_flag = BIG_LOTHARINGIA } } 
+			AND = { tag = AMA NOT = { has_country_flag = BIG_AMAZONIA } }
+			year = 1845 
+			}
+		OR = { owns = 2461 owns = 2339 }
+		NOT = { has_country_flag = coal_LOT }
+		}
+		
+		allow = { 
+		invention = coke
+		early_railroad = 1
+		owns = 2461
+		owns = 2339
+		}
+		
+		effect = { 
+		set_country_flag = coal_LOT
+		2461 = { trade_goods = coal add_province_modifier = { name = Amerigan_mines duration = -1 } } 
+		2339 = { trade_goods = coal add_province_modifier = { name = Amerigan_mines duration = -1 } } 
+		}
+		
+	}
+	
+	atlantian_ruhr = { 
+		
+		potential = { 
+		OR = { 
+		has_country_flag = coal_LOT has_country_flag = mining_ATL
+			}
+		NOT = { has_global_flag = ruhr_boom_ATL }
+		}
+		
+		allow = { 
+		scientific_management = 1 
+		investment_banks = 1 
+		}
+		
+		effect = { 
+		set_global_flag = ruhr_boom_ATL
+		add_country_modifier = {
+				name = ruhr_boom
+				duration = 3650
+			}
+		}
+	}
+
+	Burning_New_Amsterdam = { 
+	
+		potential = { 
+		owns = 2447  
+		OR = { 
+		has_country_flag = BIG_AMAZONIA
+		has_country_flag = BIG_LOTHARINGIA
+			}
+		NOT = { has_global_flag = burning_ATL } 
+		}
+		
+		allow = { 
+		war = no 
+		owns = 2447 
+		ATL = { exists = no } 
+		}
+		
+		effect = { 
+		any_owned = { 
+		limit = { 
+		   is_core = ATL 
+		}
+		remove_core = ATL 
+	    }
+		2447 = { 	
+			any_pop = { 
+			reduce_pop = 0.95		
+			}
+		}
+		2447 = { 	
+			any_pop = { 
+			    limit = { 
+				   OR = { 
+				      type = aristocrats
+				      type = clergymen 
+				      type = bureaucrats
+				      type = capitalists
+				   }
+				}
+				reduce_pop = 0.05		
+			}
+		}		
+		set_global_flag = burning_ATL
+		money = 50000
+		prestige = 5 
+		badboy = 5
+		}
+	}
+	
+	claim_the_chacco = { 
+		potential = { 
+		tag = LOT 
+		NOT = { has_country_flag = grand_chaco } 
+		}
+		
+		allow = { 
+		OR = { 
+		2338 = { owned_by = THIS } 
+		state_n_government = 1 
+		}
+		is_secondary_power = yes
+		} 
+		
+		effect = { 
+		SA_5 = { add_core =  LOT } 
+		set_country_flag = grand_chaco
+		}
+	
+	}
+	
+	peaceful_unification_AMA = { 
+	picture = rooster_atlantia
+	potential = { 
+	tag = ATL 
+	AMA = { exists = yes } 
+	EQN = { exists = yes }
+	GOU = { exists = yes }
+	has_country_flag = AMA_ATL_PEACEFUL
+	}
+	
+	allow = { 
+	AMA = { NOT = { rank = 16 } }
+	OR = { 
+		AND = { 
+		rank = 16 
+		state_n_government = 1 
+		business_banks = 1 
+			}
+		AND = { 
+		revolution_n_counterrevolution = 1
+		investment_banks = 1
+			}
+		}
+	war = no 
+	relation = { who = AMA value = 150 } 
+	}
+	
+	effect = { 
+	political_reform = federalism
+	inherit = GOU 
+	inherit = AMA 
+	inherit = EQN
+	GOU = { all_core = { add_core = THIS } } 
+	ANT = { all_core = { add_core = THIS } } 
+	EQN = { all_core = { add_core = THIS } } 
+		}
+	
+	}
+	
+	peaceful_unification_LOT = { 
+	picture = rooster_atlantia
+	
+	potential = { 
+	tag = ATL 
+	LOT = { exists = yes } 
+	NAL = { exists = yes }
+	ODO = { exists = yes }
+	has_country_flag = LOT_ATL_PEACEFUL
+	}
+	
+	allow = { 
+	LOT = { NOT = { rank = 16 } }
+	OR = { 
+		AND = { 
+		rank = 16 
+		state_n_government = 1 
+		business_banks = 1 
+			}
+		AND = { 
+		revolution_n_counterrevolution = 1
+		investment_banks = 1
+			}
+		}
+	war = no 
+	relation = { who = LOT value = 150 } 
+	}
+	
+	effect = { 
+	political_reform = federalism
+	inherit = LOT 
+	inherit = NAL 
+	inherit = ODO
+	LOT = { all_core = { add_core = THIS } } 
+	NAL = { all_core = { add_core = THIS } } 
+	ODO = { all_core = { add_core = THIS } } 
+		}
+	
+	}
+	
+	integrate_NMC = { 
+	potential = { 
+	tag = NAN 
+	has_country_flag = New_Mercia_established 
+	NMC = { exists = yes is_vassal = yes } 
+		}
+	
+	allow = { 
+	OR = { 
+	year = 1890 
+	AND = { iron_railroad = 1 
+	owns = 2400
+			}
+		} 
+	}
+	
+	effect = { 
+	   NMC = { all_core = { add_core = NAN } }
+	   inherit = NMC
+	}
+	
+	}
+    
+    # Atlantia Crusading 
+
+	ATL_ARE_friendship_decision = {
+	
+		potential = { 
+			tag = ATL
+			ARE = { exists = yes } 
+			NOT = {
+				has_country_flag = governors_statue
+			}
+		}
+		
+		allow = {
+			money = 50000
+			prestige = 20
+			war = no
+			romanticism = 1
+		}
+		
+		effect = {
+			money = -50000
+			set_country_flag = governors_statue
+			ARE = { relation = { who = THIS value = 50 } }
+		}	
+	}
+		
+	ATL_QUI_friendship_decision = {
+		potential = { 
+			tag = ATL
+			QUI = { exists = yes government = democracy NOT = { has_country_flag = QUI_DICTATORSHIP } } 
+			NOT = {
+				has_country_flag = diplomacy_QUI 
+			}
+			
+		}
+		
+		allow = {
+			QUI = { war = no } 
+			war = no
+			ideological_thought = 1
+		}
+		
+		effect = {
+			QUI = { relation = { who = THIS value = 50 } country_event = 7755139 }	
+			set_country_flag = diplomacy_QUI
+		}
+	}
+		
+	
+	Hetzel_Doctrine = { 
+		potential = { 
+		   OR = { tag = ATL AND = { tag = AZL primary_culture = atlantian } }
+		   NOT = { has_global_flag = hetzel_doctrine } 
+		}
+		
+		allow = { 
+		rank = 10 
+		state_n_government = 1 
+		iron_steamers = 1 
+		raider_group_doctrine = 1 
+		NOT = { OR = { ruling_party_ideology = reactionary ruling_party_ideology = conservative } }
+		} 
+		
+		effect = { 
+		prestige = 10 
+		set_global_flag = hetzel_doctrine
+		set_country_flag = revolutionary_war
+		any_country = { 
+			limit = { capital_scope = { continent = south_america } NOT = { OR = { government = democracy government = parliamentary_republic government = hms_government } }
+				}
+			relation = { who = THIS value = 50 } 
+			}
+		any_country = { 
+		limit = { tag = INC is_vassal = no } 
+			country_event = { 
+				id = 7755142 days = 2 
+			}
+		}
+		any_country = { 
+		limit = { tag = SPA OR = { owns = 2264 owns = 2324 } }
+			country_event = { 
+				id = 7755143 days = 2 
+			}
+		}
+		any_country = { 
+		limit = { tag = GRA OR = { vassal_of = SPA vassal_of = SPC } } 
+			country_event = { 
+				id = 7755144 days = 2 
+				}
+			}
+		}
+	}
+	
+	Bringing_democracy_to_Amazonia = { 
+		picture = Bringing_democracy_ATL
+		potential = { 
+		tag = ATL 
+		AMA = { exists = yes is_vassal = no NOT = { OR = { government = democracy government = parliamentary_republic government = hms_government } } }
+		has_global_flag = hetzel_doctrine 
+		NOT = { has_country_flag = het_AMA }
+		}
+		
+		allow = { 
+		is_greater_power = yes 
+		NOT = { AMA = { brigades_compare = 1 } } 
+		war = no 
+		NOT = { truce_with = AMA } 
+		}
+		
+		effect = { 
+		set_country_flag = het_AMA
+		AMA = { country_event = { id = 7755152 days = 50 } } 
+		}
+	}
+	
+	Bringing_democracy_to_Equinoxia = { 
+		picture = Bringing_democracy_ATL
+		potential = { 
+		tag = ATL 
+		EQN = { exists = yes is_vassal = no NOT = { OR = { government = democracy government = parliamentary_republic government = hms_government } } }
+		has_global_flag = hetzel_doctrine 
+		NOT = { has_country_flag = het_EQN }
+		}
+		
+		allow = { 
+		is_greater_power = yes 
+		NOT = { EQN = { brigades_compare = 1 } } 
+		war = no 
+		NOT = { truce_with = EQN } 
+		}
+		
+		effect = { 
+		set_country_flag = het_EQN
+		EQN = { country_event = { id = 7755152 days = 50 } } 
+		}
+	}
+	
+	Bringing_democracy_to_Antarctica = { 
+		picture = Bringing_democracy_ATL
+		potential = { 
+		tag = ATL 
+		ANT = { exists = yes is_vassal = no NOT = { OR = { government = democracy government = parliamentary_republic government = hms_government } } }
+		has_global_flag = hetzel_doctrine 
+		NOT = { has_country_flag = het_ANT } 
+		}
+		
+		allow = { 
+		is_greater_power = yes 
+		NOT = { ANT = { brigades_compare = 1 } } 
+		war = no 
+		NOT = { truce_with = ANT } 
+		}
+		
+		effect = { 
+		set_country_flag = het_ANT
+		ANT = { country_event = { id = 7755152 days = 50 } } 
+		}
+	}
+	
+	Bringing_democracy_to_Lotharingia = { 
+		picture = Bringing_democracy_ATL
+		potential = { 
+		tag = ATL 
+		LOT = { exists = yes is_vassal = no NOT = { OR = { government = democracy government = parliamentary_republic government = hms_government } } }
+		has_global_flag = hetzel_doctrine 
+		NOT = { has_country_flag = het_LOT }
+		}
+		
+		allow = { 
+		is_greater_power = yes 
+		NOT = { LOT = { brigades_compare = 1 } } 
+		war = no 
+		NOT = { truce_with = LOT } 
+		}
+		
+		effect = { 
+		set_country_flag = het_LOT
+		LOT = { country_event = { id = 7755152 days = 50 } } 
+		}
+	}
+
+	
+	Bringing_democracy_to_Odonia = { 
+		picture = Bringing_democracy_ATL
+		potential = { 
+		tag = ATL 
+		ODO = { exists = yes is_vassal = no NOT = { OR = { government = democracy government = parliamentary_republic government = hms_government } } }
+		has_global_flag = hetzel_doctrine 
+		NOT = { has_country_flag = het_ODO }
+		}
+		
+		allow = { 
+		is_greater_power = yes 
+		NOT = { ODO = { brigades_compare = 1 } } 
+		war = no 
+		NOT = { truce_with = ODO } 
+		}
+		
+		effect = {
+		set_country_flag = het_ODO
+		ODO = { country_event = { id = 7755152 days = 50 } } 
+		}
+	}
+	
+	Bringing_democracy_to_Beornia = { 
+		picture = Bringing_democracy_ATL
+		potential = { 
+		OR = { tag = ATL AND = { tag = AZL primary_culture = atlantian } }
+		NAN = { exists = yes is_vassal = no has_country_flag = end_NAN NOT = { OR = { government = democracy government = parliamentary_republic government = hms_government } } }
+		has_global_flag = hetzel_doctrine 
+		NOT = { has_country_flag = het_NAN }
+		}
+		
+		allow = { 
+		is_greater_power = yes 
+		NOT = { ODO = { brigades_compare = 1 } } 
+		war = no 
+		NOT = { truce_with = NAN } 
+		}
+		
+		effect = { 
+		set_country_flag = het_NAN
+		NAN = { country_event = { id = 7755152 days = 50 } } 
+		}
+		
+		ai_will_do = { 
+		factor = 1 
+		modifier = { 
+		factor = 0 
+		NOT = { year = 1875 } 
+			}
+		}
+	}
+	
+	Bringing_democracy_to_Essequibo = { 
+		picture = Bringing_democracy_ATL
+		potential = { 
+		OR = { tag = ATL AND = { tag = AZL primary_culture = atlantian } }
+		GUY = { exists = yes is_vassal = no  NOT = { OR = { government = democracy government = parliamentary_republic government = hms_government } } }
+		has_global_flag = hetzel_doctrine 
+		NOT = { has_country_flag = het_GUY }
+		}
+		
+		allow = { 
+		is_greater_power = yes 
+		nationalism_n_imperialism = 1
+		NOT = { GUY = { brigades_compare = 1 } } 
+		war = no 
+		NOT = { truce_with = GUY } 
+		}
+		
+		effect = { 
+		set_country_flag = het_GUY
+		GUY = { country_event = { id = 7755152 days = 50 } } 
+		}
+		
+		ai_will_do = { 
+		factor = 1 
+			modifier = { 
+				factor = 0 
+				NOT = { year = 1882 } 
+				}
+			}
+	}
+	
+	Bringing_democracy_to_Aureliana = { 
+		picture = Bringing_democracy_ATL
+		potential = { 
+		OR = { tag = ATL AND = { tag = AZL primary_culture = atlantian } }
+		CAS = { exists = yes is_vassal = no  NOT = { OR = { government = democracy government = parliamentary_republic government = hms_government } } }
+		has_global_flag = hetzel_doctrine 
+		NOT = { has_country_flag = het_CAS }
+		}
+		
+		allow = { 
+		is_greater_power = yes 
+		revolution_n_counterrevolution = 1
+		NOT = { CAS = { brigades_compare = 1 } } 
+		war = no 
+		NOT = { truce_with = CAS } 
+		}
+		
+		effect = { 
+		set_country_flag = het_CAS
+		CAS = { country_event = { id = 7755152 days = 50 } } 
+		}
+		
+		ai_will_do = { 
+		factor = 1 
+		modifier = { 
+		factor = 0 
+		NOT = { year = 1883 } 
+			}
+		}
+	}
+	
+	Bringing_democracy_to_Herreria = { 
+		picture = Bringing_democracy_ATL
+		potential = { 
+		OR = { tag = ATL AND = { tag = AZL primary_culture = atlantian } }
+		SAN = { exists = yes is_vassal = no NOT = { OR = { government = democracy government = parliamentary_republic government = hms_government } } }
+		has_global_flag = hetzel_doctrine 
+		NOT = { has_country_flag = het_SAN }
+		}
+		
+		allow = { 
+		is_greater_power = yes 
+		revolution_n_counterrevolution = 1
+		NOT = { SAN = { brigades_compare = 1 } } 
+		war = no 
+		NOT = { truce_with = SAN } 
+		}
+		
+		effect = { 
+		set_country_flag = het_SAN
+		SAN = { country_event = { id = 7755152 days = 50 } } 
+		}
+		
+		ai_will_do = { 
+		factor = 1 
+		modifier = { 
+		factor = 0 
+		NOT = { year = 1885 } 
+			}
+		}
+	}
+	
+	Bringing_democracy_to_Granada = { 
+		picture = Bringing_democracy_ATL
+		potential = { 
+		tag = AZL 
+		primary_culture = atlantian
+		GRA = { exists = yes is_vassal = no NOT = { OR = { government = democracy government = parliamentary_republic government = hms_government } } }
+		has_global_flag = hetzel_doctrine 
+		NOT = { has_country_flag = het_GRA }
+		}
+		
+		allow = { 
+		is_greater_power = yes 
+		revolution_n_counterrevolution = 1
+		NOT = { GRA = { brigades_compare = 1 } } 
+		war = no 
+		NOT = { truce_with = GRA } 
+		}
+		
+		effect = { 
+		set_country_flag = het_GRA
+		GRA = { country_event = { id = 7755152 days = 50 } } 
+		}
+		
+		ai_will_do = { 
+		factor = 1 
+		modifier = { 
+		factor = 0 
+		NOT = { year = 1885 } 
+			}
+		}
+	}
+	
+	Bringing_democracy_to_PNM = { 
+		picture = Bringing_democracy_ATL
+		potential = { 
+		tag = AZL 
+		primary_culture = atlantian
+		PNM = { exists = yes is_vassal = no NOT = { OR = { government = democracy government = parliamentary_republic government = hms_government } } }
+		has_global_flag = hetzel_doctrine 
+		NOT = { has_country_flag = het_PNM }
+		NOT = { owns = 1723 }
+		}
+		
+		allow = { 
+		is_greater_power = yes 
+		mass_politics = 1
+		NOT = { PNM = { brigades_compare = 1 } } 
+		war = no 
+		NOT = { truce_with = PNM }
+		}
+		
+		effect = { 
+		set_country_flag = het_PNM
+		PNM = { country_event = { id = 7755152 days = 50 } } 
+		}
+		
+		ai_will_do = { 
+		factor = 1 
+		}
+	}
+	
+	Bringing_democracy_to_UCA = { 
+		picture = Bringing_democracy_ATL
+		potential = { 
+		tag = UCA
+		primary_culture = atlantian
+		GRA = { exists = yes is_vassal = no NOT = { OR = { government = democracy government = parliamentary_republic government = hms_government } } }
+		has_global_flag = hetzel_doctrine 
+		NOT = { has_country_flag = het_UCA }
+		NOT = { owns = 1723 }
+		}
+		
+		allow = { 
+		is_greater_power = yes 
+		mass_politics = 1
+		NOT = { UCA = { brigades_compare = 1 } } 
+		war = no 
+		NOT = { truce_with = UCA } 
+		}
+		
+		effect = { 
+		set_country_flag = het_UCA
+		UCA = { country_event = { id = 7755152 days = 50 } } 
+		}
+		
+		ai_will_do = { 
+		factor = 1 
+		}
+	}
+	
+	# Why the hell would you do this?
+	
+	Bringing_democracy_to_Colombia = { 
+		picture = Bringing_democracy_ATL
+		potential = { 
+		tag = AZL 
+		primary_culture = atlantian
+		CLM = { exists = yes is_vassal = no NOT = { OR = { government = democracy government = parliamentary_republic government = hms_government } } }
+		has_global_flag = hetzel_doctrine 
+		NOT = { has_country_flag = het_CLM }
+		NOT = { owns = 1723 }
+		}
+		
+		allow = { 
+		is_greater_power = yes 
+		mass_politics = 1
+		NOT = { CLM = { brigades_compare = 1 } } 
+		war = no 
+		NOT = { truce_with = CLM } 
+		}
+		
+		effect = { 
+		set_country_flag = het_CLM
+		CLM = { country_event = { id = 7755152 days = 50 } } 
+		}
+		
+		ai_will_do = { 
+		factor = 1 
+		}
+	}
+	
+    AMA_remove_debt_money = { 
+        potential = { 
+        OR = {
+		    tag = AMA 
+			tag = EQN 
+			AND = {
+			   has_country_modifier = debt_AMA 
+			   tag = AZL
+			}
+	    } 
+        has_country_modifier = debt_AMA 
+        DUA = { exists = yes } 
+        }
+        
+        allow = { 
+            money = 150000
+        }
+        
+        effect = { 
+        remove_country_modifier = debt_AMA 
+	money = -150000
+        DUA = { country_event = 7754401 }
+        }
+    }
+    
+    AMA_remove_debt_goods = { 
+        potential = { 
+        OR = {
+		    tag = AMA 
+			tag = EQN 
+			AND = {
+			   has_country_modifier = debt_AMA 
+			   tag = AZL
+			}
+	    } 
+        has_country_modifier = debt_AMA 
+        DUA = { exists = yes } 
+        }
+        
+        allow = { 
+            tropical_wood  = 100
+            sugar = 750
+            tobacco = 250
+            coffee = 100
+        }
+        
+        effect = { 
+        remove_country_modifier = debt_AMA 
+        tropical_wood  = -100
+        sugar = -750
+        tobacco = -250
+        coffee = -100
+        DUA = { country_event = 7754401 }
+        } 
+    }
+	
+	denis_war_decision = { 
+	
+		picture = Atlantia
+		
+		potential = { 
+			tag = LOT 
+			has_global_flag = LOT_RESOLVED
+			all_core = { owned_by = THIS } 
+			NOT = { is_vassal = yes } 
+			NOT = { year = 1860 } 
+			NOT = { has_country_flag = denis_war }
+		}
+		
+		allow = { 
+			war_exhaustion = 0 
+			NOT = { OR = { ODO = { exists = yes } NAL = { exists = yes } } }
+			war = no 
+		}
+		
+		effect = { 
+			set_country_flag = denis_war 
+			any_country = { limit = { tag = ATL exists = yes } country_event = 7755159 }
+			ATL = { all_core = { add_core = LOT } } 
+		}
+	}
+}

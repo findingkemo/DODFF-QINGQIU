@@ -1,0 +1,8 @@
+owner = ATL
+controller = ATL
+add_core = LOT
+add_core = ATL
+add_core = AMA
+trade_goods = sugar
+life_rating = 35
+terrain = jungle_farmland

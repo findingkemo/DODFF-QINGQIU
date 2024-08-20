@@ -1,0 +1,6 @@
+owner = ALJ
+controller = ALJ
+add_core = ALJ
+trade_goods = fruit
+life_rating = 35
+terrain = semi_desert_mountains

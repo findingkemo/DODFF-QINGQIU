@@ -1,0 +1,7 @@
+owner = ARA
+controller = KBL
+add_core = KBL
+trade_goods = grain
+life_rating = 35
+colonial = 2
+terrain = mountain_farmland

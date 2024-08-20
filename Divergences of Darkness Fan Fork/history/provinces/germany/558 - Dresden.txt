@@ -1,0 +1,33 @@
+owner = BOH
+controller = BOH
+add_core = BOH
+add_core = LUS
+add_core = ELX
+add_core = GER
+trade_goods = cattle
+life_rating = 45
+terrain = hilly_farmland
+state_building = {
+	level = 2 
+	building = fabric_factory
+	upgrade = yes
+}
+state_building = {
+	level = 2 
+	building = regular_clothes_factory
+	upgrade = yes
+}
+state_building = {
+	level = 2 
+	building = furniture_factory
+	upgrade = yes
+}
+
+state_building = {
+	level = 2 
+	building = liquor_distillery
+	upgrade = yes
+}
+
+
+

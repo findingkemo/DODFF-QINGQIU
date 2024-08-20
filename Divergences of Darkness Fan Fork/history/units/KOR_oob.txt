@@ -1,0 +1,55 @@
+#leader = {
+#	name = "Wi Man"
+#	type = land
+#	date = 1836.1.1
+#	personality = quixotic
+#	background = ethnic
+#}
+
+leader = {
+	name = "Hyeokgeose Geoseogan"
+	type = land
+	date = 1836.1.1
+	personality = hellbent
+	background = state_ideologue
+}
+
+army = {
+	name = "Joseon Army"
+	location = 1624
+	regiment = {
+		name= "1.Royal regular"
+		type = regular
+		home = 1624
+	}
+
+	regiment = {
+		name= "2. Royal regular"
+		type = regular
+		home = 1624
+	}
+
+  
+	regiment = {
+		name= "1. cavalry"
+		type = hussar
+		home = 1636
+	}
+  
+	regiment = {
+		name= "1. infantry"
+		type = infantry
+		home = 1635
+	}   
+	regiment = {
+		name= "2. infantry"
+		type = infantry
+		home = 1629
+	}
+	regiment = {
+		name= "3. infantry"
+		type = infantry
+		home = 1628
+	}
+
+}

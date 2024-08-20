@@ -1,0 +1,78 @@
+
+country_event = {
+	id = 32305
+	title = "EVTNAME32305"
+	desc = "EVTDESC32305"
+	picture = "border_ruffians"
+	trigger = { 
+	exists = yes
+	NOT = { is_substate = yes }
+	NOT = { is_vassal = yes }
+	part_of_sphere = yes
+	sphere_owner = {
+	any_core = { owned_by = THIS }
+	is_greater_power = yes
+	war = no
+	is_disarmed = no
+		  }
+	}
+
+	mean_time_to_happen = {
+	months = 24
+	}
+		
+	option = {
+	name = "That's not good."
+	sphere_owner = {
+			country_event = 32306
+		}
+	}
+}
+		
+country_event = {
+	id = 32306
+	title = "EVTNAME32306"
+	desc = "EVTDESC32306"
+	picture = "deliberation"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "This is unfortunate."
+		leave_alliance = FROM
+		random_country = {
+			limit = {
+				tag = FROM
+				vassal_of = THIS
+			}
+			THIS = { release_vassal = FROM }
+		}
+        relation = {
+			who = FROM
+			value = -400
+		}
+		diplomatic_influence = {
+			who = FROM
+			value = -600
+		}
+	ai_chance = {
+	factor = 100
+	     }	
+    }
+
+	option = {
+		name = "Can't we. You know... talk it out?"
+		prestige = -10
+        relation = {
+			who = FROM
+			value = -50
+		}
+		diplomatic_influence = {
+			who = FROM
+			value = -50
+		}
+	    ai_chance = {
+		factor = 0
+		}		
+    }
+}

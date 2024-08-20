@@ -1,0 +1,97 @@
+capital = 1624
+primary_culture = korean
+religion = mahayana
+government = absolute_monarchy
+plurality = 0.0
+nationalvalue = nv_might
+literacy = 0.38
+
+prestige = 5
+
+# Political reforms
+slavery = no_slavery
+upper_house_composition = party_appointed
+vote_franschise = none_voting
+public_meetings = no_meeting
+press_rights = state_press
+trade_unions = no_trade_unions
+voting_system = first_past_the_post
+political_parties = underground_parties
+citizens_rights = primary_culture_only
+penal_system = capital_punishment
+conscription = mandatory_service
+centralization = unitary
+debt_law = debtors_prisons
+colonial_policy = no_colonies
+child_labor = child_labor_legal
+border_policy = closed_borders
+school_reforms = no_schools
+
+# Social Reforms
+wage_reform = no_minimum_wage
+work_hours = no_work_hour_limit
+safety_regulations = no_safety
+health_care = no_health_care
+unemployment_subsidies = no_subsidies
+pensions = no_pensions 
+# New Reforms
+recruitment_reform = peasant_levys
+police_reform = no_police 
+
+ruling_party = AAA_conservative_3
+upper_house = {
+	fascist = 0
+	liberal = 33
+	conservative = 34
+	reactionary = 33
+	anarcho_liberal = 0
+	socialist = 0
+	communist = 0
+	market_liberal = 0
+	social_liberal = 0
+}
+
+# Level_4
+# Technologies
+early_classical_theory_and_critique = 1
+late_classical_theory = 1
+late_enlightenment_philosophy = 1
+enlightenment_thought = 1
+private_banks = 1
+bronze_muzzle_loaded_artillery = 1
+flintlock_rifles = 1
+muzzle_loaded_rifles = 1
+no_standard = 1
+military_staff_system = 1
+post_napoleonic_thought = 1
+army_command_principle = 1
+basic_chemistry = 1
+piston_steam_engine = 1
+freedom_of_trade = 1
+post_nelsonian_thought = 1
+
+# Inventions
+
+# Unciv Reforms
+diplomatic_reform = balanced_diplomacy
+academic_institutions = madrasahs
+admin_reform = yes_admin_reform
+taxation_reform = tax_farmers
+army_schools = yes_army_schools
+foreign_weapons = modern_weapons
+finance_reform = yes_finance_reform
+foreign_training = yes_foreign_training
+military_constructions = yes_military_constructions
+disciplinary_reform = rehabilitationunciv
+foreign_officers = yes_foreign_officers
+medicine_reform = alchemy
+land_reform = yes_land_reform
+naval_facilities = yes_naval_bases
+
+# Starting Consciousness
+consciousness = 0
+nonstate_consciousness = 0
+
+oob = "GOY_oob.txt"
+
+schools = army_tech_school

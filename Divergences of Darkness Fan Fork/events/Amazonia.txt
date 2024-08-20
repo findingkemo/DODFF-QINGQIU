@@ -1,0 +1,162 @@
+################### The Amazonian Civil War ############### 
+
+country_event = { #### Choice of government  
+
+	id = 98426
+	title = "AMA34.T"
+	desc = "AMA34.D" 
+	
+	is_triggered_only = yes 
+
+	option = { 
+	name = "AMA34.A"
+	prestige = -10 
+	change_tag = ANT
+	}
+}
+
+country_event = { #### Monarchy ? 
+
+	id = 98431
+	title = "AMA31.T"
+	desc = "AMA31.D" 
+		
+	fire_only_once = yes
+
+	trigger = { 
+	OR = { tag = AMA tag = ANT }
+	government = presidential_dictatorship 
+	has_global_flag = AMA_RESOLVED
+	}
+	
+	mean_time_to_happen = { 
+	months = 5 
+	}
+	
+	option = { 
+	name = "98431.A"
+	clr_country_flag = newgov 
+	country_event = 98432
+	ai_chance = { 
+	factor = 50 } 
+	}
+	
+	option = { 
+	name = "98431.B"
+	any_pop = { 
+		limit = { 
+		culture = amazonian  
+			}
+		militancy = -2 
+		}
+	}
+}
+
+country_event = { #### Homeland or Plantagenia ?  
+
+	id = 98432
+	title = "AMA32.T"
+	desc = "AMA32.D" 
+	
+	is_triggered_only = yes 
+	
+	option = { 
+	name = "98432.A"
+	government = absolute_monarchy 
+	relation = { who = DUA value = 200 }
+	DUA = { diplomatic_influence = { who = AMA value = 150 } }
+	country_event = 98433
+	ai_chance = { 
+	factor = 40 } 
+	}
+	
+	option = { 
+	name = "98432.B"
+	government = absolute_monarchy 
+	relation = { who = PLA value = 200 }
+	country_event = 98433
+	ai_chance = { 
+	factor = 60 } 
+	}
+}
+
+country_event = { #### Choice of government  
+
+	id = 98433
+	title = "AMA33.T"
+	desc = "AMA33.D" 
+	
+	is_triggered_only = yes 
+	
+	option = { 
+	name = "98433.A"
+	government = absolute_monarchy 
+	political_reform = none_voting
+	political_reform = no_meeting
+	political_reform = censored_press
+	political_reform = no_trade_unions
+	political_reform = underground_parties
+	political_reform = closed_borders
+	political_reform = appointed
+	ai_chance = { 
+	factor = 40 } 
+	}
+	
+	option = { 
+	name = "98433.B"
+	government = prussian_constitutionalism
+	political_reform = appointed
+	political_reform = wealth_voting
+	political_reform = yes_meeting
+	political_reform = censored_press
+	political_reform = no_trade_unions
+	political_reform = first_past_the_post
+	political_reform = non_secret_ballots
+	ai_chance = { 
+	factor = 40 } 
+	}
+	
+	option = { 
+	name = "98433.C"
+	government = hms_government
+	political_reform = state_equal_weight
+	political_reform = universal_weighted_voting
+	political_reform = yes_meeting
+	political_reform = censored_press
+	political_reform = no_trade_unions
+	political_reform = first_past_the_post
+	political_reform = non_secret_ballots
+	country_event = 800054
+	ai_chance = { 
+	factor = 20 } 
+	}
+}
+
+country_event = { #### Ploumanao
+
+	id = 98434
+	title = "AMA34.T"
+	desc = "AMA34.D" 
+	
+	trigger = { 
+	NOT = { has_country_flag = breton_amazon } 
+	OR = { 
+	tag = EQN
+	tag = AMA 
+	tag = AZL
+	tag = GRA
+		}
+	owns = 2402
+	}
+	
+	mean_time_to_happen = { 
+	months = 4 
+	}
+
+	option = { 
+	name = "AMA34.A" 
+	set_country_flag = breton_amazon
+	prestige = 1 
+	2402 = { change_province_name = "Ploumanao" } 
+	}
+}

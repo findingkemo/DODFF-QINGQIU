@@ -1,0 +1,496 @@
+# Triggered modifiers are here.
+# these are checked for each countries once/month and then applied.
+#
+# Effects are fully scriptable here.
+
+##### START PDM DIVIDE BY ZERO MODIFIERS #####
+
+winds_of_change_1900 = {
+	trigger = {
+		has_global_flag = berlin_conference
+		civilized = no
+		year = 1890
+	}
+	icon = 1
+	research_points = 2
+}
+
+##############################
+
+#powerful_HRE = { 
+#	trigger = { 
+#		OR = { 
+#		primary_culture = south_german
+#		primary_culture = rheinish 
+#		primary_culture = north_german
+#			}
+#		in_sphere = BOH 
+#		NOT = { year = 1849 }
+#	}
+#	prestige = -0.50 
+#}
+
+money_hoarder_3 = {
+	trigger = {
+		money = 5000000
+		not = { money = 10000000 }
+	}
+	tax_efficiency = -0.40
+	tariff_efficiency_modifier = -0.60
+	icon = 1
+}
+
+money_hoarder_4 = {
+	trigger = {
+		money = 10000000
+		not = { money = 15000000 }
+	}
+	tax_efficiency = -0.50
+	tariff_efficiency_modifier = -0.80
+	icon = 1
+}
+
+money_hoarder_5 = {
+	trigger = {
+		money = 15000000
+		not = { money = 30000000 }
+	}
+	factory_output = -0.10
+	tax_efficiency = -0.60
+	tariff_efficiency_modifier = -1.0
+	icon = 1
+}
+
+hyperinflation = {
+	trigger = {
+		money = 30000000
+	}
+	factory_output = -0.20
+	tax_efficiency = -0.99
+	tariff_efficiency_modifier = -1.0
+	icon = 1
+}
+
+occupied_captial = {
+	trigger = {
+		any_owned_province = {
+			is_capital = yes
+			not = { controlled_by = THIS }
+		}
+	}
+	prestige = -0.25
+	tax_efficiency = -0.10
+	mobilisation_size = -0.005
+	global_pop_consciousness_modifier = 0.05
+	global_pop_militancy_modifier = 0.02
+	icon = 1
+}
+
+#### END PDM Divide by Zero Modifiers ####
+
+#### HPM Additional Modifiers ####
+
+small_but_efficient = {
+    trigger = {
+        capital_scope = { continent = europe }
+        civilized = yes
+        NOT = { number_of_states = 4 }
+        NOT = { num_of_cities = 8 }
+        NOT = { total_pops = 500000 }
+        NOT = { money = 1000000 }
+    }
+    tax_efficiency = 0.4
+    administrative_efficiency_modifier = 0.3
+    tariff_efficiency_modifier = 0.3
+    education_efficiency_modifier = 0.05
+    supply_consumption = -0.9
+    poor_income_modifier = 1
+    middle_income_modifier = 3
+    rich_income_modifier = 5
+	icon = 9
+}
+
+vassal_nation = {
+    trigger = {
+        is_vassal = yes
+        is_substate = no
+    }
+    icon = 10
+    prestige = -0.1
+}
+
+substate_nation = {
+    trigger = {
+	    ai = yes
+        is_substate = yes       
+    }
+
+    prestige = -0.25
+    max_loan_modifier = -1.0
+    min_tax = 0.25
+    max_military_spending = -0.25
+    min_tariff = 1.2
+    tax_efficiency = 0.3
+
+    icon = 10
+}
+
+substate_nation_player = {
+    trigger = {
+	    ai = no
+        is_substate = yes       
+    }
+
+    prestige = -0.25
+    max_loan_modifier = -1.0
+    max_military_spending = -0.25
+    tax_efficiency = 0.3
+
+    icon = 10
+}
+
+trinket_health_care_fully_funded = {
+	trigger = {
+		exists = yes
+		health_care = trinket_health_care
+		administration_spending = 0.2
+	}
+	global_population_growth = 0.001
+	icon = 19
+}
+
+low_health_care_fully_funded = {
+	trigger = {
+		exists = yes
+		health_care = low_health_care
+		OR = {
+			AND = {
+				ai = yes
+				administration_spending = 0.25
+			}
+			AND = {
+				ai = no
+				administration_spending = 0.3
+			}
+		}
+	}
+	global_population_growth = 0.002
+	icon = 19
+}
+
+acceptable_health_care_fully_funded = {
+	trigger = {
+		exists = yes
+		health_care = acceptable_health_care
+		OR = {
+			AND = {
+				ai = yes
+				administration_spending = 0.3
+			}
+			AND = {
+				ai = no
+				administration_spending = 0.4
+			}
+		}
+	}
+	global_population_growth = 0.003
+	icon = 19
+}
+
+good_health_care_fully_funded = {
+	trigger = {
+		exists = yes
+		health_care = good_health_care
+		OR = {
+			AND = {
+				ai = yes
+				administration_spending = 0.3
+			}
+			AND = {
+				ai = no
+				administration_spending = 0.5
+			}
+		}
+	}
+	global_population_growth = 0.004
+	icon = 19
+}
+
+health_care_fully_funded = {
+	trigger = {
+		exists = yes
+		health_care = good_health_care
+		OR = {
+			AND = {
+				ai = yes
+				administration_spending = 0.74
+			}
+			AND = {
+				ai = no
+				administration_spending = 0.99
+			}
+		}
+	}
+	global_population_growth = 0.001
+	icon = 19
+}
+
+low_schools_fully_funded = {
+	trigger = {
+		exists = yes
+		school_reforms = low_schools
+		education_spending = 0.3
+	}
+	education_efficiency_modifier = 0.05
+	icon = 19
+}
+
+acceptable_schools_fully_funded = {
+	trigger = {
+		exists = yes
+		school_reforms = acceptable_schools
+		education_spending = 0.4
+	}
+	education_efficiency_modifier = 0.075
+	icon = 19
+}
+
+good_schools_fully_funded = {
+	trigger = {
+		exists = yes
+		school_reforms = good_schools
+		education_spending = 0.5
+	}
+	education_efficiency_modifier = 0.1
+	icon = 19
+}
+
+education_fully_funded = {
+	trigger = {
+		exists = yes
+		school_reforms = good_schools
+		OR = {
+			AND = {
+				ai = yes
+				education_spending = 0.74
+			}
+			AND = {
+				ai = no
+				education_spending = 0.99
+			}
+		}
+	}
+	education_efficiency_modifier = 0.1
+	icon = 19
+}
+
+neglected_education = {
+	trigger = {
+		exists = yes
+		civilized = yes
+		ai = no
+		number_of_states = 2
+		total_pops = 1000000
+		OR = {
+			AND = {
+				literacy = 0.75
+				NOT = { education_spending = 0.3 }
+			}
+			AND = {
+				literacy = 0.5
+				NOT = { education_spending = 0.2 }
+			}
+			AND = {
+				literacy = 0.25
+				NOT = { education_spending = 0.1 }
+			}
+		}
+	}
+	education_efficiency_modifier = -1
+	icon = 19
+}
+
+educational_spen = {
+		trigger = {
+			ai = yes
+			exists = yes
+			administration_spending = 0.74
+		}
+
+	education_efficiency_modifier = 0.3
+	icon = 16
+}
+
+admin_spen = {
+		trigger = {
+			ai = yes
+			exists = yes
+			administration_spending = 0.74
+		}
+
+	administrative_efficiency_modifier = 0.3
+	icon = 16
+}
+
+
+own_kiel_canal = {
+    trigger = {
+        owns = 369
+        is_canal_enabled = 1
+    }
+    icon = 9
+    tariff_efficiency_modifier = 0.05
+}
+
+own_suez_canal = {
+    trigger = {
+        owns = 1755
+        is_canal_enabled = 2
+    }
+    icon = 9
+    tariff_efficiency_modifier = 0.1
+    import_cost = -0.2
+    prestige = 0.01
+}
+
+own_panama_canal = {
+    trigger = {
+        owns = 1723
+        is_canal_enabled = 3
+    }
+    icon = 9
+    tariff_efficiency_modifier = 0.2
+    import_cost = -0.25
+    prestige = 0.02
+}
+
+# Replace with Events
+
+#democratic_nation = {
+#    trigger = {
+#        exists = yes
+#        slavery = no_slavery
+#        vote_franschise = universal_voting
+#        upper_house_composition = population_equal_weight
+#        voting_system = proportional_representation
+#        public_meetings = yes_meeting
+#        press_rights = free_press
+#        trade_unions = all_trade_unions
+#        political_parties = secret_ballots
+#        border_policy = open_borders
+#        debt_law = bankruptcy
+#        citizens_rights = all_voting_pops
+#    }
+#    global_immigrant_attract = 0.2
+#    ruling_party_support = 0.1
+#    core_pop_militancy_modifier = -0.1
+#    research_points_modifier = 0.05
+#	political_reform_desire = -0.3
+#	icon = 13
+#}
+
+#social_reformed_nation = {
+#        trigger = {
+#        exists = yes
+#        wage_reform = good_minimum_wage
+#        work_hours = eight_hours
+#        safety_regulations = good_safety
+#        unemployment_subsidies = good_subsidies
+#        pensions = good_pensions
+#        health_care = good_health_care
+#        school_reforms = good_schools
+#        penal_system = rehabilitation
+#    }
+#    core_pop_militancy_modifier = -0.2
+#    war_exhaustion = -0.01
+#    research_points_modifier = 0.10
+#    social_reform_desire = -0.3
+#    icon = 13
+#}
+
+##### END HPM MODIFIERS #####
+
+##### Adjusted GFM Revanchism Modifiers ####
+
+save_the_nation1  = {
+    trigger = {
+        revanchism = 0.1
+		year = 1870
+        NOT = { revanchism = 0.2 }
+    }
+
+    suppression_points_modifier = 0.10
+
+    land_organisation = 0.025
+    mobilisation_size = 0.01
+    supply_consumption = -0.05
+    icon = 9
+}
+
+save_the_nation2  = {
+    trigger = {
+        revanchism = 0.2
+		year = 1870
+        NOT = { revanchism = 0.3 }
+    }
+
+    suppression_points_modifier = 0.10
+
+    land_organisation = 0.075
+    mobilisation_size = 0.02
+    supply_consumption = -0.15
+    mobilization_impact = 0.25
+    mobilisation_economy_impact = -0.125
+    icon = 9
+}
+
+save_the_nation3  = {
+    trigger = {
+        revanchism = 0.3
+		year = 1870
+        NOT = { revanchism = 0.4 }
+    }
+
+    suppression_points_modifier = 0.10
+
+    land_organisation = 0.1
+    mobilisation_size = 0.03
+    supply_consumption = -0.20
+    mobilization_impact = 0.5
+    mobilisation_economy_impact = -0.25
+    icon = 9
+}
+
+save_the_nation4  = {
+    trigger = {
+        revanchism = 0.4
+		year = 1870
+        NOT = { revanchism = 0.5 }
+    }
+
+    suppression_points_modifier = 0.10
+
+    land_organisation = 0.2
+    mobilisation_size = 0.04
+    supply_consumption = -0.30
+    mobilization_impact = 1
+    mobilisation_economy_impact = -0.5
+    icon = 9
+}
+
+save_the_nation5  = {
+    trigger = {
+        revanchism = 0.5
+		year = 1870
+    }
+
+    suppression_points_modifier = 0.10
+
+    land_organisation = 0.25
+    land_unit_start_experience = 5
+    mobilisation_size = 0.05
+    supply_consumption = -0.30
+    mobilization_impact = 1
+    mobilisation_economy_impact = -0.66
+    icon = 9
+}

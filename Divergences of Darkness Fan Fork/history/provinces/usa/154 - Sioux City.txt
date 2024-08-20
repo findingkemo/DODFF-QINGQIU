@@ -1,0 +1,10 @@
+
+add_core = PLA 
+add_core = OUM
+add_core = OCE
+add_core = VIN
+
+trade_goods = grain
+life_rating = 30
+terrain = temperate_grassland
+

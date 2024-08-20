@@ -1,0 +1,9 @@
+owner = INC
+controller = INC
+add_core = INC
+add_core = QOL
+
+
+trade_goods = fruit
+life_rating = 35
+terrain = dry_forest_mountains

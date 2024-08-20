@@ -1,0 +1,23 @@
+DAI = {
+   value = -20
+   truce_until = "1837.6.1"
+}
+
+TNG = {
+   value = -20
+   truce_until = "1839.1.1"
+}
+
+navy = {
+	name = "Guangdong Fleet"
+	location = 1498
+	ship = {
+		name= "Canton"
+		type = frigate
+	}
+
+	ship = {
+		name= "Transport Flotilla"
+		type = clipper_transport
+	}
+}

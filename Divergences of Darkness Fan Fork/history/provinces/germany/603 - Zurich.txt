@@ -1,0 +1,19 @@
+owner = GRB
+controller = GRB
+add_core = GRB
+add_core = GER
+trade_goods = cattle
+life_rating = 40
+terrain = hilly_farmland
+fort = 1
+state_building = {
+	level = 2 
+	building = steel_factory
+	upgrade = yes
+}
+#state_building = {
+#	level = 4
+#	building = lumber_mill
+#	upgrade = yes
+#}
+

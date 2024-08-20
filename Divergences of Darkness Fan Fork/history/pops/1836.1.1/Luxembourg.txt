@@ -1,0 +1,77 @@
+#Luxembourg (172000)
+#In personal union with Netherlands in 1836
+#Luxembourg (172000/43000 POPS)
+397 = {
+	aristocrats = { 
+		culture = burgundian
+		religion = protestant
+		size = 480
+	}
+
+	capitalists = { 
+		culture = burgundian
+		religion = protestant
+		size = 240
+	}
+
+	artisans = { 
+		culture = burgundian
+		religion = protestant
+		size = 4800
+	}
+
+	bureaucrats = { 
+		culture = burgundian
+		religion = protestant
+		size = 192
+	}
+
+	clergymen = { 
+		culture = burgundian
+		religion = protestant
+		size = 960
+	}
+
+	clerks = { 
+		culture = burgundian
+		religion = protestant
+		size = 144
+	}
+
+	officers = { 
+		culture = burgundian
+		religion = protestant
+		size = 48
+	}
+
+	craftsmen = { 
+		culture = burgundian
+		religion = protestant
+		size = 2400
+	}
+
+	farmers = { 
+		culture = burgundian
+		religion = protestant
+		size = 3696
+	}
+
+	soldiers = { 
+		culture = burgundian
+		religion = protestant
+		size = 960
+	}
+
+	farmers = { 
+		culture = rheinish
+		religion = protestant
+		size = 32640
+	}
+
+	farmers = { 
+		culture = rheinish
+		religion = catholic
+		size = 1440
+	}
+
+}

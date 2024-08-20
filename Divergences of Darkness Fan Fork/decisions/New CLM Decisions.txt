@@ -1,0 +1,397 @@
+political_decisions = {
+
+# Formable Decisions
+
+	form_usca = {
+		potential = {
+			NOT = { part_of_sphere = yes }
+			NOT = { exists = UCA }
+			NOT = { tag = CLM }
+			NOT = { has_country_flag = the_marquez_gambit }
+			primary_culture = central_american
+		}	
+		allow = {
+			NOT = { war = yes }
+			UCA = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						owner = {
+							in_sphere = THIS
+						}
+					}
+				}
+			}
+		}
+		
+		effect = {
+			prestige = 10
+			any_country = {
+				limit = {
+					primary_culture = central_american
+					in_sphere = THIS
+					NOT = {
+						tag = THIS
+					}
+				}
+				annex_to = THIS
+			}
+			any_owned = {
+				limit = {
+					is_core = THIS
+				}
+				add_core = UCA
+			}
+			change_tag = UCA
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	save_UCA = {
+	
+		potential = {
+			tag = ELS
+			has_country_flag = the_marquez_gambit
+		}	
+		
+		allow = {
+			NOT = { war = yes }
+			nationalism_n_imperialism = 1
+			OR = {
+			  is_greater_power = yes
+			  is_secondary_power = yes
+			}
+		}
+		
+		effect = {
+		    clr_country_flag = the_marquez_gambit
+			prestige = 10
+			add_country_modifier = { name = global_baby_boom duration = 365 }
+			2191 = { add_province_modifier = { name = baby_boom duration = 2190 } }
+			set_country_flag = successful_marquez_gambit
+			change_tag = UCA
+	    }
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	form_granada = {
+		potential = {
+			NOT = { exists = GRA }
+			primary_culture = granadan
+			NOT = { has_country_flag = QUI_DICTATORSHIP }
+		}
+		
+		allow = {
+			war = no
+			ideological_thought = 1 
+			prestige = 20
+			owns = 2254
+			owns = 2247 
+			owns = 2264
+		}
+		
+		effect = {
+			prestige = 20				
+			change_tag = GRA
+			any_country = {
+				limit = {
+					OR = {
+					   tag = CAS
+					   tag = GUY
+					   tag = SAN
+					   NOT = { tag = THIS }
+					}
+					OR = { 
+					   in_sphere = THIS
+					   vassal_of = THIS 
+					}
+				}
+				country_event = { id = 11101 days = 1 }
+			}			
+		}
+	}
+	
+	form_granada_ballivian = {
+		potential = {
+			NOT = { exists = GRA }
+			tag = QUI 
+			has_country_flag = QUI_DICTATORSHIP
+		}
+		
+		allow = {
+			war = no
+			prestige = 20
+			rank = 16 
+			OR = { 
+				AND = { 		
+					owns = 2254
+					owns = 2247
+					}
+				SAN = { vassal_of = THIS owns = 2254 owns = 2247 } 
+				}
+			OR = { 
+				owns = 2264
+				CAS = { vassal_of = THIS owns = 2264 }
+				}
+		}
+		
+		effect = {
+			prestige = 20			
+			primary_culture = granadan
+			add_accepted_culture = caladeran
+			remove_accepted_culture = chimu 
+			change_tag = GRA
+			any_country = {
+				limit = {
+					OR = {
+					   tag = CAS
+					   tag = GUY
+					   tag = SAN
+					   NOT = { tag = THIS }
+					}
+					OR = { 
+					   in_sphere = THIS
+					   vassal_of = THIS 
+					}
+				}
+				annex_to = THIS
+			}	
+		}
+	}
+	
+	Expansion_into_Andagoya = { 
+		potential = { 
+		tag = GRA 
+		NOT = { has_country_flag = claimed_Andagoya } 
+		NOT = { CLM = { owns = 1723 } }
+		}
+	
+		allow = { 
+			nationalism_n_imperialism = 1 
+	        OR = {
+		      is_secondary_power = yes
+	          is_greater_power = yes
+	        }
+		}
+	
+		effect = { 
+			PNM = { all_core = { add_core = THIS } } 
+			badboy = 5 
+			set_country_flag = claimed_Andagoya 
+		}
+	}
+	
+    Caladero_in_Granada = { 
+        potential = { 
+            tag = GRA           
+            NOT = { has_country_flag = expansion_QUI } 
+            NOT = { owns = 2279 }
+        }
+        
+        allow = { 
+           revolution_n_counterrevolution = 1 
+	       OR = {
+		      is_secondary_power = yes
+	          is_greater_power = yes
+	       }
+        }
+        
+        effect = { 
+        QUI = { all_core = { add_core = THIS } }
+        set_country_flag = expansion_QUI
+        }   
+    }
+
+	Granadan_unity = { 
+	potential = { 
+	   tag = GRA 
+	   NOT = { has_country_flag = GRA_united } 
+	}
+	
+	allow = { 
+	   social_science = 1
+	   OR = {
+		  is_secondary_power = yes
+	      is_greater_power = yes
+	   } 
+	   all_core = { owned_by = THIS }
+	}
+	
+	effect = { 
+	    prestige = 20
+		GUY = { all_core = { remove_core = GUY } }
+		SAN = { all_core = { remove_core = SAN } }
+		CAS = { all_core = { remove_core = CAS } }
+	    set_country_flag = GRA_united 
+	}
+	}
+	
+	Rebuke_INC_claims = { 
+		potential = { 
+			tag = GRA 
+			INC = { exists = yes } 
+			has_global_flag = claimed_GRA_INC
+			NOT = { has_country_flag = rebuked_INC } 
+		}
+		
+		allow = { 
+		   war = no 
+		   truce_with = INC 
+	       OR = {
+		      is_secondary_power = yes
+	          is_greater_power = yes
+	       }
+		   SAN = { 
+		      all_core = {
+			         OR = {
+					   owned_by = THIS
+					   owner = {
+						 is_our_vassal = THIS
+					   }
+					}
+				}
+			}
+		}
+		
+		effect = { 
+		INC = { prestige = -10 }
+		any_owned = { remove_core = INC } 
+		set_country_flag = rebuked_INC
+		}
+	}
+	
+	
+	Rebuke_AZL_claims = { 
+		potential = { 
+			tag = GRA 
+			AZL = { exists = yes } 
+			has_global_flag = guyana_claim
+			NOT = { has_country_flag = rebuked_AZL } 
+		}
+		
+		allow = { 
+		   war = no 
+		   truce_with = AZL
+	       OR = {
+		      is_secondary_power = yes
+	          is_greater_power = yes
+	       }
+		   GUY = { 
+		      all_core = {
+			         OR = {
+					   owned_by = THIS
+					   owner = {
+						 is_our_vassal = THIS
+					   }
+					}
+				}
+			}
+		}
+		
+		effect = { 
+		    AZL = { prestige = -10 }
+			set_country_flag = rebuked_AZL
+			any_owned = { remove_core = AZL } 
+		}
+	}
+	
+	accept_afro_latinos_rocafuerte = { 
+	picture = acceptation_afro 
+		potential = { 
+		tag = GRA 
+		has_country_flag = rocafuerte
+		NOT = { has_country_flag = acceptation_afro } 
+		}
+		
+		allow = { 
+		war = no 
+		ideological_thought = 1 
+		} 
+		
+		effect = { 
+		set_country_flag = acceptation_afro 
+		add_accepted_culture = afro_latino
+		}
+	}
+	
+	de_blanco_revenge = { 
+	
+		potential = { 
+		   tag = GRA 
+		   QUI = { exists = yes } 
+		   INC = { exists = yes } 
+		   has_country_flag = de_blanco
+		   NOT = { has_country_flag = blanco_is_blank }
+		}
+		
+		allow = { 
+		   QUI = { war_with = INC } 
+		} 
+		
+		effect = {
+		   prestige = 5 
+		   set_country_flag = blanco_is_blank
+		   set_country_flag = revenge_is_best_served_cold 		
+		}		
+	} 
+	
+	Ballivian_return = { 
+	
+		potential = { 
+		   tag = GRA 
+		   QUI = { exists = yes has_country_flag = QUI_DICTATORSHIP } 
+		   has_country_flag = intervened_Andes
+		   NOT = { has_country_flag = GLORY_TO_DE_BLANCO }
+		}
+		
+		allow = { 
+		   war = no 
+		   QUI = { war = no } 
+		   INC = { is_vassal = yes } 
+		}
+		
+		effect = { 
+		   set_country_flag = GLORY_TO_DE_BLANCO
+		   add_accepted_culture = caladeran
+		   relation = {
+			   who = QUI
+			   value = 400
+		   }
+		   create_alliance = QUI
+		   QUI = { country_event = { id = 11101 days = 1 } } 
+		   INC = { country_event = { id = 46526 days = 3 } }	    		   
+		}
+	}
+	
+    accepting_caladerans = { 
+        potential = { 
+            tag = GRA 
+            NOT = { has_country_flag = accepting_caladerans } 
+            owns = 2279 #Quito
+        }
+        
+        allow = { 
+			nationalism_n_imperialism = 1 
+			biologism = 1
+			OR = {
+				citizens_rights = culture_voting_only
+				citizens_rights = all_voting_pops
+			}
+			OR = {
+				vote_franschise = universal_weighted_voting
+				vote_franschise = universal_voting
+			}
+            QUI = { all_core = { owned_by = THIS } }
+        }
+        
+        effect = { 
+           add_accepted_culture = caladeran
+           set_country_flag = accepting_caladerans
+        }   
+    }
+}

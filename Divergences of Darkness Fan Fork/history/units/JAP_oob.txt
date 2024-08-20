@@ -1,0 +1,314 @@
+DNG = {
+	value = -200		#relation
+	level = 0	#3=cordial, 4 = friendly, 5 sphere
+	influence_value = 0
+	truce_until = "1842.1.1"
+}
+
+HAW = {
+	value = -50 #relation
+	level = 1	#3=cordial, 4 = friendly, 5 sphere
+	influence_value = 0
+}
+
+GOY = {
+	value = -200		#relation
+	level = 0	#3=cordial, 4 = friendly, 5 sphere
+	influence_value = 0
+	truce_until = "1844.1.1"
+}
+
+# They want Taiwan
+
+TNG = {
+	value = -200	#relation
+	level = 0	#3=cordial, 4 = friendly, 5 sphere
+	influence_value = 0
+}
+
+# Also basically fuck the rest of China as well
+
+SHU = {
+	value = -100	#relation
+	level = 0	#3=cordial, 4 = friendly, 5 sphere
+	influence_value = 0
+}
+
+# MCH tolerates them
+
+MCH = {
+	value = 50	#relation
+	level = 2	#3=cordial, 4 = friendly, 5 sphere
+	influence_value = 0
+}
+
+
+# They hate Scandinavia due to possessing rightful territory
+
+SCA = {
+	value = -200	#relation
+	level = 0	#3=cordial, 4 = friendly, 5 sphere
+	influence_value = 0
+}
+
+# They maintain Cordial Trading Relationships with Spain and Burgundy
+
+BRG = {
+	value = 100	#relation
+	level = 3	#3=cordial, 4 = friendly, 5 sphere
+	influence_value = 0
+}
+
+SPA = {
+	value = 100	#relation
+	level = 3	#3=cordial, 4 = friendly, 5 sphere
+	influence_value = 0
+}
+
+DUA = {
+	value = 50	#relation
+	level = 2	#3=cordial, 4 = friendly, 5 sphere
+	influence_value = 0
+}
+
+INC = {
+	value = 100	#relation
+	level = 4	#3=cordial, 4 = friendly, 5 sphere
+	influence_value = 0
+}
+
+CLM = {
+	value = 50	#relation
+	level = 2	#3=cordial, 4 = friendly, 5 sphere
+	influence_value = 0
+}
+
+leader = {
+	name = "No-miya Uehara"
+	type = land
+	date = 1836.1.1
+	personality = aggressive
+	background = rising_star
+}
+
+leader = {
+	name = "Saigo Takamori"
+	type = land
+	date = 1836.1.1
+	personality = cruel
+	background = disgraced
+}
+
+leader = {
+	name = "Hisaichi Terauchi"
+	type = land
+	date = 1836.1.1
+	personality = imaginative
+	background = member_of_elite
+}
+
+leader = {
+	name = "Hajime Sugiyama"
+	type = land
+	date = 1836.1.1
+	personality = calm
+	background = nationalist
+}
+
+leader = {
+	name = "Kawamura Kageaki"
+	type = land
+	date = 1836.1.1
+	personality = deeply_religious
+	background = corrupt
+}
+
+leader = {
+	name = "Takeda Nobuyoshi"
+	type = land
+	date = 1836.1.1
+	personality = brash
+	background = ambitious_careerist
+}
+
+leader = {
+	name = "Asakura Yoshikage"
+	type = land
+	date = 1836.1.1
+	personality = relentless
+	background = son_of_hero
+}
+
+leader = {
+	name = "Shunroku Hata"
+	type = land
+	date = 1836.1.1
+	personality = decisive
+	background = war_college
+}
+
+leader = {
+	name = "Osami Nagano"
+	type = sea
+	date = 1836.1.1
+	personality = lilylivered
+	background = elderly
+}
+
+army = {
+	name = "Imperial Guard"
+	location = 1655
+	regiment = {
+		name= "1.Kyoto"
+		type = regular
+		home = 1655
+	}
+
+	regiment = {
+		name= "2.Kyoto"
+		type = regular
+		home = 1655
+	}
+
+	regiment = {
+		name= "3.Kyoto"
+		type = regular
+		home = 1655
+	}
+	regiment = {
+		name= "4.Kyoto"
+		type = regular
+		home = 1655
+	}
+
+	regiment = {
+		name= "5.Kyoto"
+		type = regular
+		home = 1655
+	}
+	
+	regiment = {
+		name= "1.Artillery"
+		type = artillery
+		home = 1655
+	}
+	
+	regiment = {
+		name= "2.Artillery"
+		type = artillery
+		home = 1655
+	}
+	
+    regiment = {
+		name= "1.Nagoya"
+		type = regular
+		home = 1675
+	}
+
+	regiment = {
+		name= "2.Nagoya"
+		type = regular
+		home = 1675
+	}
+
+	regiment = {
+		name= "3.Nagoya"
+		type = regular
+		home = 1675
+	}
+
+	regiment = {
+		name= "1.hussar"
+		type = hussar
+		home = 1675
+	}
+	
+	regiment = {
+		name= "2.hussar"
+		type = hussar
+		home = 1675
+	}
+}
+
+army = {
+	name = "Korean Garrison"
+	location = 1632
+	regiment = {
+		name= "1.Korean"
+		type = infantry
+		home = 1632
+	}
+
+	regiment = {
+		name= "2.Korean"
+		type = infantry
+		home = 1633
+	}
+
+	regiment = {
+		name= "3.Korean"
+		type = infantry
+		home = 1634
+	}
+}
+
+navy = {
+	name = "Combined Fleet"
+	location = 1655
+	
+	ship = {
+		name= "Shohei Maru"
+		type = manowar
+	}
+
+	ship = {
+		name= "Kanrin Maru"
+		type = manowar
+	}
+
+	ship = {
+		name= "Kotetsu"
+		type = manowar
+	}
+
+	ship = {
+		name= "Takao"
+		type = frigate
+	}
+
+	ship = {
+		name= "Aviso"
+		type = frigate
+	}
+
+	ship = {
+		name= "Fujisan"
+		type = frigate
+	}
+
+	ship = {
+		name= "Momo"
+		type = frigate
+	}
+
+	ship = {
+		name= "1a Yusosentai"
+		type = clipper_transport
+	}
+
+	ship = {
+		name= "2a Yusosentai"
+		type = clipper_transport
+	}
+
+	ship = {
+		name= "3a Yusosentai"
+		type = clipper_transport
+	}
+	
+	ship = {
+		name= "4a Yusosentai"
+		type = clipper_transport
+	}
+
+}

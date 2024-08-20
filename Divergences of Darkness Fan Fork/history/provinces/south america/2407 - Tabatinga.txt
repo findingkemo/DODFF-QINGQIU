@@ -1,0 +1,7 @@
+add_core = GRA
+add_core = AMA
+add_core = EQN 
+trade_goods = tropical_wood
+life_rating = 25
+terrain = swamp_jungle
+colonial = 1

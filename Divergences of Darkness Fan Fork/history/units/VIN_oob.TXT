@@ -1,0 +1,141 @@
+SCA = {
+	value = 100	     #relation
+}
+
+# Brothers in Arms
+NBG = {
+	value = 50	     #relation
+}
+
+# War to dismantle the Arcadian Empire
+PLA = {
+	value = -200     #relation
+}
+
+# Vassal
+SKR = {
+	value = 100     #relation
+}
+
+# Vassal
+MSG = {
+	value = 100     #relation
+}
+
+leader = {
+	name = "Leif Torstensson"
+	type = land
+	date = 1836.1.1
+	personality = imaginative
+	background = sinner
+}
+
+leader = {
+	name = "Hugo Welfer"
+	type = sea
+	date = 1836.1.1
+	personality = rebellious
+	background = sad_sack
+}
+
+army = {
+	name = "Army of Vinland"
+	location = 65
+	regiment = {
+		name= "1.1. Infanteridivision"
+		type = regular
+		home = 58
+	}
+	
+	regiment = {
+		name= "1.2. Infanteridivision"
+		type = regular
+		home = 67
+	}
+	
+	regiment = {
+		name= "1.3. Infanteridivision"
+		type = regular
+		home = 66
+	}
+
+	regiment = {
+		name= "1.4. Infanteridivision"
+		type = regular
+		home = 65
+	}
+	
+	regiment = {
+		name= "1.5. Infanteridivision"
+		type = regular
+		home = 65
+	}
+	
+	regiment = {
+		name= "1.6. Infanteridivision"
+		type = regular
+		home = 239
+	}
+	
+	regiment = {
+		name= "1.7. Infanteridivision"
+		type = artillery
+		home = 70
+	}
+	
+	regiment = {
+		name= "1.8. Infanteridivision"
+		type = artillery
+		home = 56
+	}
+	
+	regiment = {
+		name= "1.9. Infanteridivision"
+		type = artillery
+		home = 56
+	}
+	
+    regiment = {
+		name= "1. Kavalleridivision"
+		type = hussar
+		home = 250
+	}
+	
+    regiment = {
+		name= "2. Kavalleridivision"
+		type = hussar
+		home = 64
+	}
+}
+
+
+navy = {
+	name = "Fleet of Vinland"
+	location = 65
+
+
+	ship = {
+		name= "Thor"
+		type = frigate
+	}
+
+	ship = {
+		name= "Odin"
+		type = frigate
+	}
+
+	ship = {
+		name= "Loki"
+		type = frigate
+	}
+
+	ship = {
+		name= "Vinland"
+		type = clipper_transport
+	}
+
+	ship = {
+		name= "Danelaw"
+		type = clipper_transport
+	}
+}

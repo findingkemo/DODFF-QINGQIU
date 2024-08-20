@@ -1,0 +1,7 @@
+owner = NAN
+controller = NAN
+add_core = NAN
+trade_goods = fish
+life_rating = 35
+terrain = hilly_grassland
+naval_base = 1

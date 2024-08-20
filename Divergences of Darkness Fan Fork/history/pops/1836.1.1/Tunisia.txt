@@ -1,0 +1,408 @@
+#Tunisia Region (1392000)
+#under the rule of Tunisia in 1836
+#Tunis (488000/122000 POPs)
+1725 = {
+    aristocrats = {
+        culture = peu_vermells
+        religion = catholic
+        size = 3000
+    }
+    officers = {
+        culture = peu_vermells
+        religion = catholic
+        size = 120
+    }
+	
+    soldiers = {
+        culture = peu_vermells
+        religion = catholic
+        size = 6000
+    }
+	
+    clergymen = {
+        culture = peu_vermells
+        religion = catholic
+        size = 500
+    }
+
+    artisans = {
+        culture = peu_vermells
+        religion = catholic
+        size = 3500
+    }
+
+    artisans = {
+        culture = peu_vermells
+		religion = catholic
+        size = 2000
+    }
+
+    farmers = {
+        culture = peu_vermells
+        religion = catholic
+        size = 25000
+    }
+
+    artisans = {
+        culture = maghrebi
+        religion = sunni
+        size = 2000
+    }
+
+    farmers = {
+        culture = maghrebi
+        religion = sunni
+        size = 22100
+    }
+
+    farmers = {
+        culture = zanj
+        religion = catholic
+        size = 5000
+    }
+
+    clergymen = {
+        culture = sephardic
+        religion = jewish
+        size = 1000
+    }
+
+    artisans = {
+        culture = sephardic
+        religion = jewish
+        size = 500
+    }
+
+    bureaucrats = {
+        culture = sephardic
+        religion = jewish
+        size = 500
+    }
+}
+
+#Nabeul - More Maghrebi and Sephardic than Cartago 
+
+3282 = {
+    aristocrats = {
+        culture = maghrebi 
+        religion = sunni
+        size = 1000
+    }
+	
+    soldiers = {
+        culture = maghrebi
+        religion = sunni 
+        size = 800
+    }
+	
+    clergymen = {
+        culture = peu_vermells
+        religion = catholic
+        size = 50
+    }
+
+    artisans = {
+        culture = peu_vermells
+        religion = catholic
+        size = 150
+    }
+
+    artisans = {
+        culture = peu_vermells
+		religion = catholic
+        size = 100
+    }
+
+
+    farmers = {
+        culture = peu_vermells
+        religion = catholic
+        size = 6000
+    }
+
+    artisans = {
+        culture = maghrebi
+        religion = sunni
+        size = 10000
+    }
+
+    farmers = {
+        culture = maghrebi
+        religion = sunni
+        size = 32100
+    }
+
+    farmers = {
+        culture = zanj
+        religion = catholic
+        size = 1000
+    }
+
+    clergymen = {
+        culture = sephardic
+        religion = jewish
+        size = 1000
+    }
+
+    artisans = {
+        culture = sephardic
+        religion = jewish
+        size = 15500
+    }
+
+    bureaucrats = {
+        culture = sephardic
+        religion = jewish
+        size = 500
+    }
+}
+
+
+#Bizerte (268000/67000 POPS)
+1726 = {
+
+    clergymen = {
+        culture = maghrebi
+        religion = sunni
+        size = 540
+    }
+
+    artisans = {
+        culture = maghrebi
+        religion = sunni
+        size = 2600
+    }
+
+    farmers = {
+        culture = maghrebi
+        religion = sunni
+        size = 46860
+    }
+
+    slaves = {
+        culture = zanj
+        religion = catholic
+        size = 2000
+    }
+    clergymen = {
+        culture = peu_vermells
+        religion = catholic
+        size = 135
+    }
+
+    artisans = {
+        culture = peu_vermells
+        religion = catholic
+        size = 650
+    }
+
+    farmers = {
+        culture = peu_vermells
+        religion = catholic
+        size = 4715
+    }
+
+    farmers = {
+        culture = peu_vermells
+        religion = catholic
+        size = 9000
+    }
+
+    bureaucrats = {
+        culture = peu_vermells
+        religion = catholic
+        size = 350
+    }
+}
+#Gafsa (112000/28000 POPS)
+1727 = {
+    aristocrats = {
+        culture = maghrebi
+        religion = sunni
+        size = 800
+    }
+
+    clergymen = {
+        culture = maghrebi
+        religion = sunni
+        size = 275
+    }
+
+    artisans = {
+        culture = maghrebi
+        religion = sunni
+        size = 1250
+    }
+
+    bureaucrats = {
+        culture = maghrebi
+        religion = sunni
+        size = 150
+    }
+
+    officers = {
+        culture = maghrebi
+        religion = sunni
+        size = 200
+    }
+
+    soldiers = {
+        culture = maghrebi
+        religion = sunni
+        size = 16200
+    }
+
+    farmers = {
+        culture = maghrebi
+        religion = sunni
+        size = 22025
+    }
+
+    slaves = {
+        culture = zanj
+        religion = animist
+        size = 35000
+    }
+}
+#Kairouan (228000/57000 POPS)
+1728 = {
+    clergymen = {
+        culture = maghrebi
+        religion = sunni
+        size = 120
+    }
+
+    artisans = {
+        culture = maghrebi
+        religion = sunni
+        size = 700
+    }
+
+    farmers = {
+        culture = maghrebi
+        religion = sunni
+        size = 12180
+    }
+
+    slaves = {
+        culture = zanj
+        religion = animist
+        size = 4000
+    }
+
+
+    artisans = {
+        culture = peu_vermells
+        religion = catholic
+        size = 3
+    }
+
+    farmers = {
+        culture = peu_vermells
+        religion = catholic
+        size = 5
+    }
+}
+
+3285 = {
+    clergymen = {
+        culture = maghrebi
+        religion = sunni
+        size = 220
+    }
+
+    artisans = {
+        culture = maghrebi
+        religion = sunni
+        size = 1100
+    }
+
+    farmers = {
+        culture = maghrebi
+        religion = sunni
+        size = 20180
+    }
+
+    slaves = {
+        culture = zanj
+        religion = animist
+        size = 8000
+    }
+	
+	artisans = {
+        culture = peu_vermells
+        religion = catholic
+        size = 15
+    }
+
+}
+#Tozeur (96000/24000 POPS)
+1729 = {
+    clergymen = {
+        culture = maghrebi
+        religion = sunni
+        size = 200
+    }
+
+    artisans = {
+        culture = maghrebi
+        religion = sunni
+        size = 950
+    }
+
+    farmers = {
+        culture = maghrebi
+        religion = sunni
+        size = 17300
+    }
+
+    slaves = {
+        culture = zanj
+        religion = animist
+        size = 5000
+    }
+}
+#Gabes (200000/50000 POPS)
+1730 = {
+    clergymen = {
+        culture = maghrebi
+        religion = sunni
+        size = 320
+    }
+
+    artisans = {
+        culture = maghrebi
+        religion = sunni
+        size = 1820
+    }
+
+    farmers = {
+        culture = maghrebi
+        religion = sunni
+        size = 32660
+    }
+
+    slaves = {
+        culture = zanj
+        religion = animist
+        size = 4000
+    }
+
+    clergymen = {
+        culture = peu_vermells
+        religion = catholic
+        size = 5
+    }
+
+    artisans = {
+        culture = peu_vermells
+        religion = catholic
+        size = 5
+    }
+
+    farmers = {
+        culture = peu_vermells
+        religion = catholic
+        size = 5
+    }
+}

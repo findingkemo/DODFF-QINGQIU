@@ -1,0 +1,8 @@
+owner = MJN
+controller = MJN
+add_core = AOT
+
+
+trade_goods = cattle
+life_rating = 35
+terrain = deciduous_forest_hills

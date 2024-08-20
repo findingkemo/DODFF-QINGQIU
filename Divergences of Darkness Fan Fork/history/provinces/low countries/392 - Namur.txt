@@ -1,0 +1,16 @@
+owner = BRG
+controller = BRG
+add_core = BRG
+trade_goods = iron
+life_rating = 35
+terrain = forested_farmland
+state_building = {
+	level = 3
+	building = machine_parts_factory
+	upgrade = yes
+}
+state_building = {
+	level = 2
+	building = bronze_artillery_factory
+	upgrade = yes
+}

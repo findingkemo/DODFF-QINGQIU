@@ -1,0 +1,10 @@
+owner = CNF
+controller = CNF
+add_core = NBG
+add_core = CNF
+trade_goods = grain
+life_rating = 40
+railroad = 1
+naval_base = 2
+fort = 2
+terrain = good_farmland

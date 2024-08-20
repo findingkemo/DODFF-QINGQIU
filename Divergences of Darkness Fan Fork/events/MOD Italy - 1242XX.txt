@@ -1,0 +1,7224 @@
+######################## ITALIAN EVENTS ###########################
+
+#### Tuscany is pretty important yo ######
+
+country_event = {
+	id = 36720
+	title = "TUS_setupT"
+	desc = "TUS_setupD"
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { 
+	name = "36720.A"
+	set_country_flag = this_is_tuscany
+	define_general = {
+		name = "Pietro Testi"
+		personality = cool_minded 
+		background = natural_born_leader
+	}
+	
+	add_country_modifier = {
+			name = the_last_democracy
+			duration = 4380
+	}
+	
+	744 = {
+	        life_rating = 15
+			add_province_modifier = {
+					name = liberal_stronghold
+					duration = -1
+			}
+		}
+	any_pop = { 
+		ideology = {
+				value = liberal
+				factor = 0.50
+			}
+		}
+	}
+}
+	
+country_event = { ##Using the Carbonari ?
+	id = 36731
+	title = "ETR1.T"
+	desc = "ETR1.D"
+	picture = "carbonari"
+	
+	trigger = { 
+	tag = TUS 
+	has_global_flag = italian_turnoil
+	has_global_flag = council_of_italy
+	has_country_flag = REV_TUS
+	NOT = { has_country_flag = carbonari }
+	}
+	
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	option = { 
+	name = "36731.A"
+	set_country_flag = carbonari
+	# This flag activates Redshirt Rebels
+	set_global_flag = TUS_carbonari
+	any_country = { 
+	limit = {
+	NOT = { OR = { government = democracy government = parliamentary_republic government = socialist_republic } }
+	NOT = { tag = THIS }
+	exists = yes 
+	OR = { 
+		primary_culture = north_italian 
+		primary_culture = central_italian
+				}
+			}
+			country_event = 36732 
+		}
+	}
+}	
+
+country_event = { ##Carbonari activate 
+	id = 36732
+	title = "ETR2.T"
+	desc = "ETR2.D"
+	picture = "carbonari"
+	
+	is_triggered_only = yes 
+	
+	option = { 
+	name = "36732.A"
+	any_owned = {
+	limit = { is_core = ITA }
+	any_pop = { 
+		ideology = {
+				value = liberal
+				factor = 0.1
+			}
+		}
+	any_pop = {
+				limit = {
+					OR = {
+						type = officers
+						type = soldiers
+					}
+				}
+				ideology = {
+				value = liberal
+				factor = 0.5
+				}
+			militancy = 5 
+			consciousness = 4 
+		}
+	}
+	capital_scope = { add_province_modifier = { name = etrurian_agitation duration = 1200 } }
+	set_country_flag = carbonari_activity 
+	}
+}	
+
+province_event = { #Spread of the Etrurian agitation
+	id = 36733
+	title = "ETR3.T"
+	desc = "ETR3.D"
+
+	trigger = {
+		has_country_flag = liberal_revolution_in_progress
+		NOT = { owner = { government = democracy } }
+		NOT = { owner = { government = parliamentary_republic } }
+		NOT = { owner = { government = socialist_republic } }
+		NOT = { year = 1849 }
+		is_colonial = no
+		is_core = ITA
+		liberal = 20
+		any_neighbor_province = {
+			has_province_modifier = etrurian_agitation
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 20
+		modifier = {
+			factor = 0.5
+			NOT = { controlled_by = THIS }
+		}
+		modifier = {
+			factor = 0.5
+			owner = { num_of_revolts = 1 }
+		}
+		modifier = {
+			factor = 0.5
+			controlled_by = THIS
+			any_neighbor_province = {
+				controlled_by = REB
+			}
+		}
+		modifier = {
+			factor = 0.5
+			owner = { has_country_modifier = springtime_of_nations }
+		}
+		modifier = {
+			factor = 1.25
+			owner = { has_country_modifier = anti_jacobin_tract }
+		}
+		modifier = {
+			factor = 0.9
+			liberal = 25
+		}
+		modifier = {
+			factor = 0.9
+			liberal = 30
+		}
+		modifier = {
+			factor = 0.9
+			liberal = 35
+		}
+		modifier = {
+			factor = 0.9
+			liberal = 40
+		}
+		modifier = {
+			factor = 1.2
+			conservative = 30
+		}
+		modifier = {
+			factor = 1.2
+			conservative = 40
+		}
+		modifier = {
+			factor = 1.2
+			conservative = 50
+		}
+		modifier = {
+			factor = 1.2
+			reactionary = 5
+		}
+		modifier = {
+			factor = 1.2
+			reactionary = 10
+		}
+		modifier = {
+			factor = 0.9
+			average_consciousness = 5
+		}
+		modifier = {
+			factor = 0.9
+			average_consciousness = 7
+		}
+		modifier = {
+			factor = 0.9
+			average_militancy = 2
+		}
+		modifier = {
+			factor = 2
+			NOT = { average_consciousness = 3 }
+		}
+	}
+	
+	option = {
+		name = "650215.A"
+		state_scope = {
+				limit = { liberal = 20 }
+				add_province_modifier = {
+					name = etrurian_agitation
+					duration = 1200
+			}
+		}
+	}
+}
+
+country_event = { ##Sending an embassy to Florence ( not for TUS cores )
+	id = 36734
+	title = "ETR4.T"
+	desc = "ETR4.D"
+	picture = "risorgimento"
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes 
+	
+	option = { 
+	name = "36734.A"
+	government = democracy
+	ruling_party_ideology = conservative
+	political_reform = universal_voting
+	political_reform = appointed
+	political_reform = yes_meeting
+	political_reform = censored_press
+	political_reform = underground_parties
+    political_reform = mandatory_service
+	clr_country_flag = carbonari_activity
+	TUS = { country_event = 36735 }
+	relation = { who = TUS value = 100 }
+	ai_chance = { 
+	factor = 0
+		}
+	}
+	
+	option = { 
+	name = "36734.B"
+	government = democracy
+	ruling_party_ideology = conservative
+	political_reform = universal_voting
+	political_reform = appointed
+	political_reform = yes_meeting
+	political_reform = censored_press
+	political_reform = underground_parties
+    political_reform = mandatory_service
+	clr_country_flag = carbonari_activity
+	TUS = { country_event = 36736 }
+	relation = { who = TUS value = 200 }
+	ai_chance = { 
+	factor = 100
+		}
+	}
+}
+
+country_event = { ##embassy to Florence - alliance
+	id = 36735
+	title = "ETR5.T"
+	desc = "ETR5.D"
+	picture = "risorgimento"
+	
+	is_triggered_only = yes 
+	
+	option = { 
+	name = "36735.A"
+	prestige = 5 
+	relation = { who = FROM value = 200 }
+	create_alliance = FROM 
+	diplomatic_influence = { who = FROM value = 100 }
+	}
+}
+
+country_event = { ##Embassy -vassal
+	id = 36736
+	title = "ETR6.T"
+	desc = "ETR6.D"
+	picture = "risorgimento"
+	
+	is_triggered_only = yes 
+	
+	option = { 
+	name = "36736.A"
+	prestige = 10 
+	relation = { who = FROM value = 200 }
+	create_vassal = FROM 
+	create_alliance = FROM 
+	diplomatic_influence = { who = FROM value = 200 }
+	}
+}
+
+country_event = { ##Sending an embassy to Florence ( for TUS cores )
+	id = 36737
+	title = "ETR7.T"
+	desc = "ETR7.D"
+	picture = "risorgimento"
+	
+	is_triggered_only = yes
+	
+	option = { 
+	name = "36737.A"
+	government = democracy
+	ruling_party_ideology = conservative
+	political_reform = universal_voting
+	political_reform = appointed
+	political_reform = yes_meeting
+	political_reform = censored_press
+	political_reform = underground_parties
+    political_reform = mandatory_service
+	clr_country_flag = carbonari_activity
+	TUS = { country_event = 36738 }
+	}
+}
+
+country_event = { ##Sending an embassy to Florence (for TUS cores )
+	id = 36738
+	title = "ETR8.T"
+	desc = "ETR8.D"
+	picture = "risorgimento"
+	
+	is_triggered_only = yes 
+	
+	option = { 
+	name = "36738.A"
+	prestige = 10 
+	inherit = FROM
+	}
+}
+
+country_event = { ##Provence attacks Tuscany
+	id = 36756
+	title = "36756.T"
+	desc = "36756.D"
+	picture = "troubles_italy"
+	
+	is_triggered_only = yes 
+	
+	option = { 
+	name = "22243.A"
+	}
+}
+
+country_event = { 
+	id = 36757 
+	title = "36757.T"
+	desc = "36757.D"
+	
+	trigger = { 
+	has_country_flag = carbonari_activity
+	any_owned_province = { controlled_by = REB }
+	}
+	
+	fire_only_once = yes 
+	
+	mean_time_to_happen = { days = 1 }
+	
+	option = { 
+	name = "36757.A"
+	any_pop = { militancy = 9 }
+	}
+}
+
+
+country_event = { 
+	id = 124223
+	title = "ITA4.T"
+	desc = "ITA4.D"
+	picture = "risorgimento"
+	
+	trigger = { 
+	tag = ITA 
+	OCC = { AND = { exists = yes OR = { government = democracy government = parliamentary_republic } } }
+	FRA = { AND = { exists = yes OR = { government = democracy government = parliamentary_republic } } }
+	DUA = { exists = no }
+	}
+	
+	mean_time_to_happen = { months = 1 }
+	
+	fire_only_once = yes
+	
+	option = { 
+	name = "124223.A"
+	OCC = { country_event = 124224 }
+	FRA = { country_event = 124224 }
+	ai_chance = { 
+	factor = 65 
+		}
+	}
+	
+	option = { 
+	name = "124223.B"
+	OCC = { country_event = 124224 }
+	ai_chance = { 
+	factor = 65 
+		}
+	}
+	
+	option = { 
+	name = "124223.C"
+	ai_chance = { factor = 0 }
+	}
+}
+
+country_event = { 
+	id = 124224
+	title = "ITA5.T"
+	desc = "ITA5.D"
+	picture = "risorgimento"
+	
+	is_triggered_only = yes 
+	
+	option = { 
+	name = "124224.A"
+	create_alliance = FROM 
+	relation = { who = FROM value = 300 }
+	}
+}
+
+country_event = { 
+	id = 124225 #Cleanup of Provence
+	title = "ITA6.T"
+	desc = "ITA6.D"
+	picture = "risorgimento"
+	
+	trigger = { 
+	tag = PRV 
+	NOT = { has_global_flag = FRA_OCC }
+	OCC = { AND = { exists = yes OR = { government = democracy government = parliamentary_republic } } }
+	DUA = { exists = no }
+	war = no 
+	}
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = { 
+	months = 2 
+	}
+	
+	option = { 
+	name = "124225.A"
+	OCC = { inherit = THIS }
+	ai_chance = { factor = 50 
+	modifier = {
+		factor = 2
+		government = democracy
+		}
+	modifier = {
+		factor = 2
+		government = parliamentary_republic
+		}
+				
+	modifier = {
+		factor = 0
+		NOT = { OR = { government = democracy government = parliamentary_republic } }
+		}
+		}
+	}
+	
+	option = { 
+	name = "124225.B"
+	ai_chance = { factor = 50 
+	modifier = {
+		factor = 0
+		government = democracy
+		}
+	modifier = {
+		factor = 0
+		government = parliamentary_republic
+		}
+	modifier = {
+		factor = 2
+		NOT = { OR = { government = democracy government = parliamentary_republic } }
+		}
+		}
+	}
+} 
+
+
+
+##########################
+##		Revised TUS		##
+##########################
+
+
+#Genoa crisis revised 
+
+country_event = { #Genoa crisis
+	id = 1242300
+	title = "GEN1.T"
+	desc = "GEN1.D"
+	picture = "genova"
+	
+	trigger = { 
+	tag = GEN
+	NOT = { has_country_flag = Genoa_crisis }
+	}
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = { 
+	days = 1
+	}
+	
+	option = { 
+	name = "GEN1.A"
+	country_event = { id = 1242301 days = 174 }
+	}
+}
+
+country_event = { #Insurrection in GEN
+	id = 1242301
+	title = "GEN2.T"
+	desc = "GEN2.D"
+	picture = "troubles_in_streets"
+	
+	is_triggered_only = yes 
+	
+	option = { 
+	name = "GEN2.A"
+	random_list = {
+	   50 = { country_event = { id = 1242302 days = 1 } }
+	   50 = { country_event = { id = 1242303 days = 1 } }
+	}	
+	}
+}
+
+country_event = { #Successful insurrection in GEN
+	id = 1242302
+	title = "GEN3.T"
+	desc = "GEN3.D"
+	picture = "barricade_Italy"
+	
+	is_triggered_only = yes 
+	
+	option = { 
+	name = "GEN3.A"
+	set_global_flag = Genoa_Della_Rovere
+	government = merchant_republic
+	political_reform = landed_voting
+	political_reform = yes_meeting
+	political_reform = state_press
+	political_reform = no_trade_unions
+	political_reform = first_past_the_post
+	political_reform = non_secret_ballots
+	any_country = {
+	   limit = {
+	      primary_culture = north_italian
+		  NOT = { tag = TUS }
+	    }
+		leave_alliance = GEN 
+		relation = { who = GEN value = -100 }
+    }
+	}
+}
+
+country_event = { #Insurrection failed in GEN
+	id = 1242303
+	title = "GEN4.T"
+	desc = "GEN4.D"
+	picture = "troubles_in_streets_2"
+	
+	is_triggered_only = yes 
+	
+	option = { 
+	name = "GEN4.A"
+	set_global_flag = Genoa_Della_Rovere_endured
+	prestige = 2 
+	set_country_flag = troubles_brewing 
+	any_pop = {
+	   scaled_militancy = { 
+			factor = 1
+			ideology = conservative
+	   }
+	   scaled_consciousness = { 
+		   factor = 2
+		   ideology = conservative
+	    }
+	}
+	country_event = { id = 1242317 days = 60 }
+	country_event = { id = 1242331 days = 80 }	
+	}
+}
+
+country_event = { #Della Rovere in SAR
+	id = 1242304 
+	title = "GEN5.T" #has loc
+	desc = "GEN5.D"
+	picture = "turin"
+	
+	trigger = { 
+	tag = SAR
+	has_global_flag = Genoa_Della_Rovere
+	}
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = { 
+	days = 7
+	}
+	
+	option = { 
+	name = "GEN5.A"
+	clr_global_flag = Genoa_Della_Rovere
+	prestige = 1 
+	BRG = { leave_alliance = GEN diplomatic_influence = { who = GEN value = -400 } diplomatic_influence = { who = THIS  value = 50 } }
+	DUA = { leave_alliance = GEN diplomatic_influence = { who = GEN value = -400 } diplomatic_influence = { who = THIS  value = 50 } }
+	badboy = 10
+	add_country_modifier = { 
+	name = SAR_dellarovere
+	duration = 5475
+		}
+	war = { 
+		target = GEN
+			attacker_goal = {
+				casus_belli = conquest_any
+			}
+			defender_goal = {
+				casus_belli = status_quo
+			}
+		}
+	ai_chance = { 
+	factor = 90
+		}
+	}
+	
+	option = { 
+	name = "GEN5.B"
+	prestige = -1 
+	relation = { who = GEN value = 100 } 
+	relation = { who = BRG value = 25 }
+	ai_chance = { 
+	factor = 10
+		}
+	}
+}
+
+country_event = { #GEN stabilizes
+	id = 1242305
+	title = "GEN6.T"
+	desc = "GEN6.D"
+	picture = "genova"
+	
+	trigger = { 
+	tag = GEN 
+	government = merchant_republic 
+	NOT = { war_with = SAR }
+	NOT = { has_global_flag = Genoa_Della_Rovere }
+	}
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = { 
+	days = 31
+		modifier = {
+			factor = 0.01
+			year = 1838
+		}
+	}
+	
+	option = { 
+	name = "GEN6.A"
+	relation = { who = BRG value = 50 }
+	set_country_flag = troubles_brewing
+	}
+} 
+
+country_event = { #Comuni agitate
+	id = 1242307
+	title = "GEN8.T"
+	desc = "GEN8.D"
+	picture = "genova"
+	
+	trigger = { 
+	OR = { AND = { tag = GEN has_country_flag = troubles_brewing } tag = PIE owns = 724 }
+	NOT = { has_global_flag = comuni_genoa } 
+	year = 1837 
+	}
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = { 
+	days = 31
+		modifier = {
+			factor = 0.01
+			year = 1838
+		}
+	}
+	
+	option = { 
+	name = "GEN8.A"
+	set_global_flag = comuni_genoa
+	any_pop = { 
+	limit = { location = { is_core = GEN } }
+	ideology = { factor = 0.1 value = liberal } 
+	scaled_militancy = { 
+		ideology = liberal 
+		factor = 5 
+			}
+		}
+	}
+} 
+
+country_event = { #Debate in TUS about the Comuni in Genoa
+	id = 1242308
+	title = "GEN9.T" 
+	desc = "GEN9.D"
+	picture = "parthenopea"
+	
+	trigger = { 
+	tag = TUS 
+	has_global_flag = comuni_genoa
+	NOT = { has_country_flag = TUS_supports_comuni }
+	NOT = { has_country_flag = TUS_supported_normalization }
+	}
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = { 
+	days = 31
+		modifier = {
+			factor = 0.01
+			year = 1838
+		}
+	}
+
+	option = { 
+	name = "GEN9.A" #support Normalization of relations
+	set_country_flag = TUS_supported_normalization
+	set_global_flag = stance_on_GEN 
+	clr_global_flag = comuni_genoa 
+	relation = { who = GEN value = 50 } 
+	
+	any_country = { 
+	limit = { 
+		OR = { 
+		primary_culture = north_italian 
+		primary_culture = south_italian 
+		tag = ARA 
+				}
+			}
+	relation = { who = THIS value = 50 }
+		}
+	ai_chance = { 
+	factor = 60
+		}
+	}
+	
+	option = { 
+	name = "GEN9.B" #Support revolters 
+	set_country_flag = TUS_supports_comuni
+	clr_global_flag = comuni_genoa 
+	relation = { who = GEN value = -50 } 
+	any_country = { 
+	limit = { 
+		OR = { 
+		primary_culture = north_italian 
+		primary_culture = south_italian 
+		tag = ARA 
+				}
+			}
+	relation = { who = THIS value = -50 }
+		}
+	ai_chance = { 
+	factor = 40
+		}
+	}
+}
+
+country_event = { #Void in Corsica
+	id = 1242309
+	title = "GEN10.T"
+	desc = "GEN10.D"
+	picture = "italian_in_hills"
+	
+	trigger = { 
+	tag = GEN
+	has_global_flag = stance_on_GEN 
+	government = merchant_republic 
+	CRS = { exists = no } 
+	}
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = { 
+	days = 1
+	}
+	
+	option = { 
+	name = "GEN10.A"
+	any_owned = { limit = { is_core = CRS } secede_province = CRS remove_core = THIS }
+	CRS = { country_event = { id = 1242310 days = 15 } } 
+	}
+}
+
+country_event = { #CRS choice : clans and liberalism
+	id = 1242310 
+	title = "GEN11.T"
+	desc = "GEN11.D"
+	picture = "italian_in_hills"
+	
+	is_triggered_only = yes
+	
+	immediate = { 
+	   473 = { add_core = GEN } 
+	}
+	
+	option = { 
+	name = "GEN11.A" #join Tuscany 
+	473 = { add_core = GEN } 
+	any_pop = { 
+	ideology = { factor = 0.1 value = liberal } 
+	}
+	TUS = { country_event = 1242311 }
+	GEN = { country_event = 1242312 }
+	ai_chance = { 
+	factor = 50
+	modifier = { 
+	factor = 1.5 
+	TUS = { has_country_flag = TUS_supports_comuni }
+			}
+		}
+	}
+	
+	option = { 
+	name = "GEN11.B" #The corsican Republic headed by Mateo Falcone!
+	473 = { add_core = GEN } 
+	country_event = 1242314
+	government = democracy
+	ruling_party_ideology = conservative
+	political_reform = universal_voting
+	political_reform = appointed
+	political_reform = yes_meeting
+	political_reform = censored_press
+	political_reform = underground_parties
+    political_reform = mandatory_service
+    clr_country_flag = theocratic_government
+	clr_country_flag = merchantrepublic_gov
+	clr_country_flag = communist_gov
+	clr_country_flag = absolute_monarchy_gov
+    clr_country_flag = semi_constitutional_monarchy_gov
+	clr_country_flag = constitutional_monarchy_gov
+    clr_country_flag = parliamentary_republic_gov
+    clr_country_flag = democracy_gov
+	set_country_flag = presidential_dictatorship_gov
+	clr_country_flag = fascist_gov
+	clr_country_flag = anarcho_liberal_gov
+	clr_country_flag = socialist_republic_gov
+	clr_country_flag = fascist_monarchy_gov
+	clr_country_flag = election_started
+	clr_country_flag = tory_election_win
+	clr_country_flag = socialist_election_win
+	clr_country_flag = liberal_election_win
+	clr_country_flag = communist_election_win
+	clr_country_flag = fascist_election_win
+	clr_country_flag = reactionary_election_win
+	clr_country_flag = anarcho_liberal_election_win
+	clr_country_flag = social_liberal_election_win
+	clr_country_flag = market_liberal_election_win		
+		clr_country_flag = paternal_election_win
+	clr_country_flag = conservative_party_in_power
+	clr_country_flag = liberal_party_in_power
+	clr_country_flag = reactionary_party_in_power
+	clr_country_flag = socialist_party_in_power
+	clr_country_flag = communist_party_in_power
+	clr_country_flag = fascist_party_in_power
+	clr_country_flag = paternal_party_in_power
+	clr_country_flag = anarcho_liberal_party_in_power
+	clr_country_flag = market_liberal_party_in_power
+	money = 50000
+	ai_chance = { 
+		factor = 50
+	modifier = { 
+	factor = 1.5 
+	TUS = { has_country_flag = TUS_supported_normalization }
+			}
+		}
+	}
+	
+}
+
+country_event = { #Tus inherits Corsica!
+	id = 1242311
+	title = "GEN12.T"
+	desc = "GEN12.D"
+	picture = "italian_in_hills"
+	
+	is_triggered_only = yes
+	
+	option = { 
+	name = "GEN12.A" #join Tuscany 
+	inherit = CRS 
+	473 = { add_core = THIS } 
+	prestige = 2 
+	}
+	
+}
+
+country_event = { #Genoa has lost Corsica, what now ? 
+	id = 1242312
+	title = "GEN13.T"
+	desc = "GEN13.D"
+	picture = "italian_in_hills"
+	
+	is_triggered_only = yes
+	
+	option = { 
+	name = "GEN13.A" #Refuse this !
+	TUS = { country_event = 1242313 } 
+	war = { 
+		target = TUS
+			attacker_goal = {
+				casus_belli = acquire_any_state
+				state_province_id = 473
+			}
+			defender_goal = {
+				casus_belli = status_quo
+			}
+		}
+	ai_chance = { 
+		factor = 60
+		}
+	}
+	
+	option = { 
+	name = "GEN13.B" #Accept the loss
+	473 = { remove_core = GEN }
+	prestige = -5 
+	relation = { who = TUS value = -50 } 
+	ai_chance = { 
+		factor = 40 
+		}
+	}
+	
+}
+
+country_event = { #Genoa attacks us! 
+	id = 1242313
+	title = "GEN14.T"
+	desc = "GEN14.D"
+	picture = "italian_in_hills"
+	
+	is_triggered_only = yes
+	
+	option = { 
+	name = "GEN14.A" 
+	}
+}
+
+country_event = { #Declaration of independence
+	id = 1242314
+	title = "GEN15.T"
+	desc = "GEN15.D"
+	picture = "italian_in_hills"
+	
+	major = yes 
+	
+	is_triggered_only = yes
+	
+	option = { 
+	name = "GEN15.A" 
+	GEN = { country_event = 1242315 } 
+	define_general = { 
+		name = "Mateo Falcone"
+		personality = resolute  
+		background = nationalist 
+	}
+	add_country_modifier = { 
+	name = small_country_draft 
+	duration = 1000 
+		}
+	}
+}
+
+country_event = { #Genoa has lost Corsica, what now ? 
+	id = 1242315
+	title = "GEN16.T"
+	desc = "GEN16.D"
+	picture = "parthenopea"
+	
+	is_triggered_only = yes
+	
+	option = { 
+	name = "GEN16.A" #Refuse this !
+	set_global_flag = corsica_not_yet_lost 
+	CRS = { country_event = 1242316 } 
+	war = { 
+		target = CRS
+			attacker_goal = {
+				casus_belli = acquire_any_state
+				state_province_id = 473
+			}
+			defender_goal = {
+				casus_belli = status_quo
+			}
+		}
+	ai_chance = { 
+		factor = 60
+		}
+	}
+	
+	option = { 
+	name = "GEN16.B" #Accept the loss
+	prestige = -5 
+	473 = { remove_core = GEN }
+	relation = { who = TUS value = -50 } 
+	ai_chance = { 
+		factor = 40 
+		}
+	}
+	
+}
+
+country_event = { #Genoa lost its gamble
+	id = 1242316
+	title = "GEN17.T"
+	desc = "GEN17.D"
+	picture = "parthenopea"
+	
+	trigger = { 
+	OR = { tag = CRS tag = TUS } 
+	has_global_flag = corsica_not_yet_lost
+	owns = 473
+	truce_with = GEN 
+	}
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = { 
+	days = 1 
+	}
+	
+	option = { 
+	name = "GEN17.A" 
+	clr_global_flag = corsica_not_yet_lost 
+	473 = { remove_core = GEN }
+	}
+}
+
+
+#Della Rovere held on, time for Corsica selling
+
+country_event = { #Selling Corsica is needed to fund the latest palace we swear !!!
+	id = 1242317
+	title = "GEN18.T"
+	desc = "GEN18.D"
+	picture = "parthenopea"
+	
+	is_triggered_only = yes 
+	
+	
+	option = { 
+	name = "GEN18.A" #The Bank of Saint Georges 
+	money = 100000
+	set_country_flag = good_idea_giving_CRS_to_a_bank
+	ai_chance = { 
+	factor = 40 
+		}
+	}
+	
+	option = { 
+	name = "GEN18.B" #The King in Tolon
+	PRV = { country_event = 1242323 }
+	ai_chance = { 
+	factor = 30
+		}
+	}
+	
+	option = { 
+	name = "GEN18.C" #The Duke of Savoy
+	SAR = { country_event = 1242328 }
+	ai_chance = { 
+	factor = 30 
+		}
+	}
+}
+
+country_event = { #The Incident of Ponte Novu
+	id = 1242318
+	title = "GEN19.T"
+	desc = "GEN19.D"
+	picture = "italian_in_hills"
+	
+	trigger = { 
+	tag = GEN 
+	owns = 473 
+	has_country_flag = good_idea_giving_CRS_to_a_bank 
+	}
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = { 
+	days = 365 
+	modifier = { 
+	factor = 0.01 
+	year = 1838 
+		}
+	}
+	
+	option = { 
+	name = "GEN19.A" #
+	clr_country_flag = good_idea_giving_CRS_to_a_bank 
+	any_pop = { 
+	limit = { location = { is_core = CRS } }
+	militancy = 7 
+		}
+	TUS = { country_event = 1242319 } 
+	}
+}
+
+country_event = { #Corsican embassy in Firenze
+	id = 1242319
+	title = "GEN20.T"
+	desc = "GEN20.D"
+	picture = "parthenopea"
+	
+	is_triggered_only = yes 
+	
+	option = { 
+	name = "GEN20.A" 
+	random_country = {
+	    limit = {
+		   tag = GEN
+		}
+		any_owned = {
+		    limit = {
+		      province_id = 473
+		    }
+			add_core = THIS
+		    secede_province = THIS 
+		}
+    }
+	GEN = { country_event = 1242320 } 
+	
+	prestige = 2 
+	ai_chance = { 
+	factor = 60 
+	modifier = { 
+	factor = 1.5 
+	has_country_flag = TUS_supports_comuni
+			}	
+		}
+	}
+	
+	option = { 
+	name = "GEN20.B"
+	random_country = {
+	    limit = {
+		   tag = GEN
+		}
+		any_owned = {
+		    limit = {
+		      province_id = 473
+		    }
+			add_core = CRS
+		    secede_province = CRS
+		}
+    }
+	CRS = { country_event = 1242321 }
+	ai_chance = { 
+	factor = 40 
+	modifier = { 
+	factor = 1.5 
+	has_country_flag = TUS_supported_normalization
+			}	
+		}
+	}
+}
+
+country_event = { #The Bank has led to Corsica seceding !
+	id = 1242320
+	title = "GEN21.T"
+	desc = "GEN21.D"
+	picture = "italian_in_hills"
+	
+	is_triggered_only = yes
+	
+	option = { 
+	name = "GEN21.A" #Refuse this !
+	TUS = { country_event = 1242313 } 
+	war = { 
+		target = TUS
+			attacker_goal = {
+				casus_belli = acquire_any_state
+				state_province_id  = 473
+			}
+			defender_goal = {
+				casus_belli = status_quo
+			}
+		}
+	ai_chance = { 
+		factor = 80
+		}
+	}
+	
+	option = { 
+	name = "GEN21.B" #Accept the loss
+	473 = { remove_core = GEN }
+	prestige = -5 
+	relation = { who = TUS value = -50 } 
+	ai_chance = { 
+		factor = 20
+		}
+	}
+	
+}
+
+country_event = { #Declaration of independence
+	id = 1242321
+	title = "GEN22.T"
+	desc = "GEN22.D"
+	picture = "italian_in_hills"
+	
+	major = yes 
+	
+	is_triggered_only = yes
+	
+	option = { 
+	name = "GEN22.A" 
+	GEN = { country_event = 1242322 } 
+	define_general = { 
+		name = "Mateo Falcone"
+		personality = resolute  
+		background = nationalist 
+	}
+	government = democracy
+	ruling_party_ideology = conservative
+	political_reform = universal_voting
+	political_reform = appointed
+	political_reform = yes_meeting
+	political_reform = censored_press
+	political_reform = underground_parties
+    political_reform = mandatory_service
+    clr_country_flag = theocratic_government
+	clr_country_flag = merchantrepublic_gov
+	clr_country_flag = communist_gov
+	clr_country_flag = absolute_monarchy_gov
+    clr_country_flag = semi_constitutional_monarchy_gov
+	clr_country_flag = constitutional_monarchy_gov
+    clr_country_flag = parliamentary_republic_gov
+    clr_country_flag = democracy_gov
+	set_country_flag = presidential_dictatorship_gov
+	clr_country_flag = fascist_gov
+	clr_country_flag = anarcho_liberal_gov
+	clr_country_flag = socialist_republic_gov
+	clr_country_flag = fascist_monarchy_gov
+	clr_country_flag = election_started
+	clr_country_flag = tory_election_win
+	clr_country_flag = socialist_election_win
+	clr_country_flag = liberal_election_win
+	clr_country_flag = communist_election_win
+	clr_country_flag = fascist_election_win
+	clr_country_flag = reactionary_election_win
+	clr_country_flag = anarcho_liberal_election_win
+	clr_country_flag = social_liberal_election_win
+	clr_country_flag = market_liberal_election_win		
+		clr_country_flag = paternal_election_win
+	clr_country_flag = conservative_party_in_power
+	clr_country_flag = liberal_party_in_power
+	clr_country_flag = reactionary_party_in_power
+	clr_country_flag = socialist_party_in_power
+	clr_country_flag = communist_party_in_power
+	clr_country_flag = fascist_party_in_power
+	clr_country_flag = paternal_party_in_power
+	clr_country_flag = anarcho_liberal_party_in_power
+	clr_country_flag = market_liberal_party_in_power
+	money = 50000
+	add_country_modifier = { 
+	name = small_country_draft 
+	duration = 1000 
+		}
+	}
+}
+
+country_event = { #Genoa has lost Corsica, what now ? 
+	id = 1242322
+	title = "GEN23.T"
+	desc = "GEN23.D"
+	picture = "italian_in_hills"
+	
+	is_triggered_only = yes
+	
+	option = { 
+	name = "GEN23.A" #Refuse this !
+	set_global_flag = corsica_not_yet_lost 
+	war = { 
+		target = CRS
+			attacker_goal = {
+				casus_belli = conquest_any
+			}
+			defender_goal = {
+				casus_belli = status_quo
+			}
+		}
+	ai_chance = { 
+		factor = 60
+		}
+	}
+	
+	option = { 
+	name = "GEN23.B" #Accept the loss
+	prestige = -5 
+	473 = { remove_core = GEN }
+	ai_chance = { 
+		factor = 40 
+		}
+	}
+}
+
+country_event = { #Genoa proposes to sell us Corsica
+	id = 1242323
+	title = "GEN24.T"
+	desc = "GEN24.D"
+	picture = "parthenopea"
+	
+	is_triggered_only = yes
+	
+	option = { 
+	name = "GEN24.A" #We'll take that advanced base! 
+	GEN = { country_event = 1242324 }
+	random_owned = {
+        limit = {
+                owner = {
+                NOT = { treasury = 100000 }
+                check_variable = { which = owed_cash_money value = 9 }
+            }
+        }
+        owner = { change_variable = { which = owed_cash_money value = 100 } }
+        }
+        random_owned = {
+        limit = {
+            owner = {
+                NOT = { treasury = 100000 }
+                NOT = { check_variable = { which = owed_cash_money value = 1 } }
+            }
+        }
+        owner = { set_variable = { which = owed_cash_money value = 100 } }
+        }
+	ai_chance = { 
+	factor = 80 
+		}	
+	}
+	
+	option = { 
+	name = "GEN24.B" #Our funds are too tight 
+	GEN = { country_event = 1242325 }
+	prestige = -5 
+	ai_chance = { 
+	factor = 20
+		}	
+	}
+}
+
+country_event = { #The exchange is done
+	id = 1242324
+	title = "GEN25.T"
+	desc = "GEN25.D"
+	picture = "parthenopea"
+	
+	is_triggered_only = yes
+	
+	option = { 
+	name = "GEN25.A"
+	money = 100000 
+	473 = { secede_province = FROM add_core = FROM remove_core = THIS } 
+	}
+}
+
+country_event = { #We'll ask Aragon then
+	id = 1242325
+	title = "GEN26.T"
+	desc = "GEN26.D"
+	picture = "parthenopea"
+	
+	is_triggered_only = yes
+
+	option = { 
+	name = "GEN26"
+	ARA = { country_event = 1242326 } 
+	}
+}
+
+country_event = { #Genoa proposes to sell us Corsica -Aragon
+	id = 1242326
+	title = "GEN27.T"
+	desc = "GEN27.D"
+	picture = "parthenopea"
+	
+	is_triggered_only = yes
+	
+	option = { 
+	name = "GEN27.A" #Our mastery over the Tyrrhenian Sea expands! 
+	GEN = { country_event = 1242324 }
+	random_owned = {
+        limit = {
+                owner = {
+                NOT = { treasury = 100000 }
+                check_variable = { which = owed_cash_money value = 9 }
+            }
+        }
+        owner = { change_variable = { which = owed_cash_money value = 100 } }
+        }
+    random_owned = {
+        limit = {
+            owner = {
+                NOT = { treasury = 100000 }
+                NOT = { check_variable = { which = owed_cash_money value = 1 } }
+            }
+        }
+        owner = { set_variable = { which = owed_cash_money value = 100 } }
+        }
+	random_owned = {
+        limit = {
+            owner = {
+                treasury = 100000  
+            }
+        }
+        treasury = -100000
+        }
+	ai_chance = { 
+	factor = 90 
+		}	
+	}
+	
+	option = { 
+	name = "GEN27.B" #Our funds are too tight 
+	GEN = { country_event = 1242327 }
+	prestige = -5 
+	ai_chance = { 
+	factor = 10
+		}	
+	}
+
+}
+
+country_event = { #The Bank of Saint Georges it is ...
+	id = 1242327
+	title = "GEN28.T"
+	desc = "GEN28.D"
+	picture = "parthenopea"
+	
+	is_triggered_only = yes
+
+	option = { 
+	name = "GEN28"
+	money = 100000
+	set_country_flag = good_idea_giving_CRS_to_a_bank
+	}
+}
+
+country_event = { #Genoa proposes to sell us Corsica -SAR 
+	id = 1242328
+	title = "GEN29.T"
+	desc = "GEN29.D"
+	picture = "parthenopea"
+	
+	is_triggered_only = yes
+	
+	option = { 
+	name = "GEN29.A" #We'll take that advanced base! 
+	GEN = { country_event = 1242324 }
+	random_owned = {
+        limit = {
+                owner = {
+                NOT = { treasury = 100000 }
+                check_variable = { which = owed_cash_money value = 9 }
+            }
+        }
+        owner = { change_variable = { which = owed_cash_money value = 100 } }
+        }
+        random_owned = {
+        limit = {
+            owner = {
+                NOT = { treasury = 100000 }
+                NOT = { check_variable = { which = owed_cash_money value = 1 } }
+            }
+        }
+        owner = { set_variable = { which = owed_cash_money value = 100 } }
+        }
+	ai_chance = { 
+	factor = 66 
+		}	
+	}
+	
+	option = { 
+	name = "GEN29.B" #Our funds are too tight 
+	GEN = { country_event = 1242325 }
+	prestige = -5 
+	ai_chance = { 
+	factor = 34 
+		}	
+	}
+}
+
+country_event = { #Corsican brigandage 
+	id = 1242329
+	title = "GEN30.T"
+	desc = "GEN30.D"
+	picture = "italian_in_hills"
+	
+	trigger = { 
+	OR = { tag = SAR tag = PRV tag = ARA } 
+	owns = 473 
+	NOT = { has_country_flag = brigands_linked_to_TUS } 
+	}
+	
+    fire_only_once = yes
+	
+	mean_time_to_happen = { 
+	days = 7
+	}	
+	
+	option = { 
+	name = "GEN30.A"
+	473 = { add_province_modifier = { name = etrurian_agitation duration = 790 } } 
+	set_country_flag = brigands_linked_to_TUS 
+	}
+}
+
+country_event = { #Corsican secession
+	id = 1242330
+	title = "GEN31.T"
+	desc = "GEN31.D"
+	picture = "parthenopea"
+	
+	trigger = { 
+	OR = { 
+		OR = { tag = SAR tag = PRV } 
+		AND = { tag = ARA year = 1845 } 
+	}
+	owns = 473 
+	has_country_flag = brigands_linked_to_TUS 
+	truce_with = TUS 
+	TUS = { government = democracy } 
+	}
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = { 
+	days = 31
+		modifier = {
+			factor = 0.01
+			year = 1838
+		}
+	}
+	
+	major = yes
+	
+	option = { 
+	name = "GEN31.A"
+	473 = { secede_province = TUS add_core = TUS remove_core = THIS } 
+	}
+}
+
+
+country_event = { #Might as well sell African ports
+	id = 1242331
+	title = "GEN320.T"
+	desc = "GEN320.D"
+	picture = "parthenopea"
+	
+	is_triggered_only = yes 
+	
+	
+	option = { 
+	name = "GEN320.A" #Our good Parisian friends 
+	DUA = { country_event = 1242332 }
+	ai_chance = { 
+	factor = 50 
+		}
+	}
+	
+	option = { 
+	name = "GEN320.B" #The Spanish might want it ? 
+	PRV = { country_event = 1242332 }
+	ai_chance = { 
+	factor = 30
+		}
+	}
+	
+	option = { 
+	name = "GEN320.C" #How about the Burgundians ?
+	SAR = { country_event = 1242332 }
+	ai_chance = { 
+	factor = 20
+		}
+	}
+}
+
+country_event = { #Genoa proposes to sell us Kamerun
+	id = 1242332
+	title = "GEN33.T"
+	desc = "GEN33.D"
+	picture = "parthenopea"
+	
+	is_triggered_only = yes
+	
+	option = { 
+	name = "GEN33.A" #We'll take that!
+	GEN = { country_event = 1242333 }
+	random_owned = {
+        limit = {
+                owner = {
+                NOT = { treasury = 50000 }
+                check_variable = { which = owed_cash_money value = 9 }
+            }
+        }
+        owner = { change_variable = { which = owed_cash_money value = 100 } }
+        }
+    random_owned = {
+        limit = {
+            owner = {
+                NOT = { treasury = 50000 }
+                NOT = { check_variable = { which = owed_cash_money value = 1 } }
+            }
+        }
+        owner = { set_variable = { which = owed_cash_money value = 50 } }
+        }
+	random_owned = {
+        limit = {
+            owner = {
+                treasury = 50000  
+            }
+        }
+        treasury = -50000
+        }
+	ai_chance = { 
+	factor = 90 
+		}	
+	}
+	
+	option = { 
+	name = "GEN33.B" #Our funds are too tight 
+	GEN = { country_event = 1242334 }
+	prestige = -5 
+	ai_chance = { 
+	factor = 10
+		}	
+	}
+}
+
+
+country_event = { #The exchange is done
+	id = 1242333
+	title = "GEN34.T"
+	desc = "GEN34.D"
+	picture = "parthenopea"
+	
+	is_triggered_only = yes
+	
+	option = { 
+	name = "GEN34.A"
+	money = 50000
+	any_owned = { limit = { is_core = NRI } secede_province = FROM } 
+	}
+}
+
+country_event = { #Nevermind
+	id = 1242334
+	title = "GEN35.T"
+	desc = "GEN35.D"
+	picture = "parthenopea"
+	
+	is_triggered_only = yes
+
+	option = { 
+	name = "GEN35"
+	}
+}
+
+#Tuscan government events 
+
+
+
+country_event = { #Partial election of the Councils 
+	id = 124237
+	title = "TUS8.T"
+	desc = "TUS8.D"
+	picture = "risorgimento"
+	
+	trigger = { 
+	tag = TUS 
+	year = 1838
+	}
+	
+	mean_time_to_happen = { 
+	days = 31 
+		modifier = {
+			factor = 0.01
+			year = 1839
+		}
+	}	
+	
+	fire_only_once = yes 
+	
+	option = { 
+	name = "TUS8.A"
+	any_pop = { 
+	militancy = 4
+		}
+	random_list = { 50 = { country_event = 124238 } 50 = { country_event = 124239 } }
+	}
+}
+
+
+country_event = { #Moderate Victory -Commons Insurrection
+	id = 124238
+	title = "TUS9.T"
+	desc = "TUS9.D"
+	picture = "barricade_red"
+	
+	is_triggered_only = yes
+	
+	option = { 
+	name = "TUS9.A" #Commons victory
+	any_country = {
+			limit = { 
+			tag = PRV
+			exists = yes
+			war = no
+			}
+			country_event = 110601 
+	}
+	set_country_flag = REV_TUS
+	government = democracy 
+	political_reform = universal_voting
+	clr_country_flag = theocratic_government
+	clr_country_flag = merchantrepublic_gov
+	clr_country_flag = communist_gov
+	clr_country_flag = absolute_monarchy_gov
+    clr_country_flag = semi_constitutional_monarchy_gov
+	clr_country_flag = constitutional_monarchy_gov
+    clr_country_flag = parliamentary_republic_gov
+    clr_country_flag = democracy_gov
+	set_country_flag = presidential_dictatorship_gov
+	clr_country_flag = fascist_gov
+	clr_country_flag = anarcho_liberal_gov
+	clr_country_flag = socialist_republic_gov
+	clr_country_flag = fascist_monarchy_gov
+	clr_country_flag = election_started
+	clr_country_flag = tory_election_win
+	clr_country_flag = socialist_election_win
+	clr_country_flag = liberal_election_win
+	clr_country_flag = communist_election_win
+	clr_country_flag = fascist_election_win
+	clr_country_flag = reactionary_election_win
+	clr_country_flag = anarcho_liberal_election_win
+	clr_country_flag = social_liberal_election_win
+	clr_country_flag = market_liberal_election_win		
+		clr_country_flag = paternal_election_win
+	clr_country_flag = conservative_party_in_power
+	clr_country_flag = liberal_party_in_power
+	clr_country_flag = reactionary_party_in_power
+	clr_country_flag = socialist_party_in_power
+	clr_country_flag = communist_party_in_power
+	clr_country_flag = fascist_party_in_power
+	clr_country_flag = paternal_party_in_power
+	clr_country_flag = anarcho_liberal_party_in_power
+	clr_country_flag = market_liberal_party_in_power
+	any_pop = { 
+	militancy = -3 
+	ideology = {
+				value = conservative
+				factor = -0.25
+			}
+	ideology = {
+				value = liberal
+				factor = 0.25
+			}
+	}
+	ai_chance = { 
+	factor = 50 
+	modifier = { 
+	    factor = 0
+	    has_country_flag = ITALIAN_LEAGUE_MEMBER
+		}
+	modifier = { 
+		factor = 0
+		has_global_flag = con_TUS_global
+		}
+	modifier = { 
+	    factor = 0.75
+	    has_country_flag = TUS_supported_normalization
+		}
+	modifier = { 
+	    factor = 1.5
+	    has_country_flag = TUS_supports_comuni
+		}
+	} 
+	}
+	
+	option = { 
+	name = "TUS9.B" #Conservative victory
+	any_country = {
+			limit = { 
+			tag = PRV
+			exists = yes
+			war = no
+			}
+			country_event = 110601 
+	}
+	set_country_flag = CON_TUS
+	political_reform = wealth_voting
+	political_reform = censored_press
+	any_pop = { 
+	militancy = -3
+	ideology = {
+				value = liberal
+				factor = -0.25
+			}
+	ideology = {
+				value = conservative
+				factor = 0.25
+			}
+	}
+	ai_chance = { 
+	factor = 50
+	modifier = { 
+	    factor = 4
+	    has_country_flag = ITALIAN_LEAGUE_MEMBER
+		}
+	modifier = { 
+		factor = 0
+		has_global_flag = rev_TUS_global
+		}
+	modifier = { 
+	    factor = 1.25
+	    has_country_flag = TUS_supported_normalization
+		}
+	modifier = { 
+	    factor = 0.5
+	    has_country_flag = TUS_supports_comuni
+		}	
+	}
+    }
+}
+
+country_event = { #Republican Victory -Conservative Coup
+	id = 124239
+	title = "TUS10.T"
+	desc = "TUS10.D"
+	picture = "sicilian_revolution"
+	
+	is_triggered_only = yes
+	
+	option = { 
+	name = "TUS10.A" #Conservative victory
+	any_country = {
+			limit = { 
+			tag = PRV
+			exists = yes
+			}
+			country_event = 110601 
+	}
+	set_country_flag = CON_TUS
+	political_reform = wealth_voting
+	political_reform = censored_press
+	any_pop = { 
+	militancy = -3
+	ideology = {
+				value = liberal
+				factor = -0.25
+			}
+	ideology = {
+				value = conservative
+				factor = 0.25
+			}
+	}
+	ai_chance = { 
+	factor = 50 
+	modifier = { 
+	    factor = 4
+	    has_country_flag = ITALIAN_LEAGUE_MEMBER
+		}
+	modifier = { 
+		factor = 0
+		has_global_flag = rev_TUS_global
+		}
+	modifier = { 
+	    factor = 1.5
+	    has_country_flag = TUS_supported_normalization
+		}
+	modifier = { 
+	    factor = 0.75
+	    has_country_flag = TUS_supports_comuni
+		}
+	}
+	}
+	
+	option = { 	
+	name = "TUS10.B" #Commons victory
+	any_country = {
+			limit = { 
+			tag = PRV
+			exists = yes
+			}
+			country_event = 110601 
+	}
+	set_country_flag = REV_TUS
+	clr_country_flag = theocratic_government
+	clr_country_flag = merchantrepublic_gov
+	clr_country_flag = communist_gov
+	clr_country_flag = absolute_monarchy_gov
+    clr_country_flag = semi_constitutional_monarchy_gov
+	clr_country_flag = constitutional_monarchy_gov
+    clr_country_flag = parliamentary_republic_gov
+    clr_country_flag = democracy_gov
+	set_country_flag = presidential_dictatorship_gov
+	clr_country_flag = fascist_gov
+	clr_country_flag = anarcho_liberal_gov
+	clr_country_flag = socialist_republic_gov
+	clr_country_flag = fascist_monarchy_gov
+	clr_country_flag = election_started
+	clr_country_flag = tory_election_win
+	clr_country_flag = socialist_election_win
+	clr_country_flag = liberal_election_win
+	clr_country_flag = communist_election_win
+	clr_country_flag = fascist_election_win
+	clr_country_flag = reactionary_election_win
+	clr_country_flag = anarcho_liberal_election_win
+	clr_country_flag = social_liberal_election_win
+	clr_country_flag = market_liberal_election_win		
+		clr_country_flag = paternal_election_win
+	clr_country_flag = conservative_party_in_power
+	clr_country_flag = liberal_party_in_power
+	clr_country_flag = reactionary_party_in_power
+	clr_country_flag = socialist_party_in_power
+	clr_country_flag = communist_party_in_power
+	clr_country_flag = fascist_party_in_power
+	clr_country_flag = paternal_party_in_power
+	clr_country_flag = anarcho_liberal_party_in_power
+	clr_country_flag = market_liberal_party_in_power
+	government = democracy 
+	political_reform = universal_voting
+	any_pop = { 
+	militancy = -3 
+	ideology = {
+				value = conservative
+				factor = -0.25
+			}
+	ideology = {
+				value = liberal
+				factor = 0.25
+			}
+	}
+	ai_chance = { 
+	factor = 50 
+	modifier = { 
+	    factor = 0
+	    has_country_flag = ITALIAN_LEAGUE_MEMBER
+		}
+	modifier = { 
+		factor = 0
+		has_global_flag = con_TUS_global
+		}
+	modifier = { 
+	    factor = 0.5
+	    has_country_flag = TUS_supported_normalization
+		}
+	modifier = { 
+	    factor = 1.25
+	    has_country_flag = TUS_supports_comuni
+		}
+	}
+	}
+}
+
+country_event = { 
+	id = 124240 #Conservative stabilization
+	title = "TUS11.T"
+	desc = "TUS11.D" 
+	picture = "doria"
+	
+	trigger = { 
+	tag = TUS 
+	has_country_flag = CON_TUS
+	war = no
+	}
+	
+	fire_only_once = yes 
+	
+	mean_time_to_happen = { 
+	months = 1 
+	}
+	
+	option = { 
+	name = "TUS11.A"
+	prestige = 1
+	}
+	
+}
+
+#Lucca chain 
+country_event = { 
+	id = 1242400 #Filipe Mosca arrives in Lucca
+	title = "LUC1.T"
+	desc = "LUC1.D" 
+	picture = ""
+	
+	trigger = { 
+	tag = LUC 
+	TUS = { government = democracy } 
+	NOT = { has_country_flag = mosca } 
+	}
+	
+	fire_only_once = yes 
+	
+	mean_time_to_happen = { 
+	months = 1 
+	}
+	
+	option = { 
+	name = "LUC1.A"
+	prestige = -2 
+	set_country_flag = mosca
+	government = hms_government
+	ruling_party_ideology = liberal
+	political_reform = appointed
+	political_reform = wealth_voting 
+	political_reform = yes_meeting
+	political_reform = free_press
+	political_reform = no_trade_unions
+	political_reform = first_past_the_post
+	political_reform = gerrymandering
+	}
+	
+	option = { 
+	name = "LUC1.B"
+	set_country_flag = mosca
+	}
+	
+}
+
+country_event = { 
+	id = 1242401 #Reviving the Alessandrist dream
+	title = "LUC2.T"
+	desc = "LUC2.D" 
+	picture = ""
+	
+	trigger = { 
+	tag = LUC 
+	has_country_flag = mosca 
+	government = hms_government 
+	NOT = { has_country_flag = emilia }
+	year = 1839 
+	}
+	
+	fire_only_once = yes 
+	
+	mean_time_to_happen = { 
+	months = 1 
+	}
+	
+	option = { 
+	name = "LUC2.A"
+	set_country_flag = emilia
+	PAR = { country_event = 1242402 } 
+	}
+	
+}
+
+country_event = { 
+	id = 1242402 #Reviving the Alessandrist dream
+	title = "LUC3.T"
+	desc = "LUC3.D" 
+	picture = ""
+	
+	is_triggered_only = yes 
+	
+	option = { 
+	name = "LUC3.A" 
+	FROM = { country_event = 1242403 }
+	ai_chance = { 
+	factor = 100 
+		}
+	}
+	
+	option = { 
+	name = "LUC3.B" #NO
+	prestige = 1
+	ai_chance = { 
+	factor = 0
+		}
+	}
+	
+}	
+
+country_event = { 
+	id = 1242403 #Reviving the Alessandrist dream -the marriage
+	title = "LUC4.T"
+	desc = "LUC4.D" 
+	picture = ""
+	
+	is_triggered_only = yes 
+	
+	option = { 
+	name = "LUC4.A" 
+	inherit = FROM 
+	PAR = { all_core = { add_core = THIS } }  
+	add_accepted_culture = north_italian
+	MOD = { country_event = { id = 1242404 days = 60 } }
+	}
+
+	
+}	
+
+country_event = { 
+	id = 1242404 #Reviving the Alessandrist dream : Parma considers the abdication
+	title = "LUC5.T"
+	desc = "LUC5.D" 
+	picture = ""
+	
+	is_triggered_only = yes 
+	
+	option = { 
+	name = "LUC5.A" 
+	FROM = { country_event = 1242405 }
+	ai_chance = { 
+	factor = 100 
+		}
+	}
+	
+	option = { 
+	name = "LUC5.B" #NO
+	prestige = 1
+	ai_chance = { 
+	factor = 0
+		}
+	}
+	
+}	
+
+country_event = { 
+	id = 1242405 #Reviving the Alessandrist dream : Parma joins the union
+	title = "LUC6.T"
+	desc = "LUC6.D" 
+	picture = ""
+
+	is_triggered_only = yes 
+	
+	option = { 
+	name = "LUC6.A" 
+	inherit = FROM 
+	MOD = { all_core = { add_core = THIS } }
+	}
+}
+
+country_event = { 
+	id = 1242406 #War against the Revolutionaries
+	title = "LUC7.T"
+	desc = "LUC7.D" 
+	picture = ""
+
+	trigger = { 
+	tag = LUC 
+	has_country_flag = emilia
+	war_with = TUS
+	}
+	
+	fire_only_once = yes
+	
+	option = { 
+	name = "LUC7.A" 
+	add_country_modifier = { 
+	name = a_new_italian_war duration = 720 
+		}
+	}
+}
+
+
+country_event = { 
+	id = 124241 #Revolutionary stabilization
+	title = "TUS12.T"
+	desc = "TUS12.D" 
+	picture = "risorgimento"
+	
+	trigger = { 
+	tag = TUS 
+	has_country_flag = REV_TUS
+	war = no
+	NOT = { has_country_flag = pre_carbonari } 
+	}
+	
+	mean_time_to_happen = { 
+	months = 1 
+	}
+	
+	option = { 
+	LUC = { all_core = { add_core = THIS } }
+	MOD = { all_core = { add_core = THIS } }
+	PAR = { all_core = { add_core = THIS } }
+	FRR = { all_core = { add_core = THIS } }
+	name = "TUS12.A"
+	set_country_flag = pre_carbonari
+	prestige = 1
+	}	
+}
+
+#####################
+## Conquest events ##	
+#####################
+
+country_event = { 
+	id = 124243
+	title = "TUS14.T" #Conquest of Lucca
+	desc = "TUS14.D" 
+	picture = "daniele_manin"
+	
+	trigger = {
+	ai = yes
+	tag = TUS 
+	LUC = { exists = yes }
+	war = no 
+	has_country_flag = REV_TUS
+	has_country_flag = pre_carbonari
+	NOT = { has_country_flag = LUC_WIMP }
+	NOT = { has_global_flag = HALT_ITALIAN_CHAINS }
+	}
+	
+	fire_only_once = yes 
+	
+	mean_time_to_happen = { 
+	days = 15
+	}
+	
+	option = { 
+	name = "TUS14.A" 
+	war = { 
+		target = LUC
+			attacker_goal = {
+				casus_belli = annex_core_country
+			}
+			defender_goal = {
+				casus_belli = status_quo
+			}
+		}
+	ai_chance = { 
+	    factor = 90
+	    modifier = { 
+	       factor = 0
+	       LUC = { in_sphere = ARA }
+			}
+		}
+	}
+	
+	option = { 
+	name = "TUS14.B" 
+	set_country_flag = LUC_WIMP
+	prestige = -5
+	ai_chance = { 
+	factor = 10 
+		}
+	}
+}
+
+country_event = { 
+	id = 124244
+	title = "TUS15.T" #Conquest of the Farnese Duchies
+	desc = "TUS15.D" 
+	picture = "daniele_manin"
+	
+	trigger = {
+	tag = TUS 
+	MOD = { exists = yes }
+	PAR = { exists = yes }
+	owns = 746
+	has_country_flag = REV_TUS
+	war = no 
+	NOT = { has_country_flag = MODPAR_WIMP }
+	NOT = { has_global_flag = HALT_ITALIAN_CHAINS }
+	}
+	
+	fire_only_once = yes 
+	
+	mean_time_to_happen = { 
+	days = 180
+	modifier = { 
+	factor = 0.1
+	year = 1841
+		}
+	}
+	
+	option = { 
+	name = "TUS15.A" 
+	war = { 
+		target = MOD
+			attacker_goal = {
+				casus_belli = annex_core_country
+			}
+			defender_goal = {
+				casus_belli = status_quo
+			}
+		}
+	war = { 
+		target = PAR
+			attacker_goal = {
+				casus_belli = annex_core_country
+			}
+			defender_goal = {
+				casus_belli = status_quo
+			}
+		}
+	ai_chance = { 
+	    factor = 90
+	    modifier = { 
+	       factor = 0
+	       OR = {
+		     MOD = { in_sphere = ARA }
+			 PAR = { in_sphere = ARA }
+		   }
+		}
+		}
+	}
+	
+	option = { 
+	name = "TUS15.B" 
+	set_country_flag = MODPAR_WIMP
+	prestige = -5
+	ai_chance = { 
+	factor = 10 
+		}
+	}
+}
+
+country_event = { 
+	id = 124250
+	title = "TUS21.T"
+	desc = "TUS21.D"
+	picture = "parthenopea"
+	
+	trigger = { 
+	tag = ARA 
+	war_with = TUS 
+	TUS = { OR = { government = democracy government = parliamentary_republic } }
+	NOT = { exists = NAP has_country_flag = ARA_south_revolt }
+	}
+	
+	major = yes
+	
+	mean_time_to_happen = { days = 35 }
+	
+	option = { 
+	name = "36748.A"
+	remove_country_modifier = sicily_burns	
+	set_country_flag = ARA_south_revolt
+	any_owned = { 
+	limit = { 
+	   province_id = 754 	
+	}
+	secede_province = NAP 
+	}
+	any_owned = { 
+	limit = { 
+	   province_id = 755 	
+	}
+	secede_province = NAP
+	}
+	any_owned = { 
+	limit = { 
+	   province_id = 2567
+    }
+	secede_province = NAP
+	}
+	any_country = {
+	   limit = {
+	   owns = 754
+	   NOT = { tag = ARA }
+	   }
+	   define_general = { 
+			name = "Michael Petruzzi" 
+			personality = cool_minded
+			background = eccentric_genius
+	   }
+	government = democracy
+	ruling_party_ideology = liberal
+	political_reform = universal_voting
+	political_reform = population_equal_weight
+	political_reform = yes_meeting
+	political_reform = free_press
+	set_country_flag = carbonari_activity
+	relation = { who = TUS value = 200 } 
+	create_alliance = TUS 
+	capital = 754 
+	add_country_modifier = { 
+	name = small_country_draft
+	duration = 1200
+		}	
+	}
+	war = {
+			target = NAP
+			attacker_goal = {
+				casus_belli = annex_core_country
+			}
+			defender_goal = {
+				casus_belli = acquire_all_cores
+				country = NAP
+			}
+		}
+	}
+}
+
+country_event = { 
+	id = 124251
+	title = "TUS22.T"
+	desc = "TUS22.D"
+	picture = "parthenopea"
+	
+	trigger = { 
+	tag = ARA 
+	war_with = TUS 
+	NOT = {
+	  exists = NAP
+	  exists = SIC
+	  has_country_flag = ARA_south_revolt
+	}
+	TUS = { OR = { government = democracy government = parliamentary_republic } }
+	has_global_flag = Council_target_Aragon
+	}
+	
+	major = yes
+	
+	mean_time_to_happen = { days = 35 }
+	
+	option = { 
+	name = "36748.A"
+	remove_country_modifier = sicily_burns	
+	set_country_flag = ARA_south_revolt
+	any_owned = { 
+	limit = { 
+	   is_core = SIC
+	   NOT = { province_id = 763 }
+    }
+	secede_province = SIC 
+	}
+	any_owned = { 
+	limit = { 
+	   province_id = 754 	
+	}
+	secede_province = NAP 
+	}
+	any_owned = { 
+	limit = { 
+	   province_id = 755 	
+	}
+	secede_province = NAP
+	}
+	any_owned = { 
+	limit = { 
+	   province_id = 2567
+    }
+	secede_province = NAP
+	}
+	any_country = {
+	   limit = {
+	   exists = yes
+	   owns = 754
+	   NOT = { tag = ARA }
+	   }
+	   define_general = { 
+		  name = "Michael Petruzzi" 
+		  personality = cool_minded
+		  background = eccentric_genius
+	   }
+	government = democracy
+	ruling_party_ideology = liberal
+	political_reform = mandatory_service
+	political_reform = universal_voting
+	political_reform = population_equal_weight
+	political_reform = yes_meeting
+	political_reform = free_press
+	set_country_flag = carbonari_activity
+	relation = { who = TUS value = 200 } 
+	create_alliance = TUS 
+	capital = 754 
+	add_country_modifier = { 
+	name = small_country_draft
+	duration = 1200
+		}	
+	}
+	any_country = {
+	   limit = {
+	   exists = yes
+	   owns = 762
+	   NOT = { tag = ARA }
+	   }
+	   define_general = { 
+		  name = "Cipriano Capoccia" 
+		  personality = stout
+		  background = generals_aide
+	   }
+	government = democracy
+	ruling_party_ideology = liberal
+	political_reform = mandatory_service
+	political_reform = universal_voting
+	political_reform = population_equal_weight
+	political_reform = yes_meeting
+	political_reform = free_press
+	set_country_flag = carbonari_activity
+	relation = { who = TUS value = 200 } 
+	create_alliance = TUS 
+	capital = 762
+	add_country_modifier = { 
+	name = small_country_draft
+	duration = 1200
+		}	
+	}
+	war = {
+			target = SIC
+			attacker_goal = {
+				casus_belli = annex_core_country
+			}
+			defender_goal = {
+				casus_belli = acquire_all_cores
+				country = SIC
+			}
+	}
+	war = {
+			target = NAP
+			attacker_goal = {
+				casus_belli = annex_core_country
+			}
+			defender_goal = {
+				casus_belli = acquire_all_cores
+				country = NAP
+			}
+		}
+	}
+}
+
+#####################
+##	ITC formation  ##
+#####################
+
+country_event = { 
+	id = 124252
+	title = "TUS23.T"
+	desc = "TUS23.D"
+	
+	is_triggered_only = yes 
+	
+	option = { 
+	name = "TUS23.A"
+	set_country_flag = accepted_ITC
+	ai_chance = { 
+	factor = 40
+	   modifier = {
+	      factor = 1.5
+		  exists = PIE
+	   }
+	   modifier = {
+	      factor = 1.25
+		  ARA = { is_greater_power = yes }
+	   }
+	   modifier = {
+	      factor = 1.5
+		  TUS = { OR = { is_greater_power = yes is_secondary_power = yes } }
+	   }	   
+       }
+	}
+	
+	option = { 
+	name = "TUS23.B"
+	set_country_flag = refused_ITC 
+	ai_chance = { 
+	factor = 60 
+	   modifier = {
+	      factor = 0.75
+		  exists = PIE
+	   }
+	   modifier = {
+	      factor = 0.75
+		  ARA = { is_greater_power = yes }
+	   }
+	   modifier = {
+	      factor = 0.75
+		  TUS = { OR = { is_greater_power = yes is_secondary_power = yes } }
+	   }
+	   }
+	}
+	
+	option = { 
+	name = "TUS23.C"
+	set_country_flag = accepted_ITC
+	change_tag_no_core_switch = TUS
+	ai_chance = { 
+	factor = 0 
+	}
+	}
+}
+
+country_event = { 
+	id = 124253
+	title = "TUS24.T" #Formation of ITC
+	desc = "TUS24.D"
+	
+	major = yes
+	
+	trigger = { 
+	tag = TUS 
+	has_country_flag = CON_TUS
+	has_country_flag = council_TUS
+	AND = { 
+		LOM = { has_country_flag = accepted_ITC }
+		PAP = { has_country_flag = accepted_ITC }
+		}
+	}
+	
+	mean_time_to_happen = { 
+	days = 20 
+	}
+	
+	option = { 
+	name = "TUS24.A"
+	clr_country_flag = council_TUS
+	PAP = { release_vassal = AVN }
+	inherit = PAP
+	inherit = LOM
+	add_accepted_culture = central_italian
+	add_accepted_culture = north_italian
+	change_tag = ITC
+	tech_school = industrial_tech_school
+	any_owned = { limit = { is_core = ITA } add_core = ITC }
+	government = theocracy
+	ruling_party_ideology = conservative
+	political_reform = none_voting
+	political_reform = party_appointed
+	political_reform = no_meeting
+    political_reform = state_press
+	political_reform = state_controlled
+	political_reform = underground_parties
+	political_reform = two_year_draft
+	political_reform = primary_culture_only
+    clr_country_flag = tory_election_win
+	clr_country_flag = socialist_election_win
+	clr_country_flag = liberal_election_win
+	clr_country_flag = communist_election_win
+	clr_country_flag = fascist_election_win
+	clr_country_flag = reactionary_election_win
+	clr_country_flag = anarcho_liberal_election_win
+	clr_country_flag = social_liberal_election_win
+	clr_country_flag = market_liberal_election_win		
+		clr_country_flag = paternal_election_win
+	set_country_flag = theocratic_government
+	clr_country_flag = merchantrepublic_gov
+	clr_country_flag = communist_gov
+	clr_country_flag = absolute_monarchy_gov
+	clr_country_flag = semi_constitutional_monarchy_gov
+	clr_country_flag = constitutional_monarchy_gov
+	clr_country_flag = parliamentary_republic_gov
+	clr_country_flag = democracy_gov
+	clr_country_flag = presidential_dictatorship_gov
+	clr_country_flag = fascist_gov
+	clr_country_flag = anarcho_liberal_gov
+	clr_country_flag = socialist_republic_gov
+	clr_country_flag = fascist_monarchy_gov
+	country_event = { id = 110660 days = 1 }
+	capital = 749
+    749 = {
+	   add_province_modifier = {
+		 name = gateway_to_harbor
+		 duration = 720
+	   } 
+	   add_province_modifier = {
+		 name = small_baby_boom
+		 duration = 14600
+	   }
+	   add_province_modifier = {
+		 name = baby_boom
+		 duration = 1825
+	   }
+    }
+	country_event = { id = 124275 days = 0 }
+	}
+}
+
+country_event = { 
+	id = 124254
+	title = "TUS25.T" #Formation of ITC-refused
+	desc = "TUS25.D"
+	
+	trigger = { 
+	tag = TUS 
+	has_country_flag = CON_TUS
+	has_country_flag = council_TUS
+	OR = { 
+       LOM = { has_country_flag = refused_ITC }
+	   PAP = { has_country_flag = refused_ITC }
+	}
+	}
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = { 
+	days = 20 
+	}
+	
+	option = { 
+	name = "TUS25.A"
+	clr_country_flag = council_TUS
+	set_country_flag = ITC_council_failed
+	prestige = -10
+	}
+} 
+
+##################
+##	LOM chance  ##
+##################
+
+country_event = { 
+	id = 124255
+	title = "TUS26.T" #Crossing the Po
+	desc = "TUS26.D"
+	picture = "troubles_italy"
+	
+	trigger = { 
+	tag = LOM 
+	war = no
+	OR = { 
+	   government = absolute_monarchy
+	   government = prussian_constitutionalism 
+	   government = hms_government
+	}
+	738 = { owned_by = TUS }
+	739 = { owned_by = TUS }
+	NOT = { year = 1848 }
+	NOT = { vassal_of = ARI }
+	has_country_flag = Mil_check
+	NOT = { has_country_flag = crossing_po } 
+	NOT = { has_global_flag = HALT_ITALIAN_CHAINS }
+	}
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = { 
+	months = 3 
+	}
+	
+	option = { 
+	name = "TUS26.A"
+	set_country_flag = crossing_po
+	badboy = 15 
+	casus_belli = {
+			target = TUS
+			type = conquest
+			months = 24
+			}
+	war = { 
+	target = TUS
+			attacker_goal = {
+				casus_belli = conquest_any
+			}
+			defender_goal = {
+				casus_belli = make_puppet
+			}
+		}
+	TUS = { country_event = 124256 }
+	ai_chance = { 
+	factor = 70 
+	modifier = { 
+	factor = 1.5
+	government = absolute_monarchy
+			}
+		}
+	}
+	
+	option = { 
+	name = "TUS26.B"
+	relation = { who = TUS value = 50 }
+	any_owned = { 
+	remove_province_modifier = etrurian_agitation
+	}
+	any_pop = { 
+	militancy = -1 
+		}
+	ai_chance = { 
+	factor = 30 
+		}
+	}
+}
+
+country_event = { 
+	id = 124256
+	title = "TUS27.T" #Crossing the Po -TUS notification event
+	desc = "TUS27.D"
+	picture = "troubles_italy"
+	
+	is_triggered_only = yes 
+	
+	option = { 
+	name = "TUS27.A"
+	}
+}
+
+country_event = { 
+	id = 124257
+	title = "TUS28.T" #LOM puppeted -check it's a republic
+	desc = "TUS28.D"
+	picture = "risorgimento"
+
+	trigger = { 
+	war = no 
+	tag = LOM 
+	vassal_of = TUS
+	NOT = { has_country_flag = LOM_republican_check }
+	TUS = { OR = { government = democracy government = parliamentary_republic government = socialist_republic } }
+	NOT = { OR = { government = democracy government = parliamentary_republic government = socialist_republic } }	
+	}
+	
+	mean_time_to_happen = { 
+	days = 3 
+	}
+	
+	option = { 
+	name = "TUS28.A"
+	government = democracy
+	set_country_flag = LOM_republican_check
+	}
+}
+
+country_event = { 
+	id = 124258
+	title = "TUS29.T" #The Italian Confederation -Milan edition
+	desc = "TUS29.D"
+	picture = "maria_borja"
+
+	trigger = { 
+	tag = LOM 
+	NOT = { OR = { has_country_flag = iron_crown has_country_flag = borgia_LOM } }
+	owns = 744
+	NOT = { vassal_of = ARI }
+	NOT = { has_global_flag = HALT_ITALIAN_CHAINS }
+	}
+
+	mean_time_to_happen = { 
+	days = 15 
+	}
+	
+	option = { 
+	name = "TUS29.A" #The old duke rallies the Pope
+	clr_global_flag = TUS_carbonari
+	set_country_flag = LOM_choice
+	inherit = PAP
+	add_accepted_culture = central_italian
+	add_accepted_culture = north_italian
+	release_vassal = AVN
+	any_country = {
+			limit = {
+			    is_our_vassal = AVN
+			    NOT = { has_global_flag = AVIGNON_CRISIS }
+		   }
+		   release_vassal = AVN
+	}
+	random_owned = {
+		limit = {
+		   owner = { NOT = { tag = PIE } NOT = { has_global_flag = AVIGNON_CRISIS } OR = { government = theocracy government = absolute_monarchy government = prussian_constitutionalism government = hms_government government = fascist_monarchy }  }
+	    }
+	    owner =  { country_event = { id = 110660 days = 1 } }
+	}	
+	change_tag = ITC 
+	tech_school = industrial_tech_school
+	any_owned = { limit = { is_core = ITA } add_core = ITC }
+	capital = 749
+    749 = {
+	   add_province_modifier = {
+		 name = gateway_to_harbor
+		 duration = 720
+	   } 
+	   add_province_modifier = {
+		 name = small_baby_boom
+		 duration = 14600
+	   }
+	   add_province_modifier = {
+		 name = baby_boom
+		 duration = 1825
+	   }
+    }
+	country_event = { id = 124275 days = 0 }	
+	ai_chance = { 
+	factor = 75
+		}
+	}
+
+}
+
+country_event = { 
+	id = 1242580
+	title = "TUS29B.T" #The Borgia Charter leads to Rome !
+	desc = "TUS29B.D"
+	picture = "maria_borja"
+
+	trigger = { 
+	tag = LOM 
+	has_country_flag = crossing_po
+	owns = 744
+	has_country_flag = borgia_LOM
+	NOT = { vassal_of = ARI }
+	NOT = { has_global_flag = HALT_ITALIAN_CHAINS }
+	}
+
+	mean_time_to_happen = { 
+	days = 15 
+	}
+	
+	option = { 
+	name = "TUS29B.A" #The Borgia charter shall be expanded to all Italy!
+	clr_global_flag = TUS_carbonari
+	set_country_flag = LOM_choice
+	set_country_flag = Borgias_ITA
+	inherit = FRR
+	badboy = 9 
+	any_country = {
+	   limit = {
+	      exists = yes
+	      owns = 754
+	   }
+	   country_event = { id = 124259 days = 0 } 
+    }	
+	country_event = { id = 124260 days = 3 } 
+	ai_chance = { 
+	factor = 25
+		}
+	}
+}
+
+country_event = { 
+	id = 124259
+	title = "TUS30.T" #Marianist insurrection in Naples
+	desc = "TUS30.D"
+	picture = "maria_borja"
+	
+	is_triggered_only = yes 
+	
+	immediate = {
+	any_owned = { 
+	limit = { 
+		is_core = NAP 
+			}
+	secede_province = NAP 
+	}
+    }	
+	
+	option = { 
+	name = "TUS30.A"
+	any_owned = { 
+	limit = { 
+		is_core = NAP 
+			}
+	secede_province = NAP 
+	}
+	remove_country_modifier = sicily_burns	
+	LOM = {
+	create_alliance = NAP
+	relation = { who = NAP value = 200 }
+	diplomatic_influence = { who = NAP value = 200 }
+	}
+	create_alliance = PAP
+	relation = { who = PAP value = 400 }
+	diplomatic_influence = { who = PAP value = 400 }	
+	}
+}
+
+country_event = { 
+	id = 124260
+	title = "TUS31.T" #The Marianist Call and March on Rome
+	desc = "TUS31.D"
+	
+	major = yes 
+	
+	is_triggered_only = yes 
+	
+	option = { 
+	name = "TUS31.A"
+	war = { 
+		target = PAP
+			attacker_goal = {
+				casus_belli = annex_core_country
+			}
+			defender_goal = {
+				casus_belli = status_quo
+			}
+   }
+   any_country = {
+	    limit = {
+	       exists = yes
+	       owns = 754
+	    }
+	    define_general = { 
+			name = "Michael Petruzzi" 
+			personality = cool_minded
+			background = eccentric_genius
+		}
+	    add_country_modifier = { 
+	       name = small_country_draft
+	       duration = 1460
+	    }
+	   capital = 754
+	   government = prussian_constitutionalism
+ 	   ruling_party_ideology = conservative
+	   political_reform = appointed
+	   political_reform = wealth_voting 
+	   political_reform = yes_meeting
+	   political_reform = censored_press
+	   political_reform = no_trade_unions
+	   political_reform = first_past_the_post
+	   political_reform = gerrymandering
+	   clr_country_flag = theocratic_government
+	   clr_country_flag = merchantrepublic_gov
+	   clr_country_flag = parliamentary_republic_gov
+	   clr_country_flag = communist_gov
+	   clr_country_flag = absolute_monarchy_gov
+	   set_country_flag = semi_constitutional_monarchy_gov
+	   clr_country_flag = constitutional_monarchy_gov
+	   clr_country_flag = democracy_gov
+	   clr_country_flag = presidential_dictatorship_gov
+	   clr_country_flag = fascist_gov
+	   clr_country_flag = anarcho_liberal_gov
+	   clr_country_flag = socialist_republic_gov
+	   clr_country_flag = fascist_monarchy_gov	
+	   set_country_flag = tory_election_win
+	   clr_country_flag = socialist_election_win
+	   clr_country_flag = liberal_election_win
+	   clr_country_flag = communist_election_win
+	   clr_country_flag = fascist_election_win
+	   clr_country_flag = reactionary_election_win
+	   clr_country_flag = anarcho_liberal_election_win
+	   clr_country_flag = social_liberal_election_win
+	   clr_country_flag = market_liberal_election_win		
+		clr_country_flag = paternal_election_win
+	   set_country_flag = conservative_party_in_power
+       clr_country_flag = liberal_party_in_power
+	   clr_country_flag = reactionary_party_in_power
+	   clr_country_flag = socialist_party_in_power
+	   clr_country_flag = communist_party_in_power
+	   clr_country_flag = fascist_party_in_power
+	   clr_country_flag = paternal_party_in_power
+	   clr_country_flag = anarcho_liberal_party_in_power
+       clr_country_flag = market_liberal_party_in_power
+	}
+	ARA = { 
+	   war = { 
+		 target = NAP
+			attacker_goal = {
+				casus_belli = conquest_any
+			}
+			defender_goal = {
+				casus_belli = status_quo
+				}
+			}
+		 war = { 
+		 target = LOM
+			attacker_goal = {
+				casus_belli = custom_treaty_cb
+			}
+			defender_goal = {
+				casus_belli = cut_down_to_size
+				}
+			}
+		}
+	}
+}
+
+country_event = { 
+	id = 124261
+	title = "TUS32.T" #Borjists won 
+	desc = "TUS32.D"
+	
+	trigger = { 
+	tag = LOM
+	has_country_flag = Borgias_ITA
+	war = no 
+	owns = 749
+	NOT = { vassal_of = ARI }
+	}
+
+	major = yes 
+	
+	mean_time_to_happen = { 
+	days = 6 
+	}
+	
+	option = { 
+	name = "TUS32.A"
+	   prestige = 30 
+	   any_country = {
+		   limit = {
+		      owns = 470
+		      NOT = { has_global_flag = AVIGNON_CRISIS }
+		   }
+		   country_event = { id = 110658 days = 0 }
+	   }
+	   change_tag = ITA 
+	   inherit = NAP 
+	   ARA = { country_event = 1242058 }
+	   set_country_flag = italy_is_borg
+	   add_accepted_culture = north_italian
+	   add_accepted_culture = central_italian
+	   add_accepted_culture = south_italian		
+	   any_country = {
+			limit = {
+				is_culture_group = italian
+				NOT = {
+					primary_culture = venetian
+					tag = SIC
+					primary_culture = catalan
+					primary_culture = athesian
+				}
+				in_sphere = THIS
+				NOT = {
+					tag = THIS
+				}
+			}
+			country_event = 11101
+	   }	   
+	}
+}
+
+country_event = { 
+	id = 124262
+	title = "TUS33.T" #Play
+	desc = "TUS33.D"
+	picture = "rhapsody"
+	
+	trigger = { 
+	tag = LOM
+	year = 1839
+	}
+
+	fire_only_once = yes 
+	
+	mean_time_to_happen = { 
+	days = 6 
+	}
+	
+	option = { 
+	name = "TUS33.A"
+	prestige = 1
+	}
+}
+
+country_event = { 
+	id = 1242630
+	title = "TUS34.T" #Statue
+	desc = "TUS34.D"
+	
+	trigger = { 
+	tag = TUS 
+	has_country_flag = REV_TUS
+	}
+
+	fire_only_once = yes 
+	
+	mean_time_to_happen = { 
+	months = 20
+	}
+	
+	option = { 
+	name = "TUS34.A"
+	prestige = 1
+	}
+}
+
+######################################
+## The Savoyard and their fuckery ####
+######################################
+
+country_event = { 
+	id = 124263
+	title = "SAR1.T" #Savoyard Introduction
+	desc = "SAR1.D"
+	picture = "turin"
+	
+	
+	trigger = { 
+	tag = SAR
+	}
+
+	fire_only_once = yes 
+	
+	mean_time_to_happen = { 
+	   days = 1
+	}
+	
+	option = { 
+	name = "SAR1.A"
+	prestige = 1
+	}
+}
+
+# Savoyard Intervention - Must form PIE
+
+country_event = { 
+	id = 124264
+	title = "SAR2.T" #Savoyard Intervention - Borgais_ITA
+	desc = "SAR2.D"
+	picture = "turin"
+	
+	
+	trigger = { 
+	   tag = PIE
+	   LOM = { has_country_flag = Borgias_ITA war_with = ARA }
+	   NOT = { has_country_flag = SAR_LOM_intervention }
+	}
+
+	
+	mean_time_to_happen = { 
+	   days = 1
+	}
+	
+	option = { 
+	name = "SAR2.A"
+	   badboy = 5
+	   prestige = 5
+	   DUA = {
+	   relation = { who = PIE value = -100 }
+	   diplomatic_influence = { who = PIE value = -200 }	
+       }
+	   ARA = { country_event = { id = 124266 days = 0 } }
+       set_country_flag = SAR_LOM_intervention	
+	   war = {
+			target = LOM
+				attacker_goal = {
+					casus_belli = civil_war
+				}
+				defender_goal = {
+					casus_belli = civil_war
+				}
+	   }
+	   ai_chance = { 
+	   factor = 70
+	   }	   
+	}
+	
+	option = { 
+	name = "SAR2.B"
+	   badboy = -5
+	   prestige = -5
+	   DUA = {
+	   relation = { who = PIE value = 100 }	
+       }
+	   set_country_flag = SAR_LOM_intervention
+	   ai_chance = { 
+	   factor = 30
+	   }
+	}
+}
+
+country_event = { 
+	id = 124265
+	title = "SAR3.T" #Savoyard Intervention - Tuscany is dumb
+	desc = "SAR3.D"
+	picture = "turin"
+		
+	trigger = { 
+	   tag = PIE
+	   TUS = { war_with = ARA }
+	   OR = { 
+	      government = hms_government
+		  government = absolute_monarchy
+		  government = prussian_constitutionalism
+	   }
+	   NOT = { has_country_flag = SAR_TUS_intervention }
+	}
+
+	mean_time_to_happen = { 
+	   days = 1
+	}
+	
+	option = { 
+	name = "SAR3.A"
+	   badboy = 5
+	   prestige = 5
+	   DUA = {
+	   relation = { who = PIE value = -100 }
+	   diplomatic_influence = { who = PIE value = -200 }	
+       }
+	   ARA = { country_event = { id = 124266 days = 0 } }
+	   TUS = { country_event = { id = 124267 days = 0 } }
+       set_country_flag = SAR_TUS_intervention
+	   war = {
+			target = TUS
+				attacker_goal = {
+					casus_belli = conquest_any
+				}
+				defender_goal = {
+					casus_belli = make_puppet
+				}
+	   }	   
+	   ai_chance = { 
+	   factor = 70
+	   }
+	}
+	
+	option = { 
+	name = "SAR3.B"
+	   badboy = -5
+	   prestige = -5
+	   DUA = {
+	   relation = { who = PIE value = 100 }	
+       }
+	   set_country_flag = SAR_TUS_intervention
+	   ai_chance = { 
+	   factor = 30
+	   }
+	}
+}
+
+country_event = { 
+	id = 124266
+	title = "SAR4.T" #The Savoyards just isolated themselves
+	desc = "SAR4.D"
+	picture = "turin"
+		
+	is_triggered_only = yes
+
+	option = { 
+	name = "SAR4.A"
+	   badboy = 2
+	   prestige = 5
+	    war = {
+			target = PIE
+				attacker_goal = {
+					casus_belli = conquest_any
+				}
+				defender_goal = {
+					casus_belli = cut_down_to_size
+				}
+	   }	   
+	   ai_chance = { 
+	   factor = 60
+	   }
+	}
+	
+	option = { 
+	name = "SAR4.B"
+	   badboy = -2
+	   prestige = -5
+	   ai_chance = { 
+	   factor = 40
+	   }
+	}
+}
+
+country_event = { 
+	id = 124267
+	title = "SAR5.T" #Piedemont/Savoy/Venice has declared war on us (ITC or TUS)
+	desc = "SAR5.D"
+	picture = "sicilian_revolution"
+		
+	trigger = {  
+	   exists = yes
+	   tag = ITC
+	   OR = {
+	      war_with = PIE
+	      war_with = ARA
+		  war_with = VEN
+	   }
+	   has_country_modifier = the_compromesso
+	   NOT = { has_country_flag = Republican_ITC } 
+	   NOT = { has_country_modifier = a_new_italian_war }
+	}
+
+	mean_time_to_happen = { 
+	   days = 1
+	}
+
+	option = { 
+	name = "SAR5.A"
+ 	add_country_modifier = {
+	    name = a_new_italian_war
+		duration = 720
+	}
+	}
+}
+
+
+##### The Savoyard-ITC War - Triggered via Decision #####
+
+country_event = { 
+	id = 124268
+	title = "SAR6.T" #What do we do about Savoy?
+	desc = "SAR6.D"
+	picture = "turin"
+		
+	is_triggered_only = yes
+
+	option = { 
+	name = "SAR6.A"	
+	   badboy = -1
+       prestige = 5
+	   SAR = { country_event = { id = 124271 days = 3 } }
+	   ai_chance = { 
+	   factor = 90
+	      modifier = {
+		     factor = 0.8
+			 has_country_modifier = the_new_order_BRG
+	      }
+	   }
+	}
+	
+	option = { 
+	name = "SAR6.B"
+	   badboy = 10
+       prestige = 10
+	   war = {
+			target = SAR
+				attacker_goal = {
+					casus_belli = conquest_any
+				}
+				defender_goal = {
+					casus_belli = cut_down_to_size
+				}
+	   }
+	   # HOLY SHIT THEY ACTUALLY DID IT
+	   relation = { who = SAR value = -400 }
+	   diplomatic_influence = { who = SAR value = -400 }	
+	   relation = { who = ITC value = -400 }
+	   diplomatic_influence = { who = ITC value = -400 }
+	   ITC = { country_event = { id = 124270 days = 31 } } 
+	   ai_chance = { 
+	   factor = 10
+	      modifier = {
+		     factor = 3
+			 has_country_modifier = the_new_order_BRG
+	      }
+	      modifier = {
+		     factor = 0
+			 badboy = 0.6
+	      }
+	   }
+	}
+}
+
+country_event = { 
+	id = 124269
+	title = "SAR7.T" #What do we do about Piedemont?
+	desc = "SAR7.D"
+	picture = "turin"
+		
+	is_triggered_only = yes
+
+	option = { 
+	name = "SAR7.A"	
+	   badboy = -1
+       prestige = 5
+	   PIE = { country_event = { id = 124271 days = 3 } }
+	   ai_chance = { 
+	   factor = 90
+	      modifier = {
+		     factor = 0.8
+			 has_country_modifier = the_new_order_BRG
+	      }
+	   }
+	}
+	
+	option = { 
+	name = "SAR7.B"
+	   badboy = 10
+       prestige = 10
+	   war = {
+			target = PIE
+				attacker_goal = {
+					casus_belli = conquest_any
+				}
+				defender_goal = {
+					casus_belli = cut_down_to_size
+				}
+	   }
+	   # HOLY SHIT THEY ACTUALLY DID IT
+	   relation = { who = PIE value = -400 }
+	   diplomatic_influence = { who = PIE value = -400 }	
+	   relation = { who = ITC value = -400 }
+	   diplomatic_influence = { who = ITC value = -400 }
+	   ITC = { country_event = { id = 124270 days = 31 } } 
+	   ai_chance = { 
+	   factor = 10
+	      modifier = {
+		     factor = 3
+			 has_country_modifier = the_new_order_BRG
+	      }
+	      modifier = {
+		     factor = 0
+			 badboy = 0.6
+	      }
+	   }
+	}
+}
+
+country_event = { 
+	id = 124270
+	title = "SAR8.T" #The Emergency Council of Italy
+	desc = "SAR8.D"
+	picture = "turin"
+	
+	major = yes
+		
+	is_triggered_only = yes
+
+	option = { 
+	name = "SAR8.A"
+	    release_vassal = AVN
+		any_country = {
+			limit = {
+			    is_our_vassal = AVN
+			    NOT = { has_global_flag = AVIGNON_CRISIS }
+			 }
+			 release_vassal = AVN
+		}
+		change_tag = ITA
+		all_core = { remove_core = ITC }
+		add_accepted_culture = north_italian
+		add_accepted_culture = central_italian
+		add_accepted_culture = south_italian	
+		remove_country_modifier = the_compromesso
+		political_reform = federalism
+		random_owned = {
+			limit = { owner = { has_country_flag = this_is_tuscany government = democracy } }
+		    owner = { clr_country_flag = this_is_tuscany set_country_flag = tuscany_revolutionary }
+		}	
+		random_owned = {
+			limit = { owner = { has_country_flag = this_is_tuscany NOT = { government = democracy } } }
+		    owner = { clr_country_flag = this_is_tuscany }
+		}
+		random_owned = {
+			limit = {
+			   owner = { NOT = { tag = PIE } NOT = { has_global_flag = AVIGNON_CRISIS } OR = { government = theocracy government = absolute_monarchy government = prussian_constitutionalism government = hms_government government = fascist_monarchy }  }
+			}
+			owner =  { country_event = { id = 110660 days = 1 } }
+	     }
+		 random_owned = {
+			limit = {
+			   owner = { OR = { government = theocracy government = absolute_monarchy government = prussian_constitutionalism government = hms_government government = fascist_monarchy }  }
+			}
+			owner =  { country_event = { id = 124353 days = 0 } }
+	     }		 
+	}
+}
+
+country_event = { 
+	id = 124271
+	title = "SAR9.T" #FROMCOUNTRY wants to sponsor our unification of Italy if we give up Savoie
+	desc = "SAR9.D"
+	picture = "pact_of_piombieres"
+		
+	is_triggered_only = yes
+
+	option = { 
+	name = "SAR9.A"	
+	   prestige = 10
+	   relation = { who = FROM value = 400 }
+	   diplomatic_influence = { who = FROM value = 400 }	
+	   create_alliance = FROM
+       FROM = { country_event = { id = 124272 days = 1 } }   
+	   ai_chance = { 
+	   factor = 100
+	   }
+	}
+	
+	option = { 
+	name = "SAR9.B"	
+       prestige = -5
+	   ai_chance = { 
+	   factor = 0
+	   }
+    }
+}
+
+country_event = { 
+	id = 124272
+	title = "SAR10.T" #FROMCOUNTRY wants to sponsor our unification of Italy if we give up Savoie
+	desc = "SAR10.D"
+	picture = "pact_of_piombieres"
+		
+	is_triggered_only = yes
+
+	option = { 
+	name = "SAR10.A"	
+	   prestige = 10
+	   FROM = { country_event = { id = 124273 days = 7 } }     
+	}
+}
+	
+country_event = {
+
+	id = 124273
+	
+	is_triggered_only = yes
+	
+	major = yes
+
+	title = "SAR11.T"
+	desc = "SAR11.D"
+	picture = "turin"
+
+	option = {
+		name = "SAR11.A"
+		465 = {
+			remove_core = SAR
+			remove_core = LOM
+			remove_core = ARI
+			remove_core = ITA
+			remove_core = ITC
+			remove_core = PIE
+			add_core = GNV
+		}
+		466 = {
+			remove_core = SAR
+			remove_core = LOM
+			remove_core = ARI
+			remove_core = ITA
+			remove_core = ITC
+			remove_core = PIE
+			add_core = GNV
+		}
+		721 = {
+			remove_core = SAR
+			remove_core = LOM
+			remove_core = ARI
+			remove_core = ITA
+			remove_core = ITC
+			remove_core = PIE
+			add_core = GNV
+		}
+		609  = {
+			remove_core = SAR
+			remove_core = LOM
+			remove_core = ARI
+			remove_core = ITA
+			remove_core = ITC
+			remove_core = PIE
+			add_core = GNV
+		}	
+		3265  = {
+			remove_core = SAR
+			remove_core = LOM
+			remove_core = ARI
+			remove_core = ITA
+			remove_core = ITC
+			remove_core = PIE
+			add_core = GNV
+		}
+		any_owned = {
+		    limit = {
+		      is_core = GNV
+			}
+			secede_province = FROM
+	    }
+	    war = {
+			target = ITC
+				attacker_goal = {
+					casus_belli = conquest_any
+				}
+				defender_goal = {
+					casus_belli = conquest_any
+				}
+				call_ally = yes
+	    }
+		FROM = { set_country_flag = italian_sponsor }
+        ITC = { country_event = { id = 124267 days = 0 } }
+		any_country = { 
+		   limit = { 
+		      tag = ARA
+			  is_greater_power = yes
+			  exists = yes
+		   }
+		   country_event = { id = 124290 days = 1 }
+		}		
+	}
+}
+
+# Italian Depression Event - The Enforced Italy
+
+country_event = {
+
+	id = 124274
+	
+	is_triggered_only = yes
+	
+	major = yes
+
+	title = "SAR12.T"
+	desc = "SAR12.D"
+	picture = "turin"
+
+	option = {
+		name = "SAR12.A"
+		set_country_flag = weak_italy
+		465 = {
+			remove_core = SAR
+			remove_core = LOM
+			remove_core = ARI
+			remove_core = ITA
+			remove_core = ITC
+			remove_core = PIE
+			add_core = GNV
+		}
+		466 = {
+			remove_core = SAR
+			remove_core = LOM
+			remove_core = ARI
+			remove_core = ITA
+			remove_core = ITC
+			remove_core = PIE
+			add_core = GNV
+		}
+		721 = {
+			remove_core = SAR
+			remove_core = LOM
+			remove_core = ARI
+			remove_core = ITA
+			remove_core = ITC
+			remove_core = PIE
+			add_core = GNV
+		}
+		609  = {
+			remove_core = SAR
+			remove_core = LOM
+			remove_core = ARI
+			remove_core = ITA
+			remove_core = ITC
+			remove_core = PIE
+			add_core = GNV
+		}
+		3265  = {
+			remove_core = SAR
+			remove_core = LOM
+			remove_core = ARI
+			remove_core = ITA
+			remove_core = ITC
+			remove_core = PIE
+			add_core = GNV
+		}
+        any_owned = {
+		      limit = {
+                 is_core = GNV
+		      }  
+		      secede_province = FROM
+		}
+        NAP = { all_core = { remove_core = ITA } }
+        ITC = { remove_country_modifier = the_compromesso all_core = { remove_core = ITC } }		
+	    any_country = {
+		   limit = {
+		      primary_culture = north_italian
+		      NOT = { tag = PAP }
+		   }
+		   annex_to = THIS
+		}
+		FROM = { set_country_flag = italian_sponsor create_vassal = THIS create_vassal = PAP }
+        change_tag = ITA    
+	    add_accepted_culture = central_italian
+	    add_accepted_culture = north_italian
+        political_reform = federalism
+		random_owned = {
+			limit = { owner = { has_country_flag = this_is_tuscany government = democracy } }
+			owner = { clr_country_flag = this_is_tuscany set_country_flag = tuscany_revolutionary }
+		}	
+		random_owned = {
+			limit = { owner = { has_country_flag = this_is_tuscany NOT = { government = democracy } } }
+		    owner = { clr_country_flag = this_is_tuscany }
+		}
+		any_country = {
+		   limit = {
+		      owns = 470
+		      NOT = { has_global_flag = AVIGNON_CRISIS }
+		   }
+		   country_event = { id = 110658 days = 0 }
+		}
+	}
+}
+
+country_event = {
+
+	id = 124294
+	title = "SAR120.T"
+	desc = "SAR120.D"
+	picture = "christian_religion"
+	
+	fire_only_once = yes
+	
+	trigger = { 
+	   has_country_flag = italian_sponsor
+    }
+	
+	mean_time_to_happen = { 
+	   days = 1
+	}
+
+	option = {
+	    name = "SAR120.A"
+	    clr_country_flag = italian_sponsor
+		SAR = {
+           any_owned = {
+		      limit = {
+                 is_core = GNV
+		      }  
+		      add_core = THIS
+		      secede_province = THIS
+		   }
+	    }
+		PIE = {
+           any_owned = {
+		      limit = {
+                 is_core = GNV
+		      }  
+		      add_core = THIS
+		      secede_province = THIS
+		   }
+	    }
+		ITA = {
+           any_owned = {
+		      limit = {
+                 is_core = GNV
+		      }  
+		      add_core = THIS
+		      secede_province = THIS
+		   }
+	    }
+	}
+}
+
+################################## Italian Confederation ###############################
+
+# Unification of the Italian Confederation - Warning and Modifier Event
+
+country_event = {
+
+	id = 124275
+	title = "SAR13.T"
+	desc = "SAR13.D"
+	picture = "christian_religion"
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "SAR12.A"
+        political_reform = confederalism
+		add_country_modifier = { name = the_compromesso duration = 11680 }
+        # Add a massive amount of relations to VEN as they know that ITC could make a useful ally.
+        relation = { who = VEN value = 400 }
+		# Add relations to ARA and PIE as they know they could exploit this.
+        relation = { who = ARA value = 50 }	
+        relation = { who = PIE value = 50 }			
+	}
+}
+
+# Compromesso Two - PIE exists and is a monarchy
+
+country_event = {
+
+	id = 124276
+	title = "SAR14.T"
+	desc = "SAR14.D"
+	picture = "christian_religion"
+	
+	trigger = { 
+	   tag = ITC
+	   war = no		  
+	   NOT = { has_country_modifier = the_compromesso }
+	   NOT = { has_global_flag = savoy_of_italy }
+	   NOT = { has_country_flag = compromesso_two }
+	   PIE = {
+	      exists = yes
+		  OR = {
+		     government = absolute_monarchy
+		     government = prussian_constitutionalism
+		     government = hms_government
+		     government = fascist_monarchy
+		  }	 
+       }
+	}
+	
+	mean_time_to_happen = { 
+	   months = 3
+	}
+	
+	option = {
+		name = "SAR14.A"		
+        set_country_flag = compromesso_two
+		PIE = { set_country_flag = compromesso_two country_event = { id = 124279 days = 3 } }
+	}
+}
+
+# Compromesso - No PIE or PIE is not a monarchy
+
+country_event = {
+
+	id = 124278
+	title = "SAR15.T"
+	desc = "SAR15.D"
+	picture = "christian_religion"
+	
+	trigger = { 
+	   tag = ITC
+	   war = no		 
+	   NOT = { has_country_modifier = the_compromesso }   
+	   NOT = { has_country_flag = Republican_ITC } 
+	   NOT = { has_country_flag = compromesso_two }
+	   PIE = {
+	     OR = {
+		    exists = no
+			NOT = { 
+		       government = absolute_monarchy
+		       government = prussian_constitutionalism
+		       government = hms_government
+		       government = fascist_monarchy	
+           }
+           }
+       }
+    }
+	
+	mean_time_to_happen = { 
+	   months = 3
+	}
+	
+	option = {
+		name = "SAR15.A"
+        set_country_flag = compromesso_two
+		ITC = { set_country_flag = compromesso_two country_event = { id = 124281 days = 7 } }
+	}
+}
+
+# PIE Compromesso Response - Let ITC die or abuse the situation.
+
+country_event = {
+
+	id = 124279
+	title = "SAR16.T"
+	desc = "SAR16.D"
+	picture = "christian_religion"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "SAR16.A"
+        ITC = { release_vassal = AVN country_event = { id = 124280 days = 3 } }
+		create_vassal = ITC
+		set_country_flag = savoyard_blocker
+		any_country = {
+		   limit = {
+		      owns = 470
+		      NOT = { has_global_flag = AVIGNON_CRISIS }
+		   }
+		   country_event = { id = 110658 days = 0 }
+		}
+	    ai_chance = { 
+	    factor = 80
+	    }
+	}
+	
+	option = {
+		name = "SAR16.B"
+        ITC = { release_vassal = AVN country_event = { id = 124280 days = 3 } }
+		create_vassal = ITC
+		any_country = {
+		   limit = {
+		      owns = 470
+		      NOT = { has_global_flag = AVIGNON_CRISIS }
+		   }
+		   country_event = { id = 110658 days = 0 }
+		}
+		set_country_flag = savoyard_blocker
+		change_tag_no_core_switch = ITC
+	    ai_chance = { 
+	    factor = 0
+	    }
+	}
+	
+	option = {
+		name = "SAR16.C"
+        prestige = 10
+		ITC = { country_event = { id = 124281 days = 7 } }
+	    ai_chance = { 
+	    factor = 20
+	    }
+	}
+}
+
+# PIE has hijacked the Second Compromesso and appointed its own government. Annex PIE into ITC. Check to see if Aragon is able to intervene
+
+country_event = {
+
+	id = 124280
+	title = "SAR17.T"
+	desc = "SAR17.D"
+	picture = "christian_religion"
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "SAR17.A"
+		prestige = -5
+		set_country_flag = savoyard_blocker
+		set_global_flag = aragon_intervention_check
+		PIE = { release_vassal = ITC clr_country_flag = savoyard_blocker }
+        inherit = PIE		
+	}
+}
+
+# The Second Compromesso is starting to collapse. Will they manage to stabilize it before it falls apart?
+
+country_event = {
+
+	id = 124281
+	title = "SAR18.T"
+	desc = "SAR18.D"
+	picture = "sicilian_revolution"
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "SAR18.A"
+		prestige = -5
+	    any_pop = { militancy = 2 }
+		random_list = {
+		    25 = { country_event = { id = 124282 days = 7 } }
+			75 = { country_event = { id = 124283 days = 7 } }		
+		}	
+	}
+}
+
+# The Second Compromesso has survived through new political arragements which has created a further solidified state. The Confederation has survived. Barely.
+
+country_event = {
+
+	id = 124282
+	title = "SAR19.T"
+	desc = "SAR19.D"
+	picture = "sicilian_revolution"
+	
+	is_triggered_only = yes
+	
+	major = yes
+
+	option = {
+		name = "SAR19.A"
+		prestige = 10
+	    any_pop = { militancy = -2 }
+        ARA = { set_country_flag = ITC_stable }		
+	}
+}
+
+### The Confederation has collapsed  ###
+
+country_event = {
+
+	id = 124283
+	title = "SAR20.T"
+	desc = "SAR20.D"
+	picture = "sicilian_revolution"
+	
+	is_triggered_only = yes
+	
+	major = yes
+
+	option = {
+		name = "SAR20.A"
+		prestige_factor = -0.5	
+		clr_country_flag = savoyard_blocker		
+		all_core = { remove_core = ITC }
+		remove_accepted_culture = north_italian
+		change_tag = TUS
+		TUS_744 = { add_core = TUS }	
+	    any_owned = {
+	       limit = {
+	          is_core = PAP
+	       }
+	       secede_province = PAP
+	    }
+	    any_owned = {
+	       limit = {
+	          is_core = FRR
+	       }
+	       secede_province = FRR
+	    }
+	    any_owned = {
+	       limit = {
+	          is_core = CRS
+	       }
+	       secede_province = CRS
+	    }
+	    any_owned = {
+	       limit = {
+	          is_core = SRD
+	       }
+	       secede_province = SRD
+	    }
+	    any_owned = {
+	       limit = {
+	          is_core = PAR
+	       }
+	       secede_province = PAR
+	    }
+	    any_owned = {
+	       limit = {
+	          is_core = MOD
+	       }
+	       secede_province = MOD
+	    }
+	    any_owned = {
+	       limit = {
+	          is_core = GEN
+	       }
+	       secede_province = GEN
+	    }
+	    any_owned = {
+	       limit = {
+	          is_core = SAR
+	       }
+	       secede_province = SAR
+	    }	
+	    any_owned = {
+	       limit = {
+	          is_core = LOM
+	       }
+	       secede_province = LOM
+	    }		
+		any_country = { 
+		   limit = {
+		      exists = yes
+		      OR = {
+			    tag = ARA
+				tag = ARI
+		      }			  
+			  PAP = { 
+			     exists = yes 
+				 OR = { 
+				    is_vassal = no 
+					vassal_of = ARA 
+					vassal_of = ARI 
+			     } 
+			  }			 
+		   }
+		   set_country_flag = BLOCK_ARI
+		   country_event = { id = 124289 days = 1 }
+		}
+	}
+}
+
+# Aragon is unable or refuses to intervene. Form ITA.
+
+country_event = {
+
+	id = 124284
+	title = "SAR21.T"
+	desc = "SAR21.D"
+	picture = "christian_religion"
+	major = yes
+	
+	trigger = { 
+	   tag = ITC
+	   ARA = { NOT = { is_greater_power = yes } }
+	   has_global_flag = aragon_intervention_check
+    }
+	
+	mean_time_to_happen = { 
+	   days = 3
+	}
+	
+	immediate = { clr_global_flag = aragon_intervention_check }
+
+	option = {
+		name = "SAR21.A"
+		random_owned = {
+			limit = { owner = { has_country_flag = this_is_tuscany government = democracy } }
+			owner = { clr_country_flag = this_is_tuscany set_country_flag = tuscany_revolutionary }
+		}	
+		random_owned = {
+			limit = { owner = { has_country_flag = this_is_tuscany NOT = { government = democracy } } }
+		    owner = { clr_country_flag = this_is_tuscany }
+		}
+		clr_country_flag = savoyard_blocker
+		prestige = 10
+		all_core = { remove_core = ITC }
+		add_accepted_culture = north_italian
+		add_accepted_culture = central_italian
+		add_accepted_culture = south_italian	
+		political_reform = unitary	
+		change_tag = ITA	
+	}
+}
+
+# Aragon Intervention in ITC Collapse - PIE
+
+country_event = {
+
+	id = 124285
+	title = "SAR22.T"
+	desc = "SAR22.D"
+	picture = "christian_religion"
+	
+	trigger = { 
+	   tag = ARA
+	   is_greater_power = yes
+	   has_global_flag = aragon_intervention_check
+    }
+	
+	mean_time_to_happen = { 
+	   days = 3
+	}
+
+	option = {
+		name = "SAR22.A"
+		prestige = 10
+		clr_global_flag = aragon_intervention_check
+		ARA = { inherit = PAP }
+		ITC = { any_owned = { limit = { is_core = PAP } secede_province = ARA } country_event = { id = 124286 days = 0 } }
+	    ai_chance = { 
+	       factor = 80
+	    }		
+	}
+	
+	option = {
+		name = "SAR22.B"
+		prestige = -10
+		clr_global_flag = aragon_intervention_check
+		ITC = { country_event = { id = 124284 days = 3 } }
+	    ai_chance = { 
+	       factor = 20
+		      modifier = {
+		         factor = 0
+			     has_country_flag = ARA_ITALIAN_TAKEOVER
+	          }
+	    }	
+	}
+}
+
+# Aragon Intervention in ITC Collapse - PIE Responce
+
+country_event = {
+
+	id = 124286
+	title = "SAR23.T"
+	desc = "SAR23.D"
+	picture = "christian_religion"
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "SAR23.A"
+		prestige = 10
+		set_global_flag = the_liberation_war_ITC
+	    war = {
+			target = ARA
+			attacker_goal = {
+				casus_belli = acquire_any_state
+				state_province_id = 752
+			}
+
+			defender_goal = {
+				casus_belli = conquest_any
+			}
+			call_ally = yes
+		}
+	    ai_chance = { 
+	       factor = 100
+	    }		
+	}
+	
+	option = {
+		name = "SAR22.B"
+		prestige = -20
+		capital = 720
+	    ai_chance = { 
+	       factor = 0
+	    }	
+	}
+}
+
+# Aragon Intervention in ITC Collapse - PIE Victory - Form Italy
+
+country_event = {
+
+	id = 124287
+	title = "SAR24.T"
+	desc = "SAR24.D"
+	picture = "christian_religion"
+	
+	major = yes
+	
+	trigger = { 
+	   tag = ITC
+	   war = no
+	   owns = 752
+	   has_global_flag = the_liberation_war_ITC
+    }
+	
+	mean_time_to_happen = { 
+	   days = 1
+	}
+
+	option = {
+		name = "SAR24.A"
+		prestige = 20
+		inherit = PAP
+		random_owned = {
+			limit = { owner = { has_country_flag = this_is_tuscany government = democracy } }
+			owner = { clr_country_flag = this_is_tuscany set_country_flag = tuscany_revolutionary }
+		}	
+		random_owned = {
+			limit = { owner = { has_country_flag = this_is_tuscany NOT = { government = democracy } } }
+		    owner = { clr_country_flag = this_is_tuscany }
+		}
+		clr_country_flag = savoyard_blocker
+		clr_global_flag = the_liberation_war_ITC	
+		all_core = { remove_core = ITC }
+		add_accepted_culture = north_italian
+		add_accepted_culture = central_italian
+		add_accepted_culture = south_italian	
+		political_reform = unitary	
+		change_tag = ITA			
+	}
+}
+
+# Aragon Intervention in ITC Collapse - ARA/ARI Victory either total or ITC did not liberate PAP
+
+country_event = {
+
+	id = 124288
+	title = "SAR25.T"
+	desc = "SAR25.D"
+	picture = "christian_religion"
+	
+	major = yes
+	
+	trigger = {
+       OR = {	
+	      tag = ARA
+          tag = ARI
+       }	
+       exists = yes	   
+	   war = no
+	   owns = 752
+	   has_global_flag = the_liberation_war_ITC
+    }
+	
+	mean_time_to_happen = { 
+	   days = 1
+	}
+
+	option = {
+		name = "SAR25.A"
+		prestige = 20	
+		any_country = {
+		   limit = {
+		      tag = ITC
+		      exists = yes
+		   }
+		   country_event = { id = 124283 days = 1 }
+		}
+		any_country = {
+		   limit = {
+		      tag = ITC
+		      exists = no
+		   }
+		   clr_country_flag = savoyard_blocker
+		}
+		clr_global_flag = the_liberation_war_ITC
+		clr_country_flag = savoyard_blocker			
+	}
+}
+
+# Aragon Intervention in ITC Collapse - ITC Collapsed and ARA is still GP. Creating Protectorate in PAP.
+
+country_event = {
+
+	id = 124289
+	title = "SAR26.T"
+	desc = "SAR26.D"
+	picture = "sicilian_revolution"
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "SAR26.A"
+		prestige = 5
+		clr_country_flag = BLOCK_ARI
+        inherit = PAP		
+	}
+}
+
+############################ ARAGON'S PATH TO FORMING ARI #################################
+
+# Aragon Intervention if PIE declares war on ITC - This event will warn the fact that it could start a war with the Anglois or Burgundians but its also the last chance Aragon has
+
+country_event = {
+
+	id = 124290
+	title = "SAR27.T"
+	desc = "SAR27.D"
+	picture = "sicilian_revolution"
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "SAR27.A"
+	    war = {
+			target = ITC
+			attacker_goal = {
+				casus_belli = conquest_any
+			}
+			defender_goal = {
+				casus_belli = cut_down_to_size
+			}
+			call_ally = yes
+		}	
+        PIE = { country_event = {  id = 124291 days = 0 } }		
+	    ai_chance = { 
+	       factor = 50
+			modifier = {
+				factor = 0
+				truce_with = ITC
+			}
+	    }		
+	}
+	
+	option = {
+		name = "SAR27.B"
+		prestige = -5
+	    ai_chance = { 
+	       factor = 50
+	    }		
+	}
+}
+
+country_event = {
+
+	id = 124291
+	title = "SAR28.T"
+	desc = "SAR28.D"
+	picture = "sicilian_revolution"
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "SAR28.A"
+		prestige = 1
+	    war = {
+			target = ARA
+			attacker_goal = {
+				casus_belli = cut_down_to_size
+			}
+			defender_goal = {
+				casus_belli = cut_down_to_size
+			}
+			call_ally = yes
+		}	
+	    ai_chance = { 
+	       factor = 75
+	    }		
+	}
+	
+	option = {
+		name = "SAR28.B"
+		prestige = -5
+	    ai_chance = { 
+	       factor = 25
+	    }		
+	}
+}
+
+# Italian Aragon burns
+
+country_event = {
+
+	id = 124292
+	title = "SAR29.T"
+	desc = "SAR29.D"
+	picture = "sicilian_revolution"
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "SAR29.A"
+		add_country_modifier = { name = sicily_burns duration = -1 }
+        relation = { who = TUS value = -400 }	
+	}
+}
+
+# Italian Aragon Stabilizes
+
+country_event = {
+
+	id = 124293
+	title = "SAR30.T"
+	desc = "SAR30.D"
+	picture = "sicilian_revolution"
+	
+	trigger = { 
+	tag = ARA
+	year = 1851
+	has_country_modifier = sicily_burns
+	}
+
+	mean_time_to_happen = { 
+	months = 1
+	}	
+	
+	option = {
+		name = "SAR30.A"
+		prestige = 5
+		remove_country_modifier = sicily_burns		
+	}
+}
+
+#### Burgundy wants Savoie and for us to remove our claims on it. Give it to them or get fucked.
+
+country_event = {
+
+	id = 124295
+	title = "SAR31.T"
+	desc = "SAR31.D"
+	picture = "pact_of_piombieres"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "SAR31.A"
+		prestige = -10
+		FROM = {
+		   relation = { who = THIS value = 200 }	
+		}		
+		any_owned = { 
+		   limit = { is_core = BRG } 
+		   remove_core = ITA
+		   remove_core = ARI
+		   secede_province = FROM 
+		}
+		any_owned = { 
+		   limit = { is_core = PBG } 
+		   remove_core = ITA
+		   remove_core = ARI
+		   secede_province = FROM 
+		}
+	    ai_chance = { 
+	       factor = 50
+		     modifier = {
+			    factor = 1.5
+				exists = BRG
+				relation = { who = BRG value = 100 }
+		     }
+		     modifier = {
+			    factor = 1.5
+				exists = PBG
+				relation = { who = PBG value = 100 }
+		     }
+		     modifier = {
+			    factor = 1.5
+				exists = BRG
+				relation = { who = BRG value = 50 }
+		     }
+		     modifier = {
+			    factor = 1.5
+				exists = PBG
+				relation = { who = PBG value = 50 }
+		     }
+		     modifier = {
+			    factor = 0.75
+				exists = PBG
+				relation = { who = PBG value = -50 }
+		     }
+		     modifier = {
+			    factor = 0.75
+				exists = BRG
+				relation = { who = BRG value = -50 }
+		     }
+		     modifier = {
+			    factor = 0.5
+				exists = PBG
+				relation = { who = PBG value = -100 }
+		     }
+		     modifier = {
+			    factor = 0.5
+				exists = BRG
+				relation = { who = BRG value = -100 }
+		     }
+		     modifier = {
+			    factor = 0
+				exists = PBG
+				relation = { who = PBG value = -150 }
+		     }
+		     modifier = {
+			    factor = 0
+				exists = BRG
+				relation = { who = BRG value = -150 }
+		     }			 
+	    }				
+	}
+	
+	option = {
+		name = "SAR31.B"
+		prestige = 10
+		FROM = {
+		   relation = { who = THIS value = -400 }
+		   diplomatic_influence = { who = THIS value = -400 }
+           leave_alliance = THIS		
+		}		
+	    ai_chance = { 
+	       factor = 50
+		     modifier = {
+			    factor = 0.25
+				exists = BRG
+				relation = { who = BRG value = 100 }
+		     }
+		     modifier = {
+			    factor = 0.25
+				exists = PBG
+				relation = { who = PBG value = 100 }
+		     }
+		     modifier = {
+			    factor = 0.5
+				exists = BRG
+				relation = { who = BRG value = 50 }
+		     }
+		     modifier = {
+			    factor = 0.5
+				exists = PBG
+				relation = { who = PBG value = 50 }
+		     }
+		     modifier = {
+			    factor = 1.25
+				exists = PBG
+				relation = { who = PBG value = -50 }
+		     }
+		     modifier = {
+			    factor = 1.25
+				exists = BRG
+				relation = { who = BRG value = -50 }
+		     }
+		     modifier = {
+			    factor = 1.5
+				exists = PBG
+				relation = { who = PBG value = -100 }
+		     }
+		     modifier = {
+			    factor = 1.5
+				exists = BRG
+				relation = { who = BRG value = -100 }
+		     }
+		     modifier = {
+			    factor = 2
+				exists = PBG
+				relation = { who = PBG value = -150 }
+		     }
+		     modifier = {
+			    factor = 2
+				exists = BRG
+				relation = { who = BRG value = -150 }
+		     }			 
+	    }		
+	}
+}
+
+# Triggers if Tuscany fails badly 
+
+country_event = {
+	id = 598026
+	title = "EVTNAME598026"
+	desc = "EVTDESC598026"
+	picture = "christian_religion"
+
+	trigger = { 
+	tag = ARA
+	year = 1860
+	NOT = { war = yes }
+	TUS = { 
+	   exists = yes 
+	   OR = { 
+	      government = democracy 
+	      government = parliamentary_republic 
+	      government = socialist_republic 
+	   } 
+	   TUS = {
+	      OR = {
+	         has_country_flag = REV_TUS
+		     has_country_flag = failed_TUS 
+	      }
+	   }
+	   NOT = { vassal_of = ARA } 
+   }
+	NOT = { has_country_flag = TUS_failure_ARA }
+	}
+	
+	mean_time_to_happen = { 
+	months = 1
+	}
+	
+	option = {
+		name = "EVTOPTA598026" 
+		set_country_flag = TUS_failure_ARA
+		leave_alliance = TUS
+		diplomatic_influence = {
+				who = TUS
+				value = -400
+		}
+		relation = {
+				who = TUS
+				value = -400
+		}
+		casus_belli = {
+			target = TUS
+			type = make_puppet
+			months = 24
+		}
+		war = {
+			target = TUS
+			attacker_goal = {
+				casus_belli = make_puppet
+			}
+			defender_goal = {
+				casus_belli = status_quo
+			}
+		}
+	}
+}
+	
+## Italian Triggered German Revolution ###
+
+#### THIS CAN NEVER TRIGGER CURRENTLY ####
+
+country_event = {
+	id = 123111 # The Congress of Roma
+	title = "GER1.T"
+	desc = "GER1.D"
+	picture = "german_radicals"
+	
+	trigger = { 
+	tag = ITA 
+	has_global_flag = revolution_germany 
+	NOT = { has_country_flag = roma_congress } 
+	}
+	
+	mean_time_to_happen = { months = 3 }
+	
+	option = { 
+	name = "123111.A"
+	set_country_flag = roma_congress
+	relation = { who = BRG value = -150 }
+	relation = { who = BOH value = -150 }
+	#BAV = { country_event = { id = 123116 days = 60 } }
+	random_country = {
+			limit = { 
+				tag = THIS
+				exists = DUA
+				NOT = { 428 = { owned_by = DUA } }
+			}
+	country_event = 123112
+		}
+	}
+}
+
+country_event = {
+	id = 123112 # A Pact with DUA ?
+	title = "GER2.T"
+	desc = "GER2.D"
+	
+	is_triggered_only = yes 
+	
+	option = { 
+	name = "123112.A"
+	DUA = { country_event = 123113 }
+	ai_chance = {
+		factor = 50
+	}
+	}
+	
+	option = { 
+	name = "123112.B"
+	prestige = 5 
+	ai_chance = {
+		factor = 50
+		}
+	}
+}
+
+### Cleanup ####
+
+country_event = {
+	id = 123127
+	title = "Annexation by Italy"
+	desc = "We should really not exist as a nation after the formation of Italy."
+	
+	trigger = { 
+	tag = GEN
+	vassal_of = ITA
+	ITA = { exists = yes }
+	NOT = { ITA = { has_country_flag = GEN_inherited } } 
+	war = no
+	}
+	
+	mean_time_to_happen = { days = 7 }
+	
+	option = { 
+	name = "Its time to join the Italian Union!"
+	ITA = { inherit = THIS }
+	ITA = { set_country_flag = GEN_inherited }
+	}
+}
+
+####################################
+### Status of Greece and Athesia ###
+####################################
+
+country_event = { ##Status of Greece
+	id = 36754
+	title = "ETR24.T"
+	desc = "ETR24.D"
+	
+	trigger = { 
+	tag = ITA 
+	owns = 834 
+	NOT = { has_country_flag = greece_status } 	
+	NOT = { has_country_flag = greek_integration }
+	}
+	
+	mean_time_to_happen = { 
+	months = 25
+	}
+	
+	option = { 
+	name = "ETR24.A"
+	set_country_flag = greece_status
+	release_vassal = GRE 
+	GRE = { capital = 834 }
+	create_alliance = GRE 
+	}
+	
+	option = { 
+	name = "ETR24.B"
+	set_country_flag = greece_status
+	badboy = 3
+	any_owned = { 
+	   limit = { OR = { is_core = CRE is_core = CYP } }
+	   remove_core = GRE
+	}
+	release_vassal = GRE 
+	GRE = { capital = 834 }
+	create_alliance = GRE 
+	}
+	
+	option = { 
+	name = "ETR24.C"
+	set_country_flag = greece_status
+	badboy = 10 
+	}
+}
+
+country_event = { ##Status of Athesia
+	id = 36755
+	title = "ETR25.T"
+	desc = "ETR25.D"
+	
+	trigger = { 
+	tag = ITA 
+	owns = 199 
+	}
+	
+	mean_time_to_happen = { 
+	months = 70 
+	modifier = { 
+	factor = 0.8 
+	year = 1870 	
+		}
+	modifier = { 
+	factor = 0.8 
+	year = 1880 	
+		}
+	modifier = { 
+	factor = 0.8 
+	year = 1890 	
+		}
+	modifier = { 
+	factor = 0.5 
+	year = 1900 	
+		}
+	}
+	
+	option = { 
+	name = "ETR25.A"
+	release_vassal = ATS 
+	relation = { who = ATS value = 200 }
+	diplomatic_influence = { who = ATS value = 200 }
+	ai_chance = { factor = 50 
+	modifier = { 
+	factor = 2 
+	year = 1900 
+			}
+		}
+	}
+	
+	option = { 
+	name = "ETR25.B"
+	ai_chance = { factor = 50 }
+	}
+}
+
+###########################################################
+#### Italy Version of the Pope Chain - 124350+ ############
+###########################################################
+
+######## Triggered by Specific Conditions - The Pope Chain ################
+
+######## If the Pope considers the government illegitimate then he will screw with the government #####
+
+####### The idea of a republican italy personally offends me. Go to hell. #########
+
+country_event = {
+	id = 124350
+	title = "PAPAL1.T" 
+	desc = "PAPAL1.D" 
+	#picture = "ARI_throne"
+	
+	trigger = { 
+	   tag = ITA
+	   owns = 749
+	   NOT = {
+	      OR = { 
+		    government = hms_government
+			government = prussian_constitutionalism
+			government = absolute_monarchy
+			government = theocracy
+	      }
+	   }
+	   NOT = { has_country_flag = papa_dicit_ad_infernum } 
+	}
+	
+	mean_time_to_happen = { 
+	days = 7
+	}
+	
+	option = { 
+	name = "PAPAL1.A" 
+	any_pop = { 
+		limit = { 
+			has_pop_religion = catholic		
+		}
+		militancy = 1
+		ideology = {
+		     value = reactionary
+			 factor = 0.1
+		}		
+	}
+	any_country = {
+	    limit = {
+			religion = catholic
+		}
+		relation = { who = THIS value = -50 }
+	}
+	add_country_modifier = {
+	    name = ARI_papal_interference
+		duration = -1
+	}	
+	set_country_flag = papa_dicit_ad_infernum
+	}
+}
+
+####### You oppitunistic assholes - Borgia Italy #########
+
+country_event = {
+	id = 124351
+	title = "PAPAL2.T" 
+	desc = "PAPAL2.D" 
+	#picture = "ARI_throne"
+	
+	trigger = { 
+	   tag = ITA
+	   owns = 749
+	   OR = { 
+		  government = hms_government
+	      government = prussian_constitutionalism
+		  government = absolute_monarchy
+	   }
+	   has_country_flag = italy_is_borg
+	   NOT = { has_country_flag = papa_dicit_ad_infernum } 
+	}
+	
+	mean_time_to_happen = { 
+	days = 7 
+	}
+	
+	option = { 
+	name = "PAPAL2.A" 
+	clr_country_flag = italy_is_borg
+	any_pop = { 
+		limit = { 
+			has_pop_religion = catholic		
+		}
+		militancy = 1
+		ideology = {
+		     value = reactionary
+			 factor = 0.1
+		}	
+	}
+	any_country = {
+	    limit = {
+			religion = catholic
+		}
+		relation = { who = THIS value = -50 }
+	}
+	add_country_modifier = {
+	    name = ARI_papal_interference
+		duration = -1
+	}
+	set_country_flag = papa_dicit_ad_infernum
+	}
+}
+
+####### I already exccmmunicated you - Valois Italy #########
+
+country_event = {
+	id = 1243510
+	title = "PAPAL20.T" 
+	desc = "PAPAL20.D" 
+	#picture = "ARI_throne"
+	
+	is_triggered_only = yes
+	
+	option = { 
+	name = "PAPAL2.A" 
+	any_pop = { 
+		limit = { 
+			has_pop_religion = catholic		
+		}
+		militancy = 1
+		ideology = {
+		     value = reactionary
+			 factor = 0.1
+		}	
+	}
+	any_country = {
+	    limit = {
+			religion = catholic
+		}
+		relation = { who = THIS value = -50 }
+	}
+	add_country_modifier = {
+	    name = ARI_papal_interference
+		duration = -1
+	}
+	set_country_flag = papa_dicit_ad_infernum
+	}
+}
+
+####### The Prisoner in the Vatican - Non Borgia Monarchist Italy #########
+
+country_event = {
+	id = 124352
+	title = "PAPAL3.T" 
+	desc = "PAPAL3.D" 
+	#picture = "ARI_throne"
+	
+	trigger = { 
+	   tag = ITA
+	   owns = 749
+	   OR = { 
+		  government = hms_government
+	      government = prussian_constitutionalism
+		  government = absolute_monarchy
+	   }
+	   NOT = { has_country_flag = italy_is_borg }
+	   NOT = { has_country_flag = papa_dicit_ad_infernum } 
+	}
+	
+	mean_time_to_happen = { 
+	days = 7 
+	}
+	
+	option = { 
+	name = "PAPAL3.A" 
+	any_pop = { 
+		limit = { 
+			has_pop_religion = catholic		
+		}
+		ideology = {
+		     value = reactionary
+			 factor = 0.05
+		}	
+	}
+	any_country = {
+	    limit = {
+			religion = catholic
+		}
+		relation = { who = THIS value = -25 }
+	}
+	add_country_modifier = {
+	    name = ARI_prisoner_vatican
+		duration = -1
+	}
+	set_country_flag = papa_dicit_ad_infernum
+	}
+}
+
+######### Confederal Italy - Pope got literally everything he could ever want so enjoy having no money. ########
+
+country_event = { 
+	id = 124353
+	title = "PAPAL4.T" 
+	desc = "PAPAL4.D"
+	#picture = "ARI_throne"
+		
+	trigger = { 
+	   tag = ITA
+	   owns = 749
+	   government = theocracy
+	   NOT = { has_country_flag = papa_dicit_ad_infernum } 
+	}
+	
+	mean_time_to_happen = { 
+	days = 7 
+	}
+	
+	### HE PLAYED US LIKE A DAMN FIDDLE...
+
+	option = { 
+	name = "PAPAL4.A"
+	set_country_flag = ARI_end_lateran
+	set_country_flag = ARI_successful_lateran
+    prestige = -20	
+	set_country_flag = ITA_AVI_PAP_SETUP
+	set_country_flag = ITA_ROM_PAP_SETUP
+    468 = { add_province_modifier = { name = ARI_papal_autonomy duration = -1 } }
+	add_country_modifier = {
+        name = ARI_ITA_catholic_schools
+		duration = -1
+	}
+	add_country_modifier = {
+        name = ARI_ITA_catholic_tax
+		duration = -1
+	}
+	any_pop = { 
+		limit = { 
+			has_pop_religion = catholic		
+		}
+		ideology = {
+		     value = conservative
+			 factor = 0.1
+		}
+        dominant_issue = { factor = 0.1 value = moralism }					
+	}
+	any_pop = { 
+		limit = { 
+			NOT = { has_pop_religion = catholic	}
+		}
+		ideology = {
+		     value = socialist
+			 factor = 0.1
+		}	
+        dominant_issue = { factor = 0.1 value = pro_atheism }		
+	}
+	any_pop = {
+		scaled_consciousness = {
+				ideology = reactionary
+				factor = -5
+		}
+		scaled_militancy = {
+				ideology = reactionary
+				factor = -5
+		}
+		scaled_consciousness = {
+				ideology = paternal
+				factor = -5
+		}
+		scaled_militancy = {
+				ideology = paternal
+				factor = -5
+		}
+		scaled_consciousness = {
+				ideology = liberal
+				factor = 1
+		}
+		scaled_militancy = {
+				ideology = liberal
+				factor = 1
+		}
+		scaled_consciousness = {
+				ideology = anarcho_liberal
+				factor = 2
+		}
+		scaled_militancy = {
+				ideology = anarcho_liberal
+				factor = 2
+		}
+		scaled_militancy = {
+				ideology = market_liberal
+				factor = -3
+		}
+		scaled_consciousness = {
+				ideology = market_liberal
+				factor = -3
+		}
+		scaled_consciousness = {
+				ideology = conservative
+				factor = -3
+		}
+		scaled_militancy = {
+				ideology = conservative
+				factor = -3
+		}
+		scaled_consciousness = {
+				ideology = socialist
+				factor = 2
+		}
+		scaled_militancy = {
+				ideology = socialist
+				factor = 2
+		}
+		scaled_consciousness = {
+				ideology = communist
+				factor = 3
+		}
+		scaled_militancy = {
+				ideology = communist
+				factor = 3
+		}
+	}
+	set_country_flag = papa_dicit_ad_infernum  	
+	}
+}
+
+######### The Elephant in the Room - Neutral or Borgia Kingdom wants to resolve the Pope Problem ########
+
+#### He might be actively pissed off at the Borgias but at the end of the day he is still a monarchy unlike the people below.
+
+country_event = { 
+	id = 124354
+	title = "PAPAL5.T" 
+	desc = "PAPAL5.D"
+	#picture = "ARI_throne"
+		
+	is_triggered_only = yes
+
+	option = { 
+	name = "PAPAL5.A" 
+	set_country_flag = italian_monarchy_active
+	any_pop = { 
+		limit = { 
+			has_pop_religion = catholic		
+		}
+		militancy = -1
+		ideology = {
+		     value = conservative
+			 factor = 0.1
+		}		
+	}
+	country_event = { id = 124355 days = 7 }  
+    }  	
+}
+
+######### The Pope agrees to treaty negotiations ########
+
+country_event = { 
+	id = 124355
+	title = "PAPAL6.T" 
+	desc = "PAPAL6.D" 
+	#picture = "ARI_throne"
+		
+	is_triggered_only = yes
+
+	option = { 
+	name = "PAPAL6.A" 
+	any_pop = { 
+		limit = { 
+			has_pop_religion = catholic		
+		}
+		militancy = -1
+		ideology = {
+		     value = conservative
+			 factor = 0.1
+		}		
+	}
+	country_event = { id = 124358 days = 14 }  
+    }  	
+}
+
+######### Our Main Problem - The Church ########
+
+######### This is for Republican Italy #########
+
+country_event = { 
+	id = 124356
+	title = "PAPAL7.T" 
+	desc = "PAPAL7.D" 
+	#picture = "ARI_throne"
+		
+	is_triggered_only = yes
+
+	option = { 
+	name = "PAPAL7.A" 
+	set_country_flag = italian_republic_active
+	any_pop = { 
+		limit = { 
+			has_pop_religion = catholic		
+		}
+		militancy = 1
+		ideology = {
+		     value = reactionary
+			 factor = 0.1
+		}	
+        dominant_issue = { factor = 0.05 value = moralism }		
+	}
+	country_event = { id = 124357 days = 7 }  
+    }  	
+}
+
+######### Meeting the Legate ########
+
+country_event = { 
+	id = 124357
+	title = "PAPAL8.T" 
+	desc = "PAPAL8.D"  
+	picture = "lateran_accords"
+		
+	is_triggered_only = yes
+
+	option = { 
+	name = "PAPAL8.A" 
+	random_list = {
+    30 = { 
+	prestige = -10
+	any_pop = { 
+		limit = { 
+			has_pop_religion = catholic		
+		}
+		militancy = 1
+		ideology = {
+		     value = reactionary
+			 factor = 0.1
+		}	
+        dominant_issue = { factor = 0.05 value = moralism }		
+	}
+	country_event = { id = 124364 days = 14 }  
+    }  	
+    70 = { 
+	any_pop = { 
+		limit = { 
+			has_pop_religion = catholic		
+		}
+		militancy = -1
+		ideology = {
+		     value = conservative
+			 factor = 0.1
+		}		
+	}
+	country_event = { id = 124358 days = 14 }  
+    } 
+	}
+	}
+}
+
+######### The Lateran Negotiations - The matter of sovereignty ########
+
+country_event = { 
+	id = 124358
+	title = "PAPAL9.T" 
+	desc = "PAPAL9.D"  
+	picture = "lateran_accords"
+		
+	is_triggered_only = yes
+	
+	# Base Variable is 1
+	
+	# We will give him full Autonomy in the Vatican City and Avignon if we ever take it.
+
+	option = { 
+	name = "PAPAL9.A" 
+	set_country_flag = ITA_AVI_PAP_SETUP
+	set_country_flag = ITA_ROM_PAP_SETUP
+	set_variable = {
+		which = ITA_pope
+		value = 3
+    }
+	prestige = -10
+	any_pop = { 
+		limit = { 
+			has_pop_religion = catholic		
+		}
+		ideology = {
+		     value = conservative
+			 factor = 0.1
+		}		
+	}
+	any_pop = { 
+		limit = { 
+			NOT = { has_pop_religion = catholic	}
+		}
+		ideology = {
+		     value = socialist
+			 factor = 0.1
+		}	
+        dominant_issue = { factor = 0.05 value = pro_atheism }		
+	}
+	any_pop = {
+		scaled_consciousness = {
+				ideology = reactionary
+				factor = -5
+		}
+		scaled_militancy = {
+				ideology = reactionary
+				factor = -5
+		}
+		scaled_consciousness = {
+				ideology = paternal
+				factor = -5
+			}
+		scaled_militancy = {
+				ideology = paternal
+				factor = -5
+			}
+		scaled_consciousness = {
+				ideology = liberal
+				factor = 1
+		}
+		scaled_militancy = {
+				ideology = liberal
+				factor = 1
+		}
+		scaled_consciousness = {
+				ideology = anarcho_liberal
+				factor = 2
+		}
+		scaled_militancy = {
+				ideology = anarcho_liberal
+				factor = 2
+		}
+		scaled_militancy = {
+				ideology = market_liberal
+				factor = -3
+		}
+		scaled_consciousness = {
+				ideology = market_liberal
+				factor = -3
+		}
+		scaled_consciousness = {
+				ideology = conservative
+				factor = -3
+		}
+		scaled_militancy = {
+				ideology = conservative
+				factor = -3
+		}
+		scaled_consciousness = {
+				ideology = socialist
+				factor = 2
+		}
+		scaled_militancy = {
+				ideology = socialist
+				factor = 2
+		}
+		scaled_consciousness = {
+				ideology = communist
+				factor = 3
+		}
+		scaled_militancy = {
+				ideology = communist
+				factor = 3
+		}
+	}
+	country_event = { id = 124359 days = 1 }
+	    ai_chance = { 
+           factor = 20
+	    }	
+	}
+	
+	option = { 
+	name = "PAPAL9.B" 
+	set_country_flag = ITA_ROM_PAP_SETUP
+	set_variable = {
+		which = ITA_pope
+		value = 2
+    }
+	prestige = -5
+	any_pop = { 
+		limit = { 
+			has_pop_religion = catholic		
+		}
+		ideology = {
+		     value = conservative
+			 factor = 0.05
+		}		
+	}
+	any_pop = { 
+		limit = { 
+			NOT = { has_pop_religion = catholic	}
+		}
+		ideology = {
+		     value = socialist
+			 factor = 0.05
+		}
+        dominant_issue = { factor = 0.05 value = pro_atheism }			
+	}
+	any_pop = {
+		scaled_consciousness = {
+				ideology = reactionary
+				factor = -3
+		}
+		scaled_militancy = {
+				ideology = reactionary
+				factor = -3
+		}
+		scaled_consciousness = {
+				ideology = paternal
+				factor = -3
+		}
+		scaled_militancy = {
+				ideology = paternal
+				factor = -3
+		}
+		scaled_consciousness = {
+				ideology = anarcho_liberal
+				factor = 1
+		}
+		scaled_militancy = {
+				ideology = anarcho_liberal
+				factor = 1
+		}
+		scaled_militancy = {
+				ideology = market_liberal
+				factor = -1
+		}
+		scaled_consciousness = {
+				ideology = market_liberal
+				factor = -1
+		}
+		scaled_consciousness = {
+				ideology = conservative
+				factor = -1
+		}
+		scaled_militancy = {
+				ideology = conservative
+				factor = -1
+		}
+		scaled_consciousness = {
+				ideology = socialist
+				factor = 1
+		}
+		scaled_militancy = {
+				ideology = socialist
+				factor = 1
+		}
+		scaled_consciousness = {
+				ideology = communist
+				factor = 2
+		}
+		scaled_militancy = {
+				ideology = communist
+				factor = 2
+		}
+	}
+	country_event = { id = 124359 days = 1 }
+	    ai_chance = { 
+           factor = 60
+	    }	
+	}
+	
+	option = { 
+	name = "PAPAL9.C" 
+	set_variable = {
+		which = ITA_pope
+		value = 1
+    }
+	any_pop = { 
+		limit = { 
+			has_pop_religion = catholic		
+		}
+		ideology = {
+		     value = paternal
+			 factor = 0.1
+		}
+        dominant_issue = { factor = 0.05 value = moralism }		
+	}
+	any_pop = { 
+		limit = { 
+			NOT = { has_pop_religion = catholic	}
+		}
+		ideology = {
+		     value = conservative
+			 factor = 0.1
+		}		
+	}
+	any_pop = {
+		scaled_consciousness = {
+				ideology = reactionary
+				factor = 3
+		}
+		scaled_militancy = {
+				ideology = reactionary
+				factor = 3
+		}
+		scaled_consciousness = {
+				ideology = paternal
+				factor = 3
+		}
+		scaled_militancy = {
+				ideology = paternal
+				factor = 3
+		}
+		scaled_consciousness = {
+				ideology = anarcho_liberal
+				factor = -1
+		}
+		scaled_militancy = {
+				ideology = anarcho_liberal
+				factor = -1
+		}
+		scaled_militancy = {
+				ideology = market_liberal
+				factor = 1
+		}
+		scaled_consciousness = {
+				ideology = market_liberal
+				factor = 1
+		}
+		scaled_consciousness = {
+				ideology = conservative
+				factor = 1
+		}
+		scaled_militancy = {
+				ideology = conservative
+				factor = 1
+		}
+		scaled_consciousness = {
+				ideology = socialist
+				factor = -1
+		}
+		scaled_militancy = {
+				ideology = socialist
+				factor = -1
+		}
+		scaled_consciousness = {
+				ideology = communist
+				factor = -2
+		}
+		scaled_militancy = {
+				ideology = communist
+				factor = -2
+		}
+	}
+	country_event = { id = 124359 days = 1 }  
+	    ai_chance = { 
+           factor = 20
+	    }
+	}
+}
+
+######### The Lateran Negotiations - The Eight per thousand ########
+#### https://en.wikipedia.org/wiki/Eight_per_thousand ##############
+
+country_event = { 
+	id = 124359
+	title = "PAPAL10.T" 
+	desc = "PAPAL10.D" 
+	picture = "lateran_accords"
+		
+	is_triggered_only = yes
+	
+	# Base Variable is 1
+	
+	# If the pope wants a special tax then he can have a special tax
+
+	option = { 
+	name = "PAPAL10.A" 
+	set_country_flag = ITA_TAX_PAP_SETUP
+	change_variable = {
+		which = ITA_pope
+		value = 1
+    }
+	prestige = -5
+	any_pop = { 
+		limit = { 
+			has_pop_religion = catholic		
+		}
+		ideology = {
+		     value = conservative
+			 factor = 0.05
+		}				
+	}
+	any_pop = { 
+		limit = { 
+			NOT = { has_pop_religion = catholic	}
+		}
+		ideology = {
+		     value = socialist
+			 factor = 0.05
+		}	
+        dominant_issue = { factor = 0.05 value = pro_atheism }			
+	}
+	any_pop = {
+		scaled_consciousness = {
+				ideology = reactionary
+				factor = -3
+		}
+		scaled_militancy = {
+				ideology = reactionary
+				factor = -3
+		}
+		scaled_consciousness = {
+				ideology = paternal
+				factor = -3
+		}
+		scaled_militancy = {
+				ideology = paternal
+				factor = -3
+		}
+		scaled_consciousness = {
+				ideology = anarcho_liberal
+				factor = 1
+		}
+		scaled_militancy = {
+				ideology = anarcho_liberal
+				factor = 1
+		}
+		scaled_militancy = {
+				ideology = market_liberal
+				factor = -1
+		}
+		scaled_consciousness = {
+				ideology = market_liberal
+				factor = -1
+		}
+		scaled_consciousness = {
+				ideology = conservative
+				factor = -1
+		}
+		scaled_militancy = {
+				ideology = conservative
+				factor = -1
+		}
+		scaled_consciousness = {
+				ideology = socialist
+				factor = 1
+		}
+		scaled_militancy = {
+				ideology = socialist
+				factor = 1
+		}
+		scaled_consciousness = {
+				ideology = communist
+				factor = 2
+		}
+		scaled_militancy = {
+				ideology = communist
+				factor = 2
+		}
+	}
+	country_event = { id = 124361 days = 1 }  
+	    ai_chance = { 
+           factor = 70
+	    }
+	}
+
+	option = { 
+	name = "PAPAL10.B" 
+	any_pop = { 
+		limit = { 
+			has_pop_religion = catholic		
+		}
+		ideology = {
+		     value = paternal
+			 factor = 0.05
+		}
+        dominant_issue = { factor = 0.05 value = moralism }			
+	}
+	any_pop = { 
+		limit = { 
+			NOT = { has_pop_religion = catholic	}
+		}
+		ideology = {
+		     value = conservative
+			 factor = 0.05
+		}		
+	}
+	any_pop = {
+		scaled_consciousness = {
+				ideology = reactionary
+				factor = 3
+		}
+		scaled_militancy = {
+				ideology = reactionary
+				factor = 3
+		}
+		scaled_consciousness = {
+				ideology = paternal
+				factor = 3
+		}
+		scaled_militancy = {
+				ideology = paternal
+				factor = 3
+		}
+		scaled_consciousness = {
+				ideology = anarcho_liberal
+				factor = -1
+		}
+		scaled_militancy = {
+				ideology = anarcho_liberal
+				factor = -1
+		}
+		scaled_militancy = {
+				ideology = market_liberal
+				factor = 1
+		}
+		scaled_consciousness = {
+				ideology = market_liberal
+				factor = 1
+		}
+		scaled_consciousness = {
+				ideology = conservative
+				factor = 1
+		}
+		scaled_militancy = {
+				ideology = conservative
+				factor = 1
+		}
+		scaled_consciousness = {
+				ideology = socialist
+				factor = -1
+		}
+		scaled_militancy = {
+				ideology = socialist
+				factor = -1
+		}
+		scaled_consciousness = {
+				ideology = communist
+				factor = -2
+		}
+		scaled_militancy = {
+				ideology = communist
+				factor = -2
+		}
+	}
+	country_event = { id = 124361 days = 1 }  
+	    ai_chance = { 
+           factor = 30
+	    }
+	}
+}
+
+######### The Lateran Negotiations - Enforced Catholic Schools ########
+
+country_event = { 
+	id = 124361
+	title = "PAPAL100.T" 
+	desc = "PAPAL100.D" 
+	picture = "lateran_accords"
+		
+	is_triggered_only = yes
+	
+	# Base Variable is 1
+	
+	# If the pope wants catholic churches then he can have catholic churches
+
+	option = { 
+	name = "PAPAL100.A" 
+	set_country_flag = ITA_SCHOOL_PAP_SETUP
+	set_country_flag = ITA_PAP_CHECK
+	change_variable = {
+		which = ITA_pope
+		value = 1
+    }
+	prestige = -5
+	any_pop = { 
+		limit = { 
+			has_pop_religion = catholic		
+		}
+		ideology = {
+		     value = conservative
+			 factor = 0.05
+		}		
+	}
+	any_pop = { 
+		limit = { 
+			NOT = { has_pop_religion = catholic	}
+		}
+		ideology = {
+		     value = socialist
+			 factor = 0.05
+		}	
+        dominant_issue = { factor = 0.05 value = pro_atheism }			
+	}
+	any_pop = {
+		scaled_consciousness = {
+				ideology = reactionary
+				factor = -3
+		}
+		scaled_militancy = {
+				ideology = reactionary
+				factor = -3
+		}
+		scaled_consciousness = {
+				ideology = paternal
+				factor = -3
+		}
+		scaled_militancy = {
+				ideology = paternal
+				factor = -3
+		}
+		scaled_consciousness = {
+				ideology = anarcho_liberal
+				factor = 1
+		}
+		scaled_militancy = {
+				ideology = anarcho_liberal
+				factor = 1
+		}
+		scaled_militancy = {
+				ideology = market_liberal
+				factor = -1
+		}
+		scaled_consciousness = {
+				ideology = market_liberal
+				factor = -1
+		}
+		scaled_consciousness = {
+				ideology = conservative
+				factor = -1
+		}
+		scaled_militancy = {
+				ideology = conservative
+				factor = -1
+		}
+		scaled_consciousness = {
+				ideology = socialist
+				factor = 1
+		}
+		scaled_militancy = {
+				ideology = socialist
+				factor = 1
+		}
+		scaled_consciousness = {
+				ideology = communist
+				factor = 2
+		}
+		scaled_militancy = {
+				ideology = communist
+				factor = 2
+		}
+	}
+	    ai_chance = { 
+           factor = 30
+	    }
+	}
+	
+	# Our citizens don't need to be brainwahsed into your dogma.
+
+	option = { 
+	name = "PAPAL100.B" 
+	set_country_flag = ITA_PAP_CHECK
+	any_pop = { 
+		limit = { 
+			has_pop_religion = catholic		
+		}
+		ideology = {
+		     value = paternal
+			 factor = 0.05
+		}
+        dominant_issue = { factor = 0.05 value = moralism }			
+	}
+	any_pop = { 
+		limit = { 
+			NOT = { has_pop_religion = catholic	}
+		}
+		ideology = {
+		     value = conservative
+			 factor = 0.05
+		}		
+	}
+	any_pop = {
+		scaled_consciousness = {
+				ideology = reactionary
+				factor = 3
+		}
+		scaled_militancy = {
+				ideology = reactionary
+				factor = 3
+		}
+		scaled_consciousness = {
+				ideology = paternal
+				factor = 3
+		}
+		scaled_militancy = {
+				ideology = paternal
+				factor = 3
+		}
+		scaled_consciousness = {
+				ideology = anarcho_liberal
+				factor = -1
+		}
+		scaled_militancy = {
+				ideology = anarcho_liberal
+				factor = -1
+		}
+		scaled_militancy = {
+				ideology = market_liberal
+				factor = 1
+		}
+		scaled_consciousness = {
+				ideology = market_liberal
+				factor = 1
+		}
+		scaled_consciousness = {
+				ideology = conservative
+				factor = 1
+		}
+		scaled_militancy = {
+				ideology = conservative
+				factor = 1
+		}
+		scaled_consciousness = {
+				ideology = socialist
+				factor = -1
+		}
+		scaled_militancy = {
+				ideology = socialist
+				factor = -1
+		}
+		scaled_consciousness = {
+				ideology = communist
+				factor = -2
+		}
+		scaled_militancy = {
+				ideology = communist
+				factor = -2
+		}
+	}
+	    ai_chance = { 
+           factor = 70
+	    }
+	}
+}
+
+######### The Lateran Treaty - Successful Negotiations - A major event ########
+
+country_event = { 
+	id = 124362
+	title = "PAPAL11.T" 
+	desc = "PAPAL11.D" 
+	picture = "lateran_accords"
+	
+	fire_only_once = yes 
+	major = yes
+		
+	trigger = {
+       tag = ITA 
+	   has_country_flag = ITA_PAP_CHECK
+	   NOT = { has_country_flag = ITA_end_lateran }
+	   check_variable = { which = ITA_pope value = 4 }
+	}
+
+	mean_time_to_happen = { 
+	    days = 7
+	}
+	
+	# ...that with it he had restored God to Italy and Italy to God
+	
+	option = { 
+	name = "PAPAL11.A"
+	set_country_flag = ITA_end_lateran
+	set_country_flag = ITA_successful_lateran
+	change_variable = {
+		which = ITA_pope
+		value = -20
+    }
+    prestige = 20	
+	remove_country_modifier = ARI_prisoner_vatican
+	remove_country_modifier = ARI_papal_interference
+	random_owned = { 
+	   limit = {
+	      owner = { has_country_flag = ITA_AVI_PAP_SETUP }
+	   }
+	   owner = { 
+	      clr_country_flag = ITA_AVI_PAP_SETUP
+	      set_country_flag = ITA_AVI_PAP		  
+		  749 = { add_province_modifier = { name = ARI_papal_autonomy duration = -1 } }
+       }
+    }	
+	random_owned = { 
+	   limit = {
+	      owner = { has_country_flag = ITA_ROM_PAP_SETUP }
+	   }
+	   owner = { 
+	      clr_country_flag = ITA_ROM_PAP_SETUP 
+	      set_country_flag = ITA_ROM_PAP
+		  468 = { add_province_modifier = { name = ARI_papal_autonomy duration = -1 } }
+       }
+    }	
+	random_owned = { 
+	   limit = {
+	      owner = { has_country_flag = ITA_SCHOOL_PAP_SETUP }
+	   }
+	   owner = { 
+	      clr_country_flag = ITA_SCHOOL_PAP_SETUP
+	      set_country_flag = ITA_SCHOOL_PAP
+	      add_country_modifier = {
+             name = ARI_ITA_catholic_schools
+		     duration = -1
+	      }
+       }
+    }	
+	random_owned = { 
+	   limit = {
+	      owner = { has_country_flag = ITA_TAX_PAP_SETUP }
+	   }
+	   owner = { 
+	      clr_country_flag = ITA_TAX_PAP_SETUP
+	      set_country_flag = ITA_TAX_PAP
+	      add_country_modifier = {
+             name = ARI_ITA_catholic_tax
+		     duration = -1
+	      }
+       }
+    }
+	any_pop = { 
+		limit = { 
+			has_pop_religion = catholic		
+		}
+		ideology = {
+		     value = conservative
+			 factor = 0.1
+		}
+        dominant_issue = { factor = 0.1 value = moralism }					
+	}
+	any_pop = { 
+		limit = { 
+			NOT = { has_pop_religion = catholic	}
+		}
+		ideology = {
+		     value = socialist
+			 factor = 0.1
+		}	
+        dominant_issue = { factor = 0.1 value = pro_atheism }		
+	}
+	any_pop = {
+		scaled_consciousness = {
+				ideology = reactionary
+				factor = -5
+		}
+		scaled_militancy = {
+				ideology = reactionary
+				factor = -5
+		}
+		scaled_consciousness = {
+				ideology = paternal
+				factor = -5
+		}
+		scaled_militancy = {
+				ideology = paternal
+				factor = -5
+		}
+		scaled_consciousness = {
+				ideology = liberal
+				factor = 1
+		}
+		scaled_militancy = {
+				ideology = liberal
+				factor = 1
+		}
+		scaled_consciousness = {
+				ideology = anarcho_liberal
+				factor = 2
+		}
+		scaled_militancy = {
+				ideology = anarcho_liberal
+				factor = 2
+		}
+		scaled_militancy = {
+				ideology = market_liberal
+				factor = -3
+		}
+		scaled_consciousness = {
+				ideology = market_liberal
+				factor = -3
+		}
+		scaled_consciousness = {
+				ideology = conservative
+				factor = -3
+		}
+		scaled_militancy = {
+				ideology = conservative
+				factor = -3
+		}
+		scaled_consciousness = {
+				ideology = socialist
+				factor = 2
+		}
+		scaled_militancy = {
+				ideology = socialist
+				factor = 2
+		}
+		scaled_consciousness = {
+				ideology = communist
+				factor = 3
+		}
+		scaled_militancy = {
+				ideology = communist
+				factor = 3
+		}
+	}
+	}
+}
+
+######### The Lateran Treaty - Failed - Here is a idiot trophy ########
+
+country_event = { 
+	id = 124363
+	title = "PAPAL12.T" 
+	desc = "PAPAL12.D" 
+	picture = "lateran_accords"
+	
+	fire_only_once = yes 
+		
+	trigger = {
+       tag = ITA
+	   has_country_flag = ITA_PAP_CHECK
+	   NOT = { has_country_flag = ITA_end_lateran }
+	   NOT = { check_variable = { which = ITA_pope value = 4 } }
+	}
+
+	mean_time_to_happen = { 
+	    days = 7
+	}
+
+	option = { 
+	name = "PAPAL12.A" 
+	change_variable = {
+		which = ITA_pope
+		value = -20
+    }
+    prestige = -10
+	set_country_flag = ITA_end_lateran
+	clr_country_flag = ITA_AVI_PAP_SETUP
+	clr_country_flag = ITA_ROM_PAP_SETUP
+	clr_country_flag = ITA_SCHOOL_PAP_SETUP
+	clr_country_flag = ITA_TAX_PAP_SETUP
+	any_pop = { 
+		limit = { 
+			has_pop_religion = catholic		
+		}
+		ideology = {
+		     value = paternal
+			 factor = 0.1
+		}
+        dominant_issue = { factor = 0.05 value = moralism }			
+	}
+	any_pop = { 
+		limit = { 
+			NOT = { has_pop_religion = catholic	}
+		}
+		ideology = {
+		     value = conservative
+			 factor = 0.1
+		}		
+	}
+	any_pop = {
+		scaled_consciousness = {
+				ideology = reactionary
+				factor = 3
+		}
+		scaled_militancy = {
+				ideology = reactionary
+				factor = 3
+		}
+		scaled_consciousness = {
+				ideology = paternal
+				factor = 3
+		}
+		scaled_militancy = {
+				ideology = paternal
+				factor = 3
+		}
+		scaled_consciousness = {
+				ideology = anarcho_liberal
+				factor = -1
+		}
+		scaled_militancy = {
+				ideology = anarcho_liberal
+				factor = -1
+		}
+		scaled_militancy = {
+				ideology = market_liberal
+				factor = 1
+		}
+		scaled_consciousness = {
+				ideology = market_liberal
+				factor = 1
+		}
+		scaled_consciousness = {
+				ideology = conservative
+				factor = 1
+		}
+		scaled_militancy = {
+				ideology = conservative
+				factor = 1
+		}
+		scaled_consciousness = {
+				ideology = socialist
+				factor = -1
+		}
+		scaled_militancy = {
+				ideology = socialist
+				factor = -1
+		}
+		scaled_consciousness = {
+				ideology = communist
+				factor = -2
+		}
+		scaled_militancy = {
+				ideology = communist
+				factor = -2
+		}
+	}
+	country_event = { id = 124364 days = 1 }  
+	}
+}
+
+######### The Fight against the Church ########
+
+country_event = { 
+	id = 124364
+	title = "PAPAL13.T" 
+	desc = "PAPAL13.D" 
+	picture = "anticlericalism"
+
+	is_triggered_only = yes
+
+	option = { 
+	name = "PAPAL13.A" 
+    prestige = -10
+	any_pop = { 
+		limit = { 
+			has_pop_religion = catholic		
+		}
+		ideology = {
+		     value = paternal
+			 factor = 0.05
+		}	
+        dominant_issue = { factor = 0.05 value = moralism }		
+	}
+	any_pop = { 
+		limit = { 
+			NOT = { has_pop_religion = catholic	}
+		}
+		ideology = {
+		     value = conservative
+			 factor = 0.05
+		}	       		
+	}
+	any_pop = {
+		scaled_consciousness = {
+				ideology = reactionary
+				factor = 3
+		}
+		scaled_militancy = {
+				ideology = reactionary
+				factor = 3
+		}
+		scaled_consciousness = {
+				ideology = paternal
+				factor = 3
+		}
+		scaled_militancy = {
+				ideology = paternal
+				factor = 3
+		}
+		scaled_consciousness = {
+				ideology = anarcho_liberal
+				factor = -1
+		}
+		scaled_militancy = {
+				ideology = anarcho_liberal
+				factor = -1
+		}
+		scaled_militancy = {
+				ideology = market_liberal
+				factor = 1
+		}
+		scaled_consciousness = {
+				ideology = market_liberal
+				factor = 1
+		}
+		scaled_consciousness = {
+				ideology = conservative
+				factor = 1
+		}
+		scaled_militancy = {
+				ideology = conservative
+				factor = 1
+		}
+		scaled_consciousness = {
+				ideology = socialist
+				factor = -1
+		}
+		scaled_militancy = {
+				ideology = socialist
+				factor = -1
+		}
+		scaled_consciousness = {
+				ideology = communist
+				factor = -2
+		}
+		scaled_militancy = {
+				ideology = communist
+				factor = -2
+		}
+	}
+	random_owned = { 
+	   limit = {
+	      owner = { has_country_flag = italian_monarchy_active }
+	   }
+	   owner = { 
+	      country_event = { id = 124365 days = 14 }  
+       }
+    }
+	random_owned = { 
+	   limit = {
+	      owner = { has_country_flag = italian_republic_active  }
+	   }
+	   owner = { 
+	      country_event = { id = 124366 days = 14 }  
+       }
+    }
+	}
+}
+
+######### The Fight against the Church - Monarchy - Pardon Republicans ########
+
+country_event = { 
+	id = 124365
+	title = "PAPAL14.T" 
+	desc = "PAPAL14.D" 
+	picture = "anticlericalism"
+
+	is_triggered_only = yes
+
+    # The fight is five years if you choose to pardon republicans and ten years if not
+	
+	# Pardon Them
+    
+	option = { 
+	name = "PAPAL14.A" 
+	remove_country_modifier = ARI_prisoner_vatican
+	remove_country_modifier = ARI_papal_interference
+	add_country_modifier = {
+         name = ARI_war_with_the_church
+		 duration = 1825
+	}
+	any_pop = { 
+		limit = { 
+			has_pop_religion = catholic	
+            NOT = { pop_majority_ideology = socialist }
+            NOT = { pop_majority_ideology = communist }		
+			NOT = { pop_majority_ideology = anarcho_liberal }	
+		}
+		ideology = {
+		     value = reactionary
+			 factor = -0.05
+		}
+		ideology = {
+		     value = paternal
+			 factor = -0.05
+		}
+		ideology = {
+		     value = conservative
+			 factor = -0.1
+		}	
+		ideology = {
+		     value = anarcho_liberal 
+			 factor = 0.2
+		}		
+		reduce_pop = 0.99
+	}
+	any_pop = { 
+		limit = { 
+			NOT = { has_pop_religion = catholic	}
+		}
+		ideology = {
+		     value = anarcho_liberal
+			 factor = 0.1
+		}		
+	}
+	any_pop = {
+		scaled_consciousness = {
+				ideology = reactionary
+				factor = 3
+		}
+		scaled_militancy = {
+				ideology = reactionary
+				factor = 3
+		}
+		scaled_consciousness = {
+				ideology = paternal
+				factor = 3
+		}
+		scaled_militancy = {
+				ideology = paternal
+				factor = 3
+		}
+		scaled_consciousness = {
+				ideology = anarcho_liberal
+				factor = -1
+		}
+		scaled_militancy = {
+				ideology = anarcho_liberal
+				factor = -1
+		}
+		scaled_militancy = {
+				ideology = market_liberal
+				factor = 1
+		}
+		scaled_consciousness = {
+				ideology = market_liberal
+				factor = 1
+		}
+		scaled_consciousness = {
+				ideology = conservative
+				factor = 1
+		}
+		scaled_militancy = {
+				ideology = conservative
+				factor = 1
+		}
+		scaled_consciousness = {
+				ideology = socialist
+				factor = -1
+		}
+		scaled_militancy = {
+				ideology = socialist
+				factor = -1
+		}
+		scaled_consciousness = {
+				ideology = communist
+				factor = -2
+		}
+		scaled_militancy = {
+				ideology = communist
+				factor = -2
+		}
+	}
+	    ai_chance = { 
+           factor = 80
+	    }
+	}
+	
+	# We will do this ourselves
+	
+	option = { 
+	name = "PAPAL14.B" 
+	remove_country_modifier = ARI_prisoner_vatican
+	remove_country_modifier = ARI_papal_interference
+	add_country_modifier = {
+         name = ARI_war_with_the_church
+		 duration = 3650
+	}
+	any_pop = { 
+		limit = { 
+			has_pop_religion = catholic		
+		}
+		ideology = {
+		     value = paternal
+			 factor = 0.1
+		}
+        dominant_issue = { factor = 0.1 value = moralism }				
+	}
+	any_pop = { 
+		limit = { 
+			NOT = { has_pop_religion = catholic	}
+		}
+		ideology = {
+		     value = conservative
+			 factor = 0.1
+		}		
+	}
+	any_pop = {
+		scaled_consciousness = {
+				ideology = reactionary
+				factor = 2
+		}
+		scaled_militancy = {
+				ideology = reactionary
+				factor = 2
+		}
+		scaled_consciousness = {
+				ideology = paternal
+				factor = 2
+		}
+		scaled_militancy = {
+				ideology = paternal
+				factor = 2
+		}
+		scaled_consciousness = {
+				ideology = anarcho_liberal
+				factor = 1
+		}
+		scaled_militancy = {
+				ideology = anarcho_liberal
+				factor = 1
+		}
+		scaled_consciousness = {
+				ideology = socialist
+				factor = 1
+		}
+		scaled_militancy = {
+				ideology = socialist
+				factor = 1
+		}
+		scaled_consciousness = {
+				ideology = communist
+				factor = 2
+		}
+		scaled_militancy = {
+				ideology = communist
+				factor = 2
+		}
+	}
+	    ai_chance = { 
+           factor = 20
+	    }
+	}
+}
+
+######### The Fight against the Church - Non-Monarchy - Enforce Secularization ########
+
+country_event = { 
+	id = 124366
+	title = "PAPAL15.T" 
+	desc = "PAPAL15.D" 
+	picture = "anticlericalism"
+
+	is_triggered_only = yes
+
+    # The fight is five years if you choose to secularize and ten years if not
+	
+	# Attempt Secularization
+    
+	option = { 
+	name = "PAPAL15.A" 
+	remove_country_modifier = ARI_prisoner_vatican
+	remove_country_modifier = ARI_papal_interference
+	add_country_modifier = {
+         name = ARI_war_with_the_church
+		 duration = 1825
+	}
+	any_pop = { 
+		limit = { 
+			has_pop_religion = catholic	
+            NOT = { pop_majority_ideology = socialist }
+            NOT = { pop_majority_ideology = communist }		
+			NOT = { pop_majority_ideology = anarcho_liberal }	
+		}
+		ideology = {
+		     value = reactionary
+			 factor = -0.05
+		}
+		ideology = {
+		     value = paternal
+			 factor = -0.05
+		}
+		ideology = {
+		     value = conservative
+			 factor = -0.1
+		}	
+		ideology = {
+		     value = socialist
+			 factor = 0.2
+		}		
+		dominant_issue = { factor = 0.4 value = secularized }	
+	}
+	any_pop = { 
+		limit = { 
+			NOT = { has_pop_religion = catholic	}
+		}
+		ideology = {
+		     value = socialist
+			 factor = 0.1
+		}
+        dominant_issue = { factor = 0.2 value = secularized }			
+	}
+	any_pop = {
+		scaled_consciousness = {
+				ideology = reactionary
+				factor = 3
+		}
+		scaled_militancy = {
+				ideology = reactionary
+				factor = 3
+		}
+		scaled_consciousness = {
+				ideology = paternal
+				factor = 3
+		}
+		scaled_militancy = {
+				ideology = paternal
+				factor = 3
+		}
+		scaled_consciousness = {
+				ideology = anarcho_liberal
+				factor = -1
+		}
+		scaled_militancy = {
+				ideology = anarcho_liberal
+				factor = -1
+		}
+		scaled_militancy = {
+				ideology = market_liberal
+				factor = 1
+		}
+		scaled_consciousness = {
+				ideology = market_liberal
+				factor = 1
+		}
+		scaled_consciousness = {
+				ideology = conservative
+				factor = 1
+		}
+		scaled_militancy = {
+				ideology = conservative
+				factor = 1
+		}
+		scaled_consciousness = {
+				ideology = socialist
+				factor = -1
+		}
+		scaled_militancy = {
+				ideology = socialist
+				factor = -1
+		}
+		scaled_consciousness = {
+				ideology = communist
+				factor = -2
+		}
+		scaled_militancy = {
+				ideology = communist
+				factor = -2
+		}
+	}
+	    ai_chance = { 
+           factor = 80
+	    }
+	}
+	
+	# We will do this ourselves
+	
+	option = { 
+	name = "PAPAL15.B" 
+	remove_country_modifier = ARI_prisoner_vatican
+	remove_country_modifier = ARI_papal_interference
+	add_country_modifier = {
+         name = ARI_war_with_the_church
+		 duration = 3650
+	}
+	any_pop = { 
+		limit = { 
+			has_pop_religion = catholic		
+		}
+		ideology = {
+		     value = paternal
+			 factor = 0.1
+		}
+        dominant_issue = { factor = 0.1 value = moralism }				
+	}
+	any_pop = { 
+		limit = { 
+			NOT = { has_pop_religion = catholic	}
+		}
+		ideology = {
+		     value = conservative
+			 factor = 0.1
+		}		
+	}
+	any_pop = {
+		scaled_consciousness = {
+				ideology = reactionary
+				factor = 2
+		}
+		scaled_militancy = {
+				ideology = reactionary
+				factor = 2
+		}
+		scaled_consciousness = {
+				ideology = paternal
+				factor = 2
+		}
+		scaled_militancy = {
+				ideology = paternal
+				factor = 2
+		}
+		scaled_consciousness = {
+				ideology = anarcho_liberal
+				factor = 1
+		}
+		scaled_militancy = {
+				ideology = anarcho_liberal
+				factor = 1
+		}
+		scaled_consciousness = {
+				ideology = socialist
+				factor = 1
+		}
+		scaled_militancy = {
+				ideology = socialist
+				factor = 1
+		}
+		scaled_consciousness = {
+				ideology = communist
+				factor = 2
+		}
+		scaled_militancy = {
+				ideology = communist
+				factor = 2
+		}
+	}
+	    ai_chance = { 
+           factor = 20
+	    }
+	}
+}
+
+### Failsafe Events ported from ARI
+
+### Communist Dictatorship or Socialist Republic has Papal Modifiers - Delete ###
+
+
+country_event = { 
+	id = 124367
+	title = "PAPAL16.T" 
+	desc = "PAPAL16.D" 
+	picture = "lateran_accords"
+		
+	trigger = {
+       tag = ITA 
+	   has_country_flag = ITA_successful_lateran
+	   OR = {
+	     government = socialist_republic
+		 government = proletarian_dictatorship
+	   }		 
+	   NOT = { has_country_flag = fuck_the_pope_ITA }
+	}
+	
+	mean_time_to_happen = { 
+	    days = 60
+	}
+	
+	# We are free from his rubbish.
+	
+	option = { 
+	name = "PAPAL16.A"
+    set_country_flag = fuck_the_pope_ITA		  
+    749 = { remove_province_modifier = ARI_papal_autonomy }
+    468 = { remove_province_modifier = ARI_papal_autonomy }
+	random_owned = { 
+	   limit = {
+	      owner = { has_country_flag = ITA_SCHOOL_PAP }
+	   }
+	   owner = { 
+	      remove_country_modifier = ARI_ITA_catholic_schools
+       }
+    }	
+	random_owned = { 
+	   limit = {
+	      owner = { has_country_flag = ITA_TAX_PAP }
+	   }
+	   owner = { 
+          remove_country_modifier = ARI_ITA_catholic_tax
+	   }
+    }
+    }	
+}
+
+### Enable Papal Modifiers if they were disabled when losing Commuie ###
+
+country_event = { 
+	id = 124368
+	title = "PAPAL17.T" 
+	desc = "PAPAL17.D" 
+	picture = "lateran_accords"
+		
+	trigger = {
+       tag = ITA
+	   has_country_flag = fuck_the_pope_ITA
+	   NOT = {
+	      OR = {
+	         government = socialist_republic
+		     government = proletarian_dictatorship
+		  }
+	   }		 
+	}
+	
+	mean_time_to_happen = { 
+	    days = 60
+	}
+	
+	# We made a promise...
+	
+	option = { 
+	name = "PAPAL17.A"
+    clr_country_flag = fuck_the_pope_ITA
+	random_owned = { 
+	   limit = {
+	      owner = { has_country_flag = ITA_AVI_PAP }
+	   }
+	   owner = { 		  
+		  749 = { add_province_modifier = { name = ARI_papal_autonomy duration = -1 } }
+       }
+    }	
+	random_owned = { 
+	   limit = {
+	      owner = { has_country_flag = ITA_ROM_PAP }
+	   }
+	   owner = { 
+		  468 = { add_province_modifier = { name = ARI_papal_autonomy duration = -1 } }
+       }
+    }	
+	random_owned = { 
+	   limit = {
+	      owner = { has_country_flag = ITA_SCHOOL_PAP }
+	   }
+	   owner = { 
+	      add_country_modifier = {
+             name = ARI_ITA_catholic_schools
+		     duration = -1
+	      }
+       }
+    }	
+	random_owned = { 
+	   limit = {
+	      owner = { has_country_flag = ITA_TAX_PAP }
+	   }
+	   owner = { 
+	      add_country_modifier = {
+             name = ARI_ITA_catholic_tax
+		     duration = -1
+	      }
+       }
+    }
+    }	
+}
+
+### Give Rome Papal Autonomy Modifier if its missing it. ###
+
+province_event = {
+	id = 124369
+	title = "PAPAL18.T" 
+	desc = "PAPAL18.D" 
+	
+	trigger = {
+		province_id = 749
+		owner = {
+			has_country_flag = ITA_ROM_PAP
+			NOT = { has_country_flag = fuck_the_pope_ITA }
+		}
+		NOT = { has_province_modifier = ARI_papal_autonomy }
+	}
+	
+	mean_time_to_happen = {
+		days = 14
+	}
+	
+	option = {
+		name = "PAPAL18.A"
+		add_province_modifier = {
+			name = ARI_papal_autonomy
+			duration = -1
+		}
+	}
+}
+
+### Give Avignon Papal Autonomy Modifier if its missing it. ###
+
+province_event = {
+	id = 124370
+	title = "PAPAL19.T" 
+	desc = "PAPAL19.D" 
+	
+	trigger = {
+		province_id = 468
+		owner = {
+			has_country_flag = ITA_AVI_PAP
+			NOT = { has_country_flag = fuck_the_pope_ITA }
+		}
+		NOT = { has_province_modifier = ARI_papal_autonomy }
+	}
+	
+	mean_time_to_happen = {
+		days = 14
+	}
+	
+	option = {
+		name = "PAPAL19.A"
+		add_province_modifier = {
+			name = ARI_papal_autonomy
+			duration = -1
+		}
+	}
+}
+
+### The Italo-German Revolutionary War ###
+
+### MAJOR - Italy has declared war on us with the intent to overthrow our government ###
+
+country_event = {
+	id = 124371
+	title = "IREV1.T" 
+	desc = "IREV1.D" 
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "IREV1.A"
+        any_pop = { militancy = -5 }  
+	}
+}
+
+### Our government has been toppled - Italy has risen ###
+
+country_event = {
+	id = 124372
+	title = "IREV2.T" 
+	desc = "IREV2.D" 
+	
+	trigger = {
+	    tag = SGF
+		has_global_flag = ITA_revolutionary_war
+		NOT = { war_with = ITA }
+        has_country_flag = custom_treaty_loser
+	}
+	
+	mean_time_to_happen = { 
+	   days = 1
+	}	
+	
+	option = {
+		name = "IREV2.A"
+		clr_global_flag = ITA_revolutionary_war
+		clr_country_flag = custom_treaty_loser
+		any_country = {
+		   limit = {
+		      tag = TRE
+			  exists = yes
+		   }
+		   annex_to = ITA
+		}
+		TRE = { all_core = { remove_core = TIR remove_core = GER remove_core = SGF } } 
+		any_owned = {
+		   limit = {
+		      is_core = ITA
+		   }
+		   remove_core = THIS
+		   secede_province = ITA
+		}
+		any_owned = {
+		   limit = {
+		      is_core = TRE
+		   }
+		   remove_core = THIS
+		   secede_province = ITA
+		}
+		set_country_flag = trent_agreement
+		set_global_flag = trent_accord_success
+		ITA = { set_country_flag = claimed_trentino country_event = 124373 }
+        prestige_factor = -0.5
+	    government = democracy 
+	    ruling_party_ideology = liberal
+	    political_reform = universal_voting
+	    political_reform = state_equal_weight
+	    political_reform = yes_meeting
+	    political_reform = free_press
+	    political_reform = all_trade_unions
+	    political_reform = secret_ballots
+	    clr_country_flag = theocratic_government
+	    clr_country_flag = merchantrepublic_gov
+	    clr_country_flag = parliamentary_republic_gov
+	    clr_country_flag = communist_gov
+	    clr_country_flag = absolute_monarchy_gov
+	    clr_country_flag = semi_constitutional_monarchy_gov
+	    clr_country_flag = constitutional_monarchy_gov
+	    clr_country_flag = presidential_dictatorship_gov
+	    clr_country_flag = fascist_gov
+	    clr_country_flag = anarcho_liberal_gov
+	    clr_country_flag = socialist_republic_gov
+	    clr_country_flag = fascist_monarchy_gov
+	    set_country_flag = democracy_gov
+	    clr_country_flag = election_started
+	    clr_country_flag = conservative_party_in_power
+	    set_country_flag = liberal_party_in_power
+	    clr_country_flag = reactionary_party_in_power
+	    clr_country_flag = socialist_party_in_power
+	    clr_country_flag = communist_party_in_power
+	    clr_country_flag = fascist_party_in_power
+	    clr_country_flag = paternal_party_in_power
+	    clr_country_flag = anarcho_liberal_party_in_power
+	    clr_country_flag = tory_election_win
+	    set_country_flag = liberal_election_win
+	    clr_country_flag = communist_election_win
+	    clr_country_flag = fascist_election_win
+	    clr_country_flag = reactionary_election_win
+	    clr_country_flag = anarcho_liberal_election_win
+	    clr_country_flag = social_liberal_election_win
+	    clr_country_flag = market_liberal_election_win		
+		clr_country_flag = paternal_election_win
+	    clr_country_flag = market_liberal_party_in_power	
+        any_country = {
+            limit = {
+               NOT = { tag = THIS }
+			   alliance_with = THIS
+            }		
+            relation = { who = THIS value = -200 }	
+            leave_alliance = THIS 
+        }			
+	}
+}
+
+### The Italian Mission has now been legitimized ###
+
+country_event = {
+	id = 124373
+	title = "IREV3.T" 
+	desc = "IREV3.D" 
+	
+	is_triggered_only = yes	
+	
+	option = {
+		name = "IREV3.A"
+		TRE = { all_core = { add_core = THIS } } 
+		prestige = 40
+	    relation = { who = FROM value = 400 }
+	    create_alliance = FROM 
+	    diplomatic_influence = { who = FROM value = 400 }	
+		set_country_flag = ended_trentino 
+        set_country_flag = successful_revolutionary_war		
+	}
+}
+
+### We have defeated the Italian Menace by either enforcing a war goal or a white peace over them ###
+
+country_event = {
+	id = 124374
+	title = "IREV4.T" 
+	desc = "IREV4.D" 
+	
+	trigger = {
+	    tag = SGF
+		has_global_flag = ITA_revolutionary_war
+		NOT = { war_with = ITA }
+        NOT = { has_country_flag = custom_treaty_loser }
+	}
+	
+	mean_time_to_happen = { 
+	   days = 3
+	}	
+	
+	option = {
+		name = "IREV4.A"
+		prestige = 40	
+		clr_global_flag = ITA_revolutionary_war
+		clr_country_flag = custom_treaty_loser
+		ITA = { country_event = 124375 }    		
+	}
+}
+
+### We have failed to enforce our will over a bunch of mountain germans - The Republic Collapses ##
+
+country_event = {
+	id = 124375
+	title = "IREV5.T" 
+	desc = "IREV5.D" 
+	
+	major = yes
+	is_triggered_only = yes	
+	
+	option = {
+		name = "IREV3.A"
+		clr_country_flag = tuscany_revolutionary
+        government = presidential_dictatorship 
+        political_reform = none_voting
+	    political_reform = party_appointed
+        political_reform = no_meeting
+	    political_reform = state_press
+	    political_reform = no_trade_unions
+	    political_reform = first_past_the_post
+	    political_reform = underground_parties 	
+	    clr_country_flag = theocratic_government
+	    clr_country_flag = merchantrepublic_gov
+	    clr_country_flag = communist_gov
+	    clr_country_flag = absolute_monarchy_gov
+	    clr_country_flag = semi_constitutional_monarchy_gov
+	    clr_country_flag = constitutional_monarchy_gov
+	    clr_country_flag = parliamentary_republic_gov
+	    clr_country_flag = democracy_gov
+	    set_country_flag = presidential_dictatorship_gov
+	    clr_country_flag = fascist_gov
+	    clr_country_flag = anarcho_liberal_gov
+	    clr_country_flag = socialist_republic_gov
+	    clr_country_flag = fascist_monarchy_gov
+	    clr_country_flag = conservative_party_in_power
+		clr_global_flag = ITA_revolutionary_war
+		clr_country_flag = custom_treaty_loser
+		TRE = { all_core = { add_core = SGF remove_core = THIS } } 
+		any_owned = {
+		   limit = {
+		      is_core = SGF
+		   }
+		   remove_core = THIS
+		   secede_province = SGF
+		}
+		set_country_flag = claimed_trentino
+        prestige_factor = -0.5
+	}
+}

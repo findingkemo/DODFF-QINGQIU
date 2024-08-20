@@ -1,0 +1,8 @@
+owner = SKR
+controller = SKR
+add_core = SKR
+add_core = VIN
+add_core = ANI
+trade_goods = iron
+life_rating = 35
+terrain = conifer_forest

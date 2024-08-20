@@ -1,0 +1,7 @@
+owner = CCA
+controller = CCA
+add_core = NBG
+add_core = CCA
+trade_goods = timber
+life_rating = 35
+terrain = deciduous_forest_hills

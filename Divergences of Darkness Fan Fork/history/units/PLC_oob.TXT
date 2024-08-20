@@ -1,0 +1,117 @@
+leader = {
+	name = "Aleksander Jablonowski"
+	type = land
+	date = 1836.1.1
+	personality = diplomatic
+	background = elderly
+}
+
+leader = {
+	name = "Wojciech Walerian Suchodolski"
+	type = land
+	date = 1836.1.1
+	personality = shrinking_violet
+	background = introverted_philosopher
+}
+
+army = {
+	name = "Armia Malopolska"
+	location = 703
+	regiment = {
+		name= "1.Reg. Pieszy Malopolski"
+		type = regular
+		home = 703
+	}
+
+	regiment = {
+		name= "2.Reg. Pieszy Koronny"
+		type = regular
+		home = 705
+	}
+
+	regiment = {
+		name= "1.Reg. Pieszy Habsburski"
+		type = regular
+		home = 715
+	}
+	
+	regiment = {
+		name= "1.Bryg. Artylerii Koronnej"
+		type = artillery
+		home = 712
+	}
+	
+	regiment = {
+		name= "Gwardia Konna Koronna"
+		type = hussar
+		home = 703
+	}
+}
+
+army = {
+	name = "Armia Wielkopolska"
+	location = 701
+	regiment = {
+		name= "1.Reg. Pieszy Koronny"
+		type = regular
+		home = 701
+	}
+
+	regiment = {
+		name= "1.Reg. Pieszy Wielkopolski"
+		type = regular
+		home = 691
+	}
+
+	regiment = {
+		name= "1.Reg. Pieszy Wybraniecki"
+		type = regular
+		home = 717
+	}
+	
+	regiment = {
+		name= "2.Bryg. Artylerii Koronnej"
+		type = artillery
+		home = 701
+	}
+	
+	regiment = {
+		name= "1.Bryg. Kawalerii Narodowej"
+		type = hussar
+		home = 699
+	}
+}
+
+army = {
+	name = "Armia Wolynsko-Podolska"
+	location = 937
+	regiment = {
+		name= "3.Reg. Pieszy Koronny"
+		type = regular
+		home = 954
+	}
+
+	regiment = {
+		name= "2.Reg. Pieszy Malopolski"
+		type = regular
+		home = 702
+	}
+
+	regiment = {
+		name= "1.Reg. Pieszy Czartoryski"
+		type = regular
+		home = 719
+	}
+	
+	regiment = {
+		name= "3.Bryg. Artylerii Koronnej"
+		type = artillery
+		home = 956
+	}
+	
+	regiment = {
+		name= "2.Bryg. Kawalerii Narodowej"
+		type = hussar
+		home = 706
+	}
+}

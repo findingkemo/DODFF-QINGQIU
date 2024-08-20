@@ -1,0 +1,5605 @@
+########## Vinland Chain ############
+
+### O Vinland! Our home and native land! True patriot love in all of us command. ###
+
+#############################################################################################
+################ INITIAL CONTENT CHAINS UP UNTIL INDIPENDENCE ###############################
+#############################################################################################
+
+########## The Crown Colony of Vinland Introduction Event - The Revolution of 182? and the Republicans ############
+
+### This explains the various colonial uprisings throughout the past decades ###
+
+country_event = {
+	id = 333500
+	title = "VIN1.T"
+	desc = "VIN1.D"
+	picture = "vinlandcapital"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "VIN1.A"
+		add_country_modifier = {
+			name = VIN_military_rule
+			duration = 36500
+		}
+		relation = { who = SCA value = -25 }
+		relation = { who = MSG value = -50 }
+		any_pop = {
+		   ideology = {
+			  value = separatist
+			  factor = 0.05
+		   }
+		   ideology = {
+			  value = liberal
+			  factor = 0.1
+		   }
+        }
+	    any_pop = {
+		scaled_consciousness = { 
+				ideology = liberal
+				factor = 2
+		}
+		scaled_militancy = {
+				ideology = reactionary
+				factor = -1
+		}
+		scaled_militancy = {
+				ideology = conservative
+				factor = -1
+		}
+		scaled_militancy = {
+				ideology = liberal
+				factor = 2
+	    }
+	    }
+        MSG = { country_event = { id = 333501 days = 0 } }	
+		SKR = { country_event = { id = 333503 days = 0 } }	
+	}
+}
+
+########## The Crown Colony of Masgirland Introduction Event - The Revolution of 182? and the Republicans ############
+
+### This explains the various colonial uprisings throughout the past decades ###
+
+country_event = {
+	id = 333501
+	title = "VIN2.T"
+	desc = "VIN2.D"
+	picture = "masgirl"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "VIN2.A"
+		add_country_modifier = {
+			name = VIN_military_rule
+			duration = 36500
+		}
+		relation = { who = SCA value = 100 }
+		relation = { who = VIN value = -50 }
+		any_pop = {
+		   ideology = {
+			  value = conservative
+			  factor = 0.1
+		   }
+		   ideology = {
+			  value = reactionary
+			  factor = 0.05
+		   }
+        }
+	    any_pop = {
+		scaled_consciousness = { 
+				ideology = liberal
+				factor = -2
+		}
+		scaled_militancy = {
+				ideology = reactionary
+				factor = -1
+		}
+		scaled_militancy = {
+				ideology = conservative
+				factor = -1
+		}
+		scaled_militancy = {
+				ideology = liberal
+				factor = -2
+	    }
+	    }		
+	}
+}
+
+########## Skralinger Territory ############
+
+### This is a messy confederation that will last basically 25 seconds if independent. The event. ###
+
+country_event = {
+	id = 333503
+	title = "VIN3.T"
+	desc = "VIN3.D"
+	picture = "skrland"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "VIN3.A"
+		money = -1
+		any_pop = {
+		   ideology = {
+			  value = separatist
+			  factor = 0.1
+		   }
+        }
+        set_country_flag = SKR_INTRO_TWO		
+    }
+}
+
+### Next event in the SKR chain is ARCGEN18 under Arcadia General
+
+####### Initial Vinland Chain #######
+
+##### The Rebellion of 1837 - Attempt Number Two - This is a very weak attempt ####
+
+country_event = {
+	id = 333504
+	title = "VIN4.T"
+	desc = "VIN4.D"
+	picture = "rebellion"
+	
+	fire_only_once = yes
+	
+    trigger = {
+        tag = VIN
+        NOT = { has_country_flag = vindladic_attempt_one }               
+        year = 1837
+		NOT = { has_global_flag = VIN_IS_FREE }
+    }
+	
+    mean_time_to_happen = {
+        months = 1
+    }
+
+	option = {
+		name = "VIN4.A"
+		set_country_flag = vindladic_attempt_one
+		relation = { who = SCA value = -10 }
+		any_pop = {
+		   ideology = {
+			  value = separatist
+			  factor = 0.01
+		   }
+		   ideology = {
+			  value = liberal
+			  factor = 0.01
+		   }
+        }
+	    any_pop = {
+		scaled_consciousness = { 
+				ideology = liberal
+				factor = 3
+        }
+		scaled_militancy = {
+				ideology = liberal
+				factor = 3
+	    }
+	    }
+        any_owned = {
+            limit = {
+                is_core = VIN
+            }
+            add_province_modifier = {
+                name = nationalist_agitation
+                duration = 60
+            }
+        }
+	}
+}
+
+##### The Rebellion of 1839 - This is even better then 1837 and results in the capture of the independence leader - We can finally crush this movement for good! ####
+
+country_event = {
+	id = 333505
+	title = "VIN5.T"
+	desc = "VIN5.D"
+	#picture = "vinlandrebel"
+	
+	fire_only_once = yes
+	
+    trigger = {
+        tag = VIN
+        NOT = { has_country_flag = vindladic_attempt_two }               
+        year = 1839
+		NOT = { has_global_flag = VIN_IS_FREE }
+    }
+	
+    mean_time_to_happen = {
+        months = 1
+    }
+
+	option = {
+		name = "VIN5.A"
+		set_country_flag = vindladic_attempt_two
+		relation = { who = SCA value = -10 }
+	    any_pop = {
+		scaled_consciousness = { 
+				ideology = liberal
+				factor = -3
+        }
+		scaled_militancy = {
+				ideology = liberal
+				factor = -3
+	    }
+	    }
+		any_pop = {
+		   ideology = {
+			  value = separatist
+			  factor = -0.05
+		   }
+		   ideology = {
+			  value = liberal
+			  factor = 0.01
+		   }
+        }
+		SCA = { country_event = { id = 333506 days = 0 } }	
+		SKR = { country_event = { id = 79124 days = 0 } }	
+	}
+}
+
+##### The Rebellion of 1839 in Vinland ####
+
+country_event = {
+	id = 333506
+	title = "VIN6.T"
+	desc = "VIN6.D"
+	picture = "vinlandrebel"
+	
+    is_triggered_only = yes
+	
+	option = {
+		name = "VIN6.A"
+		prestige = 1
+	}
+}
+
+##### The Failed Execution of Kresten Søndergaard - He has broken out and escapes. ####
+
+country_event = {
+	id = 333507
+	title = "VIN7.T"
+	desc = "VIN7.D"
+	picture = "execution"
+	
+	fire_only_once = yes
+	
+    trigger = {
+        tag = VIN
+        has_country_flag = vindladic_attempt_two             
+        year = 1839
+		NOT = { has_global_flag = VIN_IS_FREE }
+    }
+	
+    mean_time_to_happen = {
+       days = 7
+    }
+
+	option = {
+		name = "VIN7.A"
+		set_country_flag = vindladic_attempt_two
+		set_country_flag = matyr_time 
+		relation = { who = SCA value = -10 }
+		any_pop = {
+		   ideology = {
+			  value = separatist
+			  factor = 0.1
+		   }
+		   ideology = {
+			  value = liberal
+			  factor = 0.09
+		   }
+        }
+	    any_pop = {
+		scaled_consciousness = { 
+				ideology = liberal
+				factor = 1
+        }
+		scaled_militancy = {
+				ideology = liberal
+				factor = 1
+	    }
+	    }
+        any_owned = {
+            limit = {
+                is_core = VIN
+            }
+            add_province_modifier = {
+                name = nationalist_agitation
+                duration = 10
+            }
+        }
+		SCA = { country_event = { id = 333508 days = 0 } }	
+	}
+}
+
+##### The Failed Execution of Kresten Søndergaard - What are you doing Vinland? ####
+
+country_event = {
+	id = 333508
+	title = "VIN8.T"
+	desc = "VIN8.D"
+	picture = "execution"
+	
+    is_triggered_only = yes
+	
+	option = {
+		name = "VIN8.A"
+		prestige = -1
+	}
+}
+
+##### Søndergaard's Martyrdom - Oh My God ###
+
+### TLDR he was captured, tortured and executed and it ended up making the news. Everyone knows about the horrors of this regime. ###
+
+country_event = {
+	id = 333509
+	title = "VIN9.T"
+	desc = "VIN9.D"
+	#picture = "ambush_army"
+	
+	fire_only_once = yes
+	
+	major = yes
+	
+    trigger = {
+        tag = VIN
+        has_country_flag = matyr_time            
+        year = 1840
+		NOT = { has_global_flag = VIN_IS_FREE }
+    }
+	
+    mean_time_to_happen = {
+       days = 31
+    }
+
+	option = {
+		name = "VIN9.A"
+		remove_country_modifier = VIN_military_rule
+		clr_country_flag = matyr_time     
+		set_country_flag = VIN_indipendence_possible
+		relation = { who = SCA value = -100 }
+		any_pop = {
+		   ideology = {
+			  value = separatist
+			  factor = 0.2
+		   }
+		   ideology = {
+			  value = liberal
+			  factor = 0.2
+		   }
+        }
+	    any_pop = {
+		scaled_consciousness = { 
+				ideology = liberal
+				factor = 6
+        }
+		scaled_militancy = {
+				ideology = liberal
+				factor = 6
+	    }
+		scaled_militancy = {
+				ideology = conservative
+				factor = 2
+		}
+		scaled_consciousness = { 
+				ideology = conservative
+				factor = 2
+        }
+		scaled_militancy = {
+				ideology = reactionary
+				factor = -5
+		}
+		scaled_consciousness = { 
+				ideology = reactionary
+				factor = -5
+        }
+	    }
+        any_owned = {
+            limit = {
+                is_core = VIN
+            }
+            add_province_modifier = {
+                name = nationalist_agitation
+                duration = 365
+            }
+        }
+		SCA = { country_event = { id = 333510 days = 0 } }	
+		MSG = { country_event = { id = 333511 days = 0 } }	
+	}
+}
+
+##### Søndergaard's Martyrdom - What the fuck (SCA) ####
+
+country_event = {
+	id = 333510
+	title = "VIN10.T"
+	desc = "VIN10.D"
+	picture = "BOH_mob"
+	
+    is_triggered_only = yes
+	
+	option = {
+		name = "VIN10.A"
+		any_pop = {
+		   ideology = {
+			  value = separatist
+			  factor = 0.01
+		   }
+		   ideology = {
+			  value = liberal
+			  factor = 0.04
+		   }
+		   ideology = {
+			  value = conservative
+			  factor = -0.05
+		   }
+        }
+	    any_pop = {
+		scaled_consciousness = { 
+				ideology = liberal
+				factor = 1
+        }
+		scaled_militancy = {
+				ideology = liberal
+				factor = 1
+	    }
+		}
+	}
+}
+
+##### Søndergaard's Martyrdom - What the fuck (MSG)  ####
+
+country_event = {
+	id = 333511
+	title = "VIN11.T"
+	desc = "VIN11.D"
+	picture = "BOH_mob"
+	
+    is_triggered_only = yes
+
+	option = {
+		name = "VIN11.A" 
+		remove_country_modifier = VIN_military_rule
+		relation = { who = SCA value = -100 }
+		any_pop = {
+		   ideology = {
+			  value = separatist
+			  factor = 0.1
+		   }
+		   ideology = {
+			  value = liberal
+			  factor = 0.1
+		   }
+        }
+	    any_pop = {
+		scaled_consciousness = { 
+				ideology = liberal
+				factor = 3
+        }
+		scaled_militancy = {
+				ideology = liberal
+				factor = 3
+	    }
+		scaled_militancy = {
+				ideology = conservative
+				factor = 1
+		}
+		scaled_consciousness = { 
+				ideology = conservative
+				factor = 1
+        }
+		scaled_militancy = {
+				ideology = reactionary
+				factor = -2
+		}
+		scaled_consciousness = { 
+				ideology = reactionary
+				factor = -2
+        }
+	    }
+        any_owned = {
+            limit = {
+                is_core = MSG
+            }
+            add_province_modifier = {
+                name = nationalist_agitation
+                duration = 365
+            }
+        }
+	}
+}
+
+####### The many ways to Vinlandic Independence #######
+
+#### Either VIN or MSG have broken off SCA. Automatic Independence regardless of the completion of the above event chains ###
+
+### The Vinlandic Revolution (Liberal) ####
+
+country_event = {
+	id = 333512
+	title = "VIN12.T"
+	desc = "VIN12.D"
+	#picture = "ambush_army"
+	
+	major = yes
+	fire_only_once = yes
+
+	trigger = {
+		tag = VIN
+		OR = {
+		  NOT = { is_vassal = yes }
+		  MSG = { NOT = { is_vassal = yes } }
+		}
+		NOT = { has_global_flag = VIN_IS_FREE }
+	}
+
+	mean_time_to_happen = {
+		days = 14
+	}
+
+	option = {
+		name = "VIN12.A"
+		end_war = SCA
+		clr_country_flag = VIN_indipendence_possible
+		any_country = { limit = { war_with = SCA } end_war = VIN end_war = SKR end_war = MSG } 
+		MSG = { end_war = SCA all_core = { remove_core = VIN } country_event = { id = 333516 days = 0 } }
+		SCA = { 
+		relation = { who = VIN value = -400 }
+		relation = { who = MSG value = -400 }
+		diplomatic_influence = { who = VIN value = -400 }
+		diplomatic_influence = { who = MSG value = -400 }				
+		release_vassal = VIN release_vassal = MSG release_vassal = SKR country_event = { id = 333513 days = 0 } 
+		}	
+		set_global_flag = VIN_IS_FREE
+		set_country_flag = VIN_CCC
+	    government = democracy
+		ruling_party_ideology = liberal
+        political_reform = appointed
+        political_reform = landed_voting
+        political_reform = no_meeting
+        political_reform = state_press
+        political_reform = no_trade_unions
+        political_reform = first_past_the_post
+        political_reform = underground_parties
+	    clr_country_flag = theocratic_government
+	    clr_country_flag = merchantrepublic_gov
+	    clr_country_flag = parliamentary_republic_gov
+	    clr_country_flag = communist_gov
+	    clr_country_flag = absolute_monarchy_gov
+	    clr_country_flag = semi_constitutional_monarchy_gov
+	    clr_country_flag = constitutional_monarchy_gov
+	    clr_country_flag = presidential_dictatorship_gov
+	    clr_country_flag = fascist_gov
+	    clr_country_flag = anarcho_liberal_gov
+	    clr_country_flag = socialist_republic_gov
+	    clr_country_flag = fascist_monarchy_gov
+	    set_country_flag = democracy_gov	
+		# The following is temp for SKR events		
+        SKR = {
+		end_war = SCA
+		all_core = { remove_core = VIN remove_core = NBG remove_core = PLA }
+	    government = democracy
+		ruling_party_ideology = conservative
+        political_reform = appointed
+        political_reform = landed_voting
+        political_reform = no_meeting
+        political_reform = state_press
+        political_reform = no_trade_unions
+        political_reform = first_past_the_post
+        political_reform = underground_parties
+	    clr_country_flag = theocratic_government
+	    clr_country_flag = merchantrepublic_gov
+	    clr_country_flag = parliamentary_republic_gov
+	    clr_country_flag = communist_gov
+	    clr_country_flag = absolute_monarchy_gov
+	    clr_country_flag = semi_constitutional_monarchy_gov
+	    clr_country_flag = constitutional_monarchy_gov
+	    clr_country_flag = presidential_dictatorship_gov
+	    clr_country_flag = fascist_gov
+	    clr_country_flag = anarcho_liberal_gov
+	    clr_country_flag = socialist_republic_gov
+	    clr_country_flag = fascist_monarchy_gov
+	    set_country_flag = democracy_gov	
+		country_event = 79125
+        }		
+	}
+}
+
+### Vinland has left because we did not kill the rebels that they were suffering from. You lose.
+
+country_event = {
+	id = 333513
+	title = "VIN13.T"
+	desc = "VIN13.D"
+	picture = "vinlandcapital"
+	
+    is_triggered_only = yes
+	
+	option = {
+		name = "VIN13.A"
+		prestige = -5
+		any_pop = {
+		   ideology = {
+			  value = separatist
+			  factor = 0.01
+		   }
+		   ideology = {
+			  value = liberal
+			  factor = 0.04
+		   }
+		   ideology = {
+			  value = conservative
+			  factor = -0.05
+		   }
+        }
+	    any_pop = {
+		scaled_consciousness = { 
+				ideology = liberal
+				factor = 1
+        }
+		scaled_militancy = {
+				ideology = liberal
+				factor = 1
+	    }
+		}
+	}
+}
+
+#### Scandinavia is no longer a monarchy and therefore the resulting chaos during the revolution results in Vinland leaving ###
+
+### The Vinlandic Revolution (Liberal) ####
+
+country_event = {
+	id = 333514
+	title = "VIN14.T"
+	desc = "VIN14.D"
+	#picture = "ambush_army"
+	
+	major = yes
+	fire_only_once = yes
+
+	trigger = {
+		tag = VIN
+		NOT = { has_global_flag = VIN_IS_FREE }
+		SCA = {
+		   NOT = { 
+		      OR = { 
+		         government = absolute_monarchy
+			     government = prussian_constitutionalism
+			     government = hms_government
+			     government = fascist_monarchy
+              }
+		   }
+	   }
+	}
+
+	mean_time_to_happen = {
+		days = 14
+	}
+
+	option = {
+		name = "VIN14.A"
+		end_war = SCA
+		clr_country_flag = VIN_indipendence_possible
+		any_country = { limit = { war_with = SCA } end_war = VIN end_war = SKR end_war = MSG } 
+		MSG = { end_war = SCA all_core = { remove_core = VIN } country_event = { id = 333516 days = 0 } }
+		SCA = { 
+		relation = { who = VIN value = -400 }
+		relation = { who = MSG value = -400 }
+		diplomatic_influence = { who = VIN value = -400 }
+		diplomatic_influence = { who = MSG value = -400 }				
+		release_vassal = VIN release_vassal = MSG release_vassal = SKR country_event = { id = 333515 days = 0 } 
+		}
+		set_global_flag = VIN_IS_FREE
+		set_country_flag = VIN_CCC
+	    government = democracy
+		ruling_party_ideology = liberal
+        political_reform = appointed
+        political_reform = landed_voting
+        political_reform = no_meeting
+        political_reform = state_press
+        political_reform = no_trade_unions
+        political_reform = first_past_the_post
+        political_reform = underground_parties
+	    clr_country_flag = theocratic_government
+	    clr_country_flag = merchantrepublic_gov
+	    clr_country_flag = parliamentary_republic_gov
+	    clr_country_flag = communist_gov
+	    clr_country_flag = absolute_monarchy_gov
+	    clr_country_flag = semi_constitutional_monarchy_gov
+	    clr_country_flag = constitutional_monarchy_gov
+	    clr_country_flag = presidential_dictatorship_gov
+	    clr_country_flag = fascist_gov
+	    clr_country_flag = anarcho_liberal_gov
+	    clr_country_flag = socialist_republic_gov
+	    clr_country_flag = fascist_monarchy_gov
+	    set_country_flag = democracy_gov	
+		# The following is temp for SKR events	
+        SKR = {
+		end_war = SCA
+		all_core = { remove_core = VIN remove_core = NBG remove_core = PLA }
+	    government = democracy
+		ruling_party_ideology = conservative
+        political_reform = appointed
+        political_reform = landed_voting
+        political_reform = no_meeting
+        political_reform = state_press
+        political_reform = no_trade_unions
+        political_reform = first_past_the_post
+        political_reform = underground_parties
+	    clr_country_flag = theocratic_government
+	    clr_country_flag = merchantrepublic_gov
+	    clr_country_flag = parliamentary_republic_gov
+	    clr_country_flag = communist_gov
+	    clr_country_flag = absolute_monarchy_gov
+	    clr_country_flag = semi_constitutional_monarchy_gov
+	    clr_country_flag = constitutional_monarchy_gov
+	    clr_country_flag = presidential_dictatorship_gov
+	    clr_country_flag = fascist_gov
+	    clr_country_flag = anarcho_liberal_gov
+	    clr_country_flag = socialist_republic_gov
+	    clr_country_flag = fascist_monarchy_gov
+	    set_country_flag = democracy_gov	
+		country_event = 79125
+        }		
+	}
+}
+
+### Vinland has left because we are now a republic and the revolution has caused enough chaos for them to leave. You lose.
+
+country_event = {
+	id = 333515
+	title = "VIN15.T"
+	desc = "VIN15.D"
+	picture = "vinlandcapital"
+	
+    is_triggered_only = yes
+	
+	option = {
+		name = "VIN15.A"
+		prestige = -5
+		any_pop = {
+		   ideology = {
+			  value = reactionary
+			  factor = 0.05
+		   }
+		   ideology = {
+			  value = liberal
+			  factor = -0.05
+		   }
+        }
+	    any_pop = {
+		scaled_consciousness = { 
+				ideology = reactionary
+				factor = 1
+        }
+		scaled_militancy = {
+				ideology = reactionary
+				factor = 1
+	    }
+		}
+	}
+}
+
+### Vinland has broken free and we have fallen under their influence at least until the aftermath of the upcoming constitutional convention ###
+
+country_event = {
+	id = 333516
+	title = "VIN16.T"
+	desc = "VIN16.D"
+	picture = "vinlandcapital"
+	
+    is_triggered_only = yes
+	
+	option = {
+		name = "VIN16.A"
+		VIN = { create_vassal = THIS }
+		any_pop = {
+		   ideology = {
+			  value = reactionary
+			  factor = 0.02
+		   }
+        }
+	    any_pop = {
+		scaled_consciousness = { 
+				ideology = reactionary
+				factor = 1
+        }
+		scaled_militancy = {
+				ideology = reactionary
+				factor = 1
+	    }
+		}
+	}
+}
+
+#### Scandinavia is indisposed and VIN_indipendence_possible is set. ###
+
+### The Vinlandic Revolution (Liberal) ####
+
+country_event = {
+	id = 333517
+	title = "VIN17.T"
+	desc = "VIN17.D"
+	#picture = "ambush_army"
+	
+	major = yes
+	fire_only_once = yes
+
+	trigger = {
+		tag = VIN
+		NOT = { has_global_flag = VIN_IS_FREE }
+		has_country_flag = VIN_indipendence_possible
+		SCA = {
+		   OR = {
+		      war_with = BOH
+			  war_with = DUA
+			  war_with = BRG
+			  war_with = SPA
+			  war_with = NOV
+			  is_disarmed = yes
+		   }
+	    }
+	}
+
+	mean_time_to_happen = {
+		days = 14
+	}
+		
+	option = {
+		name = "VIN17.A"
+		end_war = SCA
+		clr_country_flag = VIN_indipendence_possible
+		add_country_modifier = { name = taiping_draft duration = 1095 }
+		any_country = { limit = { war_with = SCA } end_war = VIN end_war = SKR end_war = MSG } 
+		MSG = { end_war = SCA all_core = { remove_core = VIN } country_event = { id = 333519 days = 1 } }
+		SCA = { release_vassal = VIN release_vassal = MSG release_vassal = SKR country_event = { id = 333520 days = 7 } }	
+		set_global_flag = VIN_IS_FREE
+	    government = democracy
+		ruling_party_ideology = liberal
+        political_reform = appointed
+        political_reform = landed_voting
+        political_reform = no_meeting
+        political_reform = state_press
+        political_reform = no_trade_unions
+        political_reform = first_past_the_post
+        political_reform = underground_parties
+	    clr_country_flag = theocratic_government
+	    clr_country_flag = merchantrepublic_gov
+	    clr_country_flag = parliamentary_republic_gov
+	    clr_country_flag = communist_gov
+	    clr_country_flag = absolute_monarchy_gov
+	    clr_country_flag = semi_constitutional_monarchy_gov
+	    clr_country_flag = constitutional_monarchy_gov
+	    clr_country_flag = presidential_dictatorship_gov
+	    clr_country_flag = fascist_gov
+	    clr_country_flag = anarcho_liberal_gov
+	    clr_country_flag = socialist_republic_gov
+	    clr_country_flag = fascist_monarchy_gov
+	    set_country_flag = democracy_gov	
+		# The following is temp for SKR events	
+        SKR = {
+		end_war = SCA
+		all_core = { remove_core = VIN remove_core = NBG remove_core = PLA }
+	    government = democracy
+		ruling_party_ideology = conservative
+        political_reform = appointed
+        political_reform = landed_voting
+        political_reform = no_meeting
+        political_reform = state_press
+        political_reform = no_trade_unions
+        political_reform = first_past_the_post
+        political_reform = underground_parties
+	    clr_country_flag = theocratic_government
+	    clr_country_flag = merchantrepublic_gov
+	    clr_country_flag = parliamentary_republic_gov
+	    clr_country_flag = communist_gov
+	    clr_country_flag = absolute_monarchy_gov
+	    clr_country_flag = semi_constitutional_monarchy_gov
+	    clr_country_flag = constitutional_monarchy_gov
+	    clr_country_flag = presidential_dictatorship_gov
+	    clr_country_flag = fascist_gov
+	    clr_country_flag = anarcho_liberal_gov
+	    clr_country_flag = socialist_republic_gov
+	    clr_country_flag = fascist_monarchy_gov
+	    set_country_flag = democracy_gov	
+		country_event = 79125
+        }		
+	}
+}
+
+#### Vinland is denied independence after Conservative Independence Chain. Radical Vinland  ###
+
+country_event = {
+	id = 333518
+	title = "VIN18.T"
+	desc = "VIN18.D"
+	#picture = "ambush_army"
+	
+	major = yes
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = "VIN18.A"
+		end_war = SCA
+		clr_country_flag = VIN_indipendence_possible
+		add_country_modifier = { name = small_country_draft duration = 1095 }
+		any_country = { limit = { war_with = SCA } end_war = VIN end_war = SKR end_war = MSG } 
+		MSG = { end_war = SCA all_core = { remove_core = VIN } country_event = { id = 333519 days = 1 } }
+		SCA = { release_vassal = VIN release_vassal = MSG release_vassal = SKR country_event = { id = 333520 days = 7 } }	
+		set_global_flag = VIN_IS_FREE
+	    government = democracy
+		ruling_party_ideology = anarcho_liberal
+        political_reform = appointed
+        political_reform = landed_voting
+        political_reform = no_meeting
+        political_reform = state_press
+        political_reform = no_trade_unions
+        political_reform = first_past_the_post
+        political_reform = underground_parties
+	    clr_country_flag = theocratic_government
+	    clr_country_flag = merchantrepublic_gov
+	    clr_country_flag = parliamentary_republic_gov
+	    clr_country_flag = communist_gov
+	    clr_country_flag = absolute_monarchy_gov
+	    clr_country_flag = semi_constitutional_monarchy_gov
+	    clr_country_flag = constitutional_monarchy_gov
+	    clr_country_flag = presidential_dictatorship_gov
+	    clr_country_flag = fascist_gov
+	    clr_country_flag = anarcho_liberal_gov
+	    clr_country_flag = socialist_republic_gov
+	    clr_country_flag = fascist_monarchy_gov
+	    set_country_flag = democracy_gov	
+		# The following is temp for SKR events	
+        SKR = {
+		end_war = SCA
+		all_core = { remove_core = VIN remove_core = NBG remove_core = PLA }
+	    government = democracy
+		ruling_party_ideology = conservative
+        political_reform = appointed
+        political_reform = landed_voting
+        political_reform = no_meeting
+        political_reform = state_press
+        political_reform = no_trade_unions
+        political_reform = first_past_the_post
+        political_reform = underground_parties
+	    clr_country_flag = theocratic_government
+	    clr_country_flag = merchantrepublic_gov
+	    clr_country_flag = parliamentary_republic_gov
+	    clr_country_flag = communist_gov
+	    clr_country_flag = absolute_monarchy_gov
+	    clr_country_flag = semi_constitutional_monarchy_gov
+	    clr_country_flag = constitutional_monarchy_gov
+	    clr_country_flag = presidential_dictatorship_gov
+	    clr_country_flag = fascist_gov
+	    clr_country_flag = anarcho_liberal_gov
+	    clr_country_flag = socialist_republic_gov
+	    clr_country_flag = fascist_monarchy_gov
+	    set_country_flag = democracy_gov	
+		country_event = 79125
+        }		
+	}
+}
+
+### Vinland has broken free and we have fallen under their influence at least until the aftermath of the upcoming constitutional convention ###
+
+country_event = {
+	id = 333519
+	title = "VIN19.T"
+	desc = "VIN19.D"
+	picture = "vinlandcapital"
+	
+    is_triggered_only = yes
+	
+	option = {
+		name = "VIN19.A"
+		add_country_modifier = { name = taiping_draft duration = 1095 }
+		VIN = { create_vassal = THIS }
+		any_pop = {
+		   ideology = {
+			  value = reactionary
+			  factor = 0.02
+		   }
+        }
+	    any_pop = {
+		scaled_consciousness = { 
+				ideology = reactionary
+				factor = 1
+        }
+		scaled_militancy = {
+				ideology = reactionary
+				factor = 1
+	    }
+		}
+	}
+}
+
+### Vinland has declared independence. Should we act?
+
+### Annex 73
+
+country_event = {
+	id = 333520
+	title = "VIN20.T"
+	desc = "VIN20.D"
+	picture = "vinlandrebel"
+	
+    is_triggered_only = yes
+	
+	option = {
+		name = "VIN20.A"
+		leave_alliance = VIN
+		leave_alliance = MSG
+		relation = { who = VIN value = -400 }
+		relation = { who = MSG value = -400 }
+		diplomatic_influence = { who = VIN value = -400 }
+		diplomatic_influence = { who = MSG value = -400 }
+		set_global_flag = vinlandic_indipendence_war
+		prestige = 10
+		badboy = 10
+	    MSG = { country_event = { id = 333521 days = 1 } 73 = { secede_province = SCA } }
+		VIN = { country_event = { id = 3335210 days = 1 } }
+		any_pop = {
+		   ideology = {
+			  value = separatist
+			  factor = 0.01
+		   }
+		   ideology = {
+			  value = liberal
+			  factor = 0.04
+		   }
+		   ideology = {
+			  value = conservative
+			  factor = -0.05
+		   }
+        }
+	    any_pop = {
+		scaled_consciousness = { 
+				ideology = liberal
+				factor = 1
+        }
+		scaled_militancy = {
+				ideology = liberal
+				factor = 1
+	    }
+		}
+	    war = {
+			target = VIN
+			attacker_goal =  { 
+				casus_belli = custom_treaty_cb
+			}
+			defender_goal = {
+				casus_belli = status_quo
+			}	
+	    }
+	    ai_chance = { 
+	        factor = 40
+	        modifier = {
+	           factor = 0
+	           badboy = 0.5
+			}
+		}
+	}
+	
+	option = {
+		name = "VIN20.B"
+		leave_alliance = VIN
+		leave_alliance = MSG	
+		relation = { who = VIN value = -100 }
+		relation = { who = MSG value = -100 }
+		diplomatic_influence = { who = VIN value = -100 }
+		diplomatic_influence = { who = MSG value = -100 }		
+		VIN = {
+           set_country_flag = VIN_CCC
+		}
+		any_pop = {
+		   ideology = {
+			  value = reactionary
+			  factor = 0.05
+		   }
+		   ideology = {
+			  value = liberal
+			  factor = -0.05
+		   }
+        }
+	    any_pop = {
+		scaled_consciousness = { 
+				ideology = reactionary
+				factor = 1
+        }
+		scaled_militancy = {
+				ideology = reactionary
+				factor = 1
+	    }
+		}
+	    ai_chance = { 
+	        factor = 60
+		}
+	}
+}
+
+### SCANDINAVIA HAS DECLARED WAR ON US AND SIEZED A CRITICAL PORT. LETS FIGHT LIKE THE VIKINGS OF OLD AND THROW THESE ASSHOLES BACK INTO THE SEA. ###
+
+country_event = {
+	id = 333521
+	title = "VIN21.T"
+	desc = "VIN21.D"
+	#picture = "ambush_army"
+	major = yes
+	
+    is_triggered_only = yes
+	
+	option = {
+		name = "VIN21.A"
+	    any_pop = {
+	       consciousness = -9
+	    }
+	    any_pop = {
+	       militancy = -9
+	    }
+	}
+}
+
+country_event = {
+	id = 3335210
+	title = "VIN21.T"
+	desc = "VIN21.D"
+	#picture = "ambush_army"
+	
+    is_triggered_only = yes
+	
+	option = {
+		name = "VIN21.A"
+	    any_pop = {
+	       consciousness = -9
+	    }
+	    any_pop = {
+	       militancy = -9
+	    }
+	}
+}
+
+### We have been unable to take back Vinland or at least that port for a considerable about of time. Total Defeat.
+
+country_event = {
+	id = 3335220
+	title = "VIN22.T"
+	desc = "VIN22.D"
+	picture = "SCAloss"
+	
+	fire_only_once = yes
+
+	trigger = {
+       tag = SCA
+	   war = no
+	   has_global_flag = vinlandic_indipendence_war
+	   VIN = { NOT = { has_country_flag = custom_treaty_loser } }
+	}
+
+	mean_time_to_happen = {
+		days = 3
+	}
+		
+	option = {
+		name = "VIN22.A"
+		prestige = -20
+		73 = { secede_province = MSG }
+		end_war = VIN
+		end_war = MSG
+		VIN = { clr_country_flag = custom_treaty_loser set_country_flag = VIN_CCC prestige = 20 remove_country_modifier = taiping_draft remove_country_modifier = small_country_draft }
+		MSG = { prestige = 20 remove_country_modifier = taiping_draft remove_country_modifier = small_country_draft }
+		clr_global_flag = vinlandic_indipendence_war
+    }		
+}
+
+#### Radicalism exist and Vinland is still owned by Scandinavia ###
+
+#### The Radicalist Uprising in $CAPITAL$ ###
+
+country_event = {
+	id = 333523
+	title = "VIN23.T"
+	desc = "VIN23.D"
+	picture = "vinlandrebel"
+
+	fire_only_once = yes
+	
+	trigger = {
+       tag = VIN
+	   has_country_flag = VIN_indipendence_possible
+	   is_ideology_enabled = anarcho_liberal
+	   NOT = { has_global_flag = VIN_IS_FREE }
+	}
+
+	mean_time_to_happen = {
+		months = 1
+	}
+
+	option = {
+		name = "VIN23.A"
+		clr_country_flag = VIN_indipendence_possible
+		any_pop = {
+		   ideology = {
+			  value = anarcho_liberal
+			  factor = 0.25
+		   }
+        }
+	    any_pop = {
+		scaled_consciousness = { 
+				ideology = liberal
+				factor = 1
+		}
+		scaled_consciousness = {
+				ideology = anarcho_liberal
+				factor = 2
+	    }
+		scaled_militancy = {
+				ideology = reactionary
+				factor = -1
+		}
+		scaled_militancy = {
+				ideology = conservative
+				factor = -1
+		}
+		scaled_militancy = {
+				ideology = liberal
+				factor = 1
+	    }
+		scaled_militancy = {
+				ideology = anarcho_liberal
+				factor = 2
+	    }
+	    }
+		country_event = { id = 333524 days = 1 }
+	}
+}
+
+### The Racialist Massacre in Vinland - Caused by a attempted coup/revolution of the Vinlandic Government House - Vinland is catastrophically destabilized ###
+
+country_event = {
+	id = 333524
+	title = "VIN24.T"
+	desc = "VIN24.D"
+	#picture = "ambush_army"
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = "VIN24.A"	
+		ruling_party_ideology = conservative
+	    65 = {
+		poor_strata = {
+            reduce_pop = 0.99
+	    }
+		middle_strata = {
+			reduce_pop = 0.95
+	    }
+		rich_strata = {
+			reduce_pop = 0.98
+	    }
+	    }	
+		clr_country_flag = VIN_indipendence_possible
+	    any_pop = {
+		scaled_consciousness = { 
+				ideology = liberal
+				factor = 2
+		}
+		scaled_consciousness = {
+				ideology = anarcho_liberal
+				factor = 4
+	    }
+		scaled_militancy = {
+				ideology = liberal
+				factor = 2
+	    }
+		scaled_militancy = {
+				ideology = anarcho_liberal
+				factor = 4
+	    }
+	    }
+        any_owned = {
+            limit = {
+                is_core = VIN
+            }
+            add_province_modifier = {
+                name = nationalist_agitation
+                duration = 365
+            }
+        }
+		country_event = { id = 3335250 days = 1 }
+	}
+}
+
+# A unfortunate request - Offer to partition SKR after independence and allow full Scandinavian influence over Vinland.
+
+country_event = {
+	id = 3335250
+	title = "VIN250.T"
+	desc = "VIN250.D"
+	picture = "scandinavian_royal"
+	
+    is_triggered_only = yes
+	
+	option = {
+		name = "VIN250.A"
+		prestige = -5
+		any_pop = {
+		   ideology = {
+			  value = conservative
+			  factor = -0.05
+		   }
+		   ideology = {
+			  value = liberal
+			  factor = -0.1
+		   }
+		   ideology = {
+			  value = anarcho_liberal
+			  factor = 0.1
+		   }
+        }
+	    any_pop = {
+		scaled_consciousness = { 
+				ideology = anarcho_liberal
+				factor = 1
+        }
+		scaled_militancy = {
+				ideology = anarcho_liberal
+				factor = 1
+	    }
+		}
+		country_event = { id = 333518 days = 7 }
+	    ai_chance = { 
+	        factor = 10
+		}
+	}
+	
+	option = {
+		name = "VIN250.B"
+		prestige = 5
+		any_pop = {
+		   ideology = {
+			  value = anarcho_liberal
+			  factor = -0.1
+		   }
+		   ideology = {
+			  value = conservative
+			  factor = 0.1
+		   }
+        }
+		SCA = { country_event = { id = 333525 days = 7 } }
+	    ai_chance = { 
+	        factor = 90
+		}
+	}
+}
+
+#### Vinland wants conditional independence due to being destabilized. 
+
+country_event = {
+	id = 333525
+	title = "VIN25.T"
+	desc = "VIN25.D"
+	picture = "vinlandcapital"
+	
+    is_triggered_only = yes
+	
+	option = {
+		name = "VIN25.A"
+		set_global_flag = VIN_IS_FREE
+		release_vassal = VIN
+		release_vassal = MSG
+		relation = { who = VIN value = 400 }
+		relation = { who = MSG value = 400 }
+		diplomatic_influence = { who = VIN value = 400 }
+		diplomatic_influence = { who = MSG value = 400 }
+		VIN = {
+		any_pop = {
+		   ideology = {
+			  value = anarcho_liberal
+			  factor = -0.1
+		   }
+        }
+	    any_pop = {
+		scaled_consciousness = { 
+				ideology = anarcho_liberal
+				factor = -5
+        }
+		scaled_militancy = {
+				ideology = anarcho_liberal
+				factor = -5
+	    }
+		}
+		country_event = { id = 333526 days = 7 }
+		}
+	    ai_chance = { 
+	        factor = 50
+		}
+	}
+	
+	option = {
+		name = "VIN25.B"
+		prestige = 5
+		VIN = {
+		any_pop = {
+		   ideology = {
+			  value = conservative
+			  factor = -0.05
+		   }
+		   ideology = {
+			  value = liberal
+			  factor = -0.1
+		   }
+		   ideology = {
+			  value = anarcho_liberal
+			  factor = 0.1
+		   }
+        }
+	    any_pop = {
+		scaled_consciousness = { 
+				ideology = anarcho_liberal
+				factor = 1
+        }
+		scaled_militancy = {
+				ideology = anarcho_liberal
+				factor = 1
+	    }
+		}
+		country_event = { id = 333518 days = 7 }
+		}
+	    ai_chance = { 
+	        factor = 50
+		}
+	}
+}
+
+### The Independence of Vinland (Conservative) ####
+
+country_event = {
+	id = 333526
+	title = "VIN26.T"
+	desc = "VIN26.D"
+	#picture = "ambush_army"
+	
+	major = yes
+	fire_only_once = yes
+
+    is_triggered_only = yes
+	 
+	option = {
+		name = "VIN26.A"
+		clr_country_flag = VIN_indipendence_possible
+		any_country = { limit = { war_with = SCA } end_war = VIN end_war = SKR end_war = MSG } 
+		MSG = { all_core = { remove_core = VIN } country_event = { id = 333527 days = 0 } }
+		set_country_flag = VIN_CCC
+	    government = democracy
+		ruling_party_ideology = conservative
+        political_reform = appointed
+        political_reform = landed_voting
+        political_reform = no_meeting
+        political_reform = state_press
+        political_reform = no_trade_unions
+        political_reform = first_past_the_post
+        political_reform = underground_parties
+	    clr_country_flag = theocratic_government
+	    clr_country_flag = merchantrepublic_gov
+	    clr_country_flag = parliamentary_republic_gov
+	    clr_country_flag = communist_gov
+	    clr_country_flag = absolute_monarchy_gov
+	    clr_country_flag = semi_constitutional_monarchy_gov
+	    clr_country_flag = constitutional_monarchy_gov
+	    clr_country_flag = presidential_dictatorship_gov
+	    clr_country_flag = fascist_gov
+	    clr_country_flag = anarcho_liberal_gov
+	    clr_country_flag = socialist_republic_gov
+	    clr_country_flag = fascist_monarchy_gov
+	    set_country_flag = democracy_gov	
+		# The following is temp for SKR events		
+        SKR = {
+		all_core = { remove_core = VIN remove_core = NBG remove_core = PLA }
+		civilized = yes
+		set_country_flag = SKR_wait_and_see
+	    government = democracy
+		ruling_party_ideology = conservative
+        political_reform = appointed
+        political_reform = landed_voting
+        political_reform = no_meeting
+        political_reform = state_press
+        political_reform = no_trade_unions
+        political_reform = first_past_the_post
+        political_reform = underground_parties
+	    clr_country_flag = theocratic_government
+	    clr_country_flag = merchantrepublic_gov
+	    clr_country_flag = parliamentary_republic_gov
+	    clr_country_flag = communist_gov
+	    clr_country_flag = absolute_monarchy_gov
+	    clr_country_flag = semi_constitutional_monarchy_gov
+	    clr_country_flag = constitutional_monarchy_gov
+	    clr_country_flag = presidential_dictatorship_gov
+	    clr_country_flag = fascist_gov
+	    clr_country_flag = anarcho_liberal_gov
+	    clr_country_flag = socialist_republic_gov
+	    clr_country_flag = fascist_monarchy_gov
+	    set_country_flag = democracy_gov	
+        }	
+        create_vassal = SKR
+	}
+}
+
+### Vinland has broken free and we have fallen under their influence at least until the aftermath of the upcoming constitutional convention ###
+
+country_event = {
+	id = 333527
+	title = "VIN27.T"
+	desc = "VIN27.D"
+	picture = "vinlandcapital"
+	
+    is_triggered_only = yes
+	
+	option = {
+		name = "VIN27.A"
+		VIN = { create_vassal = THIS }
+		any_pop = {
+		   ideology = {
+			  value = reactionary
+			  factor = 0.02
+		   }
+        }
+	    any_pop = {
+		scaled_consciousness = { 
+				ideology = reactionary
+				factor = 1
+        }
+		scaled_militancy = {
+				ideology = reactionary
+				factor = 1
+	    }
+		}
+	}
+}
+
+#############################################################################################
+################ The Constitutional Convention of Vinland     ###############################
+#############################################################################################
+
+### The Constitutional Convention of Vinland ###
+
+country_event = {
+	id = 333528
+	title = "VIN28.T"
+	desc = "VIN28.D"
+	picture = "confederation"
+	
+	fire_only_once = yes
+
+	trigger = {
+       tag = VIN
+	   has_country_flag = VIN_CCC
+	}
+
+	mean_time_to_happen = {
+		months = 2
+	}
+
+	option = {
+		name = "VIN28.A"
+		clr_country_flag = VIN_CCC
+		political_reform = free_press
+		political_reform = yes_meeting
+		political_reform = secret_ballots
+		random_owned = {
+		   limit = {
+		      owner = { OR = { ruling_party_ideology = conservative ruling_party_ideology = reactionary } }
+		   }
+		   owner = {
+	          set_variable = {
+		         which = VIN_CON
+		         value = 9
+		      }
+	       }
+		}
+		random_owned = {
+		   limit = {
+		      owner = { ruling_party_ideology = liberal }
+		   }
+		   owner = {
+	          set_variable = {
+		         which = VIN_CON
+		         value = 10
+		      }
+	       }
+		}
+		random_owned = {
+		   limit = {
+		      owner = { ruling_party_ideology = anarcho_liberal }
+		   }
+		   owner = {
+	          set_variable = {
+		         which = VIN_CON
+		         value = 11
+		      }
+	       }
+		}
+		any_pop = {
+		   ideology = {
+			  value = conservative
+			  factor = 0.05
+		   }
+		   ideology = {
+			  value = liberal
+			  factor = 0.05
+		   }
+		   ideology = {
+			  value = reactionary
+			  factor = 0.05
+		   }
+        }
+		random_owned = {
+		   limit = {
+		      owner = { is_ideology_enabled = anarcho_liberal }
+		   }
+		   owner = {
+		   any_pop = {
+		      ideology = {
+			     value = anarcho_liberal
+			     factor = 0.05
+		      }	
+           }
+		   }
+        }		   	
+	    any_pop = {
+	       consciousness = -9
+	    }
+	    any_pop = {
+	       militancy = -9
+	    }
+		country_event = { id = 333529 days = 7 }
+	}
+}
+
+# Voting System
+
+country_event = {
+	id = 333529
+	title = "VIN29.T"
+	desc = "VIN29.D"
+	picture = "voting"
+	
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = "VIN29.A"
+		political_reform = settlement
+		political_reform = culture_voting_only
+		political_reform = landed_voting
+		political_reform = party_appointed
+		political_reform = state_press
+		political_reform = no_meeting
+		political_reform = harassment
+		political_reform = unitary
+		set_country_flag = native_assimilation
+		add_country_modifier = {
+			name = native_assimilation
+			duration = 3650
+		}
+	    any_pop = {
+		scaled_consciousness = { 
+				ideology = reactionary
+				factor = -6
+		}
+		scaled_consciousness = { 
+				ideology = conservative
+				factor = 2
+		}
+		scaled_consciousness = { 
+				ideology = liberal
+				factor = 6
+		}
+		scaled_consciousness = { 
+				ideology = anarcho_liberal
+				factor = 8
+		}
+		scaled_militancy = {
+				ideology = reactionary
+				factor = -6
+		}
+		scaled_militancy = {
+				ideology = conservative
+				factor = 2
+		}
+		scaled_militancy = {
+				ideology = liberal
+				factor = 6
+	    }
+		scaled_militancy = {
+				ideology = anarcho_liberal
+				factor = 8
+	    }
+	    }
+		country_event = { id = 333534 days = 7 }
+	    ai_chance = { 
+	        factor = 10
+			   modifier = {
+			      factor = 4
+			      MSG = { ai = no }				  
+			   }
+		}
+	}
+	
+	option = {
+		name = "VIN29.B"
+		political_reform = wealth_voting
+	    any_pop = {
+		scaled_consciousness = { 
+				ideology = reactionary
+				factor = 1
+		}
+		scaled_consciousness = { 
+				ideology = liberal
+				factor = -1
+		}
+		scaled_consciousness = { 
+				ideology = anarcho_liberal
+				factor = 1
+		}
+		scaled_militancy = {
+				ideology = reactionary
+				factor = 1
+		}
+		scaled_militancy = {
+				ideology = liberal
+				factor = -1
+	    }
+		scaled_militancy = {
+				ideology = anarcho_liberal
+				factor = 1
+	    }
+	    }
+		country_event = { id = 333530 days = 7 }
+	    change_variable = {
+		   which = VIN_CON
+		   value = 1
+		}
+	    ai_chance = { 
+	        factor = 50
+			   modifier = {
+			      factor = 0
+			      MSG = { ai = no }				  
+			   }
+		}
+	}
+	
+	option = {
+		name = "VIN29.C"
+		political_reform = universal_voting
+	    any_pop = {
+		scaled_consciousness = { 
+				ideology = reactionary
+				factor = 2
+		}
+		scaled_consciousness = { 
+				ideology = conservative
+				factor = 1
+		}
+		scaled_consciousness = { 
+				ideology = liberal
+				factor = -2
+		}
+		scaled_consciousness = { 
+				ideology = anarcho_liberal
+				factor = -4
+		}
+		scaled_militancy = {
+				ideology = reactionary
+				factor = 2
+		}
+		scaled_militancy = {
+				ideology = conservative
+				factor = 1
+		}
+		scaled_militancy = {
+				ideology = liberal
+				factor = -2
+	    }
+		scaled_militancy = {
+				ideology = anarcho_liberal
+				factor = -4
+	    }
+	    }
+		country_event = { id = 333530 days = 7 }
+	    change_variable = {
+		   which = VIN_CON
+		   value = 2
+		}
+	    ai_chance = { 
+	        factor = 40
+		}
+	}
+}
+
+# The Upper House
+
+country_event = {
+	id = 333530
+	title = "VIN30.T"
+	desc = "VIN30.D"
+	picture = "Upperhouse"
+	
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = "VIN30.A"
+		political_reform = settlement
+		political_reform = culture_voting_only
+		political_reform = party_appointed
+		political_reform = state_press
+		political_reform = no_meeting
+		political_reform = harassment
+		political_reform = unitary
+		set_country_flag = native_assimilation
+		add_country_modifier = {
+			name = native_assimilation
+			duration = 3650
+		}
+	    any_pop = {
+		scaled_consciousness = { 
+				ideology = reactionary
+				factor = -6
+		}
+		scaled_consciousness = { 
+				ideology = conservative
+				factor = 2
+		}
+		scaled_consciousness = { 
+				ideology = liberal
+				factor = 6
+		}
+		scaled_consciousness = { 
+				ideology = anarcho_liberal
+				factor = 8
+		}
+		scaled_militancy = {
+				ideology = reactionary
+				factor = -6
+		}
+		scaled_militancy = {
+				ideology = conservative
+				factor = 2
+		}
+		scaled_militancy = {
+				ideology = liberal
+				factor = 6
+	    }
+		scaled_militancy = {
+				ideology = anarcho_liberal
+				factor = 8
+	    }
+	    }
+		country_event = { id = 333534 days = 7 }
+	    ai_chance = { 
+	        factor = 10
+			   modifier = {
+			      factor = 0
+			      MSG = { ai = no }				  
+			   }
+		}
+	}
+	
+	option = {
+		name = "VIN30.B"
+		political_reform = state_equal_weight
+	    any_pop = {
+		scaled_consciousness = { 
+				ideology = reactionary
+				factor = 1
+		}
+		scaled_consciousness = { 
+				ideology = liberal
+				factor = -1
+		}
+		scaled_consciousness = { 
+				ideology = anarcho_liberal
+				factor = 1
+		}
+		scaled_militancy = {
+				ideology = reactionary
+				factor = 1
+		}
+		scaled_militancy = {
+				ideology = liberal
+				factor = -1
+	    }
+		scaled_militancy = {
+				ideology = anarcho_liberal
+				factor = 1
+	    }
+	    }
+		country_event = { id = 333531 days = 7 }
+	    change_variable = {
+		   which = VIN_CON
+		   value = 1
+		}
+	    ai_chance = { 
+	        factor = 50
+			   modifier = {
+			      factor = 0
+			      MSG = { ai = no }				  
+			   }
+		}
+	}
+	
+	option = {
+		name = "VIN30.C"
+		political_reform = population_equal_weight
+	    any_pop = {
+		scaled_consciousness = { 
+				ideology = reactionary
+				factor = 2
+		}
+		scaled_consciousness = { 
+				ideology = conservative
+				factor = 1
+		}
+		scaled_consciousness = { 
+				ideology = liberal
+				factor = -2
+		}
+		scaled_consciousness = { 
+				ideology = anarcho_liberal
+				factor = -4
+		}
+		scaled_militancy = {
+				ideology = reactionary
+				factor = 2
+		}
+		scaled_militancy = {
+				ideology = conservative
+				factor = 1
+		}
+		scaled_militancy = {
+				ideology = liberal
+				factor = -2
+	    }
+		scaled_militancy = {
+				ideology = anarcho_liberal
+				factor = -4
+	    }
+	    }
+		country_event = { id = 333531 days = 7 }
+	    change_variable = {
+		   which = VIN_CON
+		   value = 2
+		}
+	    ai_chance = { 
+	        factor = 40
+		}
+	}
+}
+
+# Native Voting Rights
+
+country_event = {
+	id = 333531
+	title = "VIN31.T"
+	desc = "VIN31.D"
+	picture = "metis"
+	
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = "VIN31.A"
+		political_reform = settlement
+		political_reform = culture_voting_only
+		political_reform = censored_press
+		political_reform = yes_meeting
+		political_reform = gerrymandering
+		political_reform = unitary
+		set_country_flag = native_assimilation
+		add_country_modifier = {
+			name = native_assimilation
+			duration = 3650
+		}
+	    any_pop = {
+		scaled_consciousness = { 
+				ideology = reactionary
+				factor = -5
+		}
+		scaled_consciousness = { 
+				ideology = conservative
+				factor = 1
+		}
+		scaled_consciousness = { 
+				ideology = liberal
+				factor = 5
+		}
+		scaled_consciousness = { 
+				ideology = anarcho_liberal
+				factor = 7
+		}
+		scaled_militancy = {
+				ideology = reactionary
+				factor = -5
+		}
+		scaled_militancy = {
+				ideology = conservative
+				factor = 1
+		}
+		scaled_militancy = {
+				ideology = liberal
+				factor = 5
+	    }
+		scaled_militancy = {
+				ideology = anarcho_liberal
+				factor = 7
+	    }
+	    }
+		country_event = { id = 333534 days = 7 }
+	    ai_chance = { 
+	        factor = 40
+			   modifier = {
+			      factor = 0
+			      MSG = { ai = no }				  
+			   }
+		}
+	}
+	
+	option = {
+		name = "VIN31.B"
+		political_reform = all_voting_pops
+	    any_pop = {
+		scaled_consciousness = { 
+				ideology = reactionary
+				factor = 2
+		}
+		scaled_consciousness = { 
+				ideology = conservative
+				factor = 1
+		}
+		scaled_consciousness = { 
+				ideology = liberal
+				factor = -2
+		}
+		scaled_consciousness = { 
+				ideology = anarcho_liberal
+				factor = -4
+		}
+		scaled_militancy = {
+				ideology = reactionary
+				factor = 2
+		}
+		scaled_militancy = {
+				ideology = conservative
+				factor = 1
+		}
+		scaled_militancy = {
+				ideology = liberal
+				factor = -2
+	    }
+		scaled_militancy = {
+				ideology = anarcho_liberal
+				factor = -4
+	    }
+	    }
+		country_event = { id = 333532 days = 7 }
+	    change_variable = {
+		   which = VIN_CON
+		   value = 2
+		}
+	    ai_chance = { 
+	        factor = 60
+		}
+	}
+}
+
+# Native Land Rights
+
+country_event = {
+	id = 333532
+	title = "VIN32.T"
+	desc = "VIN32.D"
+	picture = "sioux"
+	
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = "VIN32.A"
+		political_reform = settlement
+		political_reform = free_press
+		political_reform = yes_meeting
+		political_reform = non_secret_ballots
+		political_reform = unitary
+		set_country_flag = native_assimilation
+		add_country_modifier = {
+			name = native_assimilation
+			duration = 3650
+		}
+	    any_pop = {
+		scaled_consciousness = { 
+				ideology = reactionary
+				factor = -4
+		}
+		scaled_consciousness = { 
+				ideology = liberal
+				factor = 4
+		}
+		scaled_consciousness = { 
+				ideology = anarcho_liberal
+				factor = 6
+		}
+		scaled_militancy = {
+				ideology = reactionary
+				factor = -4
+		}
+		scaled_militancy = {
+				ideology = liberal
+				factor = 4
+	    }
+		scaled_militancy = {
+				ideology = anarcho_liberal
+				factor = 6
+	    }
+	    }
+		country_event = { id = 333534 days = 7 }
+	    ai_chance = { 
+	        factor = 40
+			   modifier = {
+			      factor = 0
+			      MSG = { ai = no }				  
+			   }
+		}
+	}
+	
+	option = {
+		name = "VIN32.B"
+		set_country_flag = native_reservation
+		any_owned = {
+			limit = {
+				is_core = IRO
+			}
+			add_province_modifier = {
+				name = native_reservation
+				duration = 36000
+			}
+		}
+		any_owned = {
+			limit = {
+				is_core = ANI
+			}
+			add_province_modifier = {
+				name = native_reservation
+				duration = 36000
+			}
+		}
+		any_owned = {
+			limit = {
+				is_core = NUN
+			}
+			add_province_modifier = {
+				name = native_reservation
+				duration = 36000
+			}
+		}
+		any_owned = {
+			limit = {
+				is_core = CHE
+			}
+			add_province_modifier = {
+				name = native_reservation
+				duration = 36000
+			}
+		}
+		any_owned = {
+			limit = {
+				is_core = DIN
+			}
+			add_province_modifier = {
+				name = native_reservation
+				duration = 36000
+			}
+		}
+		any_owned = {
+			limit = {
+				culture = native_american_minor
+			}
+			add_province_modifier = {
+				name = native_reservation
+				duration = 1825
+			}
+		}
+	    any_pop = {
+		scaled_consciousness = { 
+				ideology = reactionary
+				factor = 1
+		}
+		scaled_consciousness = { 
+				ideology = liberal
+				factor = -1
+		}
+		scaled_consciousness = { 
+				ideology = anarcho_liberal
+				factor = 1
+		}
+		scaled_militancy = {
+				ideology = reactionary
+				factor = 1
+		}
+		scaled_militancy = {
+				ideology = liberal
+				factor = -1
+	    }
+		scaled_militancy = {
+				ideology = anarcho_liberal
+				factor = 1
+	    }
+	    }
+		country_event = { id = 333533 days = 7 }
+	    change_variable = {
+		   which = VIN_CON
+		   value = 1
+		}
+	    ai_chance = { 
+	        factor = 30
+			   modifier = {
+			      factor = 0
+			      MSG = { ai = no }				  
+			   }
+		}
+	}
+	
+	option = {
+		name = "VIN32.C"
+		political_reform = proportional_representation
+		set_country_flag = native_integration
+		add_country_modifier = {
+			name = native_integration
+			duration = 3650
+		}
+	    any_pop = {
+		scaled_consciousness = { 
+				ideology = reactionary
+				factor = 3
+		}
+		scaled_consciousness = { 
+				ideology = conservative
+				factor = 2
+		}
+		scaled_consciousness = { 
+				ideology = liberal
+				factor = -3
+		}
+		scaled_consciousness = { 
+				ideology = anarcho_liberal
+				factor = -5
+		}
+		scaled_militancy = {
+				ideology = reactionary
+				factor = 3
+		}
+		scaled_militancy = {
+				ideology = conservative
+				factor = 2
+		}
+		scaled_militancy = {
+				ideology = liberal
+				factor = -3
+	    }
+		scaled_militancy = {
+				ideology = anarcho_liberal
+				factor = -5
+	    }
+	    }
+		country_event = { id = 333533 days = 7 }
+	    change_variable = {
+		   which = VIN_CON
+		   value = 2
+		}
+	    ai_chance = { 
+	        factor = 30
+		}
+	}
+}
+
+# Role of the Head of State
+
+country_event = {
+	id = 333533
+	title = "VIN33.T"
+	desc = "VIN33.D"
+	picture = "treaty"
+	
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = "VIN33.A"
+		political_reform = free_press
+		political_reform = yes_meeting
+		political_reform = secret_ballots
+		political_reform = unitary
+	    any_pop = {
+		scaled_consciousness = { 
+				ideology = reactionary
+				factor = -5
+		}
+		scaled_militancy = {
+				ideology = reactionary
+				factor = -5
+		}
+		scaled_militancy = {
+				ideology = anarcho_liberal
+				factor = 5
+	    }
+		scaled_consciousness = { 
+				ideology = anarcho_liberal
+				factor = 5
+		}
+	    }
+		country_event = { id = 333534 days = 7 }
+	    ai_chance = { 
+	        factor = 50
+			   modifier = {
+			      factor = 0
+			      MSG = { ai = no }				  
+			   }
+		}
+	}
+	
+	option = {
+		name = "VIN33.B"
+		government = parliamentary_republic
+		political_reform = free_press
+		political_reform = yes_meeting
+		political_reform = secret_ballots
+		political_reform = federalism
+	    any_pop = {
+		scaled_consciousness = { 
+				ideology = reactionary
+				factor = 5
+		}
+		scaled_consciousness = { 
+				ideology = conservative
+				factor = 2
+		}
+		scaled_consciousness = { 
+				ideology = liberal
+				factor = 1
+		}
+		scaled_consciousness = { 
+				ideology = anarcho_liberal
+				factor = -9
+		}
+		scaled_militancy = {
+				ideology = reactionary
+				factor = 5
+		}
+		scaled_militancy = {
+				ideology = conservative
+				factor = 2
+		}
+		scaled_militancy = {
+				ideology = liberal
+				factor = 1
+	    }
+		scaled_militancy = {
+				ideology = anarcho_liberal
+				factor = -9
+	    }
+	    }
+		country_event = { id = 333534 days = 7 }
+	    change_variable = {
+		   which = VIN_CON
+		   value = 2
+		}
+	    ai_chance = { 
+	        factor = 50
+		}
+	}
+}
+
+############ The End of the Convention #################
+
+country_event = {
+	id = 333534
+	title = "VIN34.T"
+	desc = "VIN34.D"
+	picture = "Prosper"
+	
+	fire_only_once = yes
+    is_triggered_only = yes
+
+	option = {
+		name = "VIN34.A"
+		prestige = 1
+	    any_pop = {
+		scaled_consciousness = { 
+				ideology = conservative
+				factor = -1
+		}
+		scaled_consciousness = { 
+				ideology = reactionary
+				factor = -1
+		}
+		scaled_consciousness = { 
+				ideology = liberal
+				factor = -1
+		}
+		scaled_consciousness = { 
+				ideology = anarcho_liberal
+				factor = -1
+		}
+		scaled_militancy = {
+				ideology = conservative
+				factor = -1
+		}
+		scaled_militancy = {
+				ideology = reactionary
+				factor = -1
+		}
+		scaled_militancy = {
+				ideology = liberal
+				factor = -1
+	    }
+		scaled_militancy = {
+				ideology = anarcho_liberal
+				factor = -1
+	    }
+	    }
+		set_country_flag = VIN_THE_REF
+	}
+}
+
+############ The Outcome of the Referendum - The Good Liberal Outcome ##############
+
+country_event = {
+	id = 333535
+	title = "VIN35.T"
+	desc = "VIN35.D"
+	picture = "confederation"
+	
+	fire_only_once = yes
+	
+	trigger = {
+       tag = VIN
+	   has_country_flag = VIN_THE_REF
+	   check_variable = {
+		 which = VIN_CON
+		 value = 15
+	   }
+	   NOT = {
+	   check_variable = {
+		  which = VIN_CON
+		  value = 18
+	      }
+       }
+	}
+
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	immediate = {
+	   release_vassal = MSG
+	}
+
+	option = {
+		name = "VIN35.A"
+		MSG = { all_core = { add_core = VIN } }
+		inherit = MSG
+		prestige = 20
+		add_accepted_culture = marklander
+		set_global_flag = VIN_ENABLE_INTERVENTION
+		set_country_flag = moderate_vin_liberal
+		clr_country_flag = VIN_THE_REF
+		any_pop = {
+		   ideology = {
+			  value = conservative
+			  factor = -0.05
+		   }
+		   ideology = {
+			  value = liberal
+			  factor = 0.05
+		   }
+		   ideology = {
+			  value = reactionary
+			  factor = -0.05
+		   }
+        }
+		random_owned = {
+		   limit = {
+		      owner = { is_ideology_enabled = anarcho_liberal }
+		   }
+		   owner = {
+		   any_pop = {
+		      ideology = {
+			     value = anarcho_liberal
+			     factor = 0.05
+		      }	
+           }
+		   }
+        }		   	
+	    any_pop = {
+	       consciousness = -9
+	    }
+	    any_pop = {
+	       militancy = -9
+	    }
+		election = yes
+	}
+}
+
+############ The Outcome of the Referendum - The Good Conservative Outcome ##############
+
+country_event = {
+	id = 333536
+	title = "VIN36.T"
+	desc = "VIN36.D"
+	picture = "confederation"
+	
+	fire_only_once = yes
+	
+	trigger = {
+       tag = VIN
+	   has_country_flag = VIN_THE_REF
+	   check_variable = {
+		 which = VIN_CON
+		 value = 12
+	   }
+	   NOT = {
+	   check_variable = {
+		  which = VIN_CON
+		  value = 15
+	      }
+       }
+	}
+
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	immediate = {
+	   release_vassal = MSG
+	}
+
+	option = {
+		name = "VIN36.A"
+		MSG = { all_core = { add_core = VIN } }
+		inherit = MSG
+		prestige = 10
+        nationalvalue = nv_order
+		remove_country_modifier = national_confusion
+		add_country_modifier = {
+			name = national_confusion
+			duration = 365
+		}
+		add_accepted_culture = marklander
+		set_global_flag = VIN_ENABLE_INTERVENTION
+		set_country_flag = moderate_vin_conservative
+		clr_country_flag = VIN_THE_REF
+		any_pop = {
+		   ideology = {
+			  value = conservative
+			  factor = 0.05
+		   }
+		   ideology = {
+			  value = liberal
+			  factor = -0.05
+		   }
+		   ideology = {
+			  value = reactionary
+			  factor = 0.05
+		   }
+        }
+		random_owned = {
+		   limit = {
+		      owner = { is_ideology_enabled = anarcho_liberal }
+		   }
+		   owner = {
+		   any_pop = {
+		      ideology = {
+			     value = anarcho_liberal
+			     factor = -0.05
+		      }	
+           }
+		   }
+        }		   	
+	    any_pop = {
+	       consciousness = -9
+	    }
+	    any_pop = {
+	       militancy = -9
+	    }
+		election = yes
+	}
+}
+
+############ The Outcome of the Referendum - Reactionary Outcome ##############
+
+country_event = {
+	id = 333537
+	title = "VIN37.T"
+	desc = "VIN37.D"
+	picture = "banquet"
+	
+	fire_only_once = yes
+	
+	trigger = {
+       tag = VIN
+	   has_country_flag = VIN_THE_REF
+	   NOT = {
+	   check_variable = {
+		  which = VIN_CON
+		  value = 12
+	      }
+       }
+	}
+
+	mean_time_to_happen = {
+		days = 7
+	}
+
+	option = {
+		name = "VIN37.A"
+		prestige = -10
+		clr_country_flag = VIN_THE_REF
+		any_pop = {
+		   ideology = {
+			  value = liberal
+			  factor = 0.05
+		   }
+        }
+		random_owned = {
+		   limit = {
+		      owner = { is_ideology_enabled = anarcho_liberal }
+		   }
+		   owner = {
+		   any_pop = {
+		      ideology = {
+			     value = anarcho_liberal
+			     factor = 0.05
+		      }	
+           }
+		   }
+        }		   	
+	    any_pop = {
+		scaled_consciousness = { 
+				ideology = liberal
+				factor = 1
+		}
+		scaled_consciousness = { 
+				ideology = anarcho_liberal
+				factor = 1
+		}
+		scaled_militancy = {
+				ideology = liberal
+				factor = 1
+	    }
+		scaled_militancy = {
+				ideology = anarcho_liberal
+				factor = 1
+	    }
+	    }
+		country_event = { id = 333538 days = 7 }
+	}
+}
+
+############ The Creation of the Kingdom of Vinland ##############
+
+### Please clap for Jeb
+
+country_event = {
+	id = 333538
+	title = "VIN38.T"
+	desc = "VIN38.D"
+	picture = "masgirl"
+	
+	fire_only_once = yes	
+    is_triggered_only = yes
+	
+	option = {
+		name = "VIN38.A"
+		government = prussian_constitutionalism
+		any_pop = {
+		   ideology = {
+			  value = liberal
+			  factor = 0.05
+		   }
+        }
+		random_owned = {
+		   limit = {
+		      owner = { is_ideology_enabled = anarcho_liberal }
+		   }
+		   owner = {
+		   any_pop = {
+		      ideology = {
+			     value = anarcho_liberal
+			     factor = 0.05
+		      }	
+           }
+		   }
+        }		   	
+	    any_pop = {
+		scaled_consciousness = { 
+				ideology = liberal
+				factor = 1
+		}
+		scaled_consciousness = { 
+				ideology = anarcho_liberal
+				factor = 1
+		}
+		scaled_militancy = {
+				ideology = liberal
+				factor = 1
+	    }
+		scaled_militancy = {
+				ideology = anarcho_liberal
+				factor = 1
+	    }
+	    }
+		country_event = { id = 333539 days = 3 }
+	}
+}
+
+############ Chaos in Erikshaven ##############
+
+### Oh No
+
+country_event = {
+	id = 333539
+	title = "VIN39.T"
+	desc = "VIN39.D"
+	picture = "street_riot_2"
+	
+	fire_only_once = yes	
+    is_triggered_only = yes
+	
+	option = {
+		name = "VIN38.A"
+		prestige = -5
+		any_pop = {
+		   ideology = {
+			  value = liberal
+			  factor = 0.05
+		   }
+        }
+		random_owned = {
+		   limit = {
+		      owner = { is_ideology_enabled = anarcho_liberal }
+		   }
+		   owner = {
+		   any_pop = {
+		      ideology = {
+			     value = anarcho_liberal
+			     factor = 0.05
+		      }	
+           }
+		   }
+        }		   	
+	    any_pop = {
+		scaled_consciousness = { 
+				ideology = liberal
+				factor = 2
+		}
+		scaled_consciousness = { 
+				ideology = anarcho_liberal
+				factor = 2
+		}
+		scaled_militancy = {
+				ideology = liberal
+				factor = 2
+	    }
+		scaled_militancy = {
+				ideology = anarcho_liberal
+				factor = 2
+	    }
+	    }
+		country_event = { id = 333540 days = 3 }
+	}
+}
+
+############ The Evacuation from Erikshaven ##############
+
+### Bravely ran away away 
+
+country_event = {
+	id = 333540
+	title = "VIN40.T"
+	desc = "VIN40.D"
+	picture = "vinlandrebel"
+	
+	fire_only_once = yes	
+    is_triggered_only = yes
+	
+	option = {
+		name = "VIN40.A"
+		any_country = {
+		   limit = {
+		      tag = SCA
+			  exists = yes
+		      NOT = { 
+		         OR = { 
+		            government = absolute_monarchy
+			        government = prussian_constitutionalism
+			        government = hms_government
+			        government = fascist_monarchy
+                 }
+		      }
+		   }
+		   set_global_flag = MSG_help_impossible
+	    }
+		MSG = { set_country_flag = reactionary_MSG country_event = { id = 333544 days = 1 } }
+		prestige = -5
+	    government = democracy
+		ruling_party_ideology = liberal
+		political_reform = universal_voting
+		political_reform = state_equal_weight		
+		political_reform = free_press
+		political_reform = yes_meeting
+		political_reform = non_secret_ballots
+		political_reform = unitary
+		political_reform = settlement
+	    clr_country_flag = theocratic_government
+	    clr_country_flag = merchantrepublic_gov
+	    clr_country_flag = parliamentary_republic_gov
+	    clr_country_flag = communist_gov
+	    clr_country_flag = absolute_monarchy_gov
+	    clr_country_flag = semi_constitutional_monarchy_gov
+	    clr_country_flag = constitutional_monarchy_gov
+	    clr_country_flag = presidential_dictatorship_gov
+	    clr_country_flag = fascist_gov
+	    clr_country_flag = anarcho_liberal_gov
+	    clr_country_flag = socialist_republic_gov
+	    clr_country_flag = fascist_monarchy_gov
+	    set_country_flag = democracy_gov			   	
+		add_country_modifier = {
+			name = calm_before_storm
+			duration = 3650
+		}
+	    ai_chance = { 
+	        factor = 100
+		}
+	}
+	
+	option = {
+		name = "VIN40.B"
+		any_country = {
+		   limit = {
+		      tag = SCA
+			  exists = yes
+		      NOT = { 
+		         OR = { 
+		            government = absolute_monarchy
+			        government = prussian_constitutionalism
+			        government = hms_government
+			        government = fascist_monarchy
+                 }
+		      }
+		   }
+		   set_global_flag = MSG_help_impossible
+	    }
+		MSG = { set_country_flag = reactionary_MSG country_event = { id = 333544 days = 1 } }
+		prestige = -5
+	    government = democracy
+		ruling_party_ideology = liberal
+		political_reform = universal_voting
+		political_reform = state_equal_weight		
+		political_reform = free_press
+		political_reform = yes_meeting
+		political_reform = non_secret_ballots
+		political_reform = unitary
+		political_reform = settlement
+	    clr_country_flag = theocratic_government
+	    clr_country_flag = merchantrepublic_gov
+	    clr_country_flag = parliamentary_republic_gov
+	    clr_country_flag = communist_gov
+	    clr_country_flag = absolute_monarchy_gov
+	    clr_country_flag = semi_constitutional_monarchy_gov
+	    clr_country_flag = constitutional_monarchy_gov
+	    clr_country_flag = presidential_dictatorship_gov
+	    clr_country_flag = fascist_gov
+	    clr_country_flag = anarcho_liberal_gov
+	    clr_country_flag = socialist_republic_gov
+	    clr_country_flag = fascist_monarchy_gov
+	    set_country_flag = democracy_gov			   	
+		add_country_modifier = {
+			name = calm_before_storm
+			duration = 3650
+		}
+		change_tag_no_core_switch = MSG
+	    ai_chance = { 
+	        factor = 0
+		}
+	}
+}
+
+############ The Outcome of the Referendum - Radical Outcome ##############
+
+country_event = {
+	id = 333541
+	title = "VIN41.T"
+	desc = "VIN41.D"
+	picture = "reichsbanner"
+	
+	fire_only_once = yes
+	
+	trigger = {
+       tag = VIN
+	   has_country_flag = VIN_THE_REF
+	   check_variable = {
+		  which = VIN_CON
+		  value = 18
+	   }
+	}
+
+	mean_time_to_happen = {
+		days = 7
+	}
+
+	option = {
+		name = "VIN41.A"
+		prestige = -10
+		clr_country_flag = VIN_THE_REF
+		any_pop = {
+		   ideology = {
+			  value = conservative
+			  factor = 0.05
+		   }
+        }
+		any_pop = {
+		   ideology = {
+			  value = reactionary
+			  factor = 0.05
+		   }
+        }	   	
+	    any_pop = {
+		scaled_consciousness = { 
+				ideology = conservative
+				factor = 1
+		}
+		scaled_consciousness = { 
+				ideology =  reactionary
+				factor = 1
+		}
+		scaled_militancy = {
+				ideology = conservative
+				factor = 1
+	    }
+		scaled_militancy = {
+				ideology =  reactionary
+				factor = 1
+	    }
+	    }
+		country_event = { id = 333542 days = 7 }
+	}
+}
+
+############ First Sitting of Parliament collapses into brawls after Kangaroo Votes  ##############
+
+country_event = {
+	id = 333542
+	title = "VIN42.T"
+	desc = "VIN42.D"
+	picture = "speech_assembly"
+	
+	fire_only_once = yes	
+    is_triggered_only = yes
+
+	option = {
+		name = "VIN42.A"
+		any_pop = {
+		   ideology = {
+			  value = conservative
+			  factor = 0.05
+		   }
+        }
+		any_pop = {
+		   ideology = {
+			  value = reactionary
+			  factor = 0.05
+		   }
+        }	   	
+	    any_pop = {
+		scaled_consciousness = { 
+				ideology = conservative
+				factor = 1
+		}
+		scaled_consciousness = { 
+				ideology =  reactionary
+				factor = 1
+		}
+		scaled_militancy = {
+				ideology = conservative
+				factor = 1
+	    }
+		scaled_militancy = {
+				ideology =  reactionary
+				factor = 1
+	    }
+	    }
+		country_event = { id = 333543 days = 7 }
+	}
+}
+
+############ Government Dissolved by Revolutionary Security Committee after failed vote. Conservatives Flee. ##############
+
+country_event = {
+	id = 333543
+	title = "VIN43.T"
+	desc = "VIN43.D"
+	picture = "vinlandrebel"
+	
+	fire_only_once = yes	
+    is_triggered_only = yes
+	
+	option = {
+		name = "VIN43.A"
+		prestige = -5
+		any_country = {
+		   limit = {
+		      tag = SCA
+			  exists = yes
+		      NOT = { 
+		         OR = { 
+		            government = absolute_monarchy
+			        government = prussian_constitutionalism
+			        government = hms_government
+			        government = fascist_monarchy
+                 }
+		      }
+		   }
+		   set_global_flag = MSG_help_impossible
+	    }  
+		any_pop = {
+		   ideology = {
+			  value = conservative
+			  factor = 0.05
+		   }
+        }
+		any_pop = {
+		   ideology = {
+			  value = reactionary
+			  factor = 0.05
+		   }
+        }		   	
+	    any_pop = {
+		scaled_consciousness = { 
+				ideology = conservative
+				factor = 2
+		}
+		scaled_consciousness = { 
+				ideology = reactionary
+				factor = 2
+		}
+		scaled_militancy = {
+				ideology = conservative
+				factor = 2
+	    }
+		scaled_militancy = {
+				ideology = reactionary
+				factor = 2
+	    }
+	    }
+		set_country_flag = VIN_security_committee
+		MSG = { set_country_flag = conservative_MSG country_event = { id = 333544 days = 1 } }
+	    government = presidential_dictatorship
+	    ruling_party_ideology = conservative
+	    political_reform = none_voting
+	    political_reform = party_appointed
+    	political_reform = no_meeting
+	    political_reform = state_press
+	    political_reform = four_year_draft
+        political_reform = first_past_the_post
+	    political_reform = underground_parties 
+	    clr_country_flag = theocratic_government
+	    clr_country_flag = merchantrepublic_gov
+	    clr_country_flag = parliamentary_republic_gov
+	    clr_country_flag = communist_gov
+	    clr_country_flag = absolute_monarchy_gov
+	    clr_country_flag = semi_constitutional_monarchy_gov
+	    clr_country_flag = constitutional_monarchy_gov
+	    set_country_flag = presidential_dictatorship_gov
+	    clr_country_flag = fascist_gov
+	    clr_country_flag = anarcho_liberal_gov
+	    clr_country_flag = socialist_republic_gov
+	    clr_country_flag = fascist_monarchy_gov
+	    clr_country_flag = democracy_gov
+	    clr_country_flag = election_started
+	    set_country_flag = conservative_party_in_power
+	    clr_country_flag = liberal_party_in_power
+	    clr_country_flag = reactionary_party_in_power
+	    clr_country_flag = socialist_party_in_power
+	    clr_country_flag = communist_party_in_power
+	    clr_country_flag = fascist_party_in_power
+	    clr_country_flag = paternal_party_in_power
+	    clr_country_flag = anarcho_liberal_party_in_power
+	    set_country_flag = tory_election_win
+	    clr_country_flag = liberal_election_win
+	    clr_country_flag = communist_election_win
+	    clr_country_flag = fascist_election_win
+	    clr_country_flag = reactionary_election_win
+	    clr_country_flag = anarcho_liberal_election_win
+	    clr_country_flag = social_liberal_election_win
+	    clr_country_flag = market_liberal_election_win		
+		clr_country_flag = paternal_election_win
+	    clr_country_flag = market_liberal_party_in_power		   	
+		add_country_modifier = {
+			name = calm_before_storm
+			duration = 3650
+		}
+	    ai_chance = { 
+	        factor = 100
+		}
+	}
+	
+	option = {
+		name = "VIN43.B"
+		prestige = -5
+		any_country = {
+		   limit = {
+		      tag = SCA
+			  exists = yes
+		      NOT = { 
+		         OR = { 
+		            government = absolute_monarchy
+			        government = prussian_constitutionalism
+			        government = hms_government
+			        government = fascist_monarchy
+                 }
+		      }
+		   }
+		   set_global_flag = MSG_help_impossible
+	    }
+		any_pop = {
+		   ideology = {
+			  value = conservative
+			  factor = 0.05
+		   }
+        }
+		any_pop = {
+		   ideology = {
+			  value = reactionary
+			  factor = 0.05
+		   }
+        }		   	
+	    any_pop = {
+		scaled_consciousness = { 
+				ideology = conservative
+				factor = 2
+		}
+		scaled_consciousness = { 
+				ideology = reactionary
+				factor = 2
+		}
+		scaled_militancy = {
+				ideology = conservative
+				factor = 2
+	    }
+		scaled_militancy = {
+				ideology = reactionary
+				factor = 2
+	    }
+	    }
+		set_country_flag = VIN_security_committee
+		MSG = { set_country_flag = conservative_MSG country_event = { id = 333544 days = 1 } }
+	    government = presidential_dictatorship
+	    ruling_party_ideology = conservative
+	    political_reform = none_voting
+	    political_reform = party_appointed
+    	political_reform = no_meeting
+	    political_reform = state_press
+	    political_reform = four_year_draft
+        political_reform = first_past_the_post
+	    political_reform = underground_parties 
+	    clr_country_flag = theocratic_government
+	    clr_country_flag = merchantrepublic_gov
+	    clr_country_flag = parliamentary_republic_gov
+	    clr_country_flag = communist_gov
+	    clr_country_flag = absolute_monarchy_gov
+	    clr_country_flag = semi_constitutional_monarchy_gov
+	    clr_country_flag = constitutional_monarchy_gov
+	    set_country_flag = presidential_dictatorship_gov
+	    clr_country_flag = fascist_gov
+	    clr_country_flag = anarcho_liberal_gov
+	    clr_country_flag = socialist_republic_gov
+	    clr_country_flag = fascist_monarchy_gov
+	    clr_country_flag = democracy_gov
+	    clr_country_flag = election_started
+	    set_country_flag = conservative_party_in_power
+	    clr_country_flag = liberal_party_in_power
+	    clr_country_flag = reactionary_party_in_power
+	    clr_country_flag = socialist_party_in_power
+	    clr_country_flag = communist_party_in_power
+	    clr_country_flag = fascist_party_in_power
+	    clr_country_flag = paternal_party_in_power
+	    clr_country_flag = anarcho_liberal_party_in_power
+	    set_country_flag = tory_election_win
+	    clr_country_flag = liberal_election_win
+	    clr_country_flag = communist_election_win
+	    clr_country_flag = fascist_election_win
+	    clr_country_flag = reactionary_election_win
+	    clr_country_flag = anarcho_liberal_election_win
+	    clr_country_flag = social_liberal_election_win
+	    clr_country_flag = market_liberal_election_win		
+		clr_country_flag = paternal_election_win
+	    clr_country_flag = market_liberal_party_in_power			   	
+		add_country_modifier = {
+			name = calm_before_storm
+			duration = 3650
+		}
+		change_tag_no_core_switch = MSG
+	    ai_chance = { 
+	        factor = 0
+		}
+	}
+}
+
+#### The Foundation of the Kingdom of Masgirland #####
+
+country_event = {
+	id = 333544
+	title = "VIN44.T"
+	desc = "VIN44.D"
+	picture = "masgirl"
+	
+	fire_only_once = yes	
+    is_triggered_only = yes
+	
+	option = {
+		name = "VIN44.A"
+		prestige = 10
+		FROM = { release_vassal = THIS country_event = { id = 333549 days = 7 } }		
+		random_owned = {
+		   limit = {
+		      owner = { has_country_flag = reactionary_MSG }
+		   }
+		   owner = {
+	         government = prussian_constitutionalism
+             political_reform = appointed
+             political_reform = landed_voting
+             political_reform = no_meeting
+             political_reform = state_press
+             political_reform = no_trade_unions
+             political_reform = first_past_the_post
+             political_reform = underground_parties
+			 political_reform = mandatory_service
+		     political_reform = unitary
+		     political_reform = settlement
+	         clr_country_flag = theocratic_government
+	         clr_country_flag = merchantrepublic_gov
+	         clr_country_flag = parliamentary_republic_gov
+	         clr_country_flag = communist_gov
+	         clr_country_flag = absolute_monarchy_gov
+	         set_country_flag = semi_constitutional_monarchy_gov
+	         clr_country_flag = constitutional_monarchy_gov
+	         clr_country_flag = presidential_dictatorship_gov
+	         clr_country_flag = fascist_gov
+	         clr_country_flag = anarcho_liberal_gov
+	         clr_country_flag = socialist_republic_gov
+	         clr_country_flag = fascist_monarchy_gov
+	         clr_country_flag = democracy_gov
+		   }
+        }
+		random_owned = {
+		   limit = {
+		      owner = { has_country_flag = conservative_MSG }
+		   }
+		   owner = {
+	          government = democracy
+		      ruling_party_ideology = conservative
+		      political_reform = wealth_voting
+		      political_reform = state_equal_weight		
+		      political_reform = free_press
+		      political_reform = yes_meeting
+		      political_reform = gerrymandering
+		      political_reform = unitary
+		      political_reform = settlement
+	          clr_country_flag = theocratic_government
+	          clr_country_flag = merchantrepublic_gov
+	          clr_country_flag = parliamentary_republic_gov
+	          clr_country_flag = communist_gov
+	          clr_country_flag = absolute_monarchy_gov
+	          clr_country_flag = semi_constitutional_monarchy_gov
+	          clr_country_flag = constitutional_monarchy_gov
+	          clr_country_flag = presidential_dictatorship_gov
+	          clr_country_flag = fascist_gov
+	          clr_country_flag = anarcho_liberal_gov
+	          clr_country_flag = socialist_republic_gov
+	          clr_country_flag = fascist_monarchy_gov
+	          set_country_flag = democracy_gov	
+		   }
+        }
+	    money = 100000
+	    canned_food = 100
+	    regular_clothes = 100
+	    small_arms = 100
+	    artillery = 100
+	    add_country_modifier = { 
+	       name = preparing_for_war
+	       duration = 2190
+	    }	
+	    add_country_modifier = { 
+	       name = calm_before_storm
+	       duration = 2190
+	    }
+		relation = { who = VIN value = -400 }
+		random_owned = {
+		   limit = {
+		      owner = { NOT = { has_global_flag = MSG_help_impossible } }
+		   }
+		   owner = { country_event = { id = 333545 days = 0 } }
+        }		
+    }
+}
+
+#### Should we ask Scandinavia for assistance? ####
+
+### To localization - I heavily advise that you use Red Text for the warning regarding being hijacked by SCA if you ask for their help ###
+
+country_event = {
+	id = 333545
+	title = "VIN45.T"
+	desc = "VIN45.D"
+	picture = "scandinavian_royal"
+	
+	fire_only_once = yes	
+    is_triggered_only = yes
+	
+	option = {
+		name = "VIN45.A"
+		prestige = -10
+		SCA = { country_event = { id = 333546 days = 0 } }
+	    ai_chance = { 
+	        factor = 90
+		}		
+    }
+	
+	option = {
+		name = "VIN45.B"
+		prestige = -10
+	    ai_chance = { 
+	        factor = 10
+		}			
+    }
+}
+
+#### Masgirland wants assistance against Vinland ####
+
+country_event = {
+	id = 333546
+	title = "VIN46.T"
+	desc = "VIN46.D"
+	picture = "masgirl"
+	
+	fire_only_once = yes	
+    is_triggered_only = yes
+	
+	option = {
+		name = "VIN45.A"
+		prestige = 1
+		MSG = { country_event = 333547 set_country_flag = MSG_is_doomed }
+		create_alliance = MSG
+		relation = { who = MSG value = 400 }
+		diplomatic_influence = { who = MSG value = 400 }
+	    ai_chance = { 
+	        factor = 90
+		}		
+    }
+	
+	option = {
+		name = "VIN46.B"
+		MSG = { country_event = 333548 }
+		prestige = -1
+	    ai_chance = { 
+	        factor = 10
+		}			
+    }
+}
+
+country_event = {
+	id = 333547
+	title = "VIN47.T"
+	desc = "VIN47.D"
+	picture = "scandinavian_royal"
+	
+	fire_only_once = yes	
+    is_triggered_only = yes
+	
+	option = {
+		name = "VIN45.A"
+		prestige = 3
+    }
+}
+
+country_event = {
+	id = 333548
+	title = "VIN48.T"
+	desc = "VIN48.D"
+	picture = "scandinavian_royal"
+	
+	fire_only_once = yes	
+    is_triggered_only = yes
+	
+	option = {
+		name = "VIN48.A"
+		prestige = -3
+    }
+}
+
+#### The North Arcadian Brothers War #####
+
+country_event = {
+	id = 333549
+	title = "VIN49.T"
+	desc = "VIN49.D"
+	#picture = "ambush_army"
+	
+	major = yes
+	fire_only_once = yes	
+    is_triggered_only = yes
+	
+	option = {
+		name = "VIN49.A"
+		set_global_flag = VIN_MSG_WAR
+		clr_global_flag = MSG_help_impossible
+		MSG = {
+		   remove_country_modifier = calm_before_storm
+		   remove_country_modifier = preparing_for_war
+		}
+		remove_country_modifier = calm_before_storm
+		remove_country_modifier = preparing_for_war
+	    war = {
+			target = MSG
+			attacker_goal =  { 
+				casus_belli = conquest_any
+			}
+			defender_goal = {
+				casus_belli = custom_treaty_cb
+			}	
+	    }
+    }
+}
+
+#### Vinland has crushed MSG - MSG is eliminated from the game entirely #####
+
+country_event = {
+	id = 333550
+	title = "VIN50.T"
+	desc = "VIN50.D"
+	picture = "masgirl"
+	
+	trigger = {
+       tag = VIN
+	   has_global_flag = VIN_MSG_WAR
+	   war = no
+	   NOT = { has_country_flag = custom_treaty_loser }
+	   NOT = { exists = MSG }
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "VIN50.A"
+		prestige = 10
+		clr_global_flag = VIN_MSG_WAR
+		set_global_flag = VIN_ENABLE_INTERVENTION
+		MSG = { clr_country_flag = MSG_is_doomed all_core = { add_core = VIN remove_core = MSG } }
+		random_owned = {
+		   limit = {
+		      owner = { NOT = { has_country_flag = VIN_security_committee } }
+		   }
+		   owner = { set_country_flag = moderate_VIN_liberal }
+		}
+		random_owned = {
+		   limit = {
+		      owner = { has_country_flag = VIN_security_committee }
+		   }
+		   owner = { set_country_flag = VIN_SC_ENABLED }
+		}
+    }
+}
+
+#### MSG has defeated Vinland - MSG is reactionary #####
+
+country_event = {
+	id = 333551
+	title = "VIN51.T"
+	desc = "VIN51.D"
+	picture = "vinlandcapital"
+	
+	trigger = {
+       tag = MSG
+	   exists = yes
+	   has_global_flag = VIN_MSG_WAR
+	   has_country_flag = reactionary_MSG
+	   war = no
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+	   VIN = { clr_country_flag = custom_treaty_loser }
+	   inherit = VIN
+	}
+	
+	option = {
+		name = "VIN51.A"	
+        inherit = VIN		
+		prestige = 20		
+        clr_global_flag = VIN_MSG_WAR
+		clr_country_flag = reactionary_MSG
+        all_core = { add_core = VIN }		
+		change_tag = VIN
+		primary_culture = vinlander
+		add_accepted_culture = marklander		
+		set_country_flag = reactionary_VIN	
+        nationalvalue = nv_order
+		remove_country_modifier = national_confusion
+		add_country_modifier = {
+			name = national_confusion
+			duration = 365
+		}		
+		random_owned = {
+		   limit = {
+		      owner = { NOT = { has_country_flag = MSG_is_doomed } }
+		   }
+		   owner = { set_global_flag = VIN_ENABLE_INTERVENTION }
+		}
+		random_owned = {
+		   limit = {
+		      owner = { has_country_flag = MSG_is_doomed }
+		   }
+		   owner = { country_event = { id = 333554 days = 3 } }
+		}
+    }
+}
+
+#### MSG has defeated Vinland - MSG is conservative #####
+
+country_event = {
+	id = 333552
+	title = "VIN52.T"
+	desc = "VIN52.D"
+	picture = "vinlandcapital"
+	
+	trigger = {
+       tag = MSG
+	   exists = yes
+	   has_global_flag = VIN_MSG_WAR
+	   has_country_flag = conservative_MSG
+	   war = no
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "VIN52.A"
+		prestige = 20
+        clr_global_flag = VIN_MSG_WAR
+		clr_country_flag = conservative_MSG
+		VIN = { clr_country_flag = custom_treaty_loser country_event = { id = 333553 days = 3 } }
+		# A Auspicious Event
+		random_owned = {
+		   limit = {
+		      owner = { has_country_flag = MSG_is_doomed }
+		   }
+		   owner = { country_event = { id = 333554 days = 3 } }
+		}
+    }
+}
+
+#### Vinland is couped by Conservatives due to failure #####
+
+country_event = {
+	id = 333553
+	title = "VIN53.T"
+	desc = "VIN53.D"
+	picture = "storming_palace"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "VIN53.A"
+		clr_country_flag = VIN_security_committee
+		set_country_flag = moderate_vin_conservative
+		set_global_flag = VIN_ENABLE_INTERVENTION
+		prestige = -20
+        nationalvalue = nv_order
+		remove_country_modifier = national_confusion
+		add_country_modifier = {
+			name = national_confusion
+			duration = 365
+		}
+	    government = democracy
+		ruling_party_ideology = conservative
+		political_reform = wealth_voting
+		political_reform = state_equal_weight		
+		political_reform = free_press
+		political_reform = yes_meeting
+		political_reform = gerrymandering
+		political_reform = unitary
+		political_reform = settlement
+	    clr_country_flag = theocratic_government
+	    clr_country_flag = merchantrepublic_gov
+	    clr_country_flag = parliamentary_republic_gov
+	    clr_country_flag = communist_gov
+	    clr_country_flag = absolute_monarchy_gov
+	    clr_country_flag = semi_constitutional_monarchy_gov
+	    clr_country_flag = constitutional_monarchy_gov
+	    clr_country_flag = presidential_dictatorship_gov
+	    clr_country_flag = fascist_gov
+	    clr_country_flag = anarcho_liberal_gov
+	    clr_country_flag = socialist_republic_gov
+	    clr_country_flag = fascist_monarchy_gov
+	    set_country_flag = democracy_gov	        
+    }
+}
+
+#### Masgirland/Vinland had taken the deal and had been couped by Scandinavian Garrisons. Good Job. #####
+
+country_event = {
+	id = 333554
+	title = "VIN54.T"
+	desc = "VIN54.D"
+	picture = "SCAwins"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "VIN54.A"
+		random_owned = {
+		   limit = {
+		      owner = { has_country_flag = reactionary_VIN }
+		   }
+		   owner = { clr_country_flag = reactionary_VIN set_country_flag = moderate_vin_conservative }
+		}
+		clr_country_flag = MSG_is_doomed
+	    government = presidential_dictatorship
+	    ruling_party_ideology = conservative
+        nationalvalue = nv_order
+		remove_country_modifier = national_confusion
+		add_country_modifier = {
+			name = national_confusion
+			duration = 365
+		}
+	    political_reform = none_voting
+	    political_reform = party_appointed
+    	political_reform = no_meeting
+	    political_reform = state_press
+	    political_reform = four_year_draft
+        political_reform = first_past_the_post
+	    political_reform = underground_parties 
+	    clr_country_flag = theocratic_government
+	    clr_country_flag = merchantrepublic_gov
+	    clr_country_flag = parliamentary_republic_gov
+	    clr_country_flag = communist_gov
+	    clr_country_flag = absolute_monarchy_gov
+	    clr_country_flag = semi_constitutional_monarchy_gov
+	    clr_country_flag = constitutional_monarchy_gov
+	    set_country_flag = presidential_dictatorship_gov
+	    clr_country_flag = fascist_gov
+	    clr_country_flag = anarcho_liberal_gov
+	    clr_country_flag = socialist_republic_gov
+	    clr_country_flag = fascist_monarchy_gov
+	    clr_country_flag = democracy_gov
+	    clr_country_flag = election_started
+	    set_country_flag = conservative_party_in_power
+	    clr_country_flag = liberal_party_in_power
+	    clr_country_flag = reactionary_party_in_power
+	    clr_country_flag = socialist_party_in_power
+	    clr_country_flag = communist_party_in_power
+	    clr_country_flag = fascist_party_in_power
+	    clr_country_flag = paternal_party_in_power
+	    clr_country_flag = anarcho_liberal_party_in_power
+	    set_country_flag = tory_election_win
+	    clr_country_flag = liberal_election_win
+	    clr_country_flag = communist_election_win
+	    clr_country_flag = fascist_election_win
+	    clr_country_flag = reactionary_election_win
+	    clr_country_flag = anarcho_liberal_election_win
+	    clr_country_flag = social_liberal_election_win
+	    clr_country_flag = market_liberal_election_win		
+		clr_country_flag = paternal_election_win
+	    clr_country_flag = market_liberal_party_in_power	
+        SCA = { country_event = { id = 333555 days = 7 } }		
+    }
+}
+
+#### Scandinavia is told that they get a free puppet in the new world again. Incredible. #####
+
+#### Entry to setup event ###
+
+### This has been moved from above ###
+
+country_event = {
+	id = 333555
+	title = "VIN55.T"
+	desc = "VIN55.D"
+	picture = "SCAwins"
+	
+	is_triggered_only = yes
+	
+	# Create a Provisional Occupation Government for the time being.
+	
+	option = {
+		name = "VIN55.A"
+		create_vassal = FROM
+		set_global_flag = VIN_ENABLE_INTERVENTION
+		prestige = 10
+		any_country = {
+		    limit = {
+			   tag = VIN 
+			   is_vassal = yes
+			}
+			THIS = {
+			   prestige = 10
+			   country_event = { id = 333556 days = 31 } 
+			}
+        }			      		
+    }
+}
+
+### We have defeated Vinland. My god. What have you done?
+
+### This has been moved from above ###
+
+country_event = {
+	id = 333522
+	title = "VIN222.T"
+	desc = "VIN222.D"
+	picture = "SCAwins"
+	
+	fire_only_once = yes
+
+	trigger = {
+       tag = SCA
+	   war = no
+	   has_global_flag = vinlandic_indipendence_war
+	   VIN = { has_country_flag = custom_treaty_loser }
+	}
+
+	mean_time_to_happen = {
+		days = 3
+	}
+		
+	# Create a Provisional Occupation Government for the time being.
+		
+	option = {
+		name = "VIN222.A"
+		country_event = { id = 333556 days = 31 }
+		set_global_flag = VIN_ENABLE_INTERVENTION
+		prestige = 20
+		73 = { secede_province = MSG }
+		end_war = MSG
+		VIN = { nationalvalue = nv_order clr_country_flag = custom_treaty_loser set_country_flag = moderate_vin_conservative prestige = -20 remove_country_modifier = taiping_draft remove_country_modifier = small_country_draft }
+		MSG = { prestige = -20 remove_country_modifier = taiping_draft remove_country_modifier = small_country_draft annex_to = VIN }
+		clr_global_flag = vinlandic_indipendence_war
+		create_vassal = VIN
+	    ai_chance = { 
+	        factor = 90
+		}
+    }	
+}
+
+#### Founding of the New Colonial Office for Arcadian Affairs ###
+
+country_event = {
+	id = 333556
+	title = "VIN56.T"
+	desc = "VIN56.D"
+	picture = "scandinavian_royal"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "VIN56.A"
+		prestige = 10
+		set_global_flag = scandinavian_arcadia
+		set_country_flag = wait_for_unionister_collapse
+		VIN = {
+		   	add_country_modifier = {
+			   name = VIN_military_rule
+			   duration = -1
+		    }
+		}
+    }
+}
+
+#### Policy Regarding Vinlandic Autonomy - Hans or Christian can do both but the AI will be weighed to whatever version of Scandinavia they have. ###
+#### This is obviously delayed until the Unionisters Collapse as setting a actual policy while your government consists of a bunch of old men does not work.
+
+country_event = {
+	id = 3335560
+	title = "VIN57.T"
+	desc = "VIN57.D"
+	picture = "vinlandcapital"
+
+    fire_only_once = yes
+	
+	trigger = {
+       tag = SCA
+	   war = no
+	   has_country_flag = wait_for_unionister_collapse
+	   OR = {
+	      has_country_flag = SCA_hans_mode
+		  has_country_flag = SCA_christian_mode
+	   }
+	}
+	
+	mean_time_to_happen = {
+		days = 100
+	}
+	
+	## Recreate the Crown Colony of Vinland
+	
+	option = {
+		name = "VIN57.A"
+		clr_country_flag = wait_for_unionister_collapse
+		diplomatic_influence = { who = VIN value = 400 }
+		relation = { who = VIN value = 400 }
+		create_alliance = VIN
+        VIN = {
+		   prestige_factor = -0.99
+		   remove_country_modifier = VIN_military_rule
+	       government = autonomous_dependency
+		   nationalvalue = nv_order
+	       political_reform = none_voting
+	       political_reform = party_appointed
+	       political_reform = yes_meeting
+	       political_reform = state_press
+	       political_reform = state_controlled
+	       political_reform = underground_parties
+	       political_reform = open_borders
+	       political_reform = mandatory_service
+	       political_reform = all_voting_pops
+		   political_reform = settlement
+		   clr_country_flag = VIN_security_committee
+		   clr_country_flag = moderate_vin_conservative
+		   set_country_flag = reactionary_VIN
+		   clr_country_flag = RADICAL_VIN
+		   clr_country_flag = moderate_vin_liberal
+		   set_country_flag = autoden_gov
+	       clr_country_flag = theocratic_government
+	       clr_country_flag = merchantrepublic_gov
+	       clr_country_flag = parliamentary_republic_gov
+	       clr_country_flag = communist_gov
+	       clr_country_flag = absolute_monarchy_gov
+	       clr_country_flag = semi_constitutional_monarchy_gov
+	       clr_country_flag = constitutional_monarchy_gov
+	       clr_country_flag = presidential_dictatorship_gov
+	       clr_country_flag = fascist_gov
+	       clr_country_flag = anarcho_liberal_gov
+	       clr_country_flag = socialist_republic_gov
+	       clr_country_flag = fascist_monarchy_gov
+	       clr_country_flag = democracy_gov
+		   any_pop = {
+		       militancy = -9
+		       consciousness = -9
+		       ideology = {
+			      value = conservative
+			      factor = 0.1
+		       }
+           }			   
+		}		
+		country_event = { id = 333557 days = 62 }
+	    ai_chance = { 
+	        factor = 50
+			modifier = {
+			   factor = 0
+			   has_country_flag = SCA_hans_mode
+		    }
+		}		
+    }
+	
+	## Create the Autonomous Kingdom of Vinland 
+	
+	option = {
+		name = "VIN57.B"
+		diplomatic_influence = { who = VIN value = 400 }
+		relation = { who = VIN value = 400 }
+		create_alliance = VIN
+		clr_country_flag = wait_for_unionister_collapse
+        VIN = {
+		   prestige_factor = -0.99
+		   remove_country_modifier = VIN_military_rule
+	       government = hms_government
+		   nationalvalue = nv_equality
+           political_reform = universal_voting
+           political_reform = yes_meeting
+           political_reform = free_press
+           political_reform = non_socialist
+           political_reform = secret_ballots
+		   political_reform = appointed
+		   political_reform = mandatory_service
+	       political_reform = first_past_the_post
+		   political_reform = all_voting_pops
+		   political_reform = settlement
+		   clr_country_flag = VIN_security_committee
+		   clr_country_flag = moderate_vin_conservative
+		   clr_country_flag = reactionary_VIN
+		   clr_country_flag = RADICAL_VIN
+		   set_country_flag = moderate_vin_liberal
+	       clr_country_flag = theocratic_government
+	       clr_country_flag = merchantrepublic_gov
+	       clr_country_flag = parliamentary_republic_gov
+	       clr_country_flag = communist_gov
+	       clr_country_flag = absolute_monarchy_gov
+	       clr_country_flag = semi_constitutional_monarchy_gov
+	       set_country_flag = constitutional_monarchy_gov
+	       clr_country_flag = presidential_dictatorship_gov
+	       clr_country_flag = fascist_gov
+	       clr_country_flag = anarcho_liberal_gov
+	       clr_country_flag = socialist_republic_gov
+	       clr_country_flag = fascist_monarchy_gov
+	       clr_country_flag = democracy_gov
+		   election = yes
+		   any_pop = {
+		       militancy = -9
+		       consciousness = -9
+		       ideology = {
+			      value = conservative
+			      factor = 0.1
+		       }
+           }	   	
+		}		
+		country_event = { id = 333557 days = 62 }	
+		ai_chance = { 
+	        factor = 50
+			modifier = {
+			   factor = 0
+			   has_country_flag = SCA_christian_mode
+		    }
+		}
+    }
+}
+
+#### Policy Regarding Masgirland ####
+
+country_event = {
+	id = 333557
+	title = "VIN58.T"
+	desc = "VIN58.D"
+	picture = "masgirl"
+
+    fire_only_once = yes
+	is_triggered_only = yes
+	
+	## Abolish it entirely
+	
+	option = {
+		name = "VIN58.A"
+		prestige = -5
+		VIN = { remove_accepted_culture = marklander }
+        MSG = { all_core = { add_core = VIN remove_core = MSG } }	
+		country_event = { id = 333560 days = 62 }
+	    ai_chance = { 
+	        factor = 50
+			modifier = {
+			   factor = 0.5
+			   has_country_flag = SCA_hans_mode
+		    }
+		}		
+    }
+	
+	## Seperate it from Vinland and set up a Client State
+	
+	option = {
+		name = "VIN58.B"
+		relation = { who = VIN value = -50 }
+		country_event = { id = 333560 days = 62 }
+        VIN = {
+		  country_event = { id = 333558 days = 31 }	
+		}		
+		ai_chance = { 
+	        factor = 50
+			modifier = {
+			   factor = 0.5
+			   has_country_flag = SCA_christian_mode
+		    }
+		}
+    }
+}
+
+#### Reestablishment of Masgirland ####
+
+country_event = {
+	id = 333558
+	title = "VIN59.T"
+	desc = "VIN59.D"
+	picture = "masgirl"
+
+    fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = "VIN59.A"
+		remove_accepted_culture = marklander
+		any_owned = {
+            limit = { is_core = MSG }
+            secede_province = MSG 
+        }
+		SCA = { country_event = { id = 333559 days = 1 } }
+    }
+}
+
+#### Foundation of the Kingdom of Masgirland ####
+
+country_event = {
+	id = 333559
+	title = "VIN60.T"
+	desc = "VIN60.D"
+	picture = "masgirl"
+
+    fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "VIN60.A"
+		prestige = 5
+		create_vassal = MSG 
+		diplomatic_influence = { who = MSG value = 400 }
+		relation = { who = MSG value = 400 }
+		create_alliance = MSG
+		MSG = {
+		   any_pop = {
+		       militancy = -9
+		       consciousness = -9
+		       ideology = {
+			      value = conservative
+			      factor = 0.1
+		       }
+           }
+		}
+    }
+}
+
+#### The Question of Rohnnst ####
+
+#### With the questions regarding both Masgirland and Vinland resolved it would be apt to deal with this error of judgement. 
+
+country_event = {
+	id = 333560
+	title = "VIN61.T"
+	desc = "VIN61.D"
+	picture = "metis"
+
+    fire_only_once = yes
+	is_triggered_only = yes
+    
+	### Send the Demand!
+	
+	option = {
+		name = "VIN61.A"
+		set_country_flag = act_on_SKR
+		HHR = { country_event = 333561 }
+    }
+}
+
+#### Scandinavia demands authority over us ####
+
+country_event = {
+	id = 333561
+	title = "VIN62.T"
+	desc = "VIN62.D"
+	picture = "scandinavian_royal"
+
+    fire_only_once = yes
+	is_triggered_only = yes
+    
+	### Scandinavia wants to make us a protectorate for our own safety
+	### There is no option to refuse since that would be a suicide war in its most absolute. You are not SKR.
+	### There might be a slim chance later of indipendence either through Qinggiu, Scandinavian Collapse or another war
+	
+	option = {
+		name = "VIN62.A"
+		prestige = -5
+		remove_country_modifier = neutrality
+		SCA = { 
+		   diplomatic_influence = { who = THIS value = 400 }
+		   relation = { who = THIS value = 400 }
+		   create_alliance = THIS
+		   create_vassal = THIS 
+		}
+    }
+}
+
+### Colonial Transfer Event
+
+province_event = {
+	id = 333562
+	title = "VIN63.T"
+	desc = "VIN63.D"
+
+	trigger = {
+		owner = { tag = SCA }
+		is_core = VIN
+		VIN = {	vassal_of = THIS }	
+	}
+	
+	mean_time_to_happen = {
+		days = 4
+	}
+	
+	option = {
+		name = "VIN62.A"
+		secede_province = VIN
+	}
+}
+
+province_event = {
+	id = 3335620
+	title = "VIN630.T"
+	desc = "VIN630.D"
+
+	trigger = {
+		owner = { tag = SCA has_country_flag = greater_rohhnst }
+		is_core = HHR
+		HHR = {	vassal_of = THIS }	
+	}
+	
+	mean_time_to_happen = {
+		days = 4
+	}
+	
+	option = {
+		name = "VIN630.A"
+		secede_province = HHR
+	}
+}
+
+### Colonial Transfer Event - Plantagenia Treaty Territory - I need to experiment with this
+#
+#province_event = {
+#	id = 333563
+#	title = "VIN64.T"
+#	desc = "VIN64.D"
+#
+#	trigger = {
+#		owner = { tag = SCA }
+#		is_core = OCE
+#		NOT = { is_core = SKR }
+#	}
+#	
+#	mean_time_to_happen = {
+#		days = 1
+#	}
+#	
+#	option = {
+#		name = "VIN62.A"
+#		secede_province = SKR
+#	}
+#}
+
+### The below is triggered by a decision ###
+
+#### What do we do about SKR? ####
+
+country_event = {
+	id = 333564
+	title = "VIN65.T"
+	desc = "VIN65.D"
+	picture = "skrland"
+
+	is_triggered_only = yes
+	
+	## We wish to restore the protectorate but upgrade their status to a Kingdom
+	
+	option = {
+		name = "VIN65.A"
+		prestige = 1
+		SKR = { country_event = { id = 333565 days = 62 } }
+	    ai_chance = { 
+	        factor = 50
+			modifier = {
+			   factor = 0
+			   has_country_flag = SCA_christian_mode
+		    }
+		}		
+    }
+	
+	## Destroy the traitors - WILL TRIGGER THE THEOCRACY WAR
+	
+	option = {
+		name = "VIN65.B"
+		prestige = -1
+		set_country_flag = the_bad_idea_defined
+	    ai_chance = { 
+	        factor = 50
+			modifier = {
+			   factor = 0
+			   has_country_flag = SCA_hans_mode
+		    }
+		}		
+    }
+}
+
+#### Scandinavia has arrived with a offer ####
+
+country_event = {
+	id = 333565
+	title = "VIN66.T"
+	desc = "VIN66.D"
+	picture = "scandinavian_royal"
+
+    fire_only_once = yes
+	is_triggered_only = yes
+	
+	## This is a fine offer that will protect us from the Arcadians
+	
+	option = {
+		name = "VIN66.A"
+		prestige = -5
+		set_country_flag = the_new_great_peace
+		clr_country_flag = legit_neutrality_SKR		
+		remove_country_modifier = neutrality
+        set_country_flag = SKR_isolated
+		SCA = { 		   
+		   diplomatic_influence = { who = THIS value = 400 }
+		   relation = { who = THIS value = 400 }
+		   create_alliance = THIS
+		   create_vassal = THIS 
+		}
+	    ai_chance = { 
+	        factor = 90
+			modifier = {
+			   factor = 0
+			   government = theocracy
+		    }
+		}		
+    }
+	
+	## FOAMS AT MOUTH
+	
+	option = {
+		name = "VIN66.B"
+		prestige = 20
+		SCA = { 		   
+		   diplomatic_influence = { who = THIS value = -400 }
+		   relation = { who = THIS value = -400 }
+		   leave_alliance = THIS
+		   set_country_flag = the_bad_idea_defined
+		}	
+	    ai_chance = { 
+	        factor = 10
+		}		
+    }
+}
+
+### THE GREAT NATIVE REVOLT - The Great Crane thinks that Scandinavia is a bunch of crap - Their envoys had their heads sent back to them in baskets by the Prophet ###
+
+country_event = {
+	id = 333566
+	title = "VIN67.T"
+	desc = "VIN67.D"
+	#picture = "war_ended"
+	
+	trigger = { 
+	   tag = SCA
+	   has_country_flag = the_bad_idea_defined
+	}
+	
+	major = yes
+	
+	mean_time_to_happen = { 
+	   days = 7
+	}
+	
+	immediate = {
+	  SKR = { clr_country_flag = SKR_wait_and_see }
+	}
+	
+	option = {
+		name = "VIN67.A"
+		clr_country_flag = the_bad_idea_defined
+		leave_alliance = SKR
+		release_vassal = SKR
+		relation = { who = SKR value = -400 }
+		diplomatic_influence = { who = SKR value = -400 }
+		set_global_flag = THE_GREAT_NATIVE_REVOLT_ALT	
+		SKR = {
+		    clr_country_flag = legit_neutrality_SKR
+		    clr_country_flag = the_new_great_peace
+		    remove_country_modifier = neutrality
+            set_country_flag = SKR_isolated
+		    clr_country_flag = SKR_wait_and_see
+	        government = theocracy
+	        ruling_party_ideology = reactionary
+	        political_reform = none_voting
+	        political_reform = party_appointed
+	        political_reform = no_meeting
+	        political_reform = state_press
+	        political_reform = state_controlled
+	        political_reform = underground_parties
+	        political_reform = closed_borders
+	        political_reform = mandatory_service
+	        political_reform = primary_culture_only
+		    political_reform = unitary
+	        clr_country_flag = tory_election_win
+	        clr_country_flag = socialist_election_win
+	        clr_country_flag = liberal_election_win
+	        clr_country_flag = communist_election_win
+	        clr_country_flag = fascist_election_win
+	        clr_country_flag = reactionary_election_win
+	        clr_country_flag = anarcho_liberal_election_win
+	        clr_country_flag = social_liberal_election_win
+	        clr_country_flag = market_liberal_election_win		
+		    clr_country_flag = paternal_election_win
+	        set_country_flag = theocratic_government
+	        clr_country_flag = merchantrepublic_gov
+	        clr_country_flag = communist_gov
+	        clr_country_flag = absolute_monarchy_gov
+	        clr_country_flag = semi_constitutional_monarchy_gov
+	        clr_country_flag = constitutional_monarchy_gov
+	        clr_country_flag = parliamentary_republic_gov
+	        clr_country_flag = democracy_gov
+	        clr_country_flag = presidential_dictatorship_gov
+    	    clr_country_flag = fascist_gov
+	        clr_country_flag = anarcho_liberal_gov
+	        clr_country_flag = socialist_republic_gov
+	        clr_country_flag = fascist_monarchy_gov
+			iron = 10
+			wool = 10
+			timber = 25
+			small_arms = 10
+			leadership = 20
+			# They get a better modifier then fighting VIN because this is Scandinavia and all its allies and not Vinland
+			add_country_modifier = {
+				name = small_country_draft
+				duration = -1
+			}
+		}
+		war = {
+			target = SKR
+			attacker_goal =  { 
+				casus_belli = conquest_any
+			}
+			defender_goal = {
+				casus_belli = custom_treaty_cb
+			}	
+			call_ally = yes
+	    }
+    }
+}
+
+### HOLY SHIT SKR ACTUALLY FUCKING WON. 
+
+### Scandinavia just got bested by a bunch of natives. Holy shit this is damming.
+
+country_event = {
+	id = 333567
+	title = "VIN68.T"
+	desc = "VIN68.D"
+	#picture = "war_ended"
+	
+	major = yes
+	fire_only_once = yes
+	
+	trigger = { 
+	   tag = SKR
+	   has_global_flag = THE_GREAT_NATIVE_REVOLT_ALT
+	   OR = {
+	      exists = yes
+		  SCA = { has_country_flag = custom_treaty_loser }
+	   }
+	   NOT = { war = yes }	   
+	}
+
+	mean_time_to_happen = { 
+	   days = 7
+	}
+	
+	# Moses, Jesus, Muhammad and the new Prophet of the West!
+	
+	option = {
+		name = "VIN68.A"
+		remove_country_modifier = small_country_draft
+		prestige = 50
+		inherit = MSG
+		inherit = VIN
+		inherit = HHR
+		clr_global_flag = THE_GREAT_NATIVE_REVOLT_ALT
+		clr_global_flag = scandinavian_arcadia
+		set_global_flag = SUPER_SKR
+		VIN = { all_core = { remove_core = VIN } }
+        any_owned = {
+            limit = {
+                is_core = MSG
+            }
+            secede_province = MSG
+        }	
+        VIN_58 = { add_core = VIN }
+		VIN_66 = { add_core = VIN }
+		238 = { remove_core = VIN }
+		61 = { remove_core = VIN }
+        any_owned = {
+            limit = {
+			    is_core = ANI
+                NOT = { is_core = VIN }
+            }
+            add_core = SKR
+        }   
+        any_owned = {
+            limit = {
+                is_core = VIN
+            }
+            secede_province = VIN
+        }
+	    add_accepted_culture = rohnnst
+		add_accepted_culture = cree		
+		add_accepted_culture = inuit
+		HHR = { all_core = { add_core = SKR } }	
+		any_pop = {
+		   militancy = -8
+		}	   
+    }   
+}
+
+### SCA naturally utterly destroys SKR - Alt-Trail of Tears
+
+country_event = {
+	id = 333568
+	title = "VIN69.T"
+	desc = "VIN69.D"
+	picture = "shawnee"
+	
+	fire_only_once = yes
+	
+	trigger = { 
+	   tag = SCA
+	   has_global_flag = THE_GREAT_NATIVE_REVOLT_ALT
+	   NOT = { war = yes }
+	   NOT = { exists = SKR }
+	}
+
+	mean_time_to_happen = { 
+	   days = 7
+	}
+	
+	# Abolish SKR and all native states north of the Great Lakes
+	## Add a lot of Reduce Pop here.
+	
+	option = {
+		name = "VIN69.A"
+		clr_global_flag = THE_GREAT_NATIVE_REVOLT_ALT
+		prestige = 5
+		VIN_55 = { remove_core = IRO }
+		176 = { add_core = IRO }		
+		VIN_161 = { add_core = ANI }
+		any_owned = {
+		   limit = { 
+		     is_core = ANI
+		   }
+		   secede_province = VIN
+		}
+		any_owned = {
+		   limit = { 
+		     is_core = SKR
+		   }
+		   secede_province = VIN
+		}
+		ANI = { all_core = { remove_core = ANI } }
+		SKR = { all_core = { remove_core = SKR } }		
+    }
+}
+
+### The Fate of Rohnnst - Triggered by decision after claiming the west ###
+
+country_event = {
+	id = 333569
+	title = "VIN70.T"
+	desc = "VIN70.D"
+	picture = "metis"
+
+    fire_only_once = yes
+	is_triggered_only = yes
+	
+	## March in and dissolve the faux state ###
+	
+	option = {
+		name = "VIN70.A"
+		HHR = { all_core = { add_core = VIN } }		   
+		diplomatic_influence = { who = HHR value = -400 }
+		relation = { who = HHR value = -400 }
+		leave_alliance = HHR
+		release_vassal = HHR 
+		war = {
+			target = HHR
+			attacker_goal =  { 
+				casus_belli = conquest_any
+			}
+			defender_goal = {
+				casus_belli = custom_treaty_cb
+			}	
+			call_ally = yes
+	    }
+	    ai_chance = { 
+	        factor = 50
+			modifier = {
+			   factor = 0
+			   has_country_flag = SCA_hans_mode
+		    }			
+		}		
+    }
+	
+	## Would it not be more apt to give Rohnnst the Empty Eastern Territories rather then Vinland?
+	
+	option = {
+		name = "VIN70.B"
+		relation = { who = VIN value = -25 }
+		prestige = 20
+		NA_11 = { remove_core = VIN add_core = HHR }
+		NA_2598 = { remove_core = VIN add_core = HHR }
+	    ai_chance = { 
+	        factor = 50
+			modifier = {
+			   factor = 0
+			   has_country_flag = SCA_christian_mode
+		    }
+		}		
+    }
+}
+
+#### Crown Colony of Vinland asking for Autonomy after Political Events in Scandinavia ####
+
+country_event = {
+	id = 333570
+	title = "VIN71.T"
+	desc = "VIN71.D"
+	#picture = "ambush_army"
+
+    fire_only_once = yes
+	
+	trigger = { 
+	   tag = VIN
+	   vassal_of = SCA
+	   government = autonomous_dependency
+	   SCA = { has_country_flag = scandinavia_determined_future	}   
+	}
+	
+	mean_time_to_happen = { 
+	   days = 30
+	}	
+	
+	## Lets see if the new adminstration is receptive to this ###
+	
+	option = {
+		name = "VIN71.A"
+		prestige = 5
+	    SCA = { country_event = 333571 }
+    }
+}
+
+country_event = {
+	id = 333571
+	title = "VIN72.T"
+	desc = "VIN72.D"
+	picture = "vinlandcapital"
+
+    fire_only_once = yes
+	is_triggered_only = yes
+	major = yes
+
+	
+	## Uh. No. ###
+	
+	option = {
+		name = "VIN72.A"
+	    VIN = {
+		  prestige = -10
+		  any_pop = { militancy = 1 }
+		}
+	    ai_chance = { 
+	        factor = 50
+			modifier = {
+			   factor = 0
+			   OR = {
+			      ruling_party_ideology = liberal
+				  ruling_party_ideology = socialist
+				  ruling_party_ideology = communist
+				  ruling_party_ideology = anarcho_liberal
+				  ruling_party_ideology = social_liberal
+				}
+		    }
+		}	
+    }
+	
+	## We will establish Home Rule in Vinland ###
+	
+	option = {
+		name = "VIN72.B"
+        VIN = {
+		   prestige = 5
+           plurality = 25
+	       government = hms_government
+		   nationalvalue = nv_equality
+           political_reform = universal_voting
+           political_reform = yes_meeting
+           political_reform = free_press
+           political_reform = all_trade_unions
+           political_reform = secret_ballots
+		   political_reform = appointed
+		   political_reform = mandatory_service
+	       political_reform = first_past_the_post
+		   political_reform = all_voting_pops
+		   political_reform = settlement
+		   clr_country_flag = moderate_vin_conservative
+		   clr_country_flag = reactionary_VIN
+		   clr_country_flag = RADICAL_VIN
+		   set_country_flag = moderate_vin_liberal
+	       clr_country_flag = theocratic_government
+	       clr_country_flag = merchantrepublic_gov
+	       clr_country_flag = parliamentary_republic_gov
+	       clr_country_flag = communist_gov
+	       clr_country_flag = absolute_monarchy_gov
+	       clr_country_flag = semi_constitutional_monarchy_gov
+	       set_country_flag = constitutional_monarchy_gov
+	       clr_country_flag = presidential_dictatorship_gov
+	       clr_country_flag = fascist_gov
+	       clr_country_flag = anarcho_liberal_gov
+	       clr_country_flag = socialist_republic_gov
+	       clr_country_flag = fascist_monarchy_gov
+	       clr_country_flag = democracy_gov
+		   election = yes
+		   any_pop = {
+		       militancy = -9
+		       consciousness = -9
+		       ideology = {
+			      value = conservative
+			      factor = 0.1
+		       }
+           }		   
+		}		
+	    ai_chance = { 
+	        factor = 50
+			modifier = {
+			   factor = 0
+			   OR = {
+			      ruling_party_ideology = paternal
+				  ruling_party_ideology = market_liberal
+				  ruling_party_ideology = conservative
+				  ruling_party_ideology = reactionary
+				}
+		    }
+		}	
+    }
+}
+
+#### The Creation of a Scandinavian-Vinlandic Union ####
+
+### Both of these are triggered by decisions ###
+
+### Scandinavia wants our government to agree with annexation - Normal ###
+
+country_event = {
+	id = 333572
+	title = "VIN73.T"
+	desc = "VIN73.D"
+	picture = "scandinavian_royal"
+
+    fire_only_once = yes
+	is_triggered_only = yes
+	
+	## Absolutely Not. Why would you even ask this question? ###
+	
+	option = {
+		name = "VIN73.A"
+	    SCA = { country_event = { id = 333575 days = 7 } }
+    }
+}
+
+### Scandinavia wants our government to agree with annexation - Crown Colony ###
+
+country_event = {
+	id = 333573
+	title = "VIN74.T"
+	desc = "VIN74.D"
+	picture = "scandinavian_royal"
+
+    fire_only_once = yes
+	is_triggered_only = yes
+	
+	## Absolutely Not and just for that we are asking for further political autonomy again ###
+	
+	option = {
+		name = "VIN74.B"
+	    SCA = { country_event = { id = 333574 days = 7 } }
+    }
+}
+
+## Vinland refused - Crown Colony
+
+country_event = {
+	id = 333574
+	title = "VIN75.T"
+	desc = "VIN75.D"
+	picture = "vinlandcapital"
+
+    fire_only_once = yes
+	is_triggered_only = yes
+	
+	## We did not ask you. We are annexing you anyway. ###
+	
+	option = {
+		name = "VIN75.A"
+		set_country_flag = annexation_VIN
+		set_global_flag = holding_out_for_hero
+		relation = { who = VIN value = -200 }
+		relation = { who = MSG value = -25 }
+        relation = { who = SKR value = -25 }
+	    VIN = {
+		   prestige_factor = -0.99
+		   any_pop = {
+		      ideology = {
+			     value = separatist
+			     factor = 0.1
+		      }
+           }
+		}
+	    add_country_modifier = {
+			name = SCA_preparing_annexation
+			duration = 3650
+		}
+	    ai_chance = { 
+	        factor = 50
+			modifier = {
+			   factor = 0
+			   OR = {
+			      ruling_party_ideology = liberal
+				  ruling_party_ideology = socialist
+				  ruling_party_ideology = communist
+				  ruling_party_ideology = anarcho_liberal
+				  ruling_party_ideology = social_liberal
+				}
+		    }
+		}	
+    }
+	
+	option = {
+		name = "VIN75.B"
+		set_global_flag = SCA_ARC_POSSIBLE
+		prestige = -10
+		relation = { who = VIN value = 50 }
+		relation = { who = MSG value = 50 }
+        relation = { who = SKR value = 50 }
+	    ai_chance = { 
+	        factor = 50
+			modifier = {
+			   factor = 0
+			   OR = {
+			      ruling_party_ideology = fascist
+			      ruling_party_ideology = paternal
+				  ruling_party_ideology = market_liberal
+				  ruling_party_ideology = conservative
+				  ruling_party_ideology = reactionary
+				}
+		    }
+		}	     
+    }
+}
+
+## Vinland refused - Kingdom
+
+country_event = {
+	id = 333575
+	title = "VIN76.T"
+	desc = "VIN76.D"
+	picture = "vinlandcapital"
+
+    fire_only_once = yes
+	is_triggered_only = yes
+	
+	## Abolish the Vinlandic Government and prepare annexation ###
+	
+	option = {
+		name = "VIN76.A"
+		set_country_flag = annexation_VIN
+		set_global_flag = holding_out_for_hero
+		relation = { who = VIN value = -200 }
+		relation = { who = MSG value = -25 }
+        relation = { who = SKR value = -25 }
+	    VIN = {
+		   prestige_factor = -0.99
+		   any_pop = {
+		      ideology = {
+			     value = separatist
+			     factor = 0.2
+		      }
+           }
+		   add_country_modifier = {
+			   name = VIN_military_rule
+			   duration = 3650
+		   }
+	       government = autonomous_dependency
+		   nationalvalue = nv_order
+	       political_reform = none_voting
+	       political_reform = party_appointed
+	       political_reform = yes_meeting
+	       political_reform = state_press
+	       political_reform = state_controlled
+	       political_reform = underground_parties
+	       political_reform = open_borders
+	       political_reform = mandatory_service
+	       political_reform = all_voting_pops
+		   political_reform = settlement
+		   clr_country_flag = moderate_vin_conservative
+		   set_country_flag = reactionary_VIN
+		   clr_country_flag = RADICAL_VIN
+		   clr_country_flag = moderate_vin_liberal
+		   set_country_flag = autoden_gov
+	       clr_country_flag = theocratic_government
+	       clr_country_flag = merchantrepublic_gov
+	       clr_country_flag = parliamentary_republic_gov
+	       clr_country_flag = communist_gov
+	       clr_country_flag = absolute_monarchy_gov
+	       clr_country_flag = semi_constitutional_monarchy_gov
+	       clr_country_flag = constitutional_monarchy_gov
+	       clr_country_flag = presidential_dictatorship_gov
+	       clr_country_flag = fascist_gov
+	       clr_country_flag = anarcho_liberal_gov
+	       clr_country_flag = socialist_republic_gov
+	       clr_country_flag = fascist_monarchy_gov
+	       clr_country_flag = democracy_gov
+		   any_pop = {
+		       militancy = -9
+		       consciousness = -9
+		       ideology = {
+			      value = conservative
+			      factor = 0.1
+		       }
+           }
+		}
+	    add_country_modifier = {
+			name = SCA_preparing_annexation
+			duration = 3650
+		}
+	    ai_chance = { 
+	        factor = 50
+			modifier = {
+			   factor = 0
+			   OR = {
+			      ruling_party_ideology = liberal
+				  ruling_party_ideology = socialist
+				  ruling_party_ideology = communist
+				  ruling_party_ideology = anarcho_liberal
+				  ruling_party_ideology = social_liberal
+				}
+		    }
+		}
+    }
+	
+	option = {
+		name = "VIN76.B"
+		set_global_flag = SCA_ARC_POSSIBLE
+		prestige = -5
+		relation = { who = VIN value = 50 }
+		relation = { who = MSG value = 50 }
+        relation = { who = SKR value = 50 }
+	    ai_chance = { 
+	        factor = 50
+			modifier = {
+			   factor = 0
+			   OR = {
+			      ruling_party_ideology = fascist
+			      ruling_party_ideology = paternal
+				  ruling_party_ideology = market_liberal
+				  ruling_party_ideology = conservative
+				  ruling_party_ideology = reactionary
+				}
+		    }
+		}	
+    }
+}
+
+### This will usually go to Arcadia but theroetically Qinggiu could get involved here as well. Might be useful for later.
+
+### Scandinavia is trying to annex the True North ###
+
+### Warning - This may start a Great War since Scandinavia WILL call its allies in. So you need to be 100 percent sure that you want to do this ###
+
+country_event = {
+	id = 333576
+	title = "VIN77.T"
+	desc = "VIN77.D"
+	picture = "vinlandcapital"
+
+    fire_only_once = yes
+	
+	trigger = { 
+	   tag = ARC
+	   is_greater_power = yes
+	   has_global_flag = holding_out_for_hero
+	}
+	
+	### Scandinavia will evacuate from Arcadia immediately! ###
+	
+	option = {
+		name = "VIN77.A"
+		leave_alliance = SCA
+		relation = { who = SCA value = -400 }
+		prestige = 10
+		any_pop = { militancy = -1 }
+		clr_global_flag = holding_out_for_hero
+	    SCA = { country_event = { id = 3335760 days = 7 } }
+	    ai_chance = { 
+	        factor = 99
+			modifier = {
+			   factor = 0
+			   is_disarmed = yes
+		    }
+	    }
+    }
+	
+	### Scandinavia is scary
+	
+	option = {
+		name = "VIN77.B"
+	    prestige = -25
+		any_pop = { militancy = 3 }
+		clr_global_flag = holding_out_for_hero
+	    ai_chance = { 
+	        factor = 1
+	    }
+    }
+}
+
+### The Giant Awakens - Arcadia wants us to leave ###
+
+### Auth Versions of Arcadia enter through this point via the decision ###
+
+country_event = {
+	id = 3335760
+	title = "VIN770.T"
+	desc = "VIN770.D"
+	picture = "charles_1_PLA"
+
+    fire_only_once = yes
+	is_triggered_only = yes
+	
+	### They cannot. They will not. ###
+	
+	option = {
+		name = "VIN770.A"
+		prestige = 10
+		any_pop = { militancy = -1 }
+		clr_global_flag = holding_out_for_hero
+	    ARC = { country_event = { id = 333577 days = 7 } }
+	    ai_chance = { 
+	        factor = 99
+			modifier = {
+			   factor = 0
+			   is_disarmed = yes
+		    }
+	    }
+    }
+	
+	### We cannot win this. Withdraw. Now.
+	
+	option = {
+		name = "VIN770.B"
+		clr_global_flag = scandinavian_arcadia
+	    prestige_factor = -0.5
+		any_country = {
+		    limit = {
+			   OR = {
+			      tag = VIN
+				  tag = HHR
+				  tag = SKR 
+				  tag = MSG
+			   }
+			}
+			country_event = 333584
+	    }
+		any_pop = {
+		    militancy = 5
+		    consciousness = 5
+		    ideology = {
+			   value = communist
+			   factor = 0.2
+		    }
+        }
+	    ai_chance = { 
+	        factor = 1
+	    }
+    }
+}
+
+### The Inevitable War ###
+
+country_event = {
+	id = 333577
+	title = "VIN78.T"
+	desc = "VIN78.D"
+	picture = "conscription_marching"
+
+    fire_only_once = yes
+	is_triggered_only = yes
+	
+	### Enact War Plan Red ###
+	
+	option = {
+		name = "VIN78.A"
+		prestige = 10
+		# Vinlandic Loyality Check - If Crown Colony owns all possible expansion points then it will be less prone to collapse. If it does not then its army will effectively be rendered incapable.
+		any_country = {
+		   limit = {
+		      tag = VIN 
+			  owns = 30
+			  owns = 173
+			  owns = 71
+		   }
+		   country_event = 333578 
+		}
+		any_country = {
+		   limit = {
+		      tag = VIN 
+			  OR = {
+			     NOT = { owns = 30 }
+			     NOT = { owns = 173 }
+			     NOT = { owns = 71 }
+			  }
+		   }
+		   country_event = 333579
+		}
+		country_event = { id = 333580 days = 3 }
+    }
+}
+
+country_event = {
+	id = 333578
+	title = "VIN79.T"
+	desc = "VIN79.D"
+	picture = "vinlandrebel"
+
+    fire_only_once = yes
+	is_triggered_only = yes
+	
+	### IT HAPPENED AGAIN ###
+	
+	option = {
+		name = "VIN79.A"
+		remove_country_modifier = VIN_military_rule
+	    65 = {
+		   poor_strata = {
+               reduce_pop = 0.99
+	       }
+		   middle_strata = {
+			   reduce_pop = 0.95
+	       }
+		   rich_strata = {
+			 reduce_pop = 0.98
+	       }
+	    }	
+        any_owned = {
+            limit = {
+                is_core = VIN
+            }
+            add_province_modifier = {
+                name = nationalist_agitation
+                duration = 180
+            }
+        }
+    }
+}
+
+country_event = {
+	id = 333579
+	title = "VIN80.T"
+	desc = "VIN80.D"
+	picture = "vinlandrebel"
+
+    fire_only_once = yes
+	is_triggered_only = yes
+	
+	### Vinland did not break off but its entire military is completely compromised with negative 99 percent army organization for five years and anything in owns in SKR getting ceded to ARC ###
+	
+	option = {
+		name = "VIN79.A"
+		remove_country_modifier = VIN_military_rule
+        add_country_modifier = {
+            name = VIN_compromised_military
+            duration = 1825
+        }
+	    65 = {
+		   poor_strata = {
+               reduce_pop = 0.98
+	       }
+		   middle_strata = {
+			   reduce_pop = 0.9
+	       }
+		   rich_strata = {
+			 reduce_pop = 0.95
+	       }
+	    }	
+        any_owned = {
+            limit = {
+                is_core = IRO
+            }
+			secede_province = ARC        
+        }	
+        any_owned = {
+            limit = {
+                is_core = ANI
+            }
+			secede_province = ARC        
+        }	
+        any_owned = {
+            limit = {
+                is_core = VIN
+            }
+            add_province_modifier = {
+                name = nationalist_agitation
+                duration = 365
+            }
+        }	
+    }
+}
+
+####### THE GREAT ARCADIAN WAR #########
+
+country_event = {
+	id = 333580
+	title = "VIN81.T"
+	desc = "VIN81.D"
+	#picture = "ambush_army"
+
+    major = yes
+	is_triggered_only = yes
+	
+	
+	### Glory Glory Hallelujah! ###
+	
+	option = {
+		name = "VIN80.A"
+		relation = { who = SCA value = -400 }
+	    war = {
+		    target = SCA
+			attacker_goal = {
+				casus_belli = dismantle_cb
+			}
+			defender_goal = {
+				casus_belli = dismantle_cb
+			}
+			call_ally = yes
+		}
+    }
+}
+
+### Exactly what happens to Arcadia will be determined by the Great War Treaty after the above event ####
+
+### Failstates - Scandinavia had lost control of Vinland ###
+
+country_event = {
+	id = 333581
+	title = "VIN82.T"
+	desc = "VIN82.D"
+	#picture = "ambush_army"
+
+    major = yes
+
+    fire_only_once = yes
+	
+	trigger = { 
+	   tag = SCA
+	   has_global_flag = scandinavian_arcadia
+	   war = no
+	   NOT = { is_our_vassal = VIN }
+	   NOT = { has_country_flag = annexed_arcadia }
+	}
+	
+	mean_time_to_happen = { 
+	   days = 180
+	}	
+	
+	### Withdraw from Arcadia
+	
+	option = {
+		name = "VIN82.A"
+		release_vassal = VIN
+		remove_country_modifier = SCA_preparing_annexation
+		clr_global_flag = scandinavian_arcadia
+	    prestige_factor = -0.25
+		any_country = {
+		    limit = {
+			   OR = {
+				  tag = SKR 
+				  tag = MSG
+				  tag = HHR
+			   }
+			   vassal_of = THIS
+			}
+			country_event = 333584
+	    }
+		MSG = { all_core = { add_core = VIN } }
+		VIN = {
+		   set_country_flag = VIN_security_committee
+		   clr_country_flag = moderate_vin_conservative
+		   clr_country_flag = reactionary_VIN
+		   clr_country_flag = RADICAL_VIN
+		   clr_country_flag = moderate_vin_liberal
+	       government = presidential_dictatorship
+	       ruling_party_ideology = conservative
+	       political_reform = none_voting
+	       political_reform = party_appointed
+    	   political_reform = no_meeting
+	       political_reform = state_press
+	       political_reform = four_year_draft
+           political_reform = first_past_the_post
+	       political_reform = underground_parties 
+	       clr_country_flag = theocratic_government
+	       clr_country_flag = merchantrepublic_gov
+	       clr_country_flag = parliamentary_republic_gov
+	       clr_country_flag = communist_gov
+	       clr_country_flag = absolute_monarchy_gov
+	       clr_country_flag = semi_constitutional_monarchy_gov
+	       clr_country_flag = constitutional_monarchy_gov
+	       set_country_flag = presidential_dictatorship_gov
+	       clr_country_flag = fascist_gov
+	       clr_country_flag = anarcho_liberal_gov
+	       clr_country_flag = socialist_republic_gov
+	       clr_country_flag = fascist_monarchy_gov
+	       clr_country_flag = democracy_gov
+	       clr_country_flag = election_started
+	       set_country_flag = conservative_party_in_power
+	       clr_country_flag = liberal_party_in_power
+	       clr_country_flag = reactionary_party_in_power
+	       clr_country_flag = socialist_party_in_power
+	       clr_country_flag = communist_party_in_power
+	       clr_country_flag = fascist_party_in_power
+	       clr_country_flag = paternal_party_in_power
+	       clr_country_flag = anarcho_liberal_party_in_power
+	       set_country_flag = tory_election_win
+	       clr_country_flag = liberal_election_win
+	       clr_country_flag = communist_election_win
+	       clr_country_flag = fascist_election_win
+	       clr_country_flag = reactionary_election_win
+	       clr_country_flag = anarcho_liberal_election_win
+	       clr_country_flag = social_liberal_election_win
+	       clr_country_flag = market_liberal_election_win		
+		   clr_country_flag = paternal_election_win
+	       clr_country_flag = market_liberal_party_in_power
+		}
+    }
+}
+
+### Failstates - Republican Scandinavia - Crown Colony ####
+
+country_event = {
+	id = 333582
+	title = "VIN83.T"
+	desc = "VIN83.D"
+	#picture = "ambush_army"
+
+    major = yes
+ 
+    fire_only_once = yes
+	
+	trigger = { 
+	   tag = SCA
+	   has_global_flag = scandinavian_arcadia
+	   war = no
+	   NOT = {
+	      OR = {
+		     government = hms_government
+			 government = fascist_monarchy
+			 government = prussian_constitutionalism
+			 government = absolute_monarchy
+	      }
+	   }
+	   VIN = { government = autonomous_dependency }
+	   NOT = { has_country_flag = annexed_arcadia }
+	}
+	
+	mean_time_to_happen = { 
+	   days = 31
+	}	
+	
+	### This is a shame.
+	
+	option = {
+		name = "VIN83.A"
+		release_vassal = VIN
+		remove_country_modifier = SCA_preparing_annexation
+		clr_global_flag = scandinavian_arcadia
+	    prestige_factor = -0.25
+		any_country = {
+		    limit = {
+			   OR = {
+				  tag = HHR
+				  tag = SKR 
+				  tag = MSG
+			   }
+			   vassal_of = THIS
+			}
+			country_event = 333584
+	    }
+		MSG = { all_core = { add_core = VIN } }
+		VIN = {
+		   set_country_flag = VIN_security_committee
+		   clr_country_flag = moderate_vin_conservative
+		   clr_country_flag = reactionary_VIN
+		   clr_country_flag = RADICAL_VIN
+		   clr_country_flag = moderate_vin_liberal
+	       government = presidential_dictatorship
+	       ruling_party_ideology = conservative
+	       political_reform = none_voting
+	       political_reform = party_appointed
+    	   political_reform = no_meeting
+	       political_reform = state_press
+	       political_reform = four_year_draft
+           political_reform = first_past_the_post
+	       political_reform = underground_parties 
+	       clr_country_flag = theocratic_government
+	       clr_country_flag = merchantrepublic_gov
+	       clr_country_flag = parliamentary_republic_gov
+	       clr_country_flag = communist_gov
+	       clr_country_flag = absolute_monarchy_gov
+	       clr_country_flag = semi_constitutional_monarchy_gov
+	       clr_country_flag = constitutional_monarchy_gov
+	       set_country_flag = presidential_dictatorship_gov
+	       clr_country_flag = fascist_gov
+	       clr_country_flag = anarcho_liberal_gov
+	       clr_country_flag = socialist_republic_gov
+	       clr_country_flag = fascist_monarchy_gov
+	       clr_country_flag = democracy_gov
+	       clr_country_flag = election_started
+	       set_country_flag = conservative_party_in_power
+	       clr_country_flag = liberal_party_in_power
+	       clr_country_flag = reactionary_party_in_power
+	       clr_country_flag = socialist_party_in_power
+	       clr_country_flag = communist_party_in_power
+	       clr_country_flag = fascist_party_in_power
+	       clr_country_flag = paternal_party_in_power
+	       clr_country_flag = anarcho_liberal_party_in_power
+	       set_country_flag = tory_election_win
+	       clr_country_flag = liberal_election_win
+	       clr_country_flag = communist_election_win
+	       clr_country_flag = fascist_election_win
+	       clr_country_flag = reactionary_election_win
+	       clr_country_flag = anarcho_liberal_election_win
+	       clr_country_flag = social_liberal_election_win
+	       clr_country_flag = market_liberal_election_win		
+		   clr_country_flag = paternal_election_win
+	       clr_country_flag = market_liberal_party_in_power
+		}
+    }
+}
+
+### Failstates - Republican Scandinavia - Kingdom ####
+
+country_event = {
+	id = 333583
+	title = "VIN84.T"
+	desc = "VIN84.D"
+	#picture = "ambush_army"
+
+    major = yes
+ 
+    fire_only_once = yes
+	
+	trigger = { 
+	   tag = SCA
+	   has_global_flag = scandinavian_arcadia
+	   war = no
+	   NOT = {
+	      OR = {
+		     government = hms_government
+			 government = fascist_monarchy
+			 government = prussian_constitutionalism
+			 government = absolute_monarchy
+	      }
+	   }
+	   VIN = { NOT = { government = autonomous_dependency } }
+	   NOT = { has_country_flag = annexed_arcadia }
+	}
+	
+	mean_time_to_happen = { 
+	   days = 31
+	}	
+	
+	### Wait? What?
+	
+	option = {
+		name = "VIN84.A"
+		release_vassal = VIN
+		remove_country_modifier = SCA_preparing_annexation
+		clr_global_flag = scandinavian_arcadia
+	    prestige_factor = -0.25		
+		any_country = {
+		    limit = {
+			   OR = {
+				  tag = HHR
+				  tag = SKR 
+				  tag = MSG
+			   }
+			   vassal_of = THIS
+			}
+			country_event = 333584
+	    }
+		## Super Top Secret Classified Event
+		VIN = { country_event = { id = 333585 days = 2 } }
+    }
+}
+
+### Collapse of Scandinavian Arcadian Holdings ###
+
+country_event = {
+	id = 333584
+	title = "VIN85.T"
+	desc = "VIN85.D"
+	picture = "vinlandrebel"
+
+    fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "VIN85.A"
+		any_pop = { militancy = -1 }
+		FROM = { release_vassal = THIS }
+    }
+}
+
+### Creation of the Federal Kingdom of Vinland ####
+
+country_event = {
+	id = 333585
+	title = "VIN86.T"
+	desc = "VIN86.D"
+	#picture = "ambush_army"
+
+    major = yes
+ 
+    fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "VIN86.A"
+		   prestige = 30
+	       government = hms_government
+		   nationalvalue = nv_equality
+           political_reform = universal_voting
+           political_reform = yes_meeting
+           political_reform = free_press
+           political_reform = all_trade_unions
+           political_reform = secret_ballots
+		   political_reform = population_equal_weight
+		   political_reform = no_draft
+	       political_reform = proportional_representation
+		   political_reform = all_voting_pops
+		   political_reform = settlement
+		   political_reform = federalism
+		   social_reform = good_schools
+		   clr_country_flag = moderate_vin_conservative
+		   clr_country_flag = reactionary_VIN
+		   clr_country_flag = RADICAL_VIN
+		   set_country_flag = moderate_vin_liberal
+	       clr_country_flag = theocratic_government
+	       clr_country_flag = merchantrepublic_gov
+	       clr_country_flag = parliamentary_republic_gov
+	       clr_country_flag = communist_gov
+	       clr_country_flag = absolute_monarchy_gov
+	       clr_country_flag = semi_constitutional_monarchy_gov
+	       set_country_flag = constitutional_monarchy_gov
+	       clr_country_flag = presidential_dictatorship_gov
+	       clr_country_flag = fascist_gov
+	       clr_country_flag = anarcho_liberal_gov
+	       clr_country_flag = socialist_republic_gov
+	       clr_country_flag = fascist_monarchy_gov
+	       clr_country_flag = democracy_gov
+		   add_accepted_culture = algonquin
+		   add_accepted_culture = southern_algonquin
+		   add_accepted_culture = iroquois 
+		   add_accepted_culture = cree
+		   add_accepted_culture = rohnnst
+		   set_country_flag = skr_accepted
+		   set_country_flag = rohnnst_accepted
+		   inherit = SKR
+		   inherit = MSG
+		   MSG = { all_core = { add_core = THIS } }         		   
+		   election = yes	
+		   random_owned = { 
+		      limit = { owner = { plurality = 50 NOT = { plurality = 80 } } }
+		      owner = { plurality = 25 }
+		   }
+		   random_owned = { 
+		      limit = { owner = { plurality = 40 NOT = { plurality = 50 } } }
+		      owner = { plurality = 35 }
+		   }
+		   random_owned = { 
+		      limit = { owner = { plurality = 20 NOT = { plurality = 40 } } }
+		      owner = { plurality = 45 }
+		   }
+		   random_owned = { 
+		      limit = { owner = { NOT = { plurality = 20 } } }
+		      owner = { plurality = 55 }
+		   }		   
+    }
+}
+
+### The King of the North - Scandinavia integrates Vinland ####
+
+country_event = {
+	id = 333586
+	title = "VIN87.T"
+	desc = "VIN87.D"
+	#picture = "ambush_army"
+
+    major = yes
+ 
+    fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "VIN87.A"
+		prestige = 20
+		set_country_flag = annexed_arcadia
+		add_accepted_culture = vinlander
+		add_accepted_culture = marklander
+        any_country = {
+           limit = {
+              tag = VIN
+			  vassal_of = SCA
+           }
+           all_core = { add_core = SCA }
+           annex_to = SCA
+        }	
+        any_country = {
+           limit = {
+              tag = HHR
+			  vassal_of = SCA
+           }
+           all_core = { add_core = SCA }
+           annex_to = SCA
+        }	
+        any_country = {
+           limit = {
+              tag = SKR
+			  vassal_of = SCA
+           }
+           all_core = { add_core = SCA }
+           annex_to = SCA
+        }
+        any_country = {
+           limit = {
+              tag = MSG
+			  vassal_of = SCA
+           }
+           all_core = { add_core = SCA }
+           annex_to = SCA
+        }	
+		any_pop = {
+			limit = { 
+				OR = {
+				    culture = vinlander
+				    culture = marklander
+				}
+			}
+			militancy = 2
+		}		
+    }
+}

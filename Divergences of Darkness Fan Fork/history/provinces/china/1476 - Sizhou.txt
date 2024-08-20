@@ -1,0 +1,7 @@
+owner = SHU
+controller = SHU 
+add_core = SHU
+add_core = CHI
+trade_goods = iron
+life_rating = 34
+terrain = good_farmland

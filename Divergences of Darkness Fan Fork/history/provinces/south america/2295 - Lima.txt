@@ -1,0 +1,7 @@
+owner = QUI
+controller = QUI
+add_core = QUI
+trade_goods = grain
+life_rating = 40
+terrain = hilly_grassland
+fort = 1 

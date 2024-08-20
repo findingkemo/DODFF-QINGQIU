@@ -1,0 +1,9 @@
+owner = INC
+controller = INC
+
+add_core = INC
+
+
+trade_goods = copper
+life_rating = 40
+terrain = mountain_farmland

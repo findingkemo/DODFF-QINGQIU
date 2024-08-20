@@ -1,0 +1,6 @@
+owner = HHR
+controller = HHR
+add_core = HHR
+trade_goods = coal
+life_rating = 35
+terrain = temperate_grassland

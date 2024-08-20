@@ -1,0 +1,150 @@
+#Sphere of Influence
+
+leader = {
+	name = "Mathieu le Bihan"
+	type = land
+	date = 1836.1.1
+	personality = wretched
+	background = religious_fanatic
+}
+
+leader = {
+	name = "Paul Marc"
+	type = land
+	date = 1836.1.1
+	personality = perverse
+	background = bootlicker
+}
+
+leader = {
+	name = "Jean Cocteau"
+	type = land
+	date = 1836.1.1
+	personality = madman
+	background = poet
+}
+
+#Army
+army = {
+	name = "Armée de la Fédération"
+	location = 2436
+	regiment = {
+		name= "1.1. hussar"
+		type = hussar
+		home = 2436
+	}
+
+	regiment = {
+		name= "Artillerie de la Fédération"
+		type = artillery
+		home = 2424
+	}
+
+	regiment = {
+		name= "4.3 Infanterie"
+		type = regular
+		home = 2435
+	}
+
+	regiment = {
+		name= "1.3. infantry"
+		type = regular
+		home = 2431
+	}
+
+	regiment = {
+		name= "2.3. infantry"
+		type = regular
+		home = 2436
+	}
+
+	regiment = {
+		name= "3.3. infantry"
+		type = regular
+		home = 2439
+	}
+}
+
+army = {
+	name = "Corps Equinoxien"
+	location = 2410
+
+	regiment = {
+		name= "1.3. infantry"
+		type = regular
+		home = 2423
+	}
+
+	regiment = {
+		name= "2.3. infantry"
+		type = regular
+		home = 2410
+	}
+
+	regiment = {
+		name= "3.3. infantry"
+		type = regular
+		home = 2449
+	}
+
+	regiment = {
+		name= "4.3. infantry"
+		type = infantry
+		home = 2423
+	}
+	
+	regiment = {
+		name= "4.3. infantry"
+		type = regular
+		home = 2421
+	}
+	
+	regiment = {
+		name= "4.3. infantry"
+		type = hussar
+		home = 2423
+	}
+}
+
+army = {
+	name = "Force du Sud"
+	location = 2467
+	
+	regiment = {
+		name= "1.3. infantry"
+		type = regular
+		home = 2467
+	}
+	
+	regiment = {
+		name= "1.3. infantry"
+		type = regular
+		home = 2442
+	}
+}
+	
+
+
+navy = {
+	name = "Fleet of the Federation"
+	location = 2431
+	ship = {
+		name= "Amazonie"
+		type = frigate
+	}
+
+	ship = {
+		name= "Francois"
+		type = frigate
+	}
+
+	ship = {
+		name= "Egalité"
+		type = clipper_transport
+	}
+
+	ship = {
+		name= "Jacques"
+		type = clipper_transport
+	}
+}

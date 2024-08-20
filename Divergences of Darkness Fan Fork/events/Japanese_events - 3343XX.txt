@@ -1,0 +1,76 @@
+# Qingqiu Invasion
+
+country_event = {   #Qinqiu is informed of the invasion
+
+	id = 334300
+
+	title = "EVTNAME334302"
+	desc = "EVTDESC334302"
+	picture = "boshin_war"
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA334302"
+    prestige = -1
+	}
+}
+
+# Yakuta
+
+country_event = {
+	
+	id = 334301
+	title = "334307.T"
+	desc = "334307.D"
+	
+	trigger = { 
+	tag = JAP 
+	has_global_flag = post_colonial_era_fired
+	NOT = { YKT = { exists = yes } } 
+	YKT = { all_core = { owned_by = THIS } }
+	} 
+	
+	mean_time_to_happen = { 
+	months = 20
+	}
+	
+	option = { 
+	name = "334307.A"
+	release_vassal = YKT
+	YKT = { civilized = yes }
+	relation = { who = YKT value = 200 }
+	diplomatic_influence = { who = YKT value = 300 }
+	ai_chance = { 
+		factor = 100 
+		}
+	}
+	
+	option = { 
+	name = "334306.B"
+	}
+}
+
+country_event = { 
+	id = 334324
+	title = "JAP24.T"
+	desc = "JAP24.D"
+	
+	trigger = { 
+	tag = JAP 
+	OR = { 
+	nationalism_n_imperialism = 1 
+	iron_steamers = 1 
+		}
+	2525 = { empty = yes }
+	2524 = { empty = yes }
+	}
+	
+	fire_only_once = yes 
+	
+	option = { 
+	name = "334324.A"
+	random_owned = { 2525 = { secede_province = THIS } }
+	random_owned = { 2524 = { secede_province = THIS } }
+	}
+}

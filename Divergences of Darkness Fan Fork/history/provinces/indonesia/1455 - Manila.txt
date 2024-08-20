@@ -1,0 +1,7 @@
+owner = SCA
+controller = SCA
+add_core = TON
+trade_goods = spices
+life_rating = 30
+terrain = jungle_farmland
+fort = 1

@@ -1,0 +1,6 @@
+add_core = INC
+owner = INC
+controller = INC
+trade_goods = sulphur
+life_rating = 35
+terrain = cold_desert_mountains

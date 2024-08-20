@@ -1,0 +1,8 @@
+owner = BKF 
+controller = BKF
+add_core = BKF
+add_core = OUM
+
+trade_goods = sulphur
+life_rating = 30
+terrain = conifer_forest_mountains

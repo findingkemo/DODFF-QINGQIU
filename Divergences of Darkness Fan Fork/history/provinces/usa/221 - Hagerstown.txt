@@ -1,0 +1,10 @@
+owner = CHV
+controller = CHV
+add_core = NBG
+add_core = CHV
+
+
+trade_goods = tobacco
+life_rating = 35
+terrain = hilly_farmland
+

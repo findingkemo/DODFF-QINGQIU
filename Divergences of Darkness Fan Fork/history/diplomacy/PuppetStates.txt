@@ -1,0 +1,570 @@
+# Holy Roman Empire Insanity
+
+vassal = {
+	first = BOH
+	second = MSZ
+	start_date = 1836.1.1
+	end_date = 1900.1.1
+}
+
+vassal = {
+	first = BAV
+	second = TRE
+	start_date = 1836.1.1
+	end_date = 1900.1.1
+}
+
+vassal = {
+	first = BAV
+	second = AGR
+	start_date = 1836.1.1
+	end_date = 1900.1.1
+}
+
+vassal = {
+	first = BAV
+	second = SAL
+	start_date = 1836.1.1
+	end_date = 1900.1.1
+}
+
+vassal = {
+	first = WUR
+	second = ULM
+	start_date = 1836.1.1
+	end_date = 1900.1.1
+}
+
+vassal = {
+	first = DSX
+	second = SME
+	start_date = 1836.1.1
+	end_date = 1900.1.1
+}
+
+vassal = {
+	first = SCA
+	second = BRE
+	start_date = 1836.1.1
+	end_date = 1900.1.1
+}
+
+vassal = {
+	first = BRG
+	second = BEG
+	start_date = 1836.1.1
+	end_date = 1900.1.1
+}
+
+# French Feudalism
+
+substate = {
+	first = DUA
+	second = AUV
+	start_date = 1836.1.1
+	end_date = 1900.1.1
+}
+
+# Spain and the Fezzan
+
+vassal = {
+	first = SPA
+	second = FEZ
+	start_date = 1836.1.1
+	end_date = 1900.1.1
+}
+
+#Japan Puppet Korea
+
+vassal = {
+	first = JAP
+	second = KOR
+	start_date = 1836.1.1
+	end_date = 1900.1.1
+}
+
+# Tibet and Dunzgar
+
+substate = {
+	first = CHG
+	second = TIB
+	start_date = 1836.1.1
+	end_date = 1900.1.1
+}
+
+# Shun and Jurchens
+
+substate = {
+	first = SHU
+	second = MCC
+	start_date = 1836.1.1
+	end_date = 1900.1.1
+}
+
+substate = {
+	first = SHU
+	second = MCH
+	start_date = 1836.1.1
+	end_date = 1900.1.1
+}
+
+# Shun and Vietnam 
+
+substate = {
+	first = SHU
+	second = DAI
+	start_date = 1836.1.1
+	end_date = 1900.1.1
+}
+
+# Shun and Tungning
+
+substate = {
+	first = SHU
+	second = TNG
+	start_date = 1836.1.1
+	end_date = 1900.1.1
+}
+
+#Teschen
+
+substate = {
+	first = BOH
+	second = TES
+	start_date = 1836.1.1
+	end_date = 1850.1.1
+}
+
+#Japan Northern Protectorate
+
+vassal = {
+	first = JAP
+	second = KAM
+	start_date = 1836.1.1
+	end_date = 1900.1.1
+}
+
+#Japan Daimyos
+
+substate = {
+	first = JAP
+	second = SEN
+	start_date = 1836.1.1
+	end_date = 1900.1.1
+}
+
+substate = {
+	first = JAP
+	second = KAG
+	start_date = 1836.1.1
+	end_date = 1900.1.1
+}
+
+substate = {
+	first = JAP
+	second = SAT
+	start_date = 1836.1.1
+	end_date = 1900.1.1
+}
+
+substate = {
+	first = JAP
+	second = AIA
+	start_date = 1836.1.1
+	end_date = 1900.1.1
+}
+
+substate = {
+	first = JAP
+	second = HAC
+	start_date = 1836.1.1
+	end_date = 1900.1.1
+}
+
+substate = {
+	first = JAP
+	second = MOI
+	start_date = 1836.1.1
+	end_date = 1900.1.1
+}
+
+substate = {
+	first = JAP
+	second = TKG
+	start_date = 1836.1.1
+	end_date = 1900.1.1
+}
+
+substate = {
+	first = JAP
+	second = MSH
+	start_date = 1836.1.1
+	end_date = 1900.1.1
+}
+
+substate = {
+	first = JAP
+	second = RYU
+	start_date = 1836.1.1
+	end_date = 1900.1.1
+}
+
+substate = {
+	first = JAP
+	second = AIN
+	start_date = 1836.1.1
+	end_date = 1900.1.1
+}
+
+#PLC substates
+substate = {
+	first = PLC
+	second = LIT
+	start_date = 1836.1.1
+	end_date = 1937.1.1
+}
+substate = {
+	first = PLC
+	second = KIE
+	start_date = 1836.1.1
+	end_date = 1937.1.1
+}
+substate = {
+	first = PLC
+	second = PRU
+	start_date = 1836.1.1
+	end_date = 1937.1.1
+}
+substate = {
+	first = PLC
+	second = PML
+	start_date = 1836.1.1
+	end_date = 1937.1.1
+}
+substate = {
+	first = PLC
+	second = DZG
+	start_date = 1836.1.1
+	end_date = 1937.1.1
+}
+vassal = {
+	first = PLC
+	second = SMO
+	start_date = 1836.1.1
+	end_date = 1937.1.1
+}
+vassal = {
+	first = PLC
+	second = KHK
+	start_date = 1836.1.1
+	end_date = 1937.1.1
+}
+vassal = {
+	first = PLC
+	second = ZAZ
+	start_date = 1836.1.1
+	end_date = 1937.1.1
+}
+
+# Papal Avignon
+vassal = {
+	first = PAP
+	second = AVN
+	start_date = 1815.1.1
+	end_date = 1937.1.1
+}
+
+# Aragonese-Navarran Personal Union
+vassal = {
+	first = ARA
+	second = NAV
+	start_date = 1815.11.9
+	end_date = 1860.1.1
+}
+
+# SPA and Quito
+vassal = {
+	first = SPA
+	second = QUI
+	start_date = 1836.1.1
+	end_date = 1900.1.1
+}
+
+
+# SCA - Pskov
+vassal = {
+	first = SCA
+	second = PSV
+	start_date = 1815.11.9
+	end_date = 1864.1.1
+}
+
+# NOV - Puppets
+
+vassal = {
+	first = NOV
+	second = UGG
+	start_date = 1836.1.1
+	end_date = 1937.1.1
+}
+
+vassal = {
+	first = NOV
+	second = PRM
+	start_date = 1836.1.1
+	end_date = 1937.1.1
+}
+
+vassal = {
+	first = NOV
+	second = VYA
+	start_date = 1836.1.1
+	end_date = 1937.1.1
+}
+
+vassal = {
+	first = NOV
+	second = BLO
+	start_date = 1836.1.1
+	end_date = 1937.1.1
+}
+
+# RYA - Don Host
+
+vassal = {
+	first = RYA
+	second = VOR
+	start_date = 1836.1.1
+	end_date = 1937.1.1
+}
+
+#Atlantia
+
+vassal = {
+	first = SPA
+	second = ATL
+	start_date = 1771.11.9
+	end_date = 1937.1.1
+}
+
+# Oldenburg - Personal Union under Scandinavia
+#
+#vassal = {
+#	first = SCA
+#	second = OLD
+#	start_date = 1815.11.9
+#	end_date = 1864.1.1
+#}
+
+# Dahomey Tributary
+vassal = {
+	first = OYO
+	second = DHY
+	start_date = 1836.1.1
+	end_date = 1937.1.1
+}
+
+# The Rhineland
+
+substate = {
+	first = BRG
+	second = RHI
+	start_date = 1836.1.1
+	end_date = 1937.1.1
+}
+
+#Malta
+vassal = {
+	first = ARA
+	second = MLT
+	start_date = 1815.11.9
+	end_date = 1860.1.1
+}
+
+#Pope Puppet
+vassal = {
+	first = PAP
+	second = FRR
+	start_date = 1815.11.9
+	end_date = 1937.1.1
+}
+
+
+# Burgundian vassals in the east indies
+
+vassal = {
+	first = BRG
+	second = VOC
+	start_date = 1815.11.9
+	end_date = 1937.1.1
+}
+
+vassal = {
+	first = BRG
+	second = PLM
+	start_date = 1815.11.9
+	end_date = 1937.1.1
+}
+
+vassal = {
+	first = BRG
+	second = BTM
+	start_date = 1815.11.9
+	end_date = 1937.1.1
+}
+
+vassal = {
+	first = BRG
+	second = YOG
+	start_date = 1815.11.9
+	end_date = 1937.1.1
+}
+
+vassal = {
+	first = BRG
+	second = BLG
+	start_date = 1815.11.9
+	end_date = 1937.1.1
+}
+
+vassal = {
+	first = BRG
+	second = TNJ
+	start_date = 1815.11.9
+	end_date = 1937.1.1
+}
+
+vassal = {
+	first = BRG
+	second = BUT
+	start_date = 1815.11.9
+	end_date = 1937.1.1
+}
+
+vassal = {
+	first = BRG
+	second = GOW
+	start_date = 1815.11.9
+	end_date = 1937.1.1
+}
+
+# The Belgian Alliance
+
+substate = {
+	first = CNF
+	second = CCA
+	start_date = 1815.11.9
+	end_date = 1843.1.1
+}
+substate = {
+	first = CNF
+	second = CPH
+	start_date = 1815.11.9
+	end_date = 1843.1.1
+}
+substate = {
+	first = CNF
+	second = CFS
+	start_date = 1815.11.9
+	end_date = 1843.1.1
+}
+substate = {
+	first = CNF
+	second = CNL
+	start_date = 1815.11.9
+	end_date = 1843.1.1
+}
+substate = {
+	first = CNF
+	second = CBV
+	start_date = 1815.11.9
+	end_date = 1843.1.1
+}
+substate = {
+	first = CNF
+	second = CHV
+	start_date = 1815.11.9
+	end_date = 1843.1.1
+}
+
+#Arcadian Scandinavian colonies
+
+
+vassal = {
+	first = SCA
+	second = VIN
+	start_date = 1815.11.9
+	end_date = 1937.1.1
+}
+
+vassal = {
+	first = SCA
+	second = MSG
+	start_date = 1815.11.9
+	end_date = 1937.1.1
+}
+
+vassal = {
+	first = SCA
+	second = SKR
+	start_date = 1815.11.9
+	end_date = 1937.1.1
+}
+
+vassal = {
+	first = PLA
+	second = CHE #Tsalagi Protectorate
+	start_date = 1815.11.9
+	end_date = 1937.1.1
+}
+
+#Mianjin and Maoris relationship 
+
+vassal = { 
+	first = MJN 
+	second = AOT 
+	start_date = 1827.1.9
+	end_date = 1840.5.7
+}
+
+#Imperial City of Fiume
+
+vassal = { 
+	first = AUS
+	second = FIU
+	start_date = 1827.1.9
+	end_date = 1855.1.1
+}
+
+#Qingqiu indian territories 
+
+vassal = { 
+	first = DNG
+	second = SHS
+	start_date = 1827.1.9
+	end_date = 1855.1.1
+}
+
+vassal = { 
+	first = DNG
+	second = UTE 
+	start_date = 1827.1.9
+	end_date = 1855.1.1
+}
+
+vassal = { 
+	first = DNG
+	second = DIN 
+	start_date = 1827.1.9
+	end_date = 1855.1.1
+}
+
+#Hokkaigan Colony 
+vassal = { 
+	first = JAP
+	second = KKN
+	start_date = 1827.1.9
+	end_date = 1855.1.1
+}
+
+

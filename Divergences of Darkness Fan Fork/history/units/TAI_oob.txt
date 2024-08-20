@@ -1,0 +1,58 @@
+leader = {
+	name = "Hong Xiuquan"
+	type = land
+	date = 1836.1.1
+	personality = imaginative
+	background = aristocrat
+}
+
+leader = {
+	name = "Yang Xiuqing"
+	type = land
+	date = 1836.1.1
+	personality = indecisive
+	background = renowned_adventurer
+}
+
+leader = {
+	name = "Xiao Chaogui"
+	type = land
+	date = 1836.1.1
+	personality = secretive
+	background = rising_star
+}
+leader = {
+	name = "Huang Rui-Song"
+	type = land
+	date = 1836.1.1
+	personality = maladroit
+	background = exranker
+}
+
+MIG = { 
+	value = -150 		#relation
+	truce_until = "1840.1.1"
+}
+
+TNG = { 
+	value = -150 		#relation
+	truce_until = "1840.1.1"
+}
+
+DAX = {
+	value = -150		#relation
+}
+
+DAI = {
+   value = -20
+   truce_until = "1840.1.1"
+}
+
+SHU = {
+	value = -150		#relation
+}
+
+GNG = {
+	value = -150		#relation
+	truce_until = "1842.1.1"
+}
